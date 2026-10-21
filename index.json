@@ -6,8 +6,11 @@
    "description": "dash, a small POSIX shell; also /bin/sh",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dash-0.5.13.5-1.npk",
-   "size": 229077,
-   "sha256": "3d9834d83e44e9d188e6b72e1d8d80e4785d011be0210b1bb3003b45a16dc70e"
+   "size": 229262,
+   "sha256": "bc03457f165f317d1efe9fccb43f2b2031e7af02e8375bdec9cc9287703af524",
+   "title": "Dash",
+   "category": "System",
+   "about": "Dash is a small, fast POSIX shell, and Nova's /bin/sh: shell scripts with #!/bin/sh run with it. Nova's own shell, nsh, stays the Terminal's."
   },
   {
    "name": "dropbear",
@@ -15,8 +18,11 @@
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
-   "size": 941130,
-   "sha256": "9ccc0612a2155383f5fb2007edc56486dff17cd1ed72fd6c0144261ff714a70d"
+   "size": 941330,
+   "sha256": "6b07de4707711334abe7e1d1e1090a7111103413f709ff0e1f53c580b2ddf7ec",
+   "title": "Dropbear SSH",
+   "category": "Internet",
+   "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
   },
   {
    "name": "kilo",
@@ -24,17 +30,20 @@
    "description": "kilo, a small text editor for the terminal",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/kilo-0.0.0_323d93b-1.npk",
-   "size": 70165,
-   "sha256": "a7b4d98d00089746e424bd29f4680c2e2718697dd339e85cb823ceee3dd68e67"
+   "size": 70267,
+   "sha256": "8309a6cdc8e651fea08f30f7632ca71b34e656b2e8a01441029498cf22b09bbb",
+   "title": "Kilo",
+   "category": "Utilities",
+   "about": "A small text editor that runs in the Terminal: kilo FILE. Ctrl+S saves, Ctrl+Q quits, Ctrl+F finds."
   },
   {
    "name": "ladybird",
    "version": "2026.10.18+7a8a84e0-1",
-   "description": "Ladybird, a web browser with its own engine: today's web, JavaScript and all",
+   "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-1.npk",
-   "size": 126703850,
-   "sha256": "031cb6b26fed96e1f127f1882cb02b442c92b692a52e642e7de47123d7c051f6",
+   "size": 126703859,
+   "sha256": "224ce4de1e4eb9ca44fbe8330fa0e9796a07cfdbd3832f55a8514f03035b3ae1",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
@@ -48,8 +57,11 @@
    "description": "Lua 5.4, a small and fast scripting language",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/lua-5.4.7-1.npk",
-   "size": 167025,
-   "sha256": "ce01ad29ff4eaa683d77b211e34808b785ff189b08cd7d176f0707b3adc5dcbc"
+   "size": 167146,
+   "sha256": "0823d4bdd2f586986ff33cd3ef82040c6434c59a5134858ed5582746050c963a",
+   "title": "Lua",
+   "category": "Development",
+   "about": "Lua is a small, fast scripting language, easy to learn and to embed. Run scripts with lua FILE, or type lua for its prompt."
   },
   {
    "name": "make",
@@ -59,8 +71,11 @@
     "dash"
    ],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/make-4.4.1-1.npk",
-   "size": 163191,
-   "sha256": "d3c13ed5f291f9c9b46a59abe1d7021341236f00e8257cb0820210e6baa429ac"
+   "size": 163315,
+   "sha256": "4b8b1c1f9a2f7e9702cf86478f23b84d5be8b0e53cbb09f2c878d5e71b4e6336",
+   "title": "GNU Make",
+   "category": "Development",
+   "about": "make builds programs from makefiles, rebuilding only what changed. With Nova's C compiler (tcc) it builds C programs on Nova itself."
   },
   {
    "name": "micropython",
@@ -68,8 +83,11 @@
    "description": "MicroPython 1.29, a lean Python 3",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/micropython-1.29.0-1.npk",
-   "size": 861055,
-   "sha256": "7226d6ba1af749f515bba081443f528e19c704f498d582901aaf14d195e6367f"
+   "size": 861171,
+   "sha256": "809418e2404a6378b4179cb70d700b0e16388e98c421bec5938dd713cc7f135d",
+   "title": "MicroPython",
+   "category": "Development",
+   "about": "A lean Python 3 that starts in an instant: micropython FILE.py runs a script. For the full language and its standard library, there is Python."
   },
   {
    "name": "python",
@@ -77,8 +95,11 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10107266,
-   "sha256": "a98f88de123cf97649bc01b41599c0e10ee17444cd52c1e2613c030b9dbf5957"
+   "size": 10107578,
+   "sha256": "5d26d7e2f203cd32ae6525776b7988d8e78c4bf66f984e92ab799965f5026107",
+   "title": "Python",
+   "category": "Development",
+   "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
   }
  ]
 }

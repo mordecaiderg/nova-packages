@@ -9,11 +9,11 @@ written by Nova's `make publish`: don't edit it by hand.
 
 | Package | Name | Version | Category | Download | About |
 |---|---|---|---|---|---|
-| dash | `dash` | 0.5.13.5-1 |  | 224 KB | dash, a small POSIX shell; also /bin/sh |
-| dropbear | `dropbear` | 2026.94-1 |  | 920 KB | Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey |
-| kilo | `kilo` | 0.0.0+323d93b-1 |  | 69 KB | kilo, a small text editor for the terminal |
-| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-1 | Internet | 123735 KB | Ladybird, a web browser with its own engine: today's web, JavaScript and all |
-| lua | `lua` | 5.4.7-1 |  | 164 KB | Lua 5.4, a small and fast scripting language |
-| make | `make` | 4.4.1-1 |  | 160 KB | GNU make 4.4.1, which builds programs from makefiles |
-| micropython | `micropython` | 1.29.0-1 |  | 841 KB | MicroPython 1.29, a lean Python 3 |
-| python | `python` | 3.14.8-1 |  | 9871 KB | Python 3.14, the reference implementation (CPython) |
+| Dash | `dash` | 0.5.13.5-1 | System | 224 KB | dash, a small POSIX shell; also /bin/sh |
+| Dropbear SSH | `dropbear` | 2026.94-1 | Internet | 920 KB | Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey |
+| Kilo | `kilo` | 0.0.0+323d93b-1 | Utilities | 69 KB | kilo, a small text editor for the terminal |
+| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-1 | Internet | 123735 KB | A web browser with its own engine: today's web, JavaScript and all |
+| Lua | `lua` | 5.4.7-1 | Development | 164 KB | Lua 5.4, a small and fast scripting language |
+| GNU Make | `make` | 4.4.1-1 | Development | 160 KB | GNU make 4.4.1, which builds programs from makefiles |
+| MicroPython | `micropython` | 1.29.0-1 | Development | 841 KB | MicroPython 1.29, a lean Python 3 |
+| Python | `python` | 3.14.8-1 | Development | 9871 KB | Python 3.14, the reference implementation (CPython) |
