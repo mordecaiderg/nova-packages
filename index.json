@@ -1,0 +1,84 @@
+{
+ "packages": [
+  {
+   "name": "dash",
+   "version": "0.5.13.5-1",
+   "description": "dash, a small POSIX shell; also /bin/sh",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dash-0.5.13.5-1.npk",
+   "size": 229077,
+   "sha256": "3d9834d83e44e9d188e6b72e1d8d80e4785d011be0210b1bb3003b45a16dc70e"
+  },
+  {
+   "name": "dropbear",
+   "version": "2026.94-1",
+   "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
+   "size": 941130,
+   "sha256": "9ccc0612a2155383f5fb2007edc56486dff17cd1ed72fd6c0144261ff714a70d"
+  },
+  {
+   "name": "kilo",
+   "version": "0.0.0+323d93b-1",
+   "description": "kilo, a small text editor for the terminal",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/kilo-0.0.0_323d93b-1.npk",
+   "size": 70165,
+   "sha256": "a7b4d98d00089746e424bd29f4680c2e2718697dd339e85cb823ceee3dd68e67"
+  },
+  {
+   "name": "ladybird",
+   "version": "2026.10.18+7a8a84e0-1",
+   "description": "Ladybird, a web browser with its own engine: today's web, JavaScript and all",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-1.npk",
+   "size": 126703850,
+   "sha256": "031cb6b26fed96e1f127f1882cb02b442c92b692a52e642e7de47123d7c051f6",
+   "title": "Ladybird",
+   "category": "Internet",
+   "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
+   "app": "web",
+   "icon": "icons/ladybird.png",
+   "icon_sha256": "c6904267ec1569c707297e3142852db0547b3992d94b9329666ab94e2f907492"
+  },
+  {
+   "name": "lua",
+   "version": "5.4.7-1",
+   "description": "Lua 5.4, a small and fast scripting language",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/lua-5.4.7-1.npk",
+   "size": 167025,
+   "sha256": "ce01ad29ff4eaa683d77b211e34808b785ff189b08cd7d176f0707b3adc5dcbc"
+  },
+  {
+   "name": "make",
+   "version": "4.4.1-1",
+   "description": "GNU make 4.4.1, which builds programs from makefiles",
+   "depends": [
+    "dash"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/make-4.4.1-1.npk",
+   "size": 163191,
+   "sha256": "d3c13ed5f291f9c9b46a59abe1d7021341236f00e8257cb0820210e6baa429ac"
+  },
+  {
+   "name": "micropython",
+   "version": "1.29.0-1",
+   "description": "MicroPython 1.29, a lean Python 3",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/micropython-1.29.0-1.npk",
+   "size": 861055,
+   "sha256": "7226d6ba1af749f515bba081443f528e19c704f498d582901aaf14d195e6367f"
+  },
+  {
+   "name": "python",
+   "version": "3.14.8-1",
+   "description": "Python 3.14, the reference implementation (CPython)",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
+   "size": 10107266,
+   "sha256": "a98f88de123cf97649bc01b41599c0e10ee17444cd52c1e2613c030b9dbf5957"
+  }
+ ]
+}
