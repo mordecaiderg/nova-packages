@@ -18,8 +18,8 @@
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
-   "size": 941330,
-   "sha256": "6b07de4707711334abe7e1d1e1090a7111103413f709ff0e1f53c580b2ddf7ec",
+   "size": 941556,
+   "sha256": "ce100fee0460364220acfa2a064b3388631365c79e32d3f67e49828f893f18e2",
    "title": "Dropbear SSH",
    "category": "Internet",
    "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
@@ -83,8 +83,8 @@
    "description": "MicroPython 1.29, a lean Python 3",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/micropython-1.29.0-1.npk",
-   "size": 861171,
-   "sha256": "809418e2404a6378b4179cb70d700b0e16388e98c421bec5938dd713cc7f135d",
+   "size": 860185,
+   "sha256": "a5eac2b796552d3c39f621a8eed2ed9f5c495ac6c7d390ddc1eae9b8907df7e3",
    "title": "MicroPython",
    "category": "Development",
    "about": "A lean Python 3 that starts in an instant: micropython FILE.py runs a script. For the full language and its standard library, there is Python."
@@ -95,11 +95,26 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10107578,
-   "sha256": "5d26d7e2f203cd32ae6525776b7988d8e78c4bf66f984e92ab799965f5026107",
+   "size": 10107749,
+   "sha256": "b3a49dced45502aee99db73e7a99f4eae6016e2affbed8c615bb27de94d19850",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
+  },
+  {
+   "name": "yipyap-server",
+   "version": "0.1.0+ec9c343-1",
+   "description": "Run your own Discord-style chat server, with a web client for any browser",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.1.0_ec9c343-1.npk",
+   "size": 1210957,
+   "sha256": "989ed0975ab215a6cb532d5ba834e161ac3a3d9070330ada27c8c5686fa21529",
+   "title": "YipYap Server",
+   "category": "Internet",
+   "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
+   "app": "yipyap",
+   "icon": "icons/yipyap-server.png",
+   "icon_sha256": "bf06f706de4fedb0e8d70b94cbfb86c8e71ee571e761da40628cbee3fd50b265"
   }
  ]
 }

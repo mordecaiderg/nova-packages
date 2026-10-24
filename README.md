@@ -17,3 +17,4 @@ written by Nova's `make publish`: don't edit it by hand.
 | GNU Make | `make` | 4.4.1-1 | Development | 160 KB | GNU make 4.4.1, which builds programs from makefiles |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 841 KB | MicroPython 1.29, a lean Python 3 |
 | Python | `python` | 3.14.8-1 | Development | 9871 KB | Python 3.14, the reference implementation (CPython) |
+| YipYap Server | `yipyap-server` | 0.1.0+ec9c343-1 | Internet | 1183 KB | Run your own Discord-style chat server, with a web client for any browser |
