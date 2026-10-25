@@ -10,12 +10,12 @@ written by Nova's `make publish`: don't edit it by hand.
 | Package | Name | Version | Category | Download | About |
 |---|---|---|---|---|---|
 | Dash | `dash` | 0.5.13.5-1 | System | 224 KB | dash, a small POSIX shell; also /bin/sh |
-| Dropbear SSH | `dropbear` | 2026.94-1 | Internet | 920 KB | Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey |
+| Dropbear SSH | `dropbear` | 2026.94-1 | Internet | 919 KB | Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey |
 | Kilo | `kilo` | 0.0.0+323d93b-1 | Utilities | 69 KB | kilo, a small text editor for the terminal |
-| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-1 | Internet | 123735 KB | A web browser with its own engine: today's web, JavaScript and all |
-| Lua | `lua` | 5.4.7-1 | Development | 164 KB | Lua 5.4, a small and fast scripting language |
+| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-2 | Internet | 123734 KB | A web browser with its own engine: today's web, JavaScript and all |
+| Lua | `lua` | 5.4.7-1 | Development | 163 KB | Lua 5.4, a small and fast scripting language |
 | GNU Make | `make` | 4.4.1-1 | Development | 160 KB | GNU make 4.4.1, which builds programs from makefiles |
-| MicroPython | `micropython` | 1.29.0-1 | Development | 841 KB | MicroPython 1.29, a lean Python 3 |
-| Nova | `nova` | 2026.10.25.1812 | System | 42274 KB | Nova itself: the kernel and the system every app runs on |
-| Python | `python` | 3.14.8-1 | Development | 9872 KB | Python 3.14, the reference implementation (CPython) |
+| MicroPython | `micropython` | 1.29.0-1 | Development | 840 KB | MicroPython 1.29, a lean Python 3 |
+| Nova | `nova` | 2026.10.25.1846 | System | 42246 KB | Nova itself: the kernel and the system every app runs on |
+| Python | `python` | 3.14.8-1 | Development | 9871 KB | Python 3.14, the reference implementation (CPython) |
 | YipYap Server | `yipyap-server` | 0.1.4+efb853a-1 | Internet | 1190 KB | Run your own Discord-style chat server, with a web client for any browser |
