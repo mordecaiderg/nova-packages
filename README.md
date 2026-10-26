@@ -11,8 +11,9 @@ written by Nova's `make publish`: don't edit it by hand.
 |---|---|---|---|---|---|
 | Dash | `dash` | 0.5.13.5-1 | System | 224 KB | dash, a small POSIX shell; also /bin/sh |
 | Dropbear SSH | `dropbear` | 2026.94-1 | Internet | 919 KB | Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey |
+| Noto Fonts | `fonts-noto` | 2026.10.26-1 | System | 20084 KB | Noto fonts: Chinese, Japanese, Korean, many more scripts, symbols and color emoji |
 | Kilo | `kilo` | 0.0.0+323d93b-1 | Utilities | 69 KB | kilo, a small text editor for the terminal |
-| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-3 | Internet | 123732 KB | A web browser with its own engine: today's web, JavaScript and all |
+| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-4 | Internet | 123731 KB | A web browser with its own engine: today's web, JavaScript and all |
 | Lua | `lua` | 5.4.7-1 | Development | 163 KB | Lua 5.4, a small and fast scripting language |
 | GNU Make | `make` | 4.4.1-1 | Development | 160 KB | GNU make 4.4.1, which builds programs from makefiles |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 840 KB | MicroPython 1.29, a lean Python 3 |

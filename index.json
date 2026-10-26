@@ -25,6 +25,18 @@
    "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
   },
   {
+   "name": "fonts-noto",
+   "version": "2026.10.26-1",
+   "description": "Noto fonts: Chinese, Japanese, Korean, many more scripts, symbols and color emoji",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/fonts-noto-2026.10.26-1.npk",
+   "size": 20565223,
+   "sha256": "c12ccdd50cf159930f178ef881ecb05702e301380ff71005fe4bf4c1b21f7673",
+   "title": "Noto Fonts",
+   "category": "System",
+   "about": "Fonts for the writing systems, symbols and emoji that Nova's own fonts don't have, so pages in Chinese, Japanese, Korean, Hebrew, Thai, Hindi and many more languages, and emoji, show up in the browser instead of empty boxes. Google's Noto family, under the SIL Open Font License."
+  },
+  {
    "name": "kilo",
    "version": "0.0.0+323d93b-1",
    "description": "kilo, a small text editor for the terminal",
@@ -38,12 +50,14 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-3",
+   "version": "2026.10.18+7a8a84e0-4",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-3.npk",
-   "size": 126700655,
-   "sha256": "2f57a0cf00f426b1901db54a2844427ffa71ae9a4faf4acac10e258e0847d699",
+   "depends": [
+    "fonts-noto"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-4.npk",
+   "size": 126700277,
+   "sha256": "96e71076af14c308081f284aa6d6cab797441672e9a2b09c7a9d8354d7649f49",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
