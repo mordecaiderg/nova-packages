@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.26.2333",
+   "version": "2026.10.27.1755",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2333.npk",
-   "size": 43649970,
-   "sha256": "0f0a0e5d8b1c956b1376f1f9a55afd43ad340158e9e7a6f68da2f0e99afe4f83",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.27.1755.npk",
+   "size": 43652028,
+   "sha256": "5d2aaac6ef7b44c861172f77be95460106fdfc90b51d3eb21d59bcd8af4fc5c2",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.27.1755",
+     "notes": "- A program keeps running when its file is replaced (an upgrade)"
+    },
     {
      "version": "2026.10.26.2333",
      "notes": "- Select several files, and drag and drop across the desktop"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.24.1950",
      "notes": "- Programs on a disk are read as they run, not whole at the start"
-    },
-    {
-     "version": "2026.10.24.1931",
-     "notes": "- Power-loss repair for exFAT and ext2, as FAT32 has"
     }
    ],
    "icon": "icons/nova.png",
