@@ -129,17 +129,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.26.2004",
+   "version": "2026.10.26.2058",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2004.npk",
-   "size": 43282091,
-   "sha256": "351093bc5b039eaf8583eefc94384196aa129d049603678b0152bb42537140ce",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2058.npk",
+   "size": 43286606,
+   "sha256": "22d11b643adeb7093cbd0ed27b35b1580b01852417853ae41f979009586938cb",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.26.2058",
+     "notes": "- Files: a right-click menu, Properties and a Bin for deleted files"
+    },
     {
      "version": "2026.10.26.2004",
      "notes": "- The Store shows what each update changes"
@@ -255,10 +259,6 @@
     {
      "version": "2026.10.24.1821",
      "notes": "- YipYap Server as a package, with an app to run it"
-    },
-    {
-     "version": "2026.10.20.2244",
-     "notes": "- An installer: Install Nova puts Nova on a whole disk of the PC"
     }
    ],
    "icon": "icons/nova.png",
