@@ -19,4 +19,4 @@ written by Nova's `make publish`: don't edit it by hand.
 | MicroPython | `micropython` | 1.29.0-1 | Development | 843 KB | MicroPython 1.29, a lean Python 3 |
 | Nova | `nova` | 2026.10.27.1755 | System | 42629 KB | Nova itself: the kernel and the system every app runs on |
 | Python | `python` | 3.14.8-1 | Development | 9871 KB | Python 3.14, the reference implementation (CPython) |
-| YipYap Server | `yipyap-server` | 0.2.0+0a2841c-1 | Internet | 1266 KB | Run your own Discord-style chat server, with a web client for any browser |
+| YipYap Server | `yipyap-server` | 0.2.1+fea76b7-1 | Internet | 1267 KB | Run your own Discord-style chat server, with a web client for any browser |

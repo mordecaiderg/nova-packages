@@ -290,17 +290,21 @@
   },
   {
    "name": "yipyap-server",
-   "version": "0.2.0+0a2841c-1",
+   "version": "0.2.1+fea76b7-1",
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.0_0a2841c-1.npk",
-   "size": 1296222,
-   "sha256": "aebc3eb21e9d107f1f5a16217649f8f2eeacb81033f10ca5259fac632e2c5efd",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.1_fea76b7-1.npk",
+   "size": 1296495,
+   "sha256": "6e9f3a916d839174cdbbddda2d76d6f55b8c819498f45170943ac006ee16838b",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard. Profiles have pictures (animated ones too) and banners, the web client installs as an app, and it can send notifications while it's closed.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
    "app": "yipyap",
    "changes": [
+    {
+     "version": "0.2.1+fea76b7-1",
+     "notes": "- On iPhone, the page no longer scrolls behind menus and drawers, and side panels stay clear of the status bar and the home bar."
+    },
     {
      "version": "0.2.0+0a2841c-1",
      "notes": "- Profiles: a picture (animated ones play on hover) and a banner, with a card and an editor that crops them.\n- The web client installs as an app, and works offline as far as it can.\n- Notifications while YipYap is closed (Web Push), also on Nova."
