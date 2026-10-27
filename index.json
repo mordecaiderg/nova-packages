@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.27.1755",
+   "version": "2026.10.27.1836",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.27.1755.npk",
-   "size": 43652028,
-   "sha256": "5d2aaac6ef7b44c861172f77be95460106fdfc90b51d3eb21d59bcd8af4fc5c2",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.27.1836.npk",
+   "size": 43956745,
+   "sha256": "7c07c85db20751a2d4461ddd09a6ae0d50683218bb631f5c93da4fff31f228b9",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.27.1836",
+     "notes": "- Services: servicesd keeps them running, svc manages them; YipYap is one"
+    },
     {
      "version": "2026.10.27.1755",
      "notes": "- A program keeps running when its file is replaced (an upgrade)"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.24.2010",
      "notes": "- System updates: Nova updates itself from the Store"
-    },
-    {
-     "version": "2026.10.24.1950",
-     "notes": "- Programs on a disk are read as they run, not whole at the start"
     }
    ],
    "icon": "icons/nova.png",
@@ -290,17 +290,21 @@
   },
   {
    "name": "yipyap-server",
-   "version": "0.2.1+fea76b7-1",
+   "version": "0.2.1+fea76b7-2",
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.1_fea76b7-1.npk",
-   "size": 1296495,
-   "sha256": "6e9f3a916d839174cdbbddda2d76d6f55b8c819498f45170943ac006ee16838b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.1_fea76b7-2.npk",
+   "size": 1296822,
+   "sha256": "eef74f8cc705e21c0e9a29e4e9be8cfefa7911f0cdf113019efbca622480201e",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard. Profiles have pictures (animated ones too) and banners, the web client installs as an app, and it can send notifications while it's closed.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
    "app": "yipyap",
    "changes": [
+    {
+     "version": "0.2.1+fea76b7-2",
+     "notes": "- The server runs as a Nova service: if it ever crashes, Nova starts it again by itself, and its log keeps the time of every line (needs Nova 2026.10.27 or newer).\n- \"Start with Nova\" moves over to Nova's services by itself the first time you open the app."
+    },
     {
      "version": "0.2.1+fea76b7-1",
      "notes": "- On iPhone, the page no longer scrolls behind menus and drawers, and side panels stay clear of the status bar and the home bar."
