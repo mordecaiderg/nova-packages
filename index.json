@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-6",
+   "version": "2026.10.18+7a8a84e0-7",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-6.npk",
-   "size": 126731035,
-   "sha256": "b76f19bd562dc7a0f785d1c138756b9bf80c06959e9828d7d8bf9af84b708736",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-7.npk",
+   "size": 126729073,
+   "sha256": "6696c2c97b2d7b5f4efb2dde7114258a658b86213a038808c30d3b93d2afd436",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-7",
+     "notes": "- \"Open in New Tab\" (and links that open a new tab) show the tab: before, the page loaded somewhere hidden.\n- View Source works on big pages: their source is shown as plain text, in seconds instead of minutes.\n- No crash when the browser is closed with the Downloads page open."
+    },
     {
      "version": "2026.10.18+7a8a84e0-6",
      "notes": "- Downloads work: they go into the new Downloads folder, and a notification says when each is done (or why it failed).\n- A Downloads button in the toolbar (or Ctrl+J) lists them, with progress while they run and Open / Show in folder when done.\n- \"Download Linked File As...\" asks where to save in Nova's Save window; screenshots from the page menu save the same way."
