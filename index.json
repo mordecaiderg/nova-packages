@@ -290,17 +290,21 @@
   },
   {
    "name": "yipyap-server",
-   "version": "0.1.8+f55f08b-1",
+   "version": "0.2.0+0a2841c-1",
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.1.8_f55f08b-1.npk",
-   "size": 1220374,
-   "sha256": "1595e6845844ec7ba79838e4f1ef342c2fad968aecec5186e2768dea4216b5b4",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.0_0a2841c-1.npk",
+   "size": 1296222,
+   "sha256": "aebc3eb21e9d107f1f5a16217649f8f2eeacb81033f10ca5259fac632e2c5efd",
    "title": "YipYap Server",
    "category": "Internet",
-   "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
+   "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard. Profiles have pictures (animated ones too) and banners, the web client installs as an app, and it can send notifications while it's closed.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
    "app": "yipyap",
    "changes": [
+    {
+     "version": "0.2.0+0a2841c-1",
+     "notes": "- Profiles: a picture (animated ones play on hover) and a banner, with a card and an editor that crops them.\n- The web client installs as an app, and works offline as far as it can.\n- Notifications while YipYap is closed (Web Push), also on Nova."
+    },
     {
      "version": "0.1.8+f55f08b-1",
      "notes": "- Open in browser works again with a certificate made by an older version: one that doesn't name 127.0.0.1 or this computer's address is made again at start."
