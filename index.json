@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.27.1836",
+   "version": "2026.10.27.1902",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.27.1836.npk",
-   "size": 43956745,
-   "sha256": "7c07c85db20751a2d4461ddd09a6ae0d50683218bb631f5c93da4fff31f228b9",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.27.1902.npk",
+   "size": 44132881,
+   "sha256": "6855293a9c91b42600b506f964b1dbc328fcb4b521eba5da009bc3e52106afd8",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.27.1902",
+     "notes": "- A web dashboard (novad), and updates restart the services they replace"
+    },
     {
      "version": "2026.10.27.1836",
      "notes": "- Services: servicesd keeps them running, svc manages them; YipYap is one"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.24.2042",
      "notes": "- Started from the stick, leave a disk Nova is installed on alone"
-    },
-    {
-     "version": "2026.10.24.2010",
-     "notes": "- System updates: Nova updates itself from the Store"
     }
    ],
    "icon": "icons/nova.png",
@@ -282,8 +282,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10107353,
-   "sha256": "61cb30b64ba7b221fcd3fbf68b7d8057cd3d660ee917c059d4cdf6566338c18a",
+   "size": 10107408,
+   "sha256": "bbc294ced62321273aeebefcc3732eeeb47133d9b383bacc2356bc5735f1f08d",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
