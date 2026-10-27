@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-5",
+   "version": "2026.10.18+7a8a84e0-6",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-5.npk",
-   "size": 126717182,
-   "sha256": "0d8a0f5ea15cec6cea98b0f643f90e7cbb7e8c2de78e5e1290f73bcab25bdecf",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-6.npk",
+   "size": 126731035,
+   "sha256": "b76f19bd562dc7a0f785d1c138756b9bf80c06959e9828d7d8bf9af84b708736",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-6",
+     "notes": "- Downloads work: they go into the new Downloads folder, and a notification says when each is done (or why it failed).\n- A Downloads button in the toolbar (or Ctrl+J) lists them, with progress while they run and Open / Show in folder when done.\n- \"Download Linked File As...\" asks where to save in Nova's Save window; screenshots from the page menu save the same way."
+    },
     {
      "version": "2026.10.18+7a8a84e0-5",
      "notes": "- Right-click menus: on a page (back, forward, reload, copy, paste, select all, view source), a link (open in a new tab, download, copy its address), an image (open, save, copy) and selected text (search the web). The address bar has cut, copy, paste and \"Paste and Go\"; a tab has new tab, reload and close."
@@ -133,17 +137,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.26.2150",
+   "version": "2026.10.26.2222",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2150.npk",
-   "size": 43585624,
-   "sha256": "7ec161e60b597184ea7964aa56d247069e042511baf44d1322da495f7ccdc876",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2222.npk",
+   "size": 43594045,
+   "sha256": "52de3aa6a948329293b4b9959509cdff9765138e071a29b45cdc4ed1b1eaabf2",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.26.2222",
+     "notes": "- Downloads that work, a Downloads list and a Save window"
+    },
     {
      "version": "2026.10.26.2150",
      "notes": "- Right-click menus everywhere, Photos, picture wallpapers and MP3s"
@@ -259,10 +267,6 @@
     {
      "version": "2026.10.24.1906",
      "notes": "- FAT32: keep 4 MiB of the table in memory, not all of it"
-    },
-    {
-     "version": "2026.10.24.1848",
-     "notes": "- Install Nova on a USB stick, and never on the stick Nova started from"
     }
    ],
    "icon": "icons/nova.png",
@@ -274,8 +278,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10107466,
-   "sha256": "169b79854c0d3c2113d583969db97f81a5a2508856e3fae6fa0522312cfd6474",
+   "size": 10107500,
+   "sha256": "87bbb0b5a918ff64629cbcd81a6e56643226e9c4db226e52430058678b3f0e1f",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
