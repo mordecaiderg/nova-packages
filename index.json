@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-4",
+   "version": "2026.10.18+7a8a84e0-5",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-4.npk",
-   "size": 126700230,
-   "sha256": "48917a0e4423d2455c57cb298177879688cc6c196a0bedda450d82416c69c9d3",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-5.npk",
+   "size": 126717182,
+   "sha256": "0d8a0f5ea15cec6cea98b0f643f90e7cbb7e8c2de78e5e1290f73bcab25bdecf",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-5",
+     "notes": "- Right-click menus: on a page (back, forward, reload, copy, paste, select all, view source), a link (open in a new tab, download, copy its address), an image (open, save, copy) and selected text (search the web). The address bar has cut, copy, paste and \"Paste and Go\"; a tab has new tab, reload and close."
+    },
     {
      "version": "2026.10.18+7a8a84e0-4",
      "notes": "- Emoji, symbols, math and every language's letters show on web pages: the browser now looks through all of Nova's fonts for a character the page's font lacks.\n- Brings the new Noto Fonts package with it."
@@ -129,17 +133,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.26.2058",
+   "version": "2026.10.26.2150",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2058.npk",
-   "size": 43286606,
-   "sha256": "22d11b643adeb7093cbd0ed27b35b1580b01852417853ae41f979009586938cb",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2150.npk",
+   "size": 43585624,
+   "sha256": "7ec161e60b597184ea7964aa56d247069e042511baf44d1322da495f7ccdc876",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.26.2150",
+     "notes": "- Right-click menus everywhere, Photos, picture wallpapers and MP3s"
+    },
     {
      "version": "2026.10.26.2058",
      "notes": "- Files: a right-click menu, Properties and a Bin for deleted files"
@@ -255,10 +263,6 @@
     {
      "version": "2026.10.24.1848",
      "notes": "- Install Nova on a USB stick, and never on the stick Nova started from"
-    },
-    {
-     "version": "2026.10.24.1821",
-     "notes": "- YipYap Server as a package, with an app to run it"
     }
    ],
    "icon": "icons/nova.png",
@@ -270,8 +274,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10107470,
-   "sha256": "85fc16dd5212a59226f76ff6390b86dcef04317ed06a50f719a67e1630aac5a7",
+   "size": 10107466,
+   "sha256": "169b79854c0d3c2113d583969db97f81a5a2508856e3fae6fa0522312cfd6474",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
