@@ -18,8 +18,8 @@
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
-   "size": 940616,
-   "sha256": "cc2f0b48f44a4679dae0e4cbea044cd2b53c85df07edb854d4565eeed2bc9643",
+   "size": 940828,
+   "sha256": "202e5a429c1a49dcc91493a290844bce224101316b9d5fd41d5266be075c520e",
    "title": "Dropbear SSH",
    "category": "Internet",
    "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
@@ -133,25 +133,29 @@
    "description": "MicroPython 1.29, a lean Python 3",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/micropython-1.29.0-1.npk",
-   "size": 859974,
-   "sha256": "f13dd391a5fa1d7c1687c729615d3747fdcd6fa4fee659d5d2809ccf1520b443",
+   "size": 862877,
+   "sha256": "21b41e4f07ec7a3f9cbe00e9d3dce01dc2b666ea46be344fd00d95a197a6f72f",
    "title": "MicroPython",
    "category": "Development",
    "about": "A lean Python 3 that starts in an instant: micropython FILE.py runs a script. For the full language and its standard library, there is Python."
   },
   {
    "name": "nova",
-   "version": "2026.10.26.2311",
+   "version": "2026.10.26.2333",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2311.npk",
-   "size": 43634703,
-   "sha256": "9e1d97487902ec7392c9ad646a7e0f54e2f9237cbe48c868d12219b40e44c8bc",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2333.npk",
+   "size": 43649970,
+   "sha256": "0f0a0e5d8b1c956b1376f1f9a55afd43ad340158e9e7a6f68da2f0e99afe4f83",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.26.2333",
+     "notes": "- Select several files, and drag and drop across the desktop"
+    },
     {
      "version": "2026.10.26.2311",
      "notes": "- Right-click menus in the Store, Task Manager, Music, Disks, Paint and more"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.24.1931",
      "notes": "- Power-loss repair for exFAT and ext2, as FAT32 has"
-    },
-    {
-     "version": "2026.10.24.1912",
-     "notes": "- The installer asks for the format: ext2 (default), exFAT or FAT32"
     }
    ],
    "icon": "icons/nova.png",
@@ -282,8 +282,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10107500,
-   "sha256": "87bbb0b5a918ff64629cbcd81a6e56643226e9c4db226e52430058678b3f0e1f",
+   "size": 10107353,
+   "sha256": "61cb30b64ba7b221fcd3fbf68b7d8057cd3d660ee917c059d4cdf6566338c18a",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
@@ -294,8 +294,8 @@
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.1.8_f55f08b-1.npk",
-   "size": 1220209,
-   "sha256": "09c6c572e6acc2d1f219e2a02100a2dceb8b071a3376ebca0c372078b438e92a",
+   "size": 1220374,
+   "sha256": "1595e6845844ec7ba79838e4f1ef342c2fad968aecec5186e2768dea4216b5b4",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
