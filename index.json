@@ -30,11 +30,17 @@
    "description": "Noto fonts: Chinese, Japanese, Korean, many more scripts, symbols and color emoji",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/fonts-noto-2026.10.26-1.npk",
-   "size": 20565223,
-   "sha256": "c12ccdd50cf159930f178ef881ecb05702e301380ff71005fe4bf4c1b21f7673",
+   "size": 20565290,
+   "sha256": "2f8d4e4b67bec3b0ac44c273e2823bce3e4acac7737eecfd61834c43f884373d",
    "title": "Noto Fonts",
    "category": "System",
-   "about": "Fonts for the writing systems, symbols and emoji that Nova's own fonts don't have, so pages in Chinese, Japanese, Korean, Hebrew, Thai, Hindi and many more languages, and emoji, show up in the browser instead of empty boxes. Google's Noto family, under the SIL Open Font License."
+   "about": "Fonts for the writing systems, symbols and emoji that Nova's own fonts don't have, so pages in Chinese, Japanese, Korean, Hebrew, Thai, Hindi and many more languages, and emoji, show up in the browser instead of empty boxes. Google's Noto family, under the SIL Open Font License.",
+   "changes": [
+    {
+     "version": "2026.10.26-1",
+     "notes": "- The first version: Chinese, Japanese and Korean, many other scripts, symbols, math and color emoji for the browser."
+    }
+   ]
   },
   {
    "name": "kilo",
@@ -56,12 +62,30 @@
     "fonts-noto"
    ],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-4.npk",
-   "size": 126700277,
-   "sha256": "96e71076af14c308081f284aa6d6cab797441672e9a2b09c7a9d8354d7649f49",
+   "size": 126700230,
+   "sha256": "48917a0e4423d2455c57cb298177879688cc6c196a0bedda450d82416c69c9d3",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
+   "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-4",
+     "notes": "- Emoji, symbols, math and every language's letters show on web pages: the browser now looks through all of Nova's fonts for a character the page's font lacks.\n- Brings the new Noto Fonts package with it."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-3",
+     "notes": "- The address bar edits like a text field: click to place the cursor, move it with the arrow keys, select with the mouse or Shift, and copy, cut and paste."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-2",
+     "notes": "- Pages that start helper programs no longer fail."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-1",
+     "notes": "- The first Ladybird for Nova."
+    }
+   ],
    "icon": "icons/ladybird.png",
    "icon_sha256": "c6904267ec1569c707297e3142852db0547b3992d94b9329666ab94e2f907492"
   },
@@ -105,16 +129,138 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.26.1807",
+   "version": "2026.10.26.2004",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.1807.npk",
-   "size": 43277741,
-   "sha256": "8646fd929c84c976f504a1c661afce37402bd4a690559f91ab9ab20cd7a5e89b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.26.2004.npk",
+   "size": 43282091,
+   "sha256": "351093bc5b039eaf8583eefc94384196aa129d049603678b0152bb42537140ce",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
+   "changes": [
+    {
+     "version": "2026.10.26.2004",
+     "notes": "- The Store shows what each update changes"
+    },
+    {
+     "version": "2026.10.26.1807",
+     "notes": "- Terminal copies with Ctrl+C or a right-click; the browser's address bar edits"
+    },
+    {
+     "version": "2026.10.26.1728",
+     "notes": "- Copy and paste in the Editor, Terminal and Files"
+    },
+    {
+     "version": "2026.10.25.2347",
+     "notes": "- YipYap Server 0.1.6: its HTTPS works in Nova's own browser at 127.0.0.1"
+    },
+    {
+     "version": "2026.10.25.2300",
+     "notes": "- Keep free memory in one piece; mmap finds room without rescanning every region"
+    },
+    {
+     "version": "2026.10.25.2026",
+     "notes": "- Kernel heap in size classes: kmalloc and kfree no longer walk the heap"
+    },
+    {
+     "version": "2026.10.25.2003",
+     "notes": "- An AP's tick with nothing to do leaves the kernel lock alone"
+    },
+    {
+     "version": "2026.10.25.1959",
+     "notes": "- Scheduler and wake-ups no longer walk every task"
+    },
+    {
+     "version": "2026.10.25.1846",
+     "notes": "- posix_spawn takes file actions for any fd, not only those below 128"
+    },
+    {
+     "version": "2026.10.25.1812",
+     "notes": "- Room for 4096 processes and threads"
+    },
+    {
+     "version": "2026.10.25.1748",
+     "notes": "- A block cache sized to memory: metadata reads come from memory"
+    },
+    {
+     "version": "2026.10.25.1649",
+     "notes": "- Room for a browser's connections: 1024 TCP, 4096 fds, waiting DNS lookups"
+    },
+    {
+     "version": "2026.10.25.1621",
+     "notes": "- Received TCP data leaves lwIP's shared buffers at once"
+    },
+    {
+     "version": "2026.10.25.1308",
+     "notes": "- Pipe buffers come from pages; the kernel heap grows with memory"
+    },
+    {
+     "version": "2026.10.25.1237",
+     "notes": "- Map usable memory the direct map lacks; kernel crash reports name the caller"
+    },
+    {
+     "version": "2026.10.25.0406",
+     "notes": "- System updates make room by keeping only the running version"
+    },
+    {
+     "version": "2026.10.25.0357",
+     "notes": "- Install Nova leaves the launcher once Nova runs from its installed disk"
+    },
+    {
+     "version": "2026.10.25.0342",
+     "notes": "- Nova's version counts only commits that change the system"
+    },
+    {
+     "version": "2026.10.25.0306",
+     "notes": "- Web starts Ladybird without its HTTP disk cache"
+    },
+    {
+     "version": "2026.10.24.2302",
+     "notes": "- Formatting clears the other filesystems' signatures"
+    },
+    {
+     "version": "2026.10.24.2056",
+     "notes": "- Say when the stick's Nova runs on a PC Nova is installed on; the Store's errors read whole"
+    },
+    {
+     "version": "2026.10.24.2042",
+     "notes": "- Started from the stick, leave a disk Nova is installed on alone"
+    },
+    {
+     "version": "2026.10.24.2010",
+     "notes": "- System updates: Nova updates itself from the Store"
+    },
+    {
+     "version": "2026.10.24.1950",
+     "notes": "- Programs on a disk are read as they run, not whole at the start"
+    },
+    {
+     "version": "2026.10.24.1931",
+     "notes": "- Power-loss repair for exFAT and ext2, as FAT32 has"
+    },
+    {
+     "version": "2026.10.24.1912",
+     "notes": "- The installer asks for the format: ext2 (default), exFAT or FAT32"
+    },
+    {
+     "version": "2026.10.24.1906",
+     "notes": "- FAT32: keep 4 MiB of the table in memory, not all of it"
+    },
+    {
+     "version": "2026.10.24.1848",
+     "notes": "- Install Nova on a USB stick, and never on the stick Nova started from"
+    },
+    {
+     "version": "2026.10.24.1821",
+     "notes": "- YipYap Server as a package, with an app to run it"
+    },
+    {
+     "version": "2026.10.20.2244",
+     "notes": "- An installer: Install Nova puts Nova on a whole disk of the PC"
+    }
+   ],
    "icon": "icons/nova.png",
    "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
   },
@@ -124,8 +270,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10107380,
-   "sha256": "ae15c87633d1a9a97f0df25a6a26a2545dd0b2a49dc976c76212c25b598a668f",
+   "size": 10107470,
+   "sha256": "85fc16dd5212a59226f76ff6390b86dcef04317ed06a50f719a67e1630aac5a7",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
@@ -136,12 +282,46 @@
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.1.8_f55f08b-1.npk",
-   "size": 1219924,
-   "sha256": "3d63c4944c1a5f9f5b852ee7c0963a2a69ab67cb0c303380dfc7b8f7d95ce5e7",
+   "size": 1220209,
+   "sha256": "09c6c572e6acc2d1f219e2a02100a2dceb8b071a3376ebca0c372078b438e92a",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
    "app": "yipyap",
+   "changes": [
+    {
+     "version": "0.1.8+f55f08b-1",
+     "notes": "- Open in browser works again with a certificate made by an older version: one that doesn't name 127.0.0.1 or this computer's address is made again at start."
+    },
+    {
+     "version": "0.1.7",
+     "notes": "- An address typed without https:// still opens the chat: plain HTTP is sent on to HTTPS."
+    },
+    {
+     "version": "0.1.6",
+     "notes": "- HTTPS works in Nova's own browser at 127.0.0.1."
+    },
+    {
+     "version": "0.1.5",
+     "notes": "- Call tiles are centered; close buttons and icons are easier to see."
+    },
+    {
+     "version": "0.1.4",
+     "notes": "- Call audio fixed."
+    },
+    {
+     "version": "0.1.3",
+     "notes": "- Big files arrive whole over HTTPS."
+    },
+    {
+     "version": "0.1.2",
+     "notes": "- HTTPS with no setup."
+    },
+    {
+     "version": "0.1.1",
+     "notes": "- HTTPS with a certificate made on Nova."
+    }
+   ],
    "icon": "icons/yipyap-server.png",
    "icon_sha256": "bf06f706de4fedb0e8d70b94cbfb86c8e71ee571e761da40628cbee3fd50b265"
   }
