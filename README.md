@@ -17,6 +17,6 @@ written by Nova's `make publish`: don't edit it by hand.
 | Lua | `lua` | 5.4.7-1 | Development | 163 KB | Lua 5.4, a small and fast scripting language |
 | GNU Make | `make` | 4.4.1-1 | Development | 160 KB | GNU make 4.4.1, which builds programs from makefiles |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 843 KB | MicroPython 1.29, a lean Python 3 |
-| Nova | `nova` | 2026.10.27.2256 | System | 43244 KB | Nova itself: the kernel and the system every app runs on |
+| Nova | `nova` | 2026.10.27.2335 | System | 43246 KB | Nova itself: the kernel and the system every app runs on |
 | Python | `python` | 3.14.8-1 | Development | 9871 KB | Python 3.14, the reference implementation (CPython) |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1269 KB | Run your own Discord-style chat server, with a web client for any browser |
