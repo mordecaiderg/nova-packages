@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.28.0040",
+   "version": "2026.10.28.1932",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.28.0040.npk",
-   "size": 44291974,
-   "sha256": "90cc0663f4445c51fbf6303c7295c8e373e14cfa485c31d12e5a353f96005744",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.28.1932.npk",
+   "size": 44291837,
+   "sha256": "09319cc3904d8c30220db430522814c69e8065d05ed93668054590c06bdf8577",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.28.1932",
+     "notes": "- Store: removing a source asks \"Sure?\" first, as removing a package does"
+    },
     {
      "version": "2026.10.28.0040",
      "notes": "- nvidia: the display, through NVIDIA's own display driver (first try)"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.25.1621",
      "notes": "- Received TCP data leaves lwIP's shared buffers at once"
-    },
-    {
-     "version": "2026.10.25.1308",
-     "notes": "- Pipe buffers come from pages; the kernel heap grows with memory"
     }
    ],
    "icon": "icons/nova.png",
