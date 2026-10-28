@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.27.2222",
+   "version": "2026.10.27.2256",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.27.2222.npk",
-   "size": 44280851,
-   "sha256": "6b264448901052419940a8d3eba3295a8a2c84247b8b1a508cbf6651657e0793",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.27.2256.npk",
+   "size": 44280983,
+   "sha256": "13a0c5ba3da350388c68160f795d3043c53e66f8bbf3c3a45258310d58d3e980",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.27.2256",
+     "notes": "- nvidia: connect the GPU's interrupts (MSI)"
+    },
     {
      "version": "2026.10.27.2222",
      "notes": "- Drivers from packages, and NVIDIA's open GPU driver as one (first stage)"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.25.0342",
      "notes": "- Nova's version counts only commits that change the system"
-    },
-    {
-     "version": "2026.10.25.0306",
-     "notes": "- Web starts Ladybird without its HTTP disk cache"
     }
    ],
    "icon": "icons/nova.png",
