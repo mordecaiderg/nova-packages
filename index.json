@@ -2,15 +2,25 @@
  "packages": [
   {
    "name": "nvidia",
-   "version": "570.144-1",
+   "version": "570.144-2",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-1.npk",
-   "size": 60135023,
-   "sha256": "b2138c984a60636c422e1872e1017096dfc0bcaf92945b9ed7c444d778c76efa",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-2.npk",
+   "size": 60135388,
+   "sha256": "0ebe0caef1f6e0c99fc1679c7bd2a4a7b70a057ae991f92a902b1e57f14ca660",
    "title": "NVIDIA Graphics",
    "category": "System",
-   "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off."
+   "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
+   "changes": [
+    {
+     "version": "570.144-2",
+     "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-1",
+     "notes": "- First test: finds the card, starts NVIDIA's driver and the card's firmware, and writes what happened to /var/log/nvidia.log."
+    }
+   ]
   }
  ]
 }

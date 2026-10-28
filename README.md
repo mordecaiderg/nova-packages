@@ -9,4 +9,4 @@ written by Nova's `make publish`: don't edit it by hand.
 
 | Package | Name | Version | Category | Download | About |
 |---|---|---|---|---|---|
-| NVIDIA Graphics | `nvidia` | 570.144-1 | System | 58726 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU) |
+| NVIDIA Graphics | `nvidia` | 570.144-2 | System | 58726 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU) |
