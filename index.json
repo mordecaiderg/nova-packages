@@ -290,17 +290,21 @@
   },
   {
    "name": "yipyap-server",
-   "version": "0.2.3+4b3e452-1",
+   "version": "0.2.4+f502b00-1",
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.3_4b3e452-1.npk",
-   "size": 1298074,
-   "sha256": "5951b0a1381e122c6029b019d24b8c0b1baae5fb5e790bb80e18e9d38c94cbd2",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.4_f502b00-1.npk",
+   "size": 1298616,
+   "sha256": "b09a9c8086934197af5f2dfcac115a6fd9ccac9e0c9ca1408a90a6c6aa296459",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard. Profiles have pictures (animated ones too) and banners, the web client installs as an app, and it can send notifications while it's closed.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
    "app": "yipyap",
    "changes": [
+    {
+     "version": "0.2.4+f502b00-1",
+     "notes": "- Server settings can go in /var/lib/yipyap/yipyap.db.conf, one per line (for example \"push-contact mailto:you@example.org\"), since the app starts the server without options."
+    },
     {
      "version": "0.2.3+4b3e452-1",
      "notes": "- A new device (or the app installed again) starts with old messages read, instead of showing the whole history as unread.\n- When a phone's notification service refuses a notification, the server's log says why."
