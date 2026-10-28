@@ -2,16 +2,20 @@
  "packages": [
   {
    "name": "nvidia",
-   "version": "570.144-6",
+   "version": "570.144-7",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-6.npk",
-   "size": 61004172,
-   "sha256": "11983e4ffb900d2878a44c2ccbcd9b0ed84eb541bb4fce67ede7042cb48a823b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-7.npk",
+   "size": 61004356,
+   "sha256": "3f21d43e75bd9b657b76c2b87ef920e3655b779b8e10c722565039888df858a6",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-7",
+     "notes": "- Fixes the black screen: the display's output scale was left at zero, which turns every pixel black."
+    },
     {
      "version": "570.144-6",
      "notes": "- If the display setup fails partway, the screen is given back to the old display instead of staying black.\n- The last start's log is kept as /var/log/nvidia.log.1, and the log says more about each display step."
