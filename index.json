@@ -2,16 +2,20 @@
  "packages": [
   {
    "name": "nvidia",
-   "version": "570.144-2",
+   "version": "570.144-3",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-2.npk",
-   "size": 60135388,
-   "sha256": "0ebe0caef1f6e0c99fc1679c7bd2a4a7b70a057ae991f92a902b1e57f14ca660",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-3.npk",
+   "size": 60135955,
+   "sha256": "fa6b81b931bfe2ed7080d53a5053f71a44fb12f07e98dd12007d98e80d428dc5",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-3",
+     "notes": "- When the driver waits for something another part of it does (its interrupt work, queued work, timers), that work now runs while it waits, instead of the wait being skipped. Waits that never end are logged with where they were."
+    },
     {
      "version": "570.144-2",
      "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
