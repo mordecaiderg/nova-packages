@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.28.2100",
+   "version": "2026.10.29.0928",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.28.2100.npk",
-   "size": 44301981,
-   "sha256": "42d248a48ca0fd11ccf04e5b13eb46b193bae12a66ddf8813fcb4c78e443e149",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.0928.npk",
+   "size": 44305342,
+   "sha256": "02a6fe29445f5b51b1fb9923803dda07d09a694667c8101bb2c81785862108db",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.0928",
+     "notes": "- Programs map device memory: mmap on module devices, and the GPU's memory"
+    },
     {
      "version": "2026.10.28.2100",
      "notes": "- A new resolution is a trial: kept from Settings, else it goes back in 15 s"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.25.1812",
      "notes": "- Room for 4096 processes and threads"
-    },
-    {
-     "version": "2026.10.25.1748",
-     "notes": "- A block cache sized to memory: metadata reads come from memory"
     }
    ],
    "icon": "icons/nova.png",
