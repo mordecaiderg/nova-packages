@@ -2,16 +2,20 @@
  "packages": [
   {
    "name": "nvidia",
-   "version": "570.144-8",
+   "version": "570.144-9",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-8.npk",
-   "size": 61004636,
-   "sha256": "54694fdda4aaa49db1ece62d5c291d16475f9d75863b2956ebf0adfdd04ea969",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-9.npk",
+   "size": 61005037,
+   "sha256": "397a5d56f8008d4611aa5c7193779d3f04b5f6f89aa3c8712392ce6c8712cdde",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-9",
+     "notes": "- When the monitor is switched off and on again (or its cable unplugged and plugged back in), the picture comes back: the mode is set again."
+    },
     {
      "version": "570.144-8",
      "notes": "- Settings > Display's resolutions go down as well as up (they were listed biggest first).\n- Switches on the card's own sound device for HDMI and DisplayPort, so Settings > Sound can play through your monitor or TV (needs the Nova update published with it)."
