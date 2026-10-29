@@ -2,16 +2,20 @@
  "packages": [
   {
    "name": "nvidia",
-   "version": "570.144-9",
+   "version": "570.144-10",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-9.npk",
-   "size": 61005032,
-   "sha256": "9ab26b58cec79afd6e5dbe14ad20e1fa4b51dab680d0d3638c514b6401b74fcb",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-10.npk",
+   "size": 61004969,
+   "sha256": "3903674ea70269ff685fe9ec62d9558b5987c9afeaad9c4e1c35635e2c7add29",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-10",
+     "notes": "- Programs can map the card's memory (video memory and system memory it uses) and write to it directly, as graphics libraries do; nvidia-info checks it. Needs the Nova update published with it."
+    },
     {
      "version": "570.144-9",
      "notes": "- When the monitor is switched off and on again (or its cable unplugged and plugged back in), the picture comes back: the mode is set again."
