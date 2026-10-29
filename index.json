@@ -6,8 +6,8 @@
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-10.npk",
-   "size": 61004969,
-   "sha256": "3903674ea70269ff685fe9ec62d9558b5987c9afeaad9c4e1c35635e2c7add29",
+   "size": 61005314,
+   "sha256": "31f40dbe51986806feb18ee0bc3343498da962d287363e1f14794c69148e056a",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
@@ -53,6 +53,20 @@
      "notes": "- First test: finds the card, starts NVIDIA's driver and the card's firmware, and writes what happened to /var/log/nvidia.log."
     }
    ]
+  },
+  {
+   "name": "nvidia-vulkan",
+   "version": "26.2.6-1",
+   "description": "Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card computes and draws",
+   "depends": [
+    "nvidia"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-1.npk",
+   "size": 3658097,
+   "sha256": "0547d138884468198177212259f45e16e5d275dfc31342423e86e668f4281cc2",
+   "title": "NVIDIA Vulkan",
+   "category": "System",
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nThis first part is a test: run vktest in the Terminal. It lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder. Its last line says VKTEST PASS or what failed."
   }
  ]
 }
