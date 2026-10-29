@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.29.1203",
+   "version": "2026.10.29.1221",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.1203.npk",
-   "size": 44369462,
-   "sha256": "855490943846d1c7ab7c69a15772568205935c2588a8b64a70e3223b8a18a4a1",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.1221.npk",
+   "size": 44369419,
+   "sha256": "8aa77d7f71025ae9fce91b5b64c1f26118bf0a7541c5fb61a69e1c5616734796",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.1221",
+     "notes": "- vktest reports where NVK stopped; driver calls that fail no longer pass"
+    },
     {
      "version": "2026.10.29.1203",
      "notes": "- nvidia-vulkan: vktest, Vulkan through NVK on NVIDIA's driver"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.25.2347",
      "notes": "- YipYap Server 0.1.6: its HTTPS works in Nova's own browser at 127.0.0.1"
-    },
-    {
-     "version": "2026.10.25.2300",
-     "notes": "- Keep free memory in one piece; mmap finds room without rescanning every region"
     }
    ],
    "icon": "icons/nova.png",
