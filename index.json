@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.29.2037",
+   "version": "2026.10.29.2107",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2037.npk",
-   "size": 44370704,
-   "sha256": "bfd80004a8a5200846d006adaf3666c3b1897a004d4b93830477312a56d59fd4",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2107.npk",
+   "size": 44370903,
+   "sha256": "675c60452f627d8206ffa502a0b94f0b2af2a4fd1b378f141af121a1def8d2f5",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.2107",
+     "notes": "- NVK on NVIDIA's driver: the GPU description NAK needs"
+    },
     {
      "version": "2026.10.29.2037",
      "notes": "- NVK maps system memory directly, as NVIDIA's driver requires"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.26.2333",
      "notes": "- Select several files, and drag and drop across the desktop"
-    },
-    {
-     "version": "2026.10.26.2311",
-     "notes": "- Right-click menus in the Store, Task Manager, Music, Disks, Paint and more"
     }
    ],
    "icon": "icons/nova.png",
