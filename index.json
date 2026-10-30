@@ -60,17 +60,17 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-7",
-   "description": "Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card computes and draws",
+   "version": "26.2.6-8",
+   "description": "Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card, vkcube spins a cube",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-7.npk",
-   "size": 3774292,
-   "sha256": "98d600fbf53b2a236bd8995d83914af9e89ee52f42d942e7b16a32ec0a2ff8bb",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-8.npk",
+   "size": 7547588,
+   "sha256": "40cdbae85c9118ab5c3f126e0c64791884dea2e0875ce6c6854b271d2d493bb6",
    "title": "NVIDIA Vulkan",
    "category": "System",
-   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nThis first part is a test: run vktest in the Terminal. It lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder. Its last line says VKTEST PASS or what failed."
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate."
   }
  ]
 }
