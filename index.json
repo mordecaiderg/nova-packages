@@ -6,8 +6,8 @@
    "description": "dash, a small POSIX shell; also /bin/sh",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dash-0.5.13.5-1.npk",
-   "size": 229775,
-   "sha256": "68d735ce63d970e395eb9f172f6d25354e9152d515e8051a1b3090e44ddeea81",
+   "size": 229916,
+   "sha256": "ed4011786e46e10ef7a88f8dc1eb6e4bc1c0cf6f957fe39d401f4e02d016811e",
    "title": "Dash",
    "category": "System",
    "about": "Dash is a small, fast POSIX shell, and Nova's /bin/sh: shell scripts with #!/bin/sh run with it. Nova's own shell, nsh, stays the Terminal's."
@@ -18,8 +18,8 @@
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
-   "size": 943176,
-   "sha256": "cea564c4ef5994b64e910ed7cdce840ae4a7cddb5918989b2df7193fd5ebc48a",
+   "size": 943412,
+   "sha256": "b56c00fb3637001db2add5fa3505b533ca8e1127a886abb86282383a452fdb41",
    "title": "Dropbear SSH",
    "category": "Internet",
    "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
@@ -48,8 +48,8 @@
    "description": "kilo, a small text editor for the terminal",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/kilo-0.0.0_323d93b-1.npk",
-   "size": 70592,
-   "sha256": "745a9f5ba21b6ee09efe97e1f712745abf2bc7fef08196419b810a929bafcd12",
+   "size": 70676,
+   "sha256": "e8efec6609f74770f7d95b9f4205c025a07b69cc80941500deb857f18053baf5",
    "title": "Kilo",
    "category": "Utilities",
    "about": "A small text editor that runs in the Terminal: kilo FILE. Ctrl+S saves, Ctrl+Q quits, Ctrl+F finds."
@@ -107,8 +107,8 @@
    "description": "Lua 5.4, a small and fast scripting language",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/lua-5.4.7-1.npk",
-   "size": 167480,
-   "sha256": "3b9e6a9dd87338d0464830874bf35fbb5b9c65e765b39706fae6563d2225bcf0",
+   "size": 167559,
+   "sha256": "8855699c6c97852a02d1a9ac57e380e1ecd6890ea63bb6722f15f96a77b2238b",
    "title": "Lua",
    "category": "Development",
    "about": "Lua is a small, fast scripting language, easy to learn and to embed. Run scripts with lua FILE, or type lua for its prompt."
@@ -121,8 +121,8 @@
     "dash"
    ],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/make-4.4.1-1.npk",
-   "size": 163803,
-   "sha256": "ecde654c8ae2d8c330215841bae3461dc7ede375b0cc9324fb9ac4dcfa74897f",
+   "size": 163886,
+   "sha256": "7f6e8340a7fac0a6c94f5f29cbe4ebfd68722191098cd03edfa9c3fc49834e72",
    "title": "GNU Make",
    "category": "Development",
    "about": "make builds programs from makefiles, rebuilding only what changed. With Nova's C compiler (tcc) it builds C programs on Nova itself."
@@ -133,25 +133,29 @@
    "description": "MicroPython 1.29, a lean Python 3",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/micropython-1.29.0-1.npk",
-   "size": 863731,
-   "sha256": "baf83a14bc494f0a2990bf6064ba1c20ecb5d62601c56758478bdeb3deda4123",
+   "size": 863833,
+   "sha256": "4323164405028be02f1a24791d47ff7f1a3a68e0b1d91fa9faaf6619fa6d26cf",
    "title": "MicroPython",
    "category": "Development",
    "about": "A lean Python 3 that starts in an instant: micropython FILE.py runs a script. For the full language and its standard library, there is Python."
   },
   {
    "name": "nova",
-   "version": "2026.10.29.2125",
+   "version": "2026.10.29.2135",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2125.npk",
-   "size": 44370819,
-   "sha256": "f25181df60af3c34d76c22688548a0d9369c765c7cc25619f8bbf56738af6117",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2135.npk",
+   "size": 44371023,
+   "sha256": "f6af412cae8830ed2bb1237bda59add528d51dc8e1e51a86f92855b0781a0505",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.2135",
+     "notes": "- libc: setvbuf's unbuffered mode writes at once"
+    },
     {
      "version": "2026.10.29.2125",
      "notes": "- Vulkan for programs: Nova's libvulkan, a window system, and vkcube"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.27.1836",
      "notes": "- Services: servicesd keeps them running, svc manages them; YipYap is one"
-    },
-    {
-     "version": "2026.10.27.1755",
-     "notes": "- A program keeps running when its file is replaced (an upgrade)"
     }
    ],
    "icon": "icons/nova.png",
@@ -282,8 +282,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10110117,
-   "sha256": "61d5fe49f19622d7449f6563bcc0a52b7cda35f1f2c5e771f1eb6d2c54ea8f69",
+   "size": 10110192,
+   "sha256": "2d945aa6e075a664c9de42ed1dfe945c611af37a17b443f73b90273c92c90451",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
@@ -294,8 +294,8 @@
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.5_9e7e443-1.npk",
-   "size": 1300431,
-   "sha256": "b061a773c19f5231cb99ece4145bcfae567f50baaa85bfbeeb51643abfeea837",
+   "size": 1300654,
+   "sha256": "276e26e37df153bdaab0088cbe64bd3bf9cba0957cec7a4adabc07f1424307ff",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard. Profiles have pictures (animated ones too) and banners, the web client installs as an app, and it can send notifications while it's closed.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
