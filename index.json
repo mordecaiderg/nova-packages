@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.29.2028",
+   "version": "2026.10.29.2037",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2028.npk",
-   "size": 44370693,
-   "sha256": "5ce67bf535cff88e84964f371131ace69d1fad834d3215533421fea75f2f6dbc",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2037.npk",
+   "size": 44370704,
+   "sha256": "bfd80004a8a5200846d006adaf3666c3b1897a004d4b93830477312a56d59fd4",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.2037",
+     "notes": "- NVK maps system memory directly, as NVIDIA's driver requires"
+    },
     {
      "version": "2026.10.29.2028",
      "notes": "- NVK's NVIDIA backend sets up what Mesa 26.2 expects of a device"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.26.2311",
      "notes": "- Right-click menus in the Store, Task Manager, Music, Disks, Paint and more"
-    },
-    {
-     "version": "2026.10.26.2222",
-     "notes": "- Downloads that work, a Downloads list and a Save window"
     }
    ],
    "icon": "icons/nova.png",
