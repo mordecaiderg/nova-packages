@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.29.2011",
+   "version": "2026.10.29.2020",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2011.npk",
-   "size": 44370660,
-   "sha256": "c7b19b1ef3c77bbe0779c1f23af17f1e68ac90b80789b1fb101b54e2ecd0d78e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2020.npk",
+   "size": 44370671,
+   "sha256": "db0d94630939946ace05cf0d0cad3e42f987de099ae82c2d123e17d8b56b2c50",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.2020",
+     "notes": "- NVK's dispatch tables are filled in a static program"
+    },
     {
      "version": "2026.10.29.2011",
      "notes": "- Fix a crash on every fork on real CPUs with XSAVE"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.26.2150",
      "notes": "- Right-click menus everywhere, Photos, picture wallpapers and MP3s"
-    },
-    {
-     "version": "2026.10.26.2058",
-     "notes": "- Files: a right-click menu, Properties and a Bin for deleted files"
     }
    ],
    "icon": "icons/nova.png",
