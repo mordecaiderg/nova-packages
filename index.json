@@ -2,16 +2,20 @@
  "packages": [
   {
    "name": "nvidia",
-   "version": "570.144-10",
+   "version": "570.144-11",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-10.npk",
-   "size": 61005314,
-   "sha256": "31f40dbe51986806feb18ee0bc3343498da962d287363e1f14794c69148e056a",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-11.npk",
+   "size": 61005246,
+   "sha256": "a1500d042ed056bd6410c1b1e31a6e4f737b58f81289061fd75e65d454cd2aba",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-11",
+     "notes": "- Programs can map system memory the card uses (it was refused as \"not supported\"): Vulkan (NVIDIA Vulkan's vktest) needs it to start the card."
+    },
     {
      "version": "570.144-10",
      "notes": "- Programs can map the card's memory (video memory and system memory it uses) and write to it directly, as graphics libraries do; nvidia-info checks it. Needs the Nova update published with it."
