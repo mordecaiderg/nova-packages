@@ -6,8 +6,8 @@
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-11.npk",
-   "size": 61005246,
-   "sha256": "a1500d042ed056bd6410c1b1e31a6e4f737b58f81289061fd75e65d454cd2aba",
+   "size": 61005256,
+   "sha256": "3646b8f61d00aa8876fb9852955c740856ba7d15ca3b59a61304b789b83ad904",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
@@ -60,14 +60,14 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-9",
+   "version": "26.2.6-10",
    "description": "Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card, vkcube spins a cube",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-9.npk",
-   "size": 7547602,
-   "sha256": "bf4f76ab4f75e926bebaed4a3febc263939268bff35e8a4dfc905da8bbdbd6fc",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-10.npk",
+   "size": 7547792,
+   "sha256": "b8971af6a4e3d2ab0471fd60cab8c55a3a7b32d4017fbc81453f68e1592421b8",
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate."
