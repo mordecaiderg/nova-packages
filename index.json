@@ -141,17 +141,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.29.1427",
+   "version": "2026.10.29.1959",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.1427.npk",
-   "size": 44370394,
-   "sha256": "c80d2d94a54ed4543c36ad232fb0c09423bac9a09979da47db85d164f622cbf5",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.1959.npk",
+   "size": 44370208,
+   "sha256": "16598e7a13492daf4cce515e0659d02fddbecf5f626add65019e029059272658",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.1959",
+     "notes": "- Boot at 1920x1080: TVs showed nothing at 1280x800"
+    },
     {
      "version": "2026.10.29.1427",
      "notes": "- AVX in programs is checked: registers survive thread switches"
@@ -267,10 +271,6 @@
     {
      "version": "2026.10.26.2004",
      "notes": "- The Store shows what each update changes"
-    },
-    {
-     "version": "2026.10.26.1807",
-     "notes": "- Terminal copies with Ctrl+C or a right-click; the browser's address bar edits"
     }
    ],
    "icon": "icons/nova.png",
