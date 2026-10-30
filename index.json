@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-7",
+   "version": "2026.10.18+7a8a84e0-8",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-7.npk",
-   "size": 126729073,
-   "sha256": "6696c2c97b2d7b5f4efb2dde7114258a658b86213a038808c30d3b93d2afd436",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-8.npk",
+   "size": 129997894,
+   "sha256": "0e865aa81a71fe92c9f54dd19b103ae7cea29f4a7899ccd90888e20453ac785b",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-8",
+     "notes": "- With an NVIDIA RTX 30 or 40 card and the NVIDIA Graphics package, pages are drawn by the graphics card (Vulkan) instead of the processor. Without one nothing changes.\n- If drawing on the card misbehaves, `touch /.config/web-no-gpu` in the Terminal keeps the browser on the processor (and `rm /.config/web-no-gpu` undoes it)."
+    },
     {
      "version": "2026.10.18+7a8a84e0-7",
      "notes": "- \"Open in New Tab\" (and links that open a new tab) show the tab: before, the page loaded somewhere hidden.\n- View Source works on big pages: their source is shown as plain text, in seconds instead of minutes.\n- No crash when the browser is closed with the Downloads page open."
@@ -141,17 +145,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.10.29.2135",
+   "version": "2026.10.29.2219",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2135.npk",
-   "size": 44371023,
-   "sha256": "f6af412cae8830ed2bb1237bda59add528d51dc8e1e51a86f92855b0781a0505",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.29.2219.npk",
+   "size": 44371069,
+   "sha256": "41ac9bb76243b76bc407dc2258ac34131adb160f3e4a9374f551ce5457f57c7e",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.10.29.2219",
+     "notes": "- Ladybird draws pages on the GPU where there is one"
+    },
     {
      "version": "2026.10.29.2135",
      "notes": "- libc: setvbuf's unbuffered mode writes at once"
@@ -267,10 +275,6 @@
     {
      "version": "2026.10.27.1902",
      "notes": "- A web dashboard (novad), and updates restart the services they replace"
-    },
-    {
-     "version": "2026.10.27.1836",
-     "notes": "- Services: servicesd keeps them running, svc manages them; YipYap is one"
     }
    ],
    "icon": "icons/nova.png",
