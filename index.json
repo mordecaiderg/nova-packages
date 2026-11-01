@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-11",
+   "version": "2026.10.18+7a8a84e0-12",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-11.npk",
-   "size": 130006071,
-   "sha256": "2b562c4103d45a456ef221caaa1d1db26176f759b21cd8cb258dd90ef4c6e817",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-12.npk",
+   "size": 130004954,
+   "sha256": "e2a27bad17ea7f5e8cf3ea3cd4f558d77d6c82075d8fe930e23d24f0285822dd",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-12",
+     "notes": "- Leaving fullscreen on a YouTube video no longer closes the page (\"Ladybird flew off-course\"): a check in the browser's engine stopped it while the page was between styles."
+    },
     {
      "version": "2026.10.18+7a8a84e0-11",
      "notes": "- Real fullscreen: a video's fullscreen button (or a page asking for it) fills the whole screen, without the browser's tabs and toolbar or Nova's top bar and dock. Esc (or the video's button again) goes back. Needs the Nova update published with it."
