@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-12",
+   "version": "2026.10.18+7a8a84e0-13",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-12.npk",
-   "size": 130004954,
-   "sha256": "e2a27bad17ea7f5e8cf3ea3cd4f558d77d6c82075d8fe930e23d24f0285822dd",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-13.npk",
+   "size": 132278032,
+   "sha256": "b8e3c22c5262314589bfbe6f1d8e3dba4bf7af0ecdeb6c7c719a766f53ee9f76",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-13",
+     "notes": "- WebGL, for 3D on web pages (maps, games, product viewers), on GeForce RTX 30 and 40 cards: drawn by the card through ANGLE on Vulkan. Needs the NVIDIA Graphics package; without an NVIDIA card pages see no WebGL, as before."
+    },
     {
      "version": "2026.10.18+7a8a84e0-12",
      "notes": "- Leaving fullscreen on a YouTube video no longer closes the page (\"Ladybird flew off-course\"): a check in the browser's engine stopped it while the page was between styles."
@@ -161,17 +165,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.01.1352",
+   "version": "2026.11.01.1437",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1352.npk",
-   "size": 44381171,
-   "sha256": "05d14598758165a229a67a140d4b8e8b5a74cdde46b2c2ea0e51badd87e7ca0a",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1437.npk",
+   "size": 44381169,
+   "sha256": "ff7d984f91cb9c1c052b64592429e8ac65660c047f75eba900cc9ec5a2881e3f",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.01.1437",
+     "notes": "- Ladybird: WebGL on ANGLE's Vulkan back end"
+    },
     {
      "version": "2026.11.01.1352",
      "notes": "- ANGLE on Vulkan: OpenGL ES and EGL for WebGL, with gltest"
@@ -287,10 +295,6 @@
     {
      "version": "2026.10.28.1932",
      "notes": "- Store: removing a source asks \"Sure?\" first, as removing a package does"
-    },
-    {
-     "version": "2026.10.28.0040",
-     "notes": "- nvidia: the display, through NVIDIA's own display driver (first try)"
     }
    ],
    "icon": "icons/nova.png",
