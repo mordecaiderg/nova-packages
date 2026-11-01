@@ -18,8 +18,8 @@
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
-   "size": 943412,
-   "sha256": "b56c00fb3637001db2add5fa3505b533ca8e1127a886abb86282383a452fdb41",
+   "size": 943416,
+   "sha256": "be0bdc186342b2b612541ac3d114c671ef9f9f2daa7c9e597cf925f0eaf65fff",
    "title": "Dropbear SSH",
    "category": "Internet",
    "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-10",
+   "version": "2026.10.18+7a8a84e0-11",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-10.npk",
-   "size": 130001722,
-   "sha256": "c171725bcbc1d79676fc8488a87aa5e8d6ac26bb7a0bf5d511ba4b7e313c559c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-11.npk",
+   "size": 130006071,
+   "sha256": "2b562c4103d45a456ef221caaa1d1db26176f759b21cd8cb258dd90ef4c6e817",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-11",
+     "notes": "- Real fullscreen: a video's fullscreen button (or a page asking for it) fills the whole screen, without the browser's tabs and toolbar or Nova's top bar and dock. Esc (or the video's button again) goes back. Needs the Nova update published with it."
+    },
     {
      "version": "2026.10.18+7a8a84e0-10",
      "notes": "- Pages with a lot to draw (YouTube) no longer stop the browser on an NVIDIA card: the graphics driver's way of counting finished GPU work was missing a piece it needed once enough had been drawn."
@@ -145,25 +149,29 @@
    "description": "MicroPython 1.29, a lean Python 3",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/micropython-1.29.0-1.npk",
-   "size": 863833,
-   "sha256": "4323164405028be02f1a24791d47ff7f1a3a68e0b1d91fa9faaf6619fa6d26cf",
+   "size": 863859,
+   "sha256": "633f316dab218fc3027972c0fb65ea50cb83ab201c290af5c966af0f9868cc5f",
    "title": "MicroPython",
    "category": "Development",
    "about": "A lean Python 3 that starts in an instant: micropython FILE.py runs a script. For the full language and its standard library, there is Python."
   },
   {
    "name": "nova",
-   "version": "2026.10.31.0154",
+   "version": "2026.11.01.0007",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.10.31.0154.npk",
-   "size": 44371077,
-   "sha256": "b79efd051bfee318a6ba6e501f35fe7fa8f8330169609ee0b2353050df97ebd6",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.0007.npk",
+   "size": 44372005,
+   "sha256": "c305cb97a0a0a79c690242227813b0d5ff44f95dad9560e02883ac136587d2ad",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.01.0007",
+     "notes": "- Fullscreen windows, and Ladybird's video fullscreen uses them"
+    },
     {
      "version": "2026.10.31.0154",
      "notes": "- NVK on NVIDIA's driver: syncs are timelines too"
@@ -279,10 +287,6 @@
     {
      "version": "2026.10.27.2222",
      "notes": "- Drivers from packages, and NVIDIA's open GPU driver as one (first stage)"
-    },
-    {
-     "version": "2026.10.27.1932",
-     "notes": "- Settings: a Network pane (DHCP or a fixed address) and a per-app mixer"
     }
    ],
    "icon": "icons/nova.png",
@@ -294,8 +298,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10110192,
-   "sha256": "2d945aa6e075a664c9de42ed1dfe945c611af37a17b443f73b90273c92c90451",
+   "size": 10110230,
+   "sha256": "d350826dd3d65b74776d35aea7700ae7fa5a1aba232663a84387623a449fceaa",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
@@ -306,8 +310,8 @@
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.5_9e7e443-1.npk",
-   "size": 1300654,
-   "sha256": "276e26e37df153bdaab0088cbe64bd3bf9cba0957cec7a4adabc07f1424307ff",
+   "size": 1300676,
+   "sha256": "a36f39f3b47c8d647905514b19ca2ace73deb18bf3b5c61128d0740d1e66c5cc",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard. Profiles have pictures (animated ones too) and banners, the web client installs as an app, and it can send notifications while it's closed.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
