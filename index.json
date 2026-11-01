@@ -56,19 +56,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-13",
+   "version": "2026.10.18+7a8a84e0-14",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-13.npk",
-   "size": 132278032,
-   "sha256": "b8e3c22c5262314589bfbe6f1d8e3dba4bf7af0ecdeb6c7c719a766f53ee9f76",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-14.npk",
+   "size": 132278058,
+   "sha256": "d0033b28e829428065160df5a3ebe7f3c89a5481b35c33991f2e5e642affdf14",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-14",
+     "notes": "- WebGL pages no longer close the tab on an NVIDIA card: the part of the browser that draws them stopped while setting up the card's memory."
+    },
     {
      "version": "2026.10.18+7a8a84e0-13",
      "notes": "- WebGL, for 3D on web pages (maps, games, product viewers), on GeForce RTX 30 and 40 cards: drawn by the card through ANGLE on Vulkan. Needs the NVIDIA Graphics package; without an NVIDIA card pages see no WebGL, as before."
@@ -165,17 +169,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.01.1437",
+   "version": "2026.11.01.1509",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1437.npk",
-   "size": 44381169,
-   "sha256": "ff7d984f91cb9c1c052b64592429e8ac65660c047f75eba900cc9ec5a2881e3f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1509.npk",
+   "size": 44381158,
+   "sha256": "f8af0ae650db6e4fadc68020510289866d237dae02fac144ebf989312077b2d9",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.01.1509",
+     "notes": "- ANGLE: give VMA vkGetInstanceProcAddr and vkGetDeviceProcAddr"
+    },
     {
      "version": "2026.11.01.1437",
      "notes": "- Ladybird: WebGL on ANGLE's Vulkan back end"
@@ -291,10 +299,6 @@
     {
      "version": "2026.10.28.2022",
      "notes": "- Sound outputs: choose the device in Settings, HDMI audio, NVIDIA's mode order"
-    },
-    {
-     "version": "2026.10.28.1932",
-     "notes": "- Store: removing a source asks \"Sure?\" first, as removing a package does"
     }
    ],
    "icon": "icons/nova.png",
@@ -368,14 +372,14 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-14",
+   "version": "26.2.6-15",
    "description": "Vulkan and OpenGL ES for NVIDIA cards (Mesa's NVK, Google's ANGLE): vktest and gltest check the card, vkcube spins a cube",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-14.npk",
-   "size": 13754619,
-   "sha256": "7f5eda3c558b311fb1ad860f347c2017d8eec8529a80f3f210212077d043672c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-15.npk",
+   "size": 13755063,
+   "sha256": "5c8c834910db62d59999113e34549f451c6b7e949d57d3e164d4499584743575",
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed)."
