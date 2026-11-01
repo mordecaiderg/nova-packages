@@ -9,5 +9,5 @@ written by Nova's `make publish`: don't edit it by hand.
 
 | Package | Name | Version | Category | Download | About |
 |---|---|---|---|---|---|
-| NVIDIA Graphics | `nvidia` | 570.144-11 | System | 59576 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU) |
+| NVIDIA Graphics | `nvidia` | 570.144-12 | System | 59576 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU) |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-12 | System | 7374 KB | Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card, vkcube spins a cube |
