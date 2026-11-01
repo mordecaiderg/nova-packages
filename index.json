@@ -161,17 +161,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.01.0121",
+   "version": "2026.11.01.1245",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.0121.npk",
-   "size": 44379458,
-   "sha256": "784c8e2acb79922120fbde2f59ec62a21de43a1883eba1c5d7971f60f82461ca",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1245.npk",
+   "size": 44380996,
+   "sha256": "82cc7ca2f511fc32a18d16718588c5d8971c9f14a87db2f249b1dda441f1ce80",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.01.1245",
+     "notes": "- NVIDIA packages move from the testing source to the default one\n- Vulkan: presenting waits for the desktop's next frame\n- NVK on NVIDIA's driver: unbind the semaphore surface before freeing the channel\n- Crash log: a fault caught by a handler that then exits is a crash too"
+    },
     {
      "version": "2026.11.01.0121",
      "notes": "- Task Manager has a GPU tab with NVIDIA's driver"
@@ -287,14 +291,90 @@
     {
      "version": "2026.10.27.2354",
      "notes": "- Task Manager shows drivers from packages and the memory they use"
-    },
-    {
-     "version": "2026.10.27.2335",
-     "notes": "- nvidia: programs talk to the driver through /dev/nvidiactl and /dev/nvidia0"
     }
    ],
    "icon": "icons/nova.png",
    "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
+  },
+  {
+   "name": "nvidia",
+   "version": "570.144-13",
+   "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-13.npk",
+   "size": 61005654,
+   "sha256": "cdbdb1fcc43af57ca00674de2730b3c0e1159ea50e4e3e64f90d1319471b875c",
+   "title": "NVIDIA Graphics",
+   "category": "System",
+   "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
+   "changes": [
+    {
+     "version": "570.144-13",
+     "notes": "- In the Store for everyone with a GeForce RTX 30 or 40 card: no testing source to add first. The description says what the driver does now."
+    },
+    {
+     "version": "570.144-12",
+     "notes": "- Task Manager gets a GPU tab: how busy the card is (drawing, memory, video decoding and encoding), its video memory and its performance state. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-11",
+     "notes": "- Programs can map system memory the card uses (it was refused as \"not supported\"): Vulkan (NVIDIA Vulkan's vktest) needs it to start the card."
+    },
+    {
+     "version": "570.144-10",
+     "notes": "- Programs can map the card's memory (video memory and system memory it uses) and write to it directly, as graphics libraries do; nvidia-info checks it. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-9",
+     "notes": "- When the monitor is switched off and on again (or its cable unplugged and plugged back in), the picture comes back: the mode is set again."
+    },
+    {
+     "version": "570.144-8",
+     "notes": "- Settings > Display's resolutions go down as well as up (they were listed biggest first).\n- Switches on the card's own sound device for HDMI and DisplayPort, so Settings > Sound can play through your monitor or TV (needs the Nova update published with it)."
+    },
+    {
+     "version": "570.144-7",
+     "notes": "- Fixes the black screen: the display's output scale was left at zero, which turns every pixel black."
+    },
+    {
+     "version": "570.144-6",
+     "notes": "- If the display setup fails partway, the screen is given back to the old display instead of staying black.\n- The last start's log is kept as /var/log/nvidia.log.1, and the log says more about each display step."
+    },
+    {
+     "version": "570.144-5",
+     "notes": "- The display: NVIDIA's display driver sets your monitor to its own resolution and refresh rate, and Nova's desktop draws through the graphics card. Settings > Display lists the monitor's modes.\n- The first time, it's a trial: press Keep in Settings > Display. If the screen stayed black and you couldn't, the next start goes back to the old display by itself.\n- Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-4",
+     "notes": "- Programs can talk to the driver: /dev/nvidiactl and /dev/nvidia0, as on Linux. The nvidia-info command (in the Terminal) asks it for the card's name, memory and the driver's version. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-3",
+     "notes": "- When the driver waits for something another part of it does (its interrupt work, queued work, timers), that work now runs while it waits, instead of the wait being skipped. Waits that never end are logged with where they were."
+    },
+    {
+     "version": "570.144-2",
+     "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-1",
+     "notes": "- First test: finds the card, starts NVIDIA's driver and the card's firmware, and writes what happened to /var/log/nvidia.log."
+    }
+   ]
+  },
+  {
+   "name": "nvidia-vulkan",
+   "version": "26.2.6-13",
+   "description": "Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card, vkcube spins a cube",
+   "depends": [
+    "nvidia"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-13.npk",
+   "size": 7550205,
+   "sha256": "cc172f8bc4229c0d443fc2609d4f6b4190097ff852564e22032a4976a6e5d913",
+   "title": "NVIDIA Vulkan",
+   "category": "System",
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate."
   },
   {
    "name": "python",
@@ -302,8 +382,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10110230,
-   "sha256": "d350826dd3d65b74776d35aea7700ae7fa5a1aba232663a84387623a449fceaa",
+   "size": 10110216,
+   "sha256": "ea6b16cdaf5fb5956611641469677fd9322bb67c4fc00974312614d33ee6c44c",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
