@@ -161,17 +161,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.01.1245",
+   "version": "2026.11.01.1352",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1245.npk",
-   "size": 44380996,
-   "sha256": "82cc7ca2f511fc32a18d16718588c5d8971c9f14a87db2f249b1dda441f1ce80",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1352.npk",
+   "size": 44381171,
+   "sha256": "05d14598758165a229a67a140d4b8e8b5a74cdde46b2c2ea0e51badd87e7ca0a",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.01.1352",
+     "notes": "- ANGLE on Vulkan: OpenGL ES and EGL for WebGL, with gltest"
+    },
     {
      "version": "2026.11.01.1245",
      "notes": "- NVIDIA packages move from the testing source to the default one\n- Vulkan: presenting waits for the desktop's next frame\n- NVK on NVIDIA's driver: unbind the semaphore surface before freeing the channel\n- Crash log: a fault caught by a handler that then exits is a crash too"
@@ -287,10 +291,6 @@
     {
      "version": "2026.10.28.0040",
      "notes": "- nvidia: the display, through NVIDIA's own display driver (first try)"
-    },
-    {
-     "version": "2026.10.27.2354",
-     "notes": "- Task Manager shows drivers from packages and the memory they use"
     }
    ],
    "icon": "icons/nova.png",
@@ -364,17 +364,17 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-13",
-   "description": "Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card, vkcube spins a cube",
+   "version": "26.2.6-14",
+   "description": "Vulkan and OpenGL ES for NVIDIA cards (Mesa's NVK, Google's ANGLE): vktest and gltest check the card, vkcube spins a cube",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-13.npk",
-   "size": 7550205,
-   "sha256": "cc172f8bc4229c0d443fc2609d4f6b4190097ff852564e22032a4976a6e5d913",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-14.npk",
+   "size": 13754619,
+   "sha256": "7f5eda3c558b311fb1ad860f347c2017d8eec8529a80f3f210212077d043672c",
    "title": "NVIDIA Vulkan",
    "category": "System",
-   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate."
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed)."
   },
   {
    "name": "python",
