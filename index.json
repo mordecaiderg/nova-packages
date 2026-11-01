@@ -6,8 +6,8 @@
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-11.npk",
-   "size": 61005256,
-   "sha256": "3646b8f61d00aa8876fb9852955c740856ba7d15ca3b59a61304b789b83ad904",
+   "size": 61005267,
+   "sha256": "01c930f20979664cdf74e6d5c6c32e7fe484919565a14d3c5159029244f0a689",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards.\nThis is the first stage: the driver starts the card and its firmware, and writes what it found to /var/log/nvidia.log. The screen is still drawn the way it was; using the card for drawing comes later.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
@@ -66,8 +66,8 @@
     "nvidia"
    ],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-12.npk",
-   "size": 7550190,
-   "sha256": "0c6c3087f6f8fe16f9edf7184eb7e445d34d8a871c43b1c3fa24456b61494df3",
+   "size": 7550245,
+   "sha256": "856296d0efdfc76017559e2ab80994d4f417ff08f8d9a6f8852571b396a31cb7",
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate."
