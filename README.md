@@ -19,6 +19,6 @@ written by Nova's `make publish`: don't edit it by hand.
 | MicroPython | `micropython` | 1.29.0-1 | Development | 844 KB | MicroPython 1.29, a lean Python 3 |
 | Nova | `nova` | 2026.11.02.0158 | System | 43345 KB | Nova itself: the kernel and the system every app runs on |
 | NVIDIA Graphics | `nvidia` | 570.144-13 | System | 59576 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
-| NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-20 | System | 26701 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
+| NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-21 | System | 26704 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
 | Python | `python` | 3.14.8-1 | Development | 9874 KB | Python 3.14, the reference implementation (CPython) |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1271 KB | Run your own Discord-style chat server, with a web client for any browser |

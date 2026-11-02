@@ -372,14 +372,14 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-20",
+   "version": "26.2.6-21",
    "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-20.npk",
-   "size": 27341707,
-   "sha256": "60be5ffbffc8f37c2f89e7f5ddcf662904b50d17b349b6778034d5adbacfee19",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-21.npk",
+   "size": 27344010,
+   "sha256": "8d2c0f7995eaf38c91f8c2ac585d3b9164cf0fbc3f0e3e572d8c2b83077db863",
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate."
