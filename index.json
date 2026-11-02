@@ -169,17 +169,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.02.1531",
+   "version": "2026.11.02.1614",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1531.npk",
-   "size": 44387647,
-   "sha256": "2a065d6813b180b98f3130fed5f37681f962eeb0ddf56592674dbe30e0088157",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1614.npk",
+   "size": 44405432,
+   "sha256": "f0d92921401ea9a123fd59955d65e0a90c062afd19d18aece91b110d20cf12fb",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.1614",
+     "notes": "- OpenArena: the first game, on ioquake3 with SDL and OpenGL through Zink"
+    },
     {
      "version": "2026.11.02.1531",
      "notes": "- Pointer lock for games that steer with the mouse, and SDL's relative mode on it"
@@ -295,10 +299,6 @@
     {
      "version": "2026.10.29.2028",
      "notes": "- NVK's NVIDIA backend sets up what Mesa 26.2 expects of a device"
-    },
-    {
-     "version": "2026.10.29.2020",
-     "notes": "- NVK's dispatch tables are filled in a static program"
     }
    ],
    "icon": "icons/nova.png",
@@ -477,6 +477,21 @@
      "notes": "- First test: vktest, Vulkan through Mesa's NVK on NVIDIA's driver. It lists the card, runs a small program on it, draws a triangle and saves it as vktest.png."
     }
    ]
+  },
+  {
+   "name": "openarena",
+   "version": "0.8.8-1",
+   "description": "OpenArena: a fast first-person arena shooter against bots or online (ioquake3), for NVIDIA cards",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/openarena-0.8.8-1.npk",
+   "size": 416253854,
+   "sha256": "64cd6179d5e1fa5069225b1481243abfd66c397f867d8c26fff27e32544d6a36",
+   "title": "OpenArena",
+   "category": "Games",
+   "about": "A fast-paced first-person arena shooter in the style of the 1999 classics: run, jump and fight across arenas against bots, or join players on the internet. The engine is ioquake3; the game, its maps and its sounds are OpenArena's, all free software. Needs an NVIDIA GeForce RTX 30 or 40 card with the NVIDIA Graphics and NVIDIA Vulkan packages. The mouse aims (Alt+Tab gets it back); settings and saves are kept in your home folder's .local/share/openarena. openarena-server in the Terminal runs a server for others to join.",
+   "app": "openarena",
+   "icon": "icons/openarena.png",
+   "icon_sha256": "ab5a76bfe6f536d559c1f935eb6a7b7a4036bb37f098e64efe713f72c2ba78e4"
   },
   {
    "name": "python",
