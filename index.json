@@ -169,17 +169,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.02.1759",
+   "version": "2026.11.02.1821",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1759.npk",
-   "size": 44407949,
-   "sha256": "2b3302fd7d61b7c46fe2cd6f9a900476b70b3dad2f069f49933107fe4480784c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1821.npk",
+   "size": 44408448,
+   "sha256": "9914dcff75a5471d17f6695486b1ff3327330dcd3be67e862da5e36d239ac1e4",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.1821",
+     "notes": "- Flips that don't finish fall back to drawing on the screen, and don't starve the system"
+    },
     {
      "version": "2026.11.02.1759",
      "notes": "- The desktop flips at the NVIDIA display's vblank: no more tearing"
@@ -295,10 +299,6 @@
     {
      "version": "2026.10.29.2107",
      "notes": "- NVK on NVIDIA's driver: the GPU description NAK needs"
-    },
-    {
-     "version": "2026.10.29.2037",
-     "notes": "- NVK maps system memory directly, as NVIDIA's driver requires"
     }
    ],
    "icon": "icons/nova.png",
@@ -306,16 +306,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-14",
+   "version": "570.144-15",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-14.npk",
-   "size": 61006924,
-   "sha256": "5c5e1b1285579d9a11f408471e01ec8f9df9caeb655fc78e5ef4add78d94523e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-15.npk",
+   "size": 61007763,
+   "sha256": "7b19202b9db8b61be3516275b3552aff63cfea2f430b990aaee9e78eaf664560",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-15",
+     "notes": "- Fixes -14's black screen at start: if the card doesn't take a flipped frame within a quarter of a second, the desktop goes back to drawing straight on the screen (it may tear, but it works), and the log says why. The desktop no longer keeps programs waiting while a frame is on its way. Needs the Nova update published with it."
+    },
     {
      "version": "570.144-14",
      "notes": "- The screen no longer tears: the desktop draws each frame out of sight and the card shows it at the monitor's refresh, so moving windows, games and video are smooth, at the monitor's own rate. Needs the Nova update published with it."
