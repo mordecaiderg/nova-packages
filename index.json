@@ -169,17 +169,41 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.02.0158",
+   "version": "2026.11.02.1531",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.0158.npk",
-   "size": 44384424,
-   "sha256": "8824eae46d00af62b3434de66555845e1434d8f40936e9799c032631e66b3df2",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1531.npk",
+   "size": 44387647,
+   "sha256": "2a065d6813b180b98f3130fed5f37681f962eeb0ddf56592674dbe30e0088157",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.1531",
+     "notes": "- Pointer lock for games that steer with the mouse, and SDL's relative mode on it"
+    },
+    {
+     "version": "2026.11.02.1515",
+     "notes": "- SDL 2 for Nova: its own video and audio drivers, and sdl2-demos"
+    },
+    {
+     "version": "2026.11.02.0242",
+     "notes": "- nvidia-vulkan gets What's new notes; mkpkg wants them past -1"
+    },
+    {
+     "version": "2026.11.02.0230",
+     "notes": "- EGL: Nova windows only on 8-bit configs"
+    },
+    {
+     "version": "2026.11.02.0221",
+     "notes": "- libvulkan: RGBA swapchains, swapped into the window as it's copied"
+    },
+    {
+     "version": "2026.11.02.0214",
+     "notes": "- publish: Nova isn't published again when only its version changed"
+    },
     {
      "version": "2026.11.02.0158",
      "notes": "- libvulkan: one lock for queue submissions\n- publish: a published package is never replaced under the same version"
@@ -275,30 +299,6 @@
     {
      "version": "2026.10.29.2020",
      "notes": "- NVK's dispatch tables are filled in a static program"
-    },
-    {
-     "version": "2026.10.29.2011",
-     "notes": "- Fix a crash on every fork on real CPUs with XSAVE"
-    },
-    {
-     "version": "2026.10.29.1959",
-     "notes": "- Boot at 1920x1080: TVs showed nothing at 1280x800"
-    },
-    {
-     "version": "2026.10.29.1427",
-     "notes": "- AVX in programs is checked: registers survive thread switches"
-    },
-    {
-     "version": "2026.10.29.1240",
-     "notes": "- Programs keep their AVX registers: XSAVE when the processor has it"
-    },
-    {
-     "version": "2026.10.29.1221",
-     "notes": "- vktest reports where NVK stopped; driver calls that fail no longer pass"
-    },
-    {
-     "version": "2026.10.29.1203",
-     "notes": "- nvidia-vulkan: vktest, Vulkan through NVK on NVIDIA's driver"
     }
    ],
    "icon": "icons/nova.png",
@@ -492,15 +492,25 @@
   },
   {
    "name": "sdl2-demos",
-   "version": "2.32.10-1",
-   "description": "SDL 2's test programs: sprites, an OpenGL cube and a looping sound, to try SDL on Nova",
+   "version": "2.32.10-2",
+   "description": "SDL 2's test programs: sprites, an OpenGL cube, a looping sound and a locked mouse, to try SDL on Nova",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/sdl2-demos-2.32.10-1.npk",
-   "size": 22414709,
-   "sha256": "d690d835d779a0530d336b1f13a9e984fbe9bacfe85a4f83807b146333407018",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/sdl2-demos-2.32.10-2.npk",
+   "size": 29862016,
+   "sha256": "abf82ba56723d68fd1575e5f4709d9886a84524f30da41b5f97e84af1e9b2bc6",
    "title": "SDL Demos",
    "category": "Games",
-   "about": "Programs that try SDL, the library many games are built on, on Nova. In the Terminal: sdl2-testsprite draws smiley faces bouncing around a window (with OpenGL on an NVIDIA card, or without it); sdl2-testgl2 spins a coloured cube with OpenGL (needs the NVIDIA Graphics and NVIDIA Vulkan packages and a GeForce RTX 30 or 40 card); sdl2-loopwave plays a sound until you press Ctrl+C."
+   "about": "Programs that try SDL, the library many games are built on, on Nova. In the Terminal: sdl2-testsprite draws smiley faces bouncing around a window (with OpenGL on an NVIDIA card, or without it); sdl2-testgl2 spins a coloured cube with OpenGL (needs the NVIDIA Graphics and NVIDIA Vulkan packages and a GeForce RTX 30 or 40 card); sdl2-loopwave plays a sound until you press Ctrl+C; sdl2-testrelative locks the mouse in its window, the way games that steer with it do, and moves a red square as you move the mouse (Alt+Tab lets go, Escape ends it).",
+   "changes": [
+    {
+     "version": "2.32.10-2",
+     "notes": "- sdl2-testrelative: the mouse locked in the window, as games that steer with it use it (needs the Nova update published with it)."
+    },
+    {
+     "version": "2.32.10-1",
+     "notes": "- First version: sdl2-testsprite, sdl2-testgl2 and sdl2-loopwave, SDL's own test programs on Nova."
+    }
+   ]
   },
   {
    "name": "yipyap-server",
