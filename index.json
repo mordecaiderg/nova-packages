@@ -18,8 +18,8 @@
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
-   "size": 943416,
-   "sha256": "be0bdc186342b2b612541ac3d114c671ef9f9f2daa7c9e597cf925f0eaf65fff",
+   "size": 943535,
+   "sha256": "df8a05495392fb4fc5232e52b7b11b5f6f3d8dfb4d614d5499d06b33718f1a5b",
    "title": "Dropbear SSH",
    "category": "Internet",
    "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
@@ -161,25 +161,29 @@
    "description": "MicroPython 1.29, a lean Python 3",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/micropython-1.29.0-1.npk",
-   "size": 863859,
-   "sha256": "633f316dab218fc3027972c0fb65ea50cb83ab201c290af5c966af0f9868cc5f",
+   "size": 863869,
+   "sha256": "7d6466c18384f5e905fd83e3e8848d0fd754acc69a2ea879831e8d471253bd03",
    "title": "MicroPython",
    "category": "Development",
    "about": "A lean Python 3 that starts in an instant: micropython FILE.py runs a script. For the full language and its standard library, there is Python."
   },
   {
    "name": "nova",
-   "version": "2026.11.02.0102",
+   "version": "2026.11.02.0140",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.0102.npk",
-   "size": 44381429,
-   "sha256": "a4bc41c1e6a0e0343ebd299878c02e0d349c03ae7531038b6e17bad69b907db3",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.0140.npk",
+   "size": 44384405,
+   "sha256": "ba89f281fa26bde0f3402ab1cbf8dd38e95721112f6506d99642b04e90bdf73f",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.0140",
+     "notes": "- OpenGL in Nova windows: EGL window surfaces on Zink, and glcube"
+    },
     {
      "version": "2026.11.02.0102",
      "notes": "- NVK: the GPU address range it sees stops at 512 GiB, as with nouveau"
@@ -295,10 +299,6 @@
     {
      "version": "2026.10.29.1131",
      "notes": "- Mesa for Nova: NVK compiles, into one static library"
-    },
-    {
-     "version": "2026.10.29.1107",
-     "notes": "- libc: initialize every field of the standard streams\n- libc: open_memstream, CPU-time clocks, condition variables on the monotonic clock"
     }
    ],
    "icon": "icons/nova.png",
@@ -310,8 +310,8 @@
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-13.npk",
-   "size": 61005654,
-   "sha256": "cdbdb1fcc43af57ca00674de2730b3c0e1159ea50e4e3e64f90d1319471b875c",
+   "size": 61005648,
+   "sha256": "1efc95e41f3312428f3a0296a26e48ea05288621887e0fa9554c86c508161a30",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
@@ -372,17 +372,17 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-18",
-   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube spins a cube",
+   "version": "26.2.6-19",
+   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-18.npk",
-   "size": 20554468,
-   "sha256": "33d3d5347140503dce09f5b4a920aab9348db8f483536177dc4584d299079ad2",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-19.npk",
+   "size": 27339907,
+   "sha256": "15d9e4024c5c838c5b4668c74406d7d1732ad1d4fe2126be77889ca5ccf0e687",
    "title": "NVIDIA Vulkan",
    "category": "System",
-   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed)."
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate."
   },
   {
    "name": "python",
@@ -390,8 +390,8 @@
    "description": "Python 3.14, the reference implementation (CPython)",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/python-3.14.8-1.npk",
-   "size": 10110216,
-   "sha256": "ea6b16cdaf5fb5956611641469677fd9322bb67c4fc00974312614d33ee6c44c",
+   "size": 10110253,
+   "sha256": "3a7f77a154bc8fa60d9f0b4d4d530a3e02ca6203a2104c9bb09c62ea0db84265",
    "title": "Python",
    "category": "Development",
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
@@ -402,8 +402,8 @@
    "description": "Run your own Discord-style chat server, with a web client for any browser",
    "depends": [],
    "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/yipyap-server-0.2.5_9e7e443-1.npk",
-   "size": 1300676,
-   "sha256": "a36f39f3b47c8d647905514b19ca2ace73deb18bf3b5c61128d0740d1e66c5cc",
+   "size": 1300771,
+   "sha256": "755cc34805e7209693269457f34ae24da549443766f5fb8dd729ececc53699b4",
    "title": "YipYap Server",
    "category": "Internet",
    "about": "YipYap is a chat server you run yourself: hubs with public and private spaces, direct and group chats, threads, reactions, file sharing, search, invites and roles, voice and video calls between browsers, and a soundboard. Profiles have pictures (animated ones too) and banners, the web client installs as an app, and it can send notifications while it's closed.\nOpen YipYap Server to start it: it shows the address to give the people on your network (http://THIS-COMPUTER:7777), and can start with Nova. It always uses HTTPS, which calls need: the server makes its own certificate the first time it starts, and the app shows its fingerprint to compare when you connect. The first account made becomes the administrator. Messages and files are kept in /var/lib/yipyap.",
