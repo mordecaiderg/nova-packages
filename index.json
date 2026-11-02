@@ -491,6 +491,18 @@
    "about": "Python 3.14, the reference implementation (CPython), with its standard library: python3 FILE.py runs a script, python3 alone gives its prompt."
   },
   {
+   "name": "sdl2-demos",
+   "version": "2.32.10-1",
+   "description": "SDL 2's test programs: sprites, an OpenGL cube and a looping sound, to try SDL on Nova",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/sdl2-demos-2.32.10-1.npk",
+   "size": 22414709,
+   "sha256": "d690d835d779a0530d336b1f13a9e984fbe9bacfe85a4f83807b146333407018",
+   "title": "SDL Demos",
+   "category": "Games",
+   "about": "Programs that try SDL, the library many games are built on, on Nova. In the Terminal: sdl2-testsprite draws smiley faces bouncing around a window (with OpenGL on an NVIDIA card, or without it); sdl2-testgl2 spins a coloured cube with OpenGL (needs the NVIDIA Graphics and NVIDIA Vulkan packages and a GeForce RTX 30 or 40 card); sdl2-loopwave plays a sound until you press Ctrl+C."
+  },
+  {
    "name": "yipyap-server",
    "version": "0.2.5+9e7e443-1",
    "description": "Run your own Discord-style chat server, with a web client for any browser",
