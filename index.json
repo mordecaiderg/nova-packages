@@ -169,17 +169,33 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.01.1509",
+   "version": "2026.11.02.0050",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.01.1509.npk",
-   "size": 44381158,
-   "sha256": "f8af0ae650db6e4fadc68020510289866d237dae02fac144ebf989312077b2d9",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.0050.npk",
+   "size": 44381409,
+   "sha256": "0d71b7cb4592634487dac1153304d1718b7edab06048afb212f10fe43e8929ea",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.0050",
+     "notes": "- Modules run with interrupts off, so a driver lock can't freeze the PC"
+    },
+    {
+     "version": "2026.11.01.2213",
+     "notes": "- Clock: a TSC measured below 100 MHz means the timer didn't count"
+    },
+    {
+     "version": "2026.11.01.2122",
+     "notes": "- Zink: OpenGL on Vulkan for ported programs, with zinktest"
+    },
+    {
+     "version": "2026.11.01.2032",
+     "notes": "- Tests: catch up with the 1920x1080 boot and the bigger catalog; CI keeps its caches"
+    },
     {
      "version": "2026.11.01.1509",
      "notes": "- ANGLE: give VMA vkGetInstanceProcAddr and vkGetDeviceProcAddr"
@@ -283,22 +299,6 @@
     {
      "version": "2026.10.29.1050",
      "notes": "- Mesa for Nova: NVK chooses NVIDIA's open driver, no DRM; libc gains barriers"
-    },
-    {
-     "version": "2026.10.29.1029",
-     "notes": "- Mesa for Nova, the start: libelf, Mesa's host tools, the cross build"
-    },
-    {
-     "version": "2026.10.29.0928",
-     "notes": "- Programs map device memory: mmap on module devices, and the GPU's memory"
-    },
-    {
-     "version": "2026.10.28.2100",
-     "notes": "- A new resolution is a trial: kept from Settings, else it goes back in 15 s"
-    },
-    {
-     "version": "2026.10.28.2022",
-     "notes": "- Sound outputs: choose the device in Settings, HDMI audio, NVIDIA's mode order"
     }
    ],
    "icon": "icons/nova.png",
@@ -372,17 +372,17 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-15",
-   "description": "Vulkan and OpenGL ES for NVIDIA cards (Mesa's NVK, Google's ANGLE): vktest and gltest check the card, vkcube spins a cube",
+   "version": "26.2.6-16",
+   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube spins a cube",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-15.npk",
-   "size": 13755063,
-   "sha256": "5c8c834910db62d59999113e34549f451c6b7e949d57d3e164d4499584743575",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-16.npk",
+   "size": 20554773,
+   "sha256": "bc370a4cdd94e83a369166bad76f714cffad9a426af4cf08907d1219c75be418",
    "title": "NVIDIA Vulkan",
    "category": "System",
-   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed)."
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed)."
   },
   {
    "name": "python",
