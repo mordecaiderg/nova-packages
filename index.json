@@ -169,17 +169,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.02.1840",
+   "version": "2026.11.02.2049",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1840.npk",
-   "size": 44408862,
-   "sha256": "8a05617d5cb2ca4b1c09634b13fe80190c754ec998afed9c20395ff808f91ab1",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.2049.npk",
+   "size": 44409426,
+   "sha256": "70e24b421a055ed7b325b1ec378ca75ee06a468ddffd5810ac699df92396000e",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.2049",
+     "notes": "- Vulkan and OpenGL windows present at the desktop's real frames (SYS_FRAME_WAIT)"
+    },
+    {
+     "version": "2026.11.02.2042",
+     "notes": "- mkpkg: notes are needed from a package's second revision, not for any version"
+    },
     {
      "version": "2026.11.02.1840",
      "notes": "- nvidia -16: flips off unless nvidia.flips=on, until they work on a real card"
@@ -291,14 +299,6 @@
     {
      "version": "2026.10.30.1800",
      "notes": "- libvulkan answers the loader's layer queries"
-    },
-    {
-     "version": "2026.10.29.2219",
-     "notes": "- Ladybird draws pages on the GPU where there is one"
-    },
-    {
-     "version": "2026.10.29.2135",
-     "notes": "- libc: setvbuf's unbuffered mode writes at once"
     }
    ],
    "icon": "icons/nova.png",
@@ -388,18 +388,22 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-23",
+   "version": "26.2.6-24",
    "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-23.npk",
-   "size": 27344865,
-   "sha256": "3756446bab88f58084092622d0ec3b08193f9412f26fde0bb5cfcb3f85af49be",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-24.npk",
+   "size": 27346565,
+   "sha256": "25c3e740f3e6b2110bcae1f09aaee694074ca3b095f6398506d990ad928b7612",
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
    "changes": [
+    {
+     "version": "26.2.6-24",
+     "notes": "- Vulkan and OpenGL windows (vkcube, glcube) show a frame each time the monitor refreshes, in step with the desktop, instead of every 15 ms: no more dropped frames. Needs the Nova update published with it."
+    },
     {
      "version": "26.2.6-23",
      "notes": "- The Store shows what each version changed (this list)."
