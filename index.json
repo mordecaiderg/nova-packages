@@ -169,17 +169,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.02.1821",
+   "version": "2026.11.02.1840",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1821.npk",
-   "size": 44408448,
-   "sha256": "9914dcff75a5471d17f6695486b1ff3327330dcd3be67e862da5e36d239ac1e4",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.1840.npk",
+   "size": 44408862,
+   "sha256": "8a05617d5cb2ca4b1c09634b13fe80190c754ec998afed9c20395ff808f91ab1",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.1840",
+     "notes": "- nvidia -16: flips off unless nvidia.flips=on, until they work on a real card"
+    },
+    {
+     "version": "2026.11.02.1831",
+     "notes": "- A window made smaller than asked keeps a buffer of the size asked for at first"
+    },
     {
      "version": "2026.11.02.1821",
      "notes": "- Flips that don't finish fall back to drawing on the screen, and don't starve the system"
@@ -291,14 +299,6 @@
     {
      "version": "2026.10.29.2135",
      "notes": "- libc: setvbuf's unbuffered mode writes at once"
-    },
-    {
-     "version": "2026.10.29.2125",
-     "notes": "- Vulkan for programs: Nova's libvulkan, a window system, and vkcube"
-    },
-    {
-     "version": "2026.10.29.2107",
-     "notes": "- NVK on NVIDIA's driver: the GPU description NAK needs"
     }
    ],
    "icon": "icons/nova.png",
@@ -306,16 +306,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-15",
+   "version": "570.144-16",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-15.npk",
-   "size": 61007763,
-   "sha256": "7b19202b9db8b61be3516275b3552aff63cfea2f430b990aaee9e78eaf664560",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-16.npk",
+   "size": 61007990,
+   "sha256": "8dd2f7cf8ddcaf3c6d6f703c412981e56141f124fbe4bd1207b4c9c30948c37b",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-16",
+     "notes": "- Back to drawing straight on the screen, as up to -13: the flips of -14 and -15 left the screen black on some cards. They're off until they're known to work; nvidia.flips=on in /etc/nova.conf tries them."
+    },
     {
      "version": "570.144-15",
      "notes": "- Fixes -14's black screen at start: if the card doesn't take a flipped frame within a quarter of a second, the desktop goes back to drawing straight on the screen (it may tear, but it works), and the log says why. The desktop no longer keeps programs waiting while a frame is on its way. Needs the Nova update published with it."
