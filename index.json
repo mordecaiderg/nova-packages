@@ -14,15 +14,25 @@
   },
   {
    "name": "dropbear",
-   "version": "2026.94-1",
+   "version": "2026.94-2",
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-1.npk",
-   "size": 943535,
-   "sha256": "df8a05495392fb4fc5232e52b7b11b5f6f3d8dfb4d614d5499d06b33718f1a5b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-2.npk",
+   "size": 952631,
+   "sha256": "a58bdde69c5cf2d555e30c35695635addc9b822100bfd735d37ddd8a0e524887",
    "title": "Dropbear SSH",
    "category": "Internet",
-   "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how."
+   "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how.",
+   "changes": [
+    {
+     "version": "2026.94-2",
+     "notes": "- Logs in as the user you name, with their own permissions, now that Nova has users (needs the Nova update published with it; the -1 build can't log in on it)."
+    },
+    {
+     "version": "2026.94-1",
+     "notes": "- Dropbear SSH: log in to Nova from another computer with a key (~/.ssh/authorized_keys), and copy files with scp."
+    }
+   ]
   },
   {
    "name": "fonts-noto",
@@ -169,17 +179,45 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.02.2111",
+   "version": "2026.11.03.1739",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.2111.npk",
-   "size": 44410852,
-   "sha256": "dabcd8ffc211c7c01ff2a07c7da95b73b2b1c4cb676a4288891758a78cddafa3",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.1739.npk",
+   "size": 45514418,
+   "sha256": "5f426820c7f0e8824300e356433d9961f289f6d9969a06826108318a7fbce957",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.03.1739",
+     "notes": "- Server mode logs in before its console starts; fixes for CI"
+    },
+    {
+     "version": "2026.11.02.2320",
+     "notes": "- Settings' Users pane: add people, change passwords, remove people"
+    },
+    {
+     "version": "2026.11.02.2313",
+     "notes": "- Each user's own settings; the server console asks who logs in"
+    },
+    {
+     "version": "2026.11.02.2302",
+     "notes": "- The login screen, the lock screen and Log Out"
+    },
+    {
+     "version": "2026.11.02.2245",
+     "notes": "- The desktop runs apps as the user who logged in"
+    },
+    {
+     "version": "2026.11.02.2230",
+     "notes": "- Accounts: /etc/passwd, Argon2id passwords, su, sudo, login and useradd"
+    },
+    {
+     "version": "2026.11.02.2148",
+     "notes": "- Processes run as users: ids, setuid programs and permission checks"
+    },
     {
      "version": "2026.11.02.2111",
      "notes": "- Windows show what the app last flushed, not a half-drawn buffer"
@@ -271,34 +309,6 @@
     {
      "version": "2026.11.01.1437",
      "notes": "- Ladybird: WebGL on ANGLE's Vulkan back end"
-    },
-    {
-     "version": "2026.11.01.1352",
-     "notes": "- ANGLE on Vulkan: OpenGL ES and EGL for WebGL, with gltest"
-    },
-    {
-     "version": "2026.11.01.1245",
-     "notes": "- NVIDIA packages move from the testing source to the default one\n- Vulkan: presenting waits for the desktop's next frame\n- NVK on NVIDIA's driver: unbind the semaphore surface before freeing the channel\n- Crash log: a fault caught by a handler that then exits is a crash too"
-    },
-    {
-     "version": "2026.11.01.0121",
-     "notes": "- Task Manager has a GPU tab with NVIDIA's driver"
-    },
-    {
-     "version": "2026.11.01.0105",
-     "notes": "- Network: a 256 KB receive window, so 4K video keeps up"
-    },
-    {
-     "version": "2026.11.01.0047",
-     "notes": "- Desktop: a busy window costs a quarter of what it did"
-    },
-    {
-     "version": "2026.11.01.0007",
-     "notes": "- Fullscreen windows, and Ladybird's video fullscreen uses them"
-    },
-    {
-     "version": "2026.10.31.0154",
-     "notes": "- NVK on NVIDIA's driver: syncs are timelines too"
     }
    ],
    "icon": "icons/nova.png",
