@@ -169,17 +169,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.02.2049",
+   "version": "2026.11.02.2111",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.2049.npk",
-   "size": 44409426,
-   "sha256": "70e24b421a055ed7b325b1ec378ca75ee06a468ddffd5810ac699df92396000e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.02.2111.npk",
+   "size": 44410852,
+   "sha256": "dabcd8ffc211c7c01ff2a07c7da95b73b2b1c4cb676a4288891758a78cddafa3",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.02.2111",
+     "notes": "- Windows show what the app last flushed, not a half-drawn buffer"
+    },
     {
      "version": "2026.11.02.2049",
      "notes": "- Vulkan and OpenGL windows present at the desktop's real frames (SYS_FRAME_WAIT)"
@@ -295,10 +299,6 @@
     {
      "version": "2026.10.31.0154",
      "notes": "- NVK on NVIDIA's driver: syncs are timelines too"
-    },
-    {
-     "version": "2026.10.30.1800",
-     "notes": "- libvulkan answers the loader's layer queries"
     }
    ],
    "icon": "icons/nova.png",
