@@ -179,17 +179,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.03.1820",
+   "version": "2026.11.03.1924",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.1820.npk",
-   "size": 45520060,
-   "sha256": "b4d60bf0bdf7376614a1800030636b4b9fdad33ef35ed5943e415194a47df2ed",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.1924.npk",
+   "size": 45519622,
+   "sha256": "396f52ab0995c27e3d9fd29da0344baf03cbfdd680953a56e750f18c8094c918",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.03.1924",
+     "notes": "- People can be renamed: usermod -l and Settings' Rename"
+    },
     {
      "version": "2026.11.03.1820",
      "notes": "- Filesystem calls run with interrupts off; ext2 folders that got their parent's block are fixed"
@@ -305,10 +309,6 @@
     {
      "version": "2026.11.01.2122",
      "notes": "- Zink: OpenGL on Vulkan for ported programs, with zinktest"
-    },
-    {
-     "version": "2026.11.01.2032",
-     "notes": "- Tests: catch up with the 1920x1080 boot and the bigger catalog; CI keeps its caches"
     }
    ],
    "icon": "icons/nova.png",
