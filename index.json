@@ -187,17 +187,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.04.1732",
+   "version": "2026.11.04.1826",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.04.1732.npk",
-   "size": 46078957,
-   "sha256": "2f2d8104ac78fb7dd7f9a85f8c0c3f1515549640a3f116b4cc35126d7a4b8be3",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.04.1826.npk",
+   "size": 46079425,
+   "sha256": "1f0a89fae1c3533323f699a4174adc290d1ef39696ff490d8dd0e064038af5c2",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.04.1826",
+     "notes": "- The first user's home is private, as everyone else's"
+    },
+    {
+     "version": "2026.11.04.1756",
+     "notes": "- publish: compare a new Nova with what was really published"
+    },
     {
      "version": "2026.11.04.1732",
      "notes": "- NVIDIA: a late flip isn't a broken display; each thread its own to the driver's locks"
@@ -309,14 +317,6 @@
     {
      "version": "2026.11.02.1759",
      "notes": "- The desktop flips at the NVIDIA display's vblank: no more tearing"
-    },
-    {
-     "version": "2026.11.02.1614",
-     "notes": "- OpenArena: the first game, on ioquake3 with SDL and OpenGL through Zink"
-    },
-    {
-     "version": "2026.11.02.1531",
-     "notes": "- Pointer lock for games that steer with the mouse, and SDL's relative mode on it"
     }
    ],
    "icon": "icons/nova.png",
