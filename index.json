@@ -14,16 +14,20 @@
   },
   {
    "name": "dropbear",
-   "version": "2026.94-2",
+   "version": "2026.94-3",
    "description": "Dropbear SSH: a server (dropbear), client (dbclient), scp and dropbearkey",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-2.npk",
-   "size": 952631,
-   "sha256": "a58bdde69c5cf2d555e30c35695635addc9b822100bfd735d37ddd8a0e524887",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dropbear-2026.94-3.npk",
+   "size": 1000454,
+   "sha256": "c4961c6926cc97625fffa561d742329ce24ac0c64d4ab0842e3f8a3432eaeea4",
    "title": "Dropbear SSH",
    "category": "Internet",
-   "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Logins are by key; docs/SSH.md tells how.",
+   "about": "Log in to Nova from another computer, or from Nova to others: an SSH server (dropbear), a client (dbclient), scp to copy files, and dropbearkey to make keys. Log in with your password or a key, and copy files with scp or any SFTP app (FileZilla, Cyberduck, sftp); docs/SSH.md tells how.",
    "changes": [
+    {
+     "version": "2026.94-3",
+     "notes": "- Log in with your Nova password, not only with a key (an account without a password still can't).\n- SFTP: copy files to and from Nova with FileZilla, Cyberduck or sftp. Needs the Nova update published with it."
+    },
     {
      "version": "2026.94-2",
      "notes": "- Logs in as the user you name, with their own permissions, now that Nova has users (needs the Nova update published with it; the -1 build can't log in on it)."
@@ -179,17 +183,33 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.03.1941",
+   "version": "2026.11.03.2212",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.1941.npk",
-   "size": 45521301,
-   "sha256": "7db758ca150816e798f44b7554af20eed3d08f69f70c5d74490b64fb883d3f1f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.2212.npk",
+   "size": 46076328,
+   "sha256": "810fce73d896729fc27447845319ca64a8cbd1eda6530cf73eebe1a1878a7714",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.03.2212",
+     "notes": "- SSH with passwords, and sftp through Nova's own sftp-server"
+    },
+    {
+     "version": "2026.11.03.2157",
+     "notes": "- The stack protector for Nova's programs"
+    },
+    {
+     "version": "2026.11.03.2142",
+     "notes": "- ASLR: programs' stacks, heaps and mmap regions at random addresses"
+    },
+    {
+     "version": "2026.11.03.2130",
+     "notes": "- NX: data, stacks and heaps can't be run as code"
+    },
     {
      "version": "2026.11.03.1941",
      "notes": "- A renamed user's home follows their name at their next login"
@@ -293,22 +313,6 @@
     {
      "version": "2026.11.02.0158",
      "notes": "- libvulkan: one lock for queue submissions\n- publish: a published package is never replaced under the same version"
-    },
-    {
-     "version": "2026.11.02.0140",
-     "notes": "- OpenGL in Nova windows: EGL window surfaces on Zink, and glcube"
-    },
-    {
-     "version": "2026.11.02.0102",
-     "notes": "- NVK: the GPU address range it sees stops at 512 GiB, as with nouveau"
-    },
-    {
-     "version": "2026.11.02.0050",
-     "notes": "- Modules run with interrupts off, so a driver lock can't freeze the PC"
-    },
-    {
-     "version": "2026.11.01.2213",
-     "notes": "- Clock: a TSC measured below 100 MHz means the timer didn't count"
     }
    ],
    "icon": "icons/nova.png",
