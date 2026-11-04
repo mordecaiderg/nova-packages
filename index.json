@@ -187,17 +187,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.03.2322",
+   "version": "2026.11.04.0110",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.2322.npk",
-   "size": 46078881,
-   "sha256": "41aaa9dd070bb9b1e63187bbe5fd5f1309bd25e94eb58cc2754168fe94144f36",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.04.0110.npk",
+   "size": 46078931,
+   "sha256": "877318311d99f4abc9ea535dfd0885aaaea6bd540359dbffbba0f98108c99ed7",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.04.0110",
+     "notes": "- The gap ASLR leaves above the stack reads as zeros"
+    },
     {
      "version": "2026.11.03.2322",
      "notes": "- Fixes for a user's session on ext2: mkdir says EEXIST, homes reclaimed, /run/user"
@@ -313,10 +317,6 @@
     {
      "version": "2026.11.02.1515",
      "notes": "- SDL 2 for Nova: its own video and audio drivers, and sdl2-demos"
-    },
-    {
-     "version": "2026.11.02.0242",
-     "notes": "- nvidia-vulkan gets What's new notes; mkpkg wants them past -1"
     }
    ],
    "icon": "icons/nova.png",
