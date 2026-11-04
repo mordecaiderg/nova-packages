@@ -70,19 +70,23 @@
   },
   {
    "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-14",
+   "version": "2026.10.18+7a8a84e0-15",
    "description": "A web browser with its own engine: today's web, JavaScript and all",
    "depends": [
     "fonts-noto"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-14.npk",
-   "size": 132278058,
-   "sha256": "d0033b28e829428065160df5a3ebe7f3c89a5481b35c33991f2e5e642affdf14",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-15.npk",
+   "size": 132278067,
+   "sha256": "0adb4253554ae6a6f0fa924abf5eeda437b0360325f94307be82b0d4272cc331",
    "title": "Ladybird",
    "category": "Internet",
    "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
    "app": "web",
    "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-15",
+     "notes": "- Opens again: the browser's programs are marked as programs, which Nova checks now that it has users (\"permission denied\")."
+    },
     {
      "version": "2026.10.18+7a8a84e0-14",
      "notes": "- WebGL pages no longer close the tab on an NVIDIA card: the part of the browser that draws them stopped while setting up the card's memory."
@@ -514,16 +518,26 @@
   },
   {
    "name": "openarena",
-   "version": "0.8.8-1",
+   "version": "0.8.8-2",
    "description": "OpenArena: a fast first-person arena shooter against bots or online (ioquake3), for NVIDIA cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/openarena-0.8.8-1.npk",
-   "size": 416253854,
-   "sha256": "64cd6179d5e1fa5069225b1481243abfd66c397f867d8c26fff27e32544d6a36",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/openarena-0.8.8-2.npk",
+   "size": 416333583,
+   "sha256": "f7579c7bd0052bfe2bf573488d5404a7d4457a85ce48d073ba0070a70d1d35d7",
    "title": "OpenArena",
    "category": "Games",
    "about": "A fast-paced first-person arena shooter in the style of the 1999 classics: run, jump and fight across arenas against bots, or join players on the internet. The engine is ioquake3; the game, its maps and its sounds are OpenArena's, all free software. Needs an NVIDIA GeForce RTX 30 or 40 card with the NVIDIA Graphics and NVIDIA Vulkan packages. The mouse aims (Alt+Tab gets it back); settings and saves are kept in your home folder's .local/share/openarena. openarena-server in the Terminal runs a server for others to join.",
    "app": "openarena",
+   "changes": [
+    {
+     "version": "0.8.8-2",
+     "notes": "- Opens again: the game's programs are marked as programs, which Nova checks now that it has users (\"permission denied\")."
+    },
+    {
+     "version": "0.8.8-1",
+     "notes": "- OpenArena: a fast first-person arena shooter against bots or online, on ioquake3."
+    }
+   ],
    "icon": "icons/openarena.png",
    "icon_sha256": "ab5a76bfe6f536d559c1f935eb6a7b7a4036bb37f098e64efe713f72c2ba78e4"
   },
@@ -541,16 +555,20 @@
   },
   {
    "name": "sdl2-demos",
-   "version": "2.32.10-2",
+   "version": "2.32.10-3",
    "description": "SDL 2's test programs: sprites, an OpenGL cube, a looping sound and a locked mouse, to try SDL on Nova",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/sdl2-demos-2.32.10-2.npk",
-   "size": 29862016,
-   "sha256": "abf82ba56723d68fd1575e5f4709d9886a84524f30da41b5f97e84af1e9b2bc6",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/sdl2-demos-2.32.10-3.npk",
+   "size": 29970261,
+   "sha256": "163c1960c93d9fc55fc5242005c0aa29c9700388fbd9381762a96a3b97ef7ceb",
    "title": "SDL Demos",
    "category": "Games",
    "about": "Programs that try SDL, the library many games are built on, on Nova. In the Terminal: sdl2-testsprite draws smiley faces bouncing around a window (with OpenGL on an NVIDIA card, or without it); sdl2-testgl2 spins a coloured cube with OpenGL (needs the NVIDIA Graphics and NVIDIA Vulkan packages and a GeForce RTX 30 or 40 card); sdl2-loopwave plays a sound until you press Ctrl+C; sdl2-testrelative locks the mouse in its window, the way games that steer with it do, and moves a red square as you move the mouse (Alt+Tab lets go, Escape ends it).",
    "changes": [
+    {
+     "version": "2.32.10-3",
+     "notes": "- The demos open again: their programs are marked as programs, which Nova checks now that it has users."
+    },
     {
      "version": "2.32.10-2",
      "notes": "- sdl2-testrelative: the mouse locked in the window, as games that steer with it use it (needs the Nova update published with it)."
