@@ -179,17 +179,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.03.1924",
+   "version": "2026.11.03.1941",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.1924.npk",
-   "size": 45519622,
-   "sha256": "396f52ab0995c27e3d9fd29da0344baf03cbfdd680953a56e750f18c8094c918",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.1941.npk",
+   "size": 45521301,
+   "sha256": "7db758ca150816e798f44b7554af20eed3d08f69f70c5d74490b64fb883d3f1f",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.03.1941",
+     "notes": "- A renamed user's home follows their name at their next login"
+    },
     {
      "version": "2026.11.03.1924",
      "notes": "- People can be renamed: usermod -l and Settings' Rename"
@@ -305,10 +309,6 @@
     {
      "version": "2026.11.01.2213",
      "notes": "- Clock: a TSC measured below 100 MHz means the timer didn't count"
-    },
-    {
-     "version": "2026.11.01.2122",
-     "notes": "- Zink: OpenGL on Vulkan for ported programs, with zinktest"
     }
    ],
    "icon": "icons/nova.png",
