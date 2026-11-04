@@ -187,17 +187,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.03.2212",
+   "version": "2026.11.03.2259",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.2212.npk",
-   "size": 46076328,
-   "sha256": "810fce73d896729fc27447845319ca64a8cbd1eda6530cf73eebe1a1878a7714",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.03.2259.npk",
+   "size": 46076351,
+   "sha256": "b969483553b629830d621b15c54d1a79b74250acd32e11a1ba887b4c314b1812",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.03.2259",
+     "notes": "- sudo sets HOME to the target user's, as Linux's does"
+    },
+    {
+     "version": "2026.11.03.2234",
+     "notes": "- Packages mark their programs executable wherever they are"
+    },
     {
      "version": "2026.11.03.2212",
      "notes": "- SSH with passwords, and sftp through Nova's own sftp-server"
@@ -309,14 +317,6 @@
     {
      "version": "2026.11.02.0221",
      "notes": "- libvulkan: RGBA swapchains, swapped into the window as it's copied"
-    },
-    {
-     "version": "2026.11.02.0214",
-     "notes": "- publish: Nova isn't published again when only its version changed"
-    },
-    {
-     "version": "2026.11.02.0158",
-     "notes": "- libvulkan: one lock for queue submissions\n- publish: a published package is never replaced under the same version"
     }
    ],
    "icon": "icons/nova.png",
