@@ -187,17 +187,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.04.0110",
+   "version": "2026.11.04.1732",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.04.0110.npk",
-   "size": 46078931,
-   "sha256": "877318311d99f4abc9ea535dfd0885aaaea6bd540359dbffbba0f98108c99ed7",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.04.1732.npk",
+   "size": 46078957,
+   "sha256": "2f2d8104ac78fb7dd7f9a85f8c0c3f1515549640a3f116b4cc35126d7a4b8be3",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.04.1732",
+     "notes": "- NVIDIA: a late flip isn't a broken display; each thread its own to the driver's locks"
+    },
     {
      "version": "2026.11.04.0110",
      "notes": "- The gap ASLR leaves above the stack reads as zeros"
@@ -313,10 +317,6 @@
     {
      "version": "2026.11.02.1531",
      "notes": "- Pointer lock for games that steer with the mouse, and SDL's relative mode on it"
-    },
-    {
-     "version": "2026.11.02.1515",
-     "notes": "- SDL 2 for Nova: its own video and audio drivers, and sdl2-demos"
     }
    ],
    "icon": "icons/nova.png",
