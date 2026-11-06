@@ -187,17 +187,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.04.2136",
+   "version": "2026.11.05.1837",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.04.2136.npk",
-   "size": 46079025,
-   "sha256": "d9861e8518c60fad6e10818b1727e40c64e9878c0865ff4188dbf735f1f8ec05",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.05.1837.npk",
+   "size": 46151784,
+   "sha256": "f4393d86844faf668e75e71b0e4b2d86a1901263b0aff73a83c74d21e2bee7e7",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.05.1837",
+     "notes": "- Desktop icons: files, folders and shortcuts, each user's own Desktop"
+    },
+    {
+     "version": "2026.11.05.1743",
+     "notes": "- Symbolic links, on ext2: SYS_SYMLINK, SYS_READLINK, lstat follows them not"
+    },
     {
      "version": "2026.11.04.2136",
      "notes": "- watchdog: Alder Lake and later PCHs clear NO_REBOOT through TCO1_CNT, not RCBA"
@@ -309,14 +317,6 @@
     {
      "version": "2026.11.02.2042",
      "notes": "- mkpkg: notes are needed from a package's second revision, not for any version"
-    },
-    {
-     "version": "2026.11.02.1840",
-     "notes": "- nvidia -16: flips off unless nvidia.flips=on, until they work on a real card"
-    },
-    {
-     "version": "2026.11.02.1831",
-     "notes": "- A window made smaller than asked keeps a buffer of the size asked for at first"
     }
    ],
    "icon": "icons/nova.png",
