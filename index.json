@@ -187,17 +187,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.07.0038",
+   "version": "2026.11.07.1234",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.0038.npk",
-   "size": 46175676,
-   "sha256": "e0bde4b7923865f7dff23352d9e0342536d1eece39cca7e4e809948fa2976071",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.1234.npk",
+   "size": 46200500,
+   "sha256": "cce6f01b09a06a5f1684345ef3568e4ce2659668958fde8b12c5a18b061eb9ac",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.07.1234",
+     "notes": "- The overview, a blocky genie, and dock tiles that open and close smoothly"
+    },
     {
      "version": "2026.11.07.0038",
      "notes": "- Minimizing into the dock, with a genie animation"
@@ -313,10 +317,6 @@
     {
      "version": "2026.11.02.2302",
      "notes": "- The login screen, the lock screen and Log Out"
-    },
-    {
-     "version": "2026.11.02.2245",
-     "notes": "- The desktop runs apps as the user who logged in"
     }
    ],
    "icon": "icons/nova.png",
