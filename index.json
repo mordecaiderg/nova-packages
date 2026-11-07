@@ -187,17 +187,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.06.1839",
+   "version": "2026.11.06.1903",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.06.1839.npk",
-   "size": 46155573,
-   "sha256": "6ea0488aa6093df9eb34289dfb9dbf1a44727c96c7ff0ba106501a40387089d6",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.06.1903.npk",
+   "size": 46157889,
+   "sha256": "34a9646c913d3e6b9fdf804218bcee02ca3896134b31ea2f82a3d77e9fed4781",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.06.1903",
+     "notes": "- Desktop icons: Rename, and the drag label's smear is gone"
+    },
     {
      "version": "2026.11.06.1839",
      "notes": "- Desktop icons: a right-click menu with Open and Move to Bin"
@@ -313,10 +317,6 @@
     {
      "version": "2026.11.02.2148",
      "notes": "- Processes run as users: ids, setuid programs and permission checks"
-    },
-    {
-     "version": "2026.11.02.2111",
-     "notes": "- Windows show what the app last flushed, not a half-drawn buffer"
     }
    ],
    "icon": "icons/nova.png",
