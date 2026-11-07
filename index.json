@@ -324,16 +324,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-20",
+   "version": "570.144-21",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-20.npk",
-   "size": 61015745,
-   "sha256": "bcad3a609e8753d95edaf9ca6b4bc676e84bfb436cebede248bdc799bd622e3d",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-21.npk",
+   "size": 61015827,
+   "sha256": "6f9e481c839795754642e37c4d998ad56cc157929277e783d80fae5ca914c239",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-21",
+     "notes": "- Fixes -19 and -20, with which the card didn't start (a black screen; Nova then booted without the driver): the start waits for work of the driver's own, which -19 held back. The driver's work runs as it did up to -18; only a wait inside such work for a lock the interrupted call holds is passed at once instead of after 20 seconds."
+    },
     {
      "version": "570.144-20",
      "notes": "- Every line of /var/log/nvidia.log now starts with the time since boot, so a log can say when something happened, not just in what order."
