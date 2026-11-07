@@ -17,8 +17,8 @@ written by Nova's `make publish`: don't edit it by hand.
 | Lua | `lua` | 5.4.7-1 | Development | 164 KB | Lua 5.4, a small and fast scripting language |
 | GNU Make | `make` | 4.4.1-1 | Development | 161 KB | GNU make 4.4.1, which builds programs from makefiles |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 844 KB | MicroPython 1.29, a lean Python 3 |
-| Nova | `nova` | 2026.11.07.1234 | System | 45118 KB | Nova itself: the kernel and the system every app runs on |
-| NVIDIA Graphics | `nvidia` | 570.144-18 | System | 59585 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
+| Nova | `nova` | 2026.11.07.1253 | System | 45125 KB | Nova itself: the kernel and the system every app runs on |
+| NVIDIA Graphics | `nvidia` | 570.144-19 | System | 59586 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-24 | System | 26706 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
 | OpenArena | `openarena` | 0.8.8-2 | Games | 406576 KB | OpenArena: a fast first-person arena shooter against bots or online (ioquake3), for NVIDIA cards |
 | Python | `python` | 3.14.8-1 | Development | 9874 KB | Python 3.14, the reference implementation (CPython) |

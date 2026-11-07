@@ -187,17 +187,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.07.1234",
+   "version": "2026.11.07.1253",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.1234.npk",
-   "size": 46200500,
-   "sha256": "cce6f01b09a06a5f1684345ef3568e4ce2659668958fde8b12c5a18b061eb9ac",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.1253.npk",
+   "size": 46207980,
+   "sha256": "8f56b3063076c18e69323dcdf11bce4e864ecb77ba92da2e86c14140608d5b69",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.07.1253",
+     "notes": "- Box selection on the desktop"
+    },
     {
      "version": "2026.11.07.1234",
      "notes": "- The overview, a blocky genie, and dock tiles that open and close smoothly"
@@ -313,10 +317,6 @@
     {
      "version": "2026.11.02.2313",
      "notes": "- Each user's own settings; the server console asks who logs in"
-    },
-    {
-     "version": "2026.11.02.2302",
-     "notes": "- The login screen, the lock screen and Log Out"
     }
    ],
    "icon": "icons/nova.png",
@@ -324,16 +324,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-18",
+   "version": "570.144-19",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-18.npk",
-   "size": 61015035,
-   "sha256": "b8434b7d077397975530400450fd0fec41c868b91d5f3ed6bb919c878de25542",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-19.npk",
+   "size": 61015509,
+   "sha256": "497c122dd13581eac5e0ddd92b240e6e4727df83954c59580c850a63cdc15d1d",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-19",
+     "notes": "- The desktop no longer freezes for good after the driver gives up waiting for one of its locks (the log said \"a semaphore stayed taken: carried on\" every 20 seconds; seen after a monitor was switched off at an idle desktop). Work the driver hands off (its interrupts' second half, timers, queued work) no longer runs in the middle of a call that holds a lock it would need, and a wait given up on no longer leaves the lock off by one, which made every later wait time out too. The log line now says which thread, how many locks it held and how deep in waits it was."
+    },
     {
      "version": "570.144-18",
      "notes": "- The screen no longer goes black for a few seconds (with the HDMI sound) when the machine is busy: a late frame is no longer taken as flips not working.\n- Programs drawing on the card from several threads at once (the browser) no longer trip the driver's locks (\"_rmGpuAllocLockIsOwner\" in the log). Needs the Nova update published with it."
