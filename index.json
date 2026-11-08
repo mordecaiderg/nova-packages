@@ -243,17 +243,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.1348",
+   "version": "2026.11.08.1409",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1348.npk",
-   "size": 46569206,
-   "sha256": "c24565bb929e72f3e8f311f4fbab93e1a1701b7d38b04d6f4e3407995d939b13",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1409.npk",
+   "size": 46569698,
+   "sha256": "efc41632e9c006c00c0fa7535a5a3c512a6ec0ef664078106e9c609ca671d01c",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.1409",
+     "notes": "- Controllers: send a pad's light and rumble by its interrupt endpoint"
+    },
     {
      "version": "2026.11.08.1348",
      "notes": "- Controllers: a PlayStation pad's light, touchpad as the mouse, rumble"
@@ -369,10 +373,6 @@
     {
      "version": "2026.11.03.2322",
      "notes": "- Fixes for a user's session on ext2: mkdir says EEXIST, homes reclaimed, /run/user"
-    },
-    {
-     "version": "2026.11.03.2308",
-     "notes": "- Each login gets a private runtime folder (XDG_RUNTIME_DIR)"
     }
    ],
    "icon": "icons/nova.png",
