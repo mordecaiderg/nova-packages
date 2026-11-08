@@ -324,16 +324,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-23",
+   "version": "570.144-24",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-23.npk",
-   "size": 61016543,
-   "sha256": "387813b2abfb4130195e123038e8880ac42320881cdb93e8d12d446773a89cc3",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-24.npk",
+   "size": 61016888,
+   "sha256": "ba8d0ef792159a2d17876752307478188b53104796e28486ef6f9a5110844af5",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-24",
+     "notes": "- Fixes the \"_rmGpuAllocLockIsOwner\" line every start showed, and with it a way the driver could end up waiting for a lock nobody held: the second half of the card's interrupt handler, which on Linux runs on a thread of its own, ran on the waiting call's thread with the same identity, so the driver took it for that call and let go of the call's lock. It has its own identity now, as do interrupts (the identity Linux gives them, which Nova's desktop had shared)."
+    },
     {
      "version": "570.144-23",
      "notes": "- Diagnostics only: the driver's first few assertions and lock waits in /var/log/nvidia.log now say in what context they happened and which of the driver's functions led there, to find the cause of the \"_rmGpuAllocLockIsOwner\" line every start shows. Nothing else changes."
