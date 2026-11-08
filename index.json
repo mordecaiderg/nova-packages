@@ -14,17 +14,21 @@
   },
   {
    "name": "controllers",
-   "version": "1.0-2",
+   "version": "1.0-3",
    "description": "Controllers: a PlayStation pad's light and touchpad, rumble, battery, and a button tester",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-2.npk",
-   "size": 663894,
-   "sha256": "b8eb4b6c7646377a88b1ec68507dd66a496c2b7fac9baf2620235f3629b916c2",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-3.npk",
+   "size": 664268,
+   "sha256": "f0c1b9d870a3740bdcd3a7d1f2886825dee67ca5bccfd45d5592150a0468a9a8",
    "title": "Controllers",
    "category": "Utilities",
-   "about": "Settings for the game controllers you plug in. Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer: click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble and a DualSense's trigger effects (resistance, a weapon's trigger, vibration), see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense over a USB cable; other controllers show their buttons. Needs the Nova update from November 2026.",
+   "about": "Settings for the game controllers you plug in, each its own (up to four). Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer (one controller has it: the lowest-numbered player that has it on): click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble and a DualSense's trigger effects (resistance, a weapon's trigger, vibration), see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense over a USB cable; other controllers show their buttons. Needs the Nova update from November 2026.",
    "app": "controllers",
    "changes": [
+    {
+     "version": "1.0-3",
+     "notes": "- Each controller has its own settings: its light, and whether its touchpad moves the pointer. They follow the controller wherever it's plugged in.\n- Only one controller moves the pointer: player 1's (or the lowest-numbered player that has it on)."
+    },
     {
      "version": "1.0-2",
      "notes": "- Trigger effects to try on a DualSense: resistance, a weapon's trigger that gives way, and vibration (press L2 and R2).\n- The battery says whether it's charging, full, or can't charge right now. It's shown in steps of 10%, as the controller reports it."
@@ -253,17 +257,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.1433",
+   "version": "2026.11.08.1458",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1433.npk",
-   "size": 46569829,
-   "sha256": "0005d0a1d679ed87f9a4790dfb33992d6e4c9805bba657bfa2b00aebe3d5f24f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1458.npk",
+   "size": 46573310,
+   "sha256": "d196d19613762d1f947152c91497313b59a5c08d86a630a6d4f744c48ed4a70f",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.1458",
+     "notes": "- Controllers: each controller's own settings; one has the pointer"
+    },
     {
      "version": "2026.11.08.1433",
      "notes": "- Controllers: a DualSense's trigger effects, and clearer battery"
@@ -379,10 +387,6 @@
     {
      "version": "2026.11.04.1732",
      "notes": "- NVIDIA: a late flip isn't a broken display; each thread its own to the driver's locks"
-    },
-    {
-     "version": "2026.11.04.0110",
-     "notes": "- The gap ASLR leaves above the stack reads as zeros"
     }
    ],
    "icon": "icons/nova.png",
