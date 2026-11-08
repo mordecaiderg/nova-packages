@@ -187,17 +187,21 @@
   },
   {
    "name": "mgba",
-   "version": "0.10.5-2",
+   "version": "0.10.5-3",
    "description": "mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/mgba-0.10.5-2.npk",
-   "size": 7820868,
-   "sha256": "18884cc012e41259e8a25697f413a8a011963e09887beed9853a48b0413054ab",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/mgba-0.10.5-3.npk",
+   "size": 8192930,
+   "sha256": "e8d76c173571f0eff044518ed0057adc3eb720b176781a1e36c8d5f90530e02d",
    "title": "mGBA",
    "category": "Games",
-   "about": "mGBA plays Game Boy Advance games, and Game Boy and Game Boy Color ones too, from the game files you have (.gba, .gb, .gbc): double-click one in Files to play it. Put your games in the Games folder in your home folder. The keyboard plays: the arrows, X is A, Z is B, A and S are the shoulder buttons, Enter is Start and Backspace Select. A USB game controller works too (a PlayStation pad, or most others): plug it in before starting a game. Esc ends the game. Games aren't included.",
+   "about": "mGBA plays Game Boy Advance games, and Game Boy and Game Boy Color ones too, from the game files you have (.gba, .gb, .gbc): put them in the Games folder in your home folder and open mGBA, or double-click one in Files. The keyboard plays (the arrows, X is A, Z is B, A and S are the shoulder buttons, Enter is Start and Backspace Select), and so does a USB game controller (a PlayStation pad, or most others). mGBA's Settings choose the size (or full screen), a smoothed picture and the sound; its Controls change any key or button. Esc or the PS button ends a game. Games aren't included.",
    "app": "mgba",
    "changes": [
+    {
+     "version": "0.10.5-3",
+     "notes": "- A controller's buttons work: Cross is A, Square is B, L1 and R1 the shoulders, Options Start and Create Select (D-pad and left stick move). Plugging one in while playing works too.\n- Opening mGBA shows your games (the Games folder), Settings (size, full screen, a smoothed picture, the sound) and Controls (change any key or controller button by pressing it).\n- Esc or the PS button ends a game; full screen keeps the picture's shape."
+    },
     {
      "version": "0.10.5-2",
      "notes": "- Quitting a game no longer crashes mGBA (it freed its picture twice)."
@@ -224,17 +228,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.07.2244",
+   "version": "2026.11.08.0241",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.2244.npk",
-   "size": 46558832,
-   "sha256": "291734bc5b8e394a4f3fd5aef081c3c0068a04639c6a918bc95b12c18f51222e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.0241.npk",
+   "size": 46561573,
+   "sha256": "ce0b008517f70e8794123d63e15928386ead922d65d5d680a813ee7149dc6c45",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.0241",
+     "notes": "- mGBA: controller buttons, a window with Settings and Controls"
+    },
     {
      "version": "2026.11.07.2244",
      "notes": "- Archives: a package for zip, 7z, rar and tar, and Extract Here in Files"
@@ -350,10 +358,6 @@
     {
      "version": "2026.11.03.2259",
      "notes": "- sudo sets HOME to the target user's, as Linux's does"
-    },
-    {
-     "version": "2026.11.03.2234",
-     "notes": "- Packages mark their programs executable wherever they are"
     }
    ],
    "icon": "icons/nova.png",
