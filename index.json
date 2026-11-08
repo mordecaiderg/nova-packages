@@ -187,17 +187,21 @@
   },
   {
    "name": "mgba",
-   "version": "0.10.5-1",
+   "version": "0.10.5-2",
    "description": "mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/mgba-0.10.5-1.npk",
-   "size": 7820925,
-   "sha256": "bef270c6cf3129023dc8df6be27163a3bc49ef14e5b8a74af67be26d2e0ef589",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/mgba-0.10.5-2.npk",
+   "size": 7820868,
+   "sha256": "18884cc012e41259e8a25697f413a8a011963e09887beed9853a48b0413054ab",
    "title": "mGBA",
    "category": "Games",
    "about": "mGBA plays Game Boy Advance games, and Game Boy and Game Boy Color ones too, from the game files you have (.gba, .gb, .gbc): double-click one in Files to play it. Put your games in the Games folder in your home folder. The keyboard plays: the arrows, X is A, Z is B, A and S are the shoulder buttons, Enter is Start and Backspace Select. A USB game controller works too (a PlayStation pad, or most others): plug it in before starting a game. Esc ends the game. Games aren't included.",
    "app": "mgba",
    "changes": [
+    {
+     "version": "0.10.5-2",
+     "notes": "- Quitting a game no longer crashes mGBA (it freed its picture twice)."
+    },
     {
      "version": "0.10.5-1",
      "notes": "- mGBA 0.10.5: Game Boy Advance, Game Boy and Game Boy Color games from your own game files, with the keyboard or a USB game controller (a PlayStation pad, or most others). Double-click a game in Files to play it. Needs the Nova update published with it."

@@ -17,7 +17,7 @@ written by Nova's `make publish`: don't edit it by hand.
 | Ladybird | `ladybird` | 2026.10.18+7a8a84e0-15 | Internet | 129178 KB | A web browser with its own engine: today's web, JavaScript and all |
 | Lua | `lua` | 5.4.7-1 | Development | 164 KB | Lua 5.4, a small and fast scripting language |
 | GNU Make | `make` | 4.4.1-1 | Development | 161 KB | GNU make 4.4.1, which builds programs from makefiles |
-| mGBA | `mgba` | 0.10.5-1 | Games | 7638 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
+| mGBA | `mgba` | 0.10.5-2 | Games | 7638 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 844 KB | MicroPython 1.29, a lean Python 3 |
 | Nova | `nova` | 2026.11.07.2244 | System | 45468 KB | Nova itself: the kernel and the system every app runs on |
 | NVIDIA Graphics | `nvidia` | 570.144-24 | System | 59587 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
