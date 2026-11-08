@@ -269,17 +269,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.1529",
+   "version": "2026.11.08.1602",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1529.npk",
-   "size": 46595632,
-   "sha256": "f8b97d6d30121b985927fc4fe30e44063c84f9a1352d85f1a06fbfd0d537d0ea",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1602.npk",
+   "size": 46596090,
+   "sha256": "8c9c6173c9544c4302602ed392e9fafe478983b29dfd18383784de8a26a37405",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.1602",
+     "notes": "- Bluetooth: keep Intel's download result whenever it comes"
+    },
     {
      "version": "2026.11.08.1529",
      "notes": "- Bluetooth: start a USB Bluetooth controller, Intel's with its firmware"
@@ -395,10 +399,6 @@
     {
      "version": "2026.11.04.1826",
      "notes": "- The first user's home is private, as everyone else's"
-    },
-    {
-     "version": "2026.11.04.1756",
-     "notes": "- publish: compare a new Nova with what was really published"
     }
    ],
    "icon": "icons/nova.png",
