@@ -324,16 +324,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-22",
+   "version": "570.144-23",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-22.npk",
-   "size": 61015880,
-   "sha256": "0394218e08907c9861201a2d90bd8182b14d05bc6d1f750b3c62ae9af2296216",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-23.npk",
+   "size": 61016543,
+   "sha256": "387813b2abfb4130195e123038e8880ac42320881cdb93e8d12d446773a89cc3",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-23",
+     "notes": "- Diagnostics only: the driver's first few assertions and lock waits in /var/log/nvidia.log now say in what context they happened and which of the driver's functions led there, to find the cause of the \"_rmGpuAllocLockIsOwner\" line every start shows. Nothing else changes."
+    },
     {
      "version": "570.144-22",
      "notes": "- Fixes -21, with which the card took 20 seconds longer to start and the screen stayed black: the driver's own waits for a signal were mistaken for locks and skipped, so a signal was lost. The driver's locks now behave as in -18, with the one difference that a wait given up on leaves the lock as it was, instead of leaving it off by one for good, which was the frozen desktop."
