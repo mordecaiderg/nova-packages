@@ -174,6 +174,27 @@
    "about": "make builds programs from makefiles, rebuilding only what changed. With Nova's C compiler (tcc) it builds C programs on Nova itself."
   },
   {
+   "name": "mgba",
+   "version": "0.10.5-1",
+   "description": "mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/mgba-0.10.5-1.npk",
+   "size": 7820925,
+   "sha256": "bef270c6cf3129023dc8df6be27163a3bc49ef14e5b8a74af67be26d2e0ef589",
+   "title": "mGBA",
+   "category": "Games",
+   "about": "mGBA plays Game Boy Advance games, and Game Boy and Game Boy Color ones too, from the game files you have (.gba, .gb, .gbc): double-click one in Files to play it. Put your games in the Games folder in your home folder. The keyboard plays: the arrows, X is A, Z is B, A and S are the shoulder buttons, Enter is Start and Backspace Select. A USB game controller works too (a PlayStation pad, or most others): plug it in before starting a game. Esc ends the game. Games aren't included.",
+   "app": "mgba",
+   "changes": [
+    {
+     "version": "0.10.5-1",
+     "notes": "- mGBA 0.10.5: Game Boy Advance, Game Boy and Game Boy Color games from your own game files, with the keyboard or a USB game controller (a PlayStation pad, or most others). Double-click a game in Files to play it. Needs the Nova update published with it."
+    }
+   ],
+   "icon": "icons/mgba.png",
+   "icon_sha256": "3114977a3f92b8a71c001dde061d3ce3695fa64b12c2afe6b43deaeee1a8a2af"
+  },
+  {
    "name": "micropython",
    "version": "1.29.0-1",
    "description": "MicroPython 1.29, a lean Python 3",
@@ -187,17 +208,29 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.07.2124",
+   "version": "2026.11.07.2204",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.2124.npk",
-   "size": 46542864,
-   "sha256": "594c3087ae90029550f994a91dc1b78865dc35e0fe67b085d27017b71f55478a",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.2204.npk",
+   "size": 46556430,
+   "sha256": "489a1eec2c540cb7a000e823e8079bb7af01da98432182ee72718a86332fd25a",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.07.2204",
+     "notes": "- mGBA: a package for Game Boy Advance, Game Boy and Color games"
+    },
+    {
+     "version": "2026.11.07.2149",
+     "notes": "- SDL: a joystick driver for Nova's game controllers"
+    },
+    {
+     "version": "2026.11.07.2140",
+     "notes": "- Game controllers: /dev/gamepad0..3"
+    },
     {
      "version": "2026.11.07.2124",
      "notes": "- Files: the sidebar fits a short window"
@@ -305,18 +338,6 @@
     {
      "version": "2026.11.03.2212",
      "notes": "- SSH with passwords, and sftp through Nova's own sftp-server"
-    },
-    {
-     "version": "2026.11.03.2157",
-     "notes": "- The stack protector for Nova's programs"
-    },
-    {
-     "version": "2026.11.03.2142",
-     "notes": "- ASLR: programs' stacks, heaps and mmap regions at random addresses"
-    },
-    {
-     "version": "2026.11.03.2130",
-     "notes": "- NX: data, stacks and heaps can't be run as code"
     }
    ],
    "icon": "icons/nova.png",
@@ -583,16 +604,20 @@
   },
   {
    "name": "sdl2-demos",
-   "version": "2.32.10-3",
-   "description": "SDL 2's test programs: sprites, an OpenGL cube, a looping sound and a locked mouse, to try SDL on Nova",
+   "version": "2.32.10-4",
+   "description": "SDL 2's test programs: sprites, an OpenGL cube, a looping sound, a locked mouse and a game controller, to try SDL on Nova",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/sdl2-demos-2.32.10-3.npk",
-   "size": 29970261,
-   "sha256": "163c1960c93d9fc55fc5242005c0aa29c9700388fbd9381762a96a3b97ef7ceb",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/sdl2-demos-2.32.10-4.npk",
+   "size": 37514105,
+   "sha256": "7c96f3da8ed308d905326b4fdc129f18a0da055b28df096b40d37acc4153bb61",
    "title": "SDL Demos",
    "category": "Games",
-   "about": "Programs that try SDL, the library many games are built on, on Nova. In the Terminal: sdl2-testsprite draws smiley faces bouncing around a window (with OpenGL on an NVIDIA card, or without it); sdl2-testgl2 spins a coloured cube with OpenGL (needs the NVIDIA Graphics and NVIDIA Vulkan packages and a GeForce RTX 30 or 40 card); sdl2-loopwave plays a sound until you press Ctrl+C; sdl2-testrelative locks the mouse in its window, the way games that steer with it do, and moves a red square as you move the mouse (Alt+Tab lets go, Escape ends it).",
+   "about": "Programs that try SDL, the library many games are built on, on Nova. In the Terminal: sdl2-testsprite draws smiley faces bouncing around a window (with OpenGL on an NVIDIA card, or without it); sdl2-testgl2 spins a coloured cube with OpenGL (needs the NVIDIA Graphics and NVIDIA Vulkan packages and a GeForce RTX 30 or 40 card); sdl2-loopwave plays a sound until you press Ctrl+C; sdl2-testrelative locks the mouse in its window, the way games that steer with it do, and moves a red square as you move the mouse (Alt+Tab lets go, Escape ends it); sdl2-testgamecontroller shows a controller whose buttons, sticks and triggers light up as you use a USB game controller (a PlayStation pad, or most others).",
    "changes": [
+    {
+     "version": "2.32.10-4",
+     "notes": "- sdl2-testgamecontroller: a picture of a game controller whose buttons, sticks and triggers light up as you use yours (a PlayStation pad, or most other USB pads). Needs the Nova update published with it."
+    },
     {
      "version": "2.32.10-3",
      "notes": "- The demos open again: their programs are marked as programs, which Nova checks now that it has users."
