@@ -269,17 +269,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.1602",
+   "version": "2026.11.08.1629",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1602.npk",
-   "size": 46596090,
-   "sha256": "8c9c6173c9544c4302602ed392e9fafe478983b29dfd18383784de8a26a37405",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1629.npk",
+   "size": 46633835,
+   "sha256": "31b97e48946e07bd8da878efada15905892e8dc9c5e105e40568bb067b047902",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.1629",
+     "notes": "- Bluetooth: pairing a controller, and a Bluetooth icon in the top bar"
+    },
     {
      "version": "2026.11.08.1602",
      "notes": "- Bluetooth: keep Intel's download result whenever it comes"
@@ -395,10 +399,6 @@
     {
      "version": "2026.11.04.2114",
      "notes": "- novad: every mount and a users pane; a hardware watchdog for kernel hangs"
-    },
-    {
-     "version": "2026.11.04.1826",
-     "notes": "- The first user's home is private, as everyone else's"
     }
    ],
    "icon": "icons/nova.png",
