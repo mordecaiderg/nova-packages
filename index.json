@@ -14,16 +14,26 @@
   },
   {
    "name": "controllers",
-   "version": "1.0-1",
+   "version": "1.0-2",
    "description": "Controllers: a PlayStation pad's light and touchpad, rumble, battery, and a button tester",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-1.npk",
-   "size": 663202,
-   "sha256": "820136fc2d3bfb902aa977a9f61193b40837ecd06fdf8c3625619877c48e5326",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-2.npk",
+   "size": 663894,
+   "sha256": "b8eb4b6c7646377a88b1ec68507dd66a496c2b7fac9baf2620235f3629b916c2",
    "title": "Controllers",
    "category": "Utilities",
-   "about": "Settings for the game controllers you plug in. Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer: click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble, see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense over a USB cable; other controllers show their buttons. Needs the Nova update from November 2026.",
+   "about": "Settings for the game controllers you plug in. Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer: click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble and a DualSense's trigger effects (resistance, a weapon's trigger, vibration), see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense over a USB cable; other controllers show their buttons. Needs the Nova update from November 2026.",
    "app": "controllers",
+   "changes": [
+    {
+     "version": "1.0-2",
+     "notes": "- Trigger effects to try on a DualSense: resistance, a weapon's trigger that gives way, and vibration (press L2 and R2).\n- The battery says whether it's charging, full, or can't charge right now. It's shown in steps of 10%, as the controller reports it."
+    },
+    {
+     "version": "1.0-1",
+     "notes": "- Controllers: a PlayStation controller's light, its touchpad as the mouse, rumble, battery, and a drawing that lights up as you press its buttons."
+    }
+   ],
    "icon": "icons/controllers.png",
    "icon_sha256": "0571e9373db2c2d40fb00aec0082c83a31f8d1b2baf6a951e68feb85a9412a4a"
   },
@@ -243,17 +253,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.1409",
+   "version": "2026.11.08.1433",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1409.npk",
-   "size": 46569698,
-   "sha256": "efc41632e9c006c00c0fa7535a5a3c512a6ec0ef664078106e9c609ca671d01c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1433.npk",
+   "size": 46569829,
+   "sha256": "0005d0a1d679ed87f9a4790dfb33992d6e4c9805bba657bfa2b00aebe3d5f24f",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.1433",
+     "notes": "- Controllers: a DualSense's trigger effects, and clearer battery"
+    },
     {
      "version": "2026.11.08.1409",
      "notes": "- Controllers: send a pad's light and rumble by its interrupt endpoint"
@@ -369,10 +383,6 @@
     {
      "version": "2026.11.04.0110",
      "notes": "- The gap ASLR leaves above the stack reads as zeros"
-    },
-    {
-     "version": "2026.11.03.2322",
-     "notes": "- Fixes for a user's session on ext2: mkdir says EEXIST, homes reclaimed, /run/user"
     }
    ],
    "icon": "icons/nova.png",
