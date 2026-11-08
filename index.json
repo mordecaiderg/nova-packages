@@ -1,6 +1,18 @@
 {
  "packages": [
   {
+   "name": "archives",
+   "version": "3.8.11-1",
+   "description": "Open zip, 7z, rar and tar archives: Extract Here in Files, and bsdtar, unzip and extract in the Terminal",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/archives-3.8.11-1.npk",
+   "size": 2974938,
+   "sha256": "ffcf90007940e68028fe19ea198c03baef4d7b58799ba04edb9b160d074e7913",
+   "title": "Archive Utility",
+   "category": "Utilities",
+   "about": "Opens archives: double-click a .zip, .7z, .rar, .tar.gz (or .tgz, .tar.xz, .tar.bz2, .tar.zst) file in Files, or right-click it and choose Extract Here, and what's in it appears in a folder beside it. In the Terminal: extract FILE does the same, unzip lists and extracts zip files, and bsdtar (also as tar) makes and opens archives of every kind. Built on libarchive."
+  },
+  {
    "name": "dash",
    "version": "0.5.13.5-1",
    "description": "dash, a small POSIX shell; also /bin/sh",
@@ -208,17 +220,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.07.2204",
+   "version": "2026.11.07.2244",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.2204.npk",
-   "size": 46556430,
-   "sha256": "489a1eec2c540cb7a000e823e8079bb7af01da98432182ee72718a86332fd25a",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.07.2244.npk",
+   "size": 46558832,
+   "sha256": "291734bc5b8e394a4f3fd5aef081c3c0068a04639c6a918bc95b12c18f51222e",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.07.2244",
+     "notes": "- Archives: a package for zip, 7z, rar and tar, and Extract Here in Files"
+    },
     {
      "version": "2026.11.07.2204",
      "notes": "- mGBA: a package for Game Boy Advance, Game Boy and Color games"
@@ -334,10 +350,6 @@
     {
      "version": "2026.11.03.2234",
      "notes": "- Packages mark their programs executable wherever they are"
-    },
-    {
-     "version": "2026.11.03.2212",
-     "notes": "- SSH with passwords, and sftp through Nova's own sftp-server"
     }
    ],
    "icon": "icons/nova.png",
