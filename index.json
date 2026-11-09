@@ -703,16 +703,20 @@
   },
   {
    "name": "wifi-intel",
-   "version": "0.1-2",
+   "version": "0.1-3",
    "description": "Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards (early: lists the networks around)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.1-2.npk",
-   "size": 9503946,
-   "sha256": "02a3f2120b4a29b7d7537a516bc6e9e736b9dddfa4269a99862e502790a09c7b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.1-3.npk",
+   "size": 9504017,
+   "sha256": "b1e5ab960e92aad8c0881f5e8d88cb87393ffd8587a28f16b7b93a59867910a7",
    "title": "Intel Wi-Fi",
    "category": "System",
    "about": "Wi-Fi for the Intel Wi-Fi 6 and 6E cards in most PCs from 2019 on: AX200, AX201, AX210 and AX211. This early version starts the card when Nova starts and lists the networks around: in the top bar's network popup, and with the wifi command in the Terminal. Joining networks comes next. It is OpenBSD's iwx driver and 802.11 stack, with Intel's firmware. If Nova ever stops while starting it, the next start skips it by itself. wifi=off in /etc/nova.conf leaves the card alone.",
    "changes": [
+    {
+     "version": "0.1-3",
+     "notes": "- Each network's signal bars show its real strength (they all showed full)."
+    },
     {
      "version": "0.1-2",
      "notes": "- Scanning: the networks around show in the top bar's network popup (click the signal bars) and with the `wifi` command, with their signal and security. Needs the Nova update published with it. Joining comes next."
