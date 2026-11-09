@@ -14,17 +14,21 @@
   },
   {
    "name": "controllers",
-   "version": "1.0-3",
+   "version": "1.0-4",
    "description": "Controllers: a PlayStation pad's light and touchpad, rumble, battery, and a button tester",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-3.npk",
-   "size": 664268,
-   "sha256": "f0c1b9d870a3740bdcd3a7d1f2886825dee67ca5bccfd45d5592150a0468a9a8",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-4.npk",
+   "size": 681745,
+   "sha256": "18f9e78a4c4d479aeb208769ebb7b091450401b1e8439b9066b713d50533584b",
    "title": "Controllers",
    "category": "Utilities",
-   "about": "Settings for the game controllers you plug in, each its own (up to four). Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer (one controller has it: the lowest-numbered player that has it on): click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble and a DualSense's trigger effects (resistance, a weapon's trigger, vibration), see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense over a USB cable; other controllers show their buttons. Needs the Nova update from November 2026.",
+   "about": "Settings for the game controllers you plug in, each its own (up to four). Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer (one controller has it: the lowest-numbered player that has it on): click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble and a DualSense's trigger effects (resistance, a weapon's trigger, vibration), see its motion (tilt, level, how fast it turns), see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense over a USB cable; other controllers show their buttons. Needs the Nova update from November 2026.",
    "app": "controllers",
    "changes": [
+    {
+     "version": "1.0-4",
+     "notes": "- Motion: switch the drawing to Motion to see the controller's tilt, how level it is, and how fast it turns (its gyroscope and accelerometer). Needs the Nova update published with it."
+    },
     {
      "version": "1.0-3",
      "notes": "- Each controller has its own settings: its light, and whether its touchpad moves the pointer. They follow the controller wherever it's plugged in.\n- Only one controller moves the pointer: player 1's (or the lowest-numbered player that has it on)."
@@ -269,17 +273,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.1629",
+   "version": "2026.11.08.1653",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1629.npk",
-   "size": 46633835,
-   "sha256": "31b97e48946e07bd8da878efada15905892e8dc9c5e105e40568bb067b047902",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1653.npk",
+   "size": 46637419,
+   "sha256": "97098f887100992fa706dc1ef1ee9d31d47c8ce39ec5fecfab38b9226653af2f",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.1653",
+     "notes": "- Controllers: motion; Bluetooth controllers turn off with the PC"
+    },
+    {
+     "version": "2026.11.08.1638",
+     "notes": "- Bluetooth: try the controller's connection again when pairing"
+    },
     {
      "version": "2026.11.08.1629",
      "notes": "- Bluetooth: pairing a controller, and a Bluetooth icon in the top bar"
@@ -391,14 +403,6 @@
     {
      "version": "2026.11.05.1743",
      "notes": "- Symbolic links, on ext2: SYS_SYMLINK, SYS_READLINK, lstat follows them not"
-    },
-    {
-     "version": "2026.11.04.2136",
-     "notes": "- watchdog: Alder Lake and later PCHs clear NO_REBOOT through TCO1_CNT, not RCBA"
-    },
-    {
-     "version": "2026.11.04.2114",
-     "notes": "- novad: every mount and a users pane; a hardware watchdog for kernel hangs"
     }
    ],
    "icon": "icons/nova.png",
