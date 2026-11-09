@@ -277,17 +277,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.2111",
+   "version": "2026.11.08.2200",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2111.npk",
-   "size": 46651392,
-   "sha256": "49754f5beb300aa42e3370ae4369f3c794e2daf297eb6d15bed639886738bef7",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2200.npk",
+   "size": 46657044,
+   "sha256": "504943b55cae69c11c4921115330231ae6468d2e5c2d1bcf0340a5ffa3a8520b",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.2200",
+     "notes": "- Task Manager: built-in drivers get rows too, with what they drive\n- Wi-Fi: OpenBSD's iwx driver as a module, starting Intel AX2xx cards"
+    },
     {
      "version": "2026.11.08.2111",
      "notes": "- Bluetooth: notifications when a controller connects or disconnects"
@@ -403,10 +407,6 @@
     {
      "version": "2026.11.07.0020",
      "notes": "- Shortcuts in the Bin: emptying it removes the link, never what it points at"
-    },
-    {
-     "version": "2026.11.06.1903",
-     "notes": "- Desktop icons: Rename, and the drag label's smear is gone"
     }
    ],
    "icon": "icons/nova.png",
@@ -700,6 +700,18 @@
      "notes": "- First version: sdl2-testsprite, sdl2-testgl2 and sdl2-loopwave, SDL's own test programs on Nova."
     }
    ]
+  },
+  {
+   "name": "wifi-intel",
+   "version": "0.1-1",
+   "description": "Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards (early: starts the card)",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.1-1.npk",
+   "size": 9503200,
+   "sha256": "6cb22a08514f25cd98a7845cbc4297cb95fd82d2ad9edad01b9d08688d186f61",
+   "title": "Intel Wi-Fi",
+   "category": "System",
+   "about": "Wi-Fi for the Intel Wi-Fi 6 and 6E cards in most PCs from 2019 on: AX200, AX201, AX210 and AX211. This first version starts the card when Nova starts and writes what it found to the kernel log (dmesg | grep wifi): scanning and joining networks come next. It is OpenBSD's iwx driver and 802.11 stack, with Intel's firmware. If Nova ever stops while starting it, the next start skips it by itself. wifi=off in /etc/nova.conf leaves the card alone."
   },
   {
    "name": "yipyap-server",
