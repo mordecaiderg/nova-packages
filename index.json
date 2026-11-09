@@ -277,17 +277,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.2050",
+   "version": "2026.11.08.2102",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2050.npk",
-   "size": 46642953,
-   "sha256": "c60532d53b8f70e10ee6ec9f32509710f01d023cc67c86893aec2d6afaa158e7",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2102.npk",
+   "size": 46650719,
+   "sha256": "4c3d831df276a5b80c934dd63f0ed41d6ab847e432f04825c0f66c08cccae797",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.2102",
+     "notes": "- Bluetooth: answer a reconnecting controller's SDP look-up; open its channels"
+    },
     {
      "version": "2026.11.08.2050",
      "notes": "- Bluetooth: a controller connecting again checks keys when it asks, as Linux"
@@ -403,10 +407,6 @@
     {
      "version": "2026.11.06.1839",
      "notes": "- Desktop icons: a right-click menu with Open and Move to Bin"
-    },
-    {
-     "version": "2026.11.05.2228",
-     "notes": "- Desktop icons: drag onto another window, Ctrl held drops a shortcut"
     }
    ],
    "icon": "icons/nova.png",
