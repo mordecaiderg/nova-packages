@@ -14,17 +14,21 @@
   },
   {
    "name": "controllers",
-   "version": "1.0-4",
+   "version": "1.0-5",
    "description": "Controllers: a PlayStation pad's light and touchpad, rumble, battery, and a button tester",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-4.npk",
-   "size": 681745,
-   "sha256": "18f9e78a4c4d479aeb208769ebb7b091450401b1e8439b9066b713d50533584b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/controllers-1.0-5.npk",
+   "size": 681804,
+   "sha256": "c804f1bd8395a001057760100c30e81f52ed53b63740ebbf89842d3ec93ffac3",
    "title": "Controllers",
    "category": "Utilities",
-   "about": "Settings for the game controllers you plug in, each its own (up to four). Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer (one controller has it: the lowest-numbered player that has it on): click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble and a DualSense's trigger effects (resistance, a weapon's trigger, vibration), see its motion (tilt, level, how fast it turns), see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense over a USB cable; other controllers show their buttons. Needs the Nova update from November 2026.",
+   "about": "Settings for your game controllers, each its own (up to four). Choose a PlayStation controller's light: the player's colour (blue, red, green, pink) or one of eight, and how bright, or off. Let its touchpad move the pointer (one controller has it: the lowest-numbered player that has it on): click it to click, with two fingers to right-click, and slide two fingers to scroll. Try its rumble and a DualSense's trigger effects (resistance, a weapon's trigger, vibration), see its motion (tilt, level, how fast it turns), see its battery, and watch every button, stick, trigger and finger light up on a drawing of the controller. Works with a DualShock 4 or DualSense by USB cable or Bluetooth; other controllers show their buttons. Needs the Nova update from November 2026.",
    "app": "controllers",
    "changes": [
+    {
+     "version": "1.0-5",
+     "notes": "- With no controller, it says how to connect one by cable or by Bluetooth."
+    },
     {
      "version": "1.0-4",
      "notes": "- Motion: switch the drawing to Motion to see the controller's tilt, how level it is, and how fast it turns (its gyroscope and accelerometer). Needs the Nova update published with it."
@@ -273,17 +277,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.1653",
+   "version": "2026.11.08.2040",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.1653.npk",
-   "size": 46637419,
-   "sha256": "97098f887100992fa706dc1ef1ee9d31d47c8ce39ec5fecfab38b9226653af2f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2040.npk",
+   "size": 46640452,
+   "sha256": "21273d6e04e146dc2beb36ed93280a79c581f4d69d04ce4fb8665c1cb019c09a",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.2040",
+     "notes": "- Bluetooth: a paired controller connecting again, as Linux takes it"
+    },
     {
      "version": "2026.11.08.1653",
      "notes": "- Controllers: motion; Bluetooth controllers turn off with the PC"
@@ -399,10 +407,6 @@
     {
      "version": "2026.11.05.1837",
      "notes": "- Desktop icons: files, folders and shortcuts, each user's own Desktop"
-    },
-    {
-     "version": "2026.11.05.1743",
-     "notes": "- Symbolic links, on ext2: SYS_SYMLINK, SYS_READLINK, lstat follows them not"
     }
    ],
    "icon": "icons/nova.png",
