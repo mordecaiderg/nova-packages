@@ -21,11 +21,11 @@ written by Nova's `make publish`: don't edit it by hand.
 | GNU Make | `make` | 4.4.1-1 | Development | 161 KB | GNU make 4.4.1, which builds programs from makefiles |
 | mGBA | `mgba` | 0.10.5-3 | Games | 8001 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 844 KB | MicroPython 1.29, a lean Python 3 |
-| Nova | `nova` | 2026.11.08.2200 | System | 45564 KB | Nova itself: the kernel and the system every app runs on |
+| Nova | `nova` | 2026.11.08.2220 | System | 45644 KB | Nova itself: the kernel and the system every app runs on |
 | NVIDIA Graphics | `nvidia` | 570.144-24 | System | 59587 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-24 | System | 26706 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
 | OpenArena | `openarena` | 0.8.8-2 | Games | 406576 KB | OpenArena: a fast first-person arena shooter against bots or online (ioquake3), for NVIDIA cards |
 | Python | `python` | 3.14.8-1 | Development | 9874 KB | Python 3.14, the reference implementation (CPython) |
 | SDL Demos | `sdl2-demos` | 2.32.10-4 | Games | 36635 KB | SDL 2's test programs: sprites, an OpenGL cube, a looping sound, a locked mouse and a game controller, to try SDL on Nova |
-| Intel Wi-Fi | `wifi-intel` | 0.1-1 | System | 9281 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards (early: starts the card) |
+| Intel Wi-Fi | `wifi-intel` | 0.1-2 | System | 9282 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards (early: lists the networks around) |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1271 KB | Run your own Discord-style chat server, with a web client for any browser |
