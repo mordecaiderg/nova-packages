@@ -277,17 +277,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.2102",
+   "version": "2026.11.08.2111",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2102.npk",
-   "size": 46650719,
-   "sha256": "4c3d831df276a5b80c934dd63f0ed41d6ab847e432f04825c0f66c08cccae797",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2111.npk",
+   "size": 46651392,
+   "sha256": "49754f5beb300aa42e3370ae4369f3c794e2daf297eb6d15bed639886738bef7",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.2111",
+     "notes": "- Bluetooth: notifications when a controller connects or disconnects"
+    },
     {
      "version": "2026.11.08.2102",
      "notes": "- Bluetooth: answer a reconnecting controller's SDP look-up; open its channels"
@@ -403,10 +407,6 @@
     {
      "version": "2026.11.06.1903",
      "notes": "- Desktop icons: Rename, and the drag label's smear is gone"
-    },
-    {
-     "version": "2026.11.06.1839",
-     "notes": "- Desktop icons: a right-click menu with Open and Move to Bin"
     }
    ],
    "icon": "icons/nova.png",
