@@ -277,17 +277,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.2220",
+   "version": "2026.11.08.2310",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2220.npk",
-   "size": 46739085,
-   "sha256": "f732af54a5aa1fe17c7b5495610931dee5f357984f42dc0d9536e04a7ecae67c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2310.npk",
+   "size": 46766197,
+   "sha256": "6504142425c5fb90e9bbc0d9a811421a1bc0dc60b7353d70bcf735512db53cff",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.08.2310",
+     "notes": "- Wi-Fi: joining networks, remembering them, and Nova's traffic over Wi-Fi"
+    },
     {
      "version": "2026.11.08.2220",
      "notes": "- Wi-Fi scanning, and a network popup in the top bar"
@@ -403,10 +407,6 @@
     {
      "version": "2026.11.07.1234",
      "notes": "- The overview, a blocky genie, and dock tiles that open and close smoothly"
-    },
-    {
-     "version": "2026.11.07.0038",
-     "notes": "- Minimizing into the dock, with a genie animation"
     }
    ],
    "icon": "icons/nova.png",
@@ -703,16 +703,20 @@
   },
   {
    "name": "wifi-intel",
-   "version": "0.1-3",
-   "description": "Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards (early: lists the networks around)",
+   "version": "0.2-1",
+   "description": "Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.1-3.npk",
-   "size": 9504017,
-   "sha256": "b1e5ab960e92aad8c0881f5e8d88cb87393ffd8587a28f16b7b93a59867910a7",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.2-1.npk",
+   "size": 9505674,
+   "sha256": "ca6147cc0f3fbe1860d578ec5ba7ea7c133cc883fa18e3ada7fb9f2052c56bca",
    "title": "Intel Wi-Fi",
    "category": "System",
-   "about": "Wi-Fi for the Intel Wi-Fi 6 and 6E cards in most PCs from 2019 on: AX200, AX201, AX210 and AX211. This early version starts the card when Nova starts and lists the networks around: in the top bar's network popup, and with the wifi command in the Terminal. Joining networks comes next. It is OpenBSD's iwx driver and 802.11 stack, with Intel's firmware. If Nova ever stops while starting it, the next start skips it by itself. wifi=off in /etc/nova.conf leaves the card alone.",
+   "about": "Wi-Fi for the Intel Wi-Fi 6 and 6E cards in most PCs from 2019 on: AX200, AX201, AX210 and AX211. Click the network bars in the top bar to see the networks around and join one (WPA2 and open networks; WPA3-only ones not yet), or use the wifi command in the Terminal. Nova remembers the networks you join and joins them again by itself. It is OpenBSD's iwx driver and 802.11 stack, with Intel's firmware. If Nova ever stops while starting it, the next start skips it by itself. wifi=off in /etc/nova.conf leaves the card alone.",
    "changes": [
+    {
+     "version": "0.2-1",
+     "notes": "- Joining networks: click one in the network popup and type its password (WPA2, or an open network), or `wifi join NAME` in the Terminal. Nova gets an address over Wi-Fi, remembers the network and joins it again by itself; Disconnect and Forget in the popup. While a cable is connected, it stays the connection used. Needs the Nova update published with it."
+    },
     {
      "version": "0.1-3",
      "notes": "- Each network's signal bars show its real strength (they all showed full)."
