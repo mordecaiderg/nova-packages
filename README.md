@@ -27,5 +27,5 @@ written by Nova's `make publish`: don't edit it by hand.
 | OpenArena | `openarena` | 0.8.8-2 | Games | 406576 KB | OpenArena: a fast first-person arena shooter against bots or online (ioquake3), for NVIDIA cards |
 | Python | `python` | 3.14.8-1 | Development | 9874 KB | Python 3.14, the reference implementation (CPython) |
 | SDL Demos | `sdl2-demos` | 2.32.10-4 | Games | 36635 KB | SDL 2's test programs: sprites, an OpenGL cube, a looping sound, a locked mouse and a game controller, to try SDL on Nova |
-| Intel Wi-Fi | `wifi-intel` | 0.2-1 | System | 9283 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |
+| Intel Wi-Fi | `wifi-intel` | 0.2-2 | System | 9284 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1271 KB | Run your own Discord-style chat server, with a web client for any browser |

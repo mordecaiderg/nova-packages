@@ -703,16 +703,20 @@
   },
   {
    "name": "wifi-intel",
-   "version": "0.2-1",
+   "version": "0.2-2",
    "description": "Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.2-1.npk",
-   "size": 9505674,
-   "sha256": "ca6147cc0f3fbe1860d578ec5ba7ea7c133cc883fa18e3ada7fb9f2052c56bca",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.2-2.npk",
+   "size": 9506135,
+   "sha256": "b91423be037ed8ac41c32a10fa359980d6c0cc167fe736dfa97bc7ddac11f0f3",
    "title": "Intel Wi-Fi",
    "category": "System",
    "about": "Wi-Fi for the Intel Wi-Fi 6 and 6E cards in most PCs from 2019 on: AX200, AX201, AX210 and AX211. Click the network bars in the top bar to see the networks around and join one (WPA2 and open networks; WPA3-only ones not yet), or use the wifi command in the Terminal. Nova remembers the networks you join and joins them again by itself. It is OpenBSD's iwx driver and 802.11 stack, with Intel's firmware. If Nova ever stops while starting it, the next start skips it by itself. wifi=off in /etc/nova.conf leaves the card alone.",
    "changes": [
+    {
+     "version": "0.2-2",
+     "notes": "- Joining no longer stops Nova (\"Nova stopped responding\"): restarting the card to join a network failed one of the driver's own checks."
+    },
     {
      "version": "0.2-1",
      "notes": "- Joining networks: click one in the network popup and type its password (WPA2, or an open network), or `wifi join NAME` in the Terminal. Nova gets an address over Wi-Fi, remembers the network and joins it again by itself; Disconnect and Forget in the popup. While a cable is connected, it stays the connection used. Needs the Nova update published with it."
