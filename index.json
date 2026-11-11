@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.11.1551",
+   "version": "2026.11.11.1805",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.1551.npk",
-   "size": 46842553,
-   "sha256": "7e824c06c9d7c1206db30b530db6fc9d9b657363e78915f58149e232da9684fa",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.1805.npk",
+   "size": 46863468,
+   "sha256": "891d497e1f339df95efa805005f682a19efe8ebcec043330d10559fe1d4bbbc0",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.11.1805",
+     "notes": "- Folders read many entries a call (SYS_READDIRS); Wine finds Nova's root certificates"
+    },
     {
      "version": "2026.11.11.1551",
      "notes": "- Writable shared mappings of files on a disk, and msync"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.08.1653",
      "notes": "- Controllers: motion; Bluetooth controllers turn off with the PC"
-    },
-    {
-     "version": "2026.11.08.1638",
-     "notes": "- Bluetooth: try the controller's connection again when pairing"
     }
    ],
    "icon": "icons/nova.png",
@@ -317,16 +317,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-5",
+   "version": "11.0-6",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-5.npk",
-   "size": 150441127,
-   "sha256": "d3062b90812bca5b2fbea4cd92e0e76f0d286649a8c7d0bfe508c38d2f103942",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-6.npk",
+   "size": 150453045,
+   "sha256": "4c6bd0c0e405e04028d500695313985e52c0c21f7ac0dc582833fbd931559a4c",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-6",
+     "notes": "- Windows programs trust the same web certificates as the rest of Nova. Without them Steam said \"Steam needs to be online to update\"; with them it downloads its update."
+    },
     {
      "version": "11.0-5",
      "notes": "- Fixes DirectX programs freezing now and then with their picture stopped (the graphics card could be told that work was finished too soon, and then met commands that were being written again).\n- `wine novagpu cube` says where it is if it stops drawing."
