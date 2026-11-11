@@ -215,16 +215,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-1",
+   "version": "11.0-2",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-1.npk",
-   "size": 150402836,
-   "sha256": "c0589318b89146bc8e3dcc64898a75ec2cdf20df50a23be893b331b72636247a",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-2.npk",
+   "size": 150413867,
+   "sha256": "a0891606df84f09be75e598a7834a83523b784d5b7572596f4de205d11d04206",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-2",
+     "notes": "- Fixes a program freezing when it lists the computer's drives (Notepad's Save As, then My Computer), and other calls whose yes-or-no arguments could be misread."
+    },
     {
      "version": "11.0-1",
      "notes": "- The first package: Wine 11.0 as a command (`wine notepad`), 64-bit and 32-bit Windows programs in windows of their own, with sound.\n- `wine --dxvk` puts DXVK and VKD3D-Proton in the prefix for DirectX through Vulkan; not yet seen working."
