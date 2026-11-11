@@ -215,16 +215,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-2",
+   "version": "11.0-3",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-2.npk",
-   "size": 150413867,
-   "sha256": "a0891606df84f09be75e598a7834a83523b784d5b7572596f4de205d11d04206",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-3.npk",
+   "size": 150429002,
+   "sha256": "3eab5cdcfc15f49cb27676bebb457f0c1db8d2b25e8db26ecf46e1ac3de204b3",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-3",
+     "notes": "- Adds `novagpu`, a small Windows program that tries the graphics card: `wine novagpu vulkan`, `wine novagpu d3d11`, `wine novagpu window`."
+    },
     {
      "version": "11.0-2",
      "notes": "- Fixes a program freezing when it lists the computer's drives (Notepad's Save As, then My Computer), and other calls whose yes-or-no arguments could be misread."

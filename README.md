@@ -12,4 +12,4 @@ written by Nova's `make publish`: don't edit it by hand.
 | Nova | `nova` | 2026.11.10.2111 | System | 45738 KB | Nova itself: the kernel and the system every app runs on |
 | NVIDIA Graphics | `nvidia` | 570.144-12 | System | 59576 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU) |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-12 | System | 7374 KB | Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card, vkcube spins a cube |
-| Wine | `wine` | 11.0-2 | System | 146889 KB | Wine: run Windows programs (early: a command, no app yet) |
+| Wine | `wine` | 11.0-3 | System | 146904 KB | Wine: run Windows programs (early: a command, no app yet) |
