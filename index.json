@@ -1,6 +1,143 @@
 {
  "packages": [
   {
+   "name": "nova",
+   "version": "2026.11.10.2111",
+   "description": "Nova itself: the kernel and the system every app runs on",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.10.2111.npk",
+   "size": 46835706,
+   "sha256": "50a7c8e6f8ef0fe0d51692a9f233bcc54f9d56dac538759cc4a5b2df5a9e400f",
+   "title": "Nova",
+   "category": "System",
+   "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
+   "system": true,
+   "changes": [
+    {
+     "version": "2026.11.10.2111",
+     "notes": "- Wine as a package: ports/wine/build.sh, the wine command, tests/wine-package.sh"
+    },
+    {
+     "version": "2026.11.10.1944",
+     "notes": "- 12.8, the build side: a Vulkan surface for Windows windows, Wine with libvulkan, DXVK fetched"
+    },
+    {
+     "version": "2026.11.10.1501",
+     "notes": "- A window's own icon (SYS_WIN_SET_ICON), and a dock tile for programs that are not apps"
+    },
+    {
+     "version": "2026.11.10.1451",
+     "notes": "- Popup windows (NV_WIN_POPUP), and Wine's menus in them"
+    },
+    {
+     "version": "2026.11.10.1144",
+     "notes": "- ext2: as many files open at once as programs open"
+    },
+    {
+     "version": "2026.11.10.0637",
+     "notes": "- mmap by address reaches up to the stack, and the stack's place reads as taken"
+    },
+    {
+     "version": "2026.11.10.0224",
+     "notes": "- 12.3: arch_prctl's base holds when %fs still has a 32-bit selector"
+    },
+    {
+     "version": "2026.11.10.0134",
+     "notes": "- 12.3: set_thread_area, and segment registers that go with the thread"
+    },
+    {
+     "version": "2026.11.10.0118",
+     "notes": "- 12.3: Linux's user segment selectors, and a 64-bit program runs 32-bit code"
+    },
+    {
+     "version": "2026.11.10.0043",
+     "notes": "- Fault codes as Linux gives them, real inode numbers on ext2, a prefix without z:"
+    },
+    {
+     "version": "2026.11.09.2040",
+     "notes": "- Wine 12.5: address space by request, socket names that stat, staging; first Windows images load"
+    },
+    {
+     "version": "2026.11.09.1843",
+     "notes": "- Wine 12.4: Unix libraries without shared objects; wine --version runs on Nova"
+    },
+    {
+     "version": "2026.11.09.1811",
+     "notes": "- Signals: give handlers a Linux-layout ucontext, and resume from it (12.2)"
+    },
+    {
+     "version": "2026.11.09.1803",
+     "notes": "- Add SYS_ARCH_PRCTL: a per-thread user %gs base (roadmap 12.2)"
+    },
+    {
+     "version": "2026.11.09.1749",
+     "notes": "- libc: what Wine's Unix side needs to compile (roadmap 12.2, first part)"
+    },
+    {
+     "version": "2026.11.09.1742",
+     "notes": "- Add MINI=1: a small image without the third-party sysroot"
+    },
+    {
+     "version": "2026.11.08.2331",
+     "notes": "- Wi-Fi: refcnt_finalize waits as OpenBSD's does, so the card restarts"
+    },
+    {
+     "version": "2026.11.08.2310",
+     "notes": "- Wi-Fi: joining networks, remembering them, and Nova's traffic over Wi-Fi"
+    },
+    {
+     "version": "2026.11.08.2220",
+     "notes": "- Wi-Fi scanning, and a network popup in the top bar"
+    },
+    {
+     "version": "2026.11.08.2200",
+     "notes": "- Task Manager: built-in drivers get rows too, with what they drive\n- Wi-Fi: OpenBSD's iwx driver as a module, starting Intel AX2xx cards"
+    },
+    {
+     "version": "2026.11.08.2111",
+     "notes": "- Bluetooth: notifications when a controller connects or disconnects"
+    },
+    {
+     "version": "2026.11.08.2102",
+     "notes": "- Bluetooth: answer a reconnecting controller's SDP look-up; open its channels"
+    },
+    {
+     "version": "2026.11.08.2050",
+     "notes": "- Bluetooth: a controller connecting again checks keys when it asks, as Linux"
+    },
+    {
+     "version": "2026.11.08.2040",
+     "notes": "- Bluetooth: a paired controller connecting again, as Linux takes it"
+    },
+    {
+     "version": "2026.11.08.1653",
+     "notes": "- Controllers: motion; Bluetooth controllers turn off with the PC"
+    },
+    {
+     "version": "2026.11.08.1638",
+     "notes": "- Bluetooth: try the controller's connection again when pairing"
+    },
+    {
+     "version": "2026.11.08.1629",
+     "notes": "- Bluetooth: pairing a controller, and a Bluetooth icon in the top bar"
+    },
+    {
+     "version": "2026.11.08.1602",
+     "notes": "- Bluetooth: keep Intel's download result whenever it comes"
+    },
+    {
+     "version": "2026.11.08.1529",
+     "notes": "- Bluetooth: start a USB Bluetooth controller, Intel's with its firmware"
+    },
+    {
+     "version": "2026.11.08.1458",
+     "notes": "- Controllers: each controller's own settings; one has the pointer"
+    }
+   ],
+   "icon": "icons/nova.png",
+   "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
+  },
+  {
    "name": "nvidia",
    "version": "570.144-12",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU)",
@@ -75,6 +212,24 @@
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate."
+  },
+  {
+   "name": "wine",
+   "version": "11.0-1",
+   "description": "Wine: run Windows programs (early: a command, no app yet)",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-1.npk",
+   "size": 150402836,
+   "sha256": "c0589318b89146bc8e3dcc64898a75ec2cdf20df50a23be893b331b72636247a",
+   "title": "Wine",
+   "category": "System",
+   "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
+   "changes": [
+    {
+     "version": "11.0-1",
+     "notes": "- The first package: Wine 11.0 as a command (`wine notepad`), 64-bit and 32-bit Windows programs in windows of their own, with sound.\n- `wine --dxvk` puts DXVK and VKD3D-Proton in the prefix for DirectX through Vulkan; not yet seen working."
+    }
+   ]
   }
  ]
 }
