@@ -2,17 +2,29 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.10.2111",
+   "version": "2026.11.11.0350",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.10.2111.npk",
-   "size": 46835706,
-   "sha256": "50a7c8e6f8ef0fe0d51692a9f233bcc54f9d56dac538759cc4a5b2df5a9e400f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.0350.npk",
+   "size": 46836443,
+   "sha256": "8513ce736063a78e51f5b57689c800b578409bdef6dd46d66cf1ee83b20778b3",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.11.0350",
+     "notes": "- kill reaches a process whose first thread has left; nvidia-vulkan 26.2.6-25"
+    },
+    {
+     "version": "2026.11.11.0239",
+     "notes": "- NVK on NVIDIA's driver: each flush's semaphore release in its own place (the Xid 32 freezes)"
+    },
+    {
+     "version": "2026.11.11.0213",
+     "notes": "- NVK on NVIDIA's driver: write-combining buffers flushed before the card is told of work"
+    },
     {
      "version": "2026.11.10.2111",
      "notes": "- Wine as a package: ports/wine/build.sh, the wine command, tests/wine-package.sh"
@@ -120,18 +132,6 @@
     {
      "version": "2026.11.08.1629",
      "notes": "- Bluetooth: pairing a controller, and a Bluetooth icon in the top bar"
-    },
-    {
-     "version": "2026.11.08.1602",
-     "notes": "- Bluetooth: keep Intel's download result whenever it comes"
-    },
-    {
-     "version": "2026.11.08.1529",
-     "notes": "- Bluetooth: start a USB Bluetooth controller, Intel's with its firmware"
-    },
-    {
-     "version": "2026.11.08.1458",
-     "notes": "- Controllers: each controller's own settings; one has the pointer"
     }
    ],
    "icon": "icons/nova.png",
@@ -201,30 +201,136 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-12",
-   "description": "Vulkan for NVIDIA cards (Mesa's NVK): vktest checks the card, vkcube spins a cube",
+   "version": "26.2.6-25",
+   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-12.npk",
-   "size": 7550245,
-   "sha256": "856296d0efdfc76017559e2ab80994d4f417ff08f8d9a6f8852571b396a31cb7",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-25.npk",
+   "size": 27824358,
+   "sha256": "ffe477e226bab979d4c0956cc832a5de18589408aa4b455508c214effb4f46ff",
    "title": "NVIDIA Vulkan",
    "category": "System",
-   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate."
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
+   "changes": [
+    {
+     "version": "26.2.6-25",
+     "notes": "- Fixes Vulkan and OpenGL programs freezing now and then with their picture stopped (the graphics card could be told that work was finished too soon)."
+    },
+    {
+     "version": "26.2.6-24",
+     "notes": "- Vulkan and OpenGL windows (vkcube, glcube) show a frame each time the monitor refreshes, in step with the desktop, instead of every 15 ms: no more dropped frames. Needs the Nova update published with it."
+    },
+    {
+     "version": "26.2.6-23",
+     "notes": "- The Store shows what each version changed (this list)."
+    },
+    {
+     "version": "26.2.6-22",
+     "notes": "- OpenGL windows use colors a window can show (8 bits a channel), so glcube's cube appears instead of a blank window."
+    },
+    {
+     "version": "26.2.6-21",
+     "notes": "- Vulkan windows take images in RGBA order too, as OpenGL (Zink) asks for them."
+    },
+    {
+     "version": "26.2.6-20",
+     "notes": "- Programs that use the card from several threads at once (OpenGL in a window does) no longer get in each other's way."
+    },
+    {
+     "version": "26.2.6-19",
+     "notes": "- OpenGL in windows: glcube spins a cube in a window you can resize (F11: fullscreen; glcube -i: as fast as it goes).\n- Vulkan windows follow their window's size when it changes. Needs the Nova update published with it."
+    },
+    {
+     "version": "26.2.6-18",
+     "notes": "- zinktest finds its OpenGL settings on the card (it found none)."
+    },
+    {
+     "version": "26.2.6-17",
+     "notes": "- OpenGL (Zink) starts on the card: it stopped with \"out of host memory\"."
+    },
+    {
+     "version": "26.2.6-16",
+     "notes": "- OpenGL for ported programs, through Mesa's Zink on Vulkan: zinktest draws a triangle with OpenGL 4 and checks it."
+    },
+    {
+     "version": "26.2.6-15",
+     "notes": "- gltest sets up the card's memory as the browser does, so the browser's WebGL starts instead of crashing."
+    },
+    {
+     "version": "26.2.6-14",
+     "notes": "- OpenGL ES through Google's ANGLE, as the browser's WebGL uses it: gltest draws a triangle and checks it."
+    },
+    {
+     "version": "26.2.6-13",
+     "notes": "- vkcube and other Vulkan windows show a frame each time the desktop draws one, instead of hundreds nobody sees.\n- vktest no longer ends with two error lines from the driver."
+    },
+    {
+     "version": "26.2.6-12",
+     "notes": "- Vulkan programs that wait for the card with timeline semaphores (the browser's drawing) work."
+    },
+    {
+     "version": "26.2.6-11",
+     "notes": "- Programs that ask Vulkan for layers (the browser does) get an answer."
+    },
+    {
+     "version": "26.2.6-10",
+     "notes": "- vkcube's frame rate lines appear as they're printed."
+    },
+    {
+     "version": "26.2.6-9",
+     "notes": "- vkcube draws the cube's front faces (it showed the inside)."
+    },
+    {
+     "version": "26.2.6-8",
+     "notes": "- Vulkan for programs, with windows: vkcube spins a cube in a window and prints its frame rate."
+    },
+    {
+     "version": "26.2.6-7",
+     "notes": "- vktest's shaders compile for the card."
+    },
+    {
+     "version": "26.2.6-6",
+     "notes": "- When vktest fails, it shows what NVIDIA's driver said."
+    },
+    {
+     "version": "26.2.6-5",
+     "notes": "- Vulkan can use the computer's memory for the card, as NVIDIA's driver requires."
+    },
+    {
+     "version": "26.2.6-4",
+     "notes": "- The card is set up the way Mesa expects."
+    },
+    {
+     "version": "26.2.6-3",
+     "notes": "- Vulkan's functions are all in place in a program (some were missing)."
+    },
+    {
+     "version": "26.2.6-2",
+     "notes": "- vktest says where Vulkan stopped when it fails."
+    },
+    {
+     "version": "26.2.6-1",
+     "notes": "- First test: vktest, Vulkan through Mesa's NVK on NVIDIA's driver. It lists the card, runs a small program on it, draws a triangle and saves it as vktest.png."
+    }
+   ]
   },
   {
    "name": "wine",
-   "version": "11.0-4",
+   "version": "11.0-5",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-4.npk",
-   "size": 150438154,
-   "sha256": "5348ac2a413c23bae67e1b0bb317eb1ac94057ee896dc2504a92af887daba70e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-5.npk",
+   "size": 150441127,
+   "sha256": "d3062b90812bca5b2fbea4cd92e0e76f0d286649a8c7d0bfe508c38d2f103942",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-5",
+     "notes": "- Fixes DirectX programs freezing now and then with their picture stopped (the graphics card could be told that work was finished too soon, and then met commands that were being written again).\n- `wine novagpu cube` says where it is if it stops drawing."
+    },
     {
      "version": "11.0-4",
      "notes": "- `wine novagpu cube`: a turning cube drawn with shaders, to try real 3D through DirectX 11."
