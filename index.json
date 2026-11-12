@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.11.2119",
+   "version": "2026.11.11.2214",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.2119.npk",
-   "size": 46865090,
-   "sha256": "be3c20df3987e8ff1120de505f66b13d96ba5c2b763cca020691a845fde3f5dc",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.2214.npk",
+   "size": 46869306,
+   "sha256": "833f7bec41e920a186b5a21ff54e513a6c5f2ed44264fef8f5405b80f5c5c515",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.11.2214",
+     "notes": "- Another process's memory read and written (SYS_PROCESS_VM); Wine's server uses it"
+    },
     {
      "version": "2026.11.11.2119",
      "notes": "- A signal to one thread of another process (SYS_TKILL's tgid); Wine's server uses it"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.08.2102",
      "notes": "- Bluetooth: answer a reconnecting controller's SDP look-up; open its channels"
-    },
-    {
-     "version": "2026.11.08.2050",
-     "notes": "- Bluetooth: a controller connecting again checks keys when it asks, as Linux"
     }
    ],
    "icon": "icons/nova.png",
@@ -321,16 +321,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-7",
+   "version": "11.0-8",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-7.npk",
-   "size": 150477268,
-   "sha256": "e53e8dec3cb3febd811fd26f030e4959aebc5bb50185401d2e2ba8d44799ae44",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-8.npk",
+   "size": 150481959,
+   "sha256": "b64edf176db46fe142fd422594eb61dc8724852f23ec69239cd43dcaeb189c35",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-8",
+     "notes": "- Windows programs can read and change another program's memory, and their own through the same call, as Steam's web helper does when it starts. Needs the Nova update published with it."
+    },
     {
      "version": "11.0-7",
      "notes": "- Steam gets further: three faults that stopped its helpers are fixed (a program using the graphics card twice over ended, Wine's own server could end when a program closed, and a program that pauses one of its own threads waited for ever). Needs Nova 2026.11.11.2119 or newer.\n- Folders are read much faster, which Windows programs do all the time."
