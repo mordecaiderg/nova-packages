@@ -2,17 +2,25 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.11.1805",
+   "version": "2026.11.11.2119",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.1805.npk",
-   "size": 46863468,
-   "sha256": "891d497e1f339df95efa805005f682a19efe8ebcec043330d10559fe1d4bbbc0",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.2119.npk",
+   "size": 46865090,
+   "sha256": "be3c20df3987e8ff1120de505f66b13d96ba5c2b763cca020691a845fde3f5dc",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.11.2119",
+     "notes": "- A signal to one thread of another process (SYS_TKILL's tgid); Wine's server uses it"
+    },
+    {
+     "version": "2026.11.11.2102",
+     "notes": "- Vulkan: several instances at once; Wine: the server survives a cancel that completes at once"
+    },
     {
      "version": "2026.11.11.1805",
      "notes": "- Folders read many entries a call (SYS_READDIRS); Wine finds Nova's root certificates"
@@ -124,14 +132,6 @@
     {
      "version": "2026.11.08.2050",
      "notes": "- Bluetooth: a controller connecting again checks keys when it asks, as Linux"
-    },
-    {
-     "version": "2026.11.08.2040",
-     "notes": "- Bluetooth: a paired controller connecting again, as Linux takes it"
-    },
-    {
-     "version": "2026.11.08.1653",
-     "notes": "- Controllers: motion; Bluetooth controllers turn off with the PC"
     }
    ],
    "icon": "icons/nova.png",
@@ -201,18 +201,22 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-25",
+   "version": "26.2.6-26",
    "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-25.npk",
-   "size": 27824358,
-   "sha256": "ffe477e226bab979d4c0956cc832a5de18589408aa4b455508c214effb4f46ff",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-26.npk",
+   "size": 27828314,
+   "sha256": "3bfadd13d0979768d2e2adeaf9c97cfa0684eccfdeb01416d5c7118f1928ff0d",
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
    "changes": [
+    {
+     "version": "26.2.6-26",
+     "notes": "- A program that uses Vulkan in two places at once (two instances) no longer ends when it closes the newer one first."
+    },
     {
      "version": "26.2.6-25",
      "notes": "- Fixes Vulkan and OpenGL programs freezing now and then with their picture stopped (the graphics card could be told that work was finished too soon)."
@@ -317,16 +321,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-6",
+   "version": "11.0-7",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-6.npk",
-   "size": 150453045,
-   "sha256": "4c6bd0c0e405e04028d500695313985e52c0c21f7ac0dc582833fbd931559a4c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-7.npk",
+   "size": 150477268,
+   "sha256": "e53e8dec3cb3febd811fd26f030e4959aebc5bb50185401d2e2ba8d44799ae44",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-7",
+     "notes": "- Steam gets further: three faults that stopped its helpers are fixed (a program using the graphics card twice over ended, Wine's own server could end when a program closed, and a program that pauses one of its own threads waited for ever). Needs Nova 2026.11.11.2119 or newer.\n- Folders are read much faster, which Windows programs do all the time."
+    },
     {
      "version": "11.0-6",
      "notes": "- Windows programs trust the same web certificates as the rest of Nova. Without them Steam said \"Steam needs to be online to update\"; with them it downloads its update."

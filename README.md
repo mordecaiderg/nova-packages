@@ -9,7 +9,7 @@ written by Nova's `make publish`: don't edit it by hand.
 
 | Package | Name | Version | Category | Download | About |
 |---|---|---|---|---|---|
-| Nova | `nova` | 2026.11.11.1805 | System | 45766 KB | Nova itself: the kernel and the system every app runs on |
+| Nova | `nova` | 2026.11.11.2119 | System | 45767 KB | Nova itself: the kernel and the system every app runs on |
 | NVIDIA Graphics | `nvidia` | 570.144-12 | System | 59576 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards (first stage: it starts the GPU) |
-| NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-25 | System | 27173 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
-| Wine | `wine` | 11.0-6 | System | 146927 KB | Wine: run Windows programs (early: a command, no app yet) |
+| NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-26 | System | 27177 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
+| Wine | `wine` | 11.0-7 | System | 146951 KB | Wine: run Windows programs (early: a command, no app yet) |
