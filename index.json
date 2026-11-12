@@ -277,17 +277,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.08.2310",
+   "version": "2026.11.11.0448",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.08.2310.npk",
-   "size": 46766197,
-   "sha256": "6504142425c5fb90e9bbc0d9a811421a1bc0dc60b7353d70bcf735512db53cff",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.11.0448.npk",
+   "size": 47116353,
+   "sha256": "d511db6edaaa525434ddeefba1659e3a5e89314490900ec776f07e63d3424edd",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.11.0448",
+     "notes": "- VLC: the media player as a package, with a Nova window and sound output\n- libc: cleanup handlers, flockfile, sigwait, strerror_l, Bessel functions and iconv"
+    },
+    {
+     "version": "2026.11.08.2331",
+     "notes": "- Wi-Fi: refcnt_finalize waits as OpenBSD's does, so the card restarts"
+    },
     {
      "version": "2026.11.08.2310",
      "notes": "- Wi-Fi: joining networks, remembering them, and Nova's traffic over Wi-Fi"
@@ -399,14 +407,6 @@
     {
      "version": "2026.11.07.1548",
      "notes": "- The kernel log on disk, a panic screen that shows with flips, timestamps in nvidia.log"
-    },
-    {
-     "version": "2026.11.07.1253",
-     "notes": "- Box selection on the desktop"
-    },
-    {
-     "version": "2026.11.07.1234",
-     "notes": "- The overview, a blocky genie, and dock tiles that open and close smoothly"
     }
    ],
    "icon": "icons/nova.png",
@@ -700,6 +700,21 @@
      "notes": "- First version: sdl2-testsprite, sdl2-testgl2 and sdl2-loopwave, SDL's own test programs on Nova."
     }
    ]
+  },
+  {
+   "name": "vlc",
+   "version": "3.0.24-1",
+   "description": "VLC media player: plays films and music in almost any format",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/vlc-3.0.24-1.npk",
+   "size": 9947606,
+   "sha256": "4eeeaa60d571c5ae352484a690fb6e0aea6eea7b75d2334ed234c87e403057eb",
+   "title": "VLC",
+   "category": "Multimedia",
+   "about": "VLC plays films and music in almost every format there is: MP4, MKV, WebM, AVI, MOV, MPEG, FLV and WMV films; MP3, FLAC, Ogg, Opus, AAC, WAV and WMA sound; with H.264, H.265, VP9, AV1, MPEG-4 and the older codecs, subtitles and several sound tracks. Open VLC and pick a film from the Videos folder or a song from the Music folder in your home folder, drop a file on its window, or double-click one in Files. Space pauses, the arrow keys move through the film and change the volume, the number keys jump to a tenth of it, F (or a double-click on the picture) fills the screen, S goes through the subtitles and A the sound tracks, [ and ] play slower and faster; a right-click shows these. It also plays an http:// address given to it in the Terminal (vlc ADDRESS). The picture is decoded by the processor, without the graphics card's help.",
+   "app": "vlc",
+   "icon": "icons/vlc.png",
+   "icon_sha256": "a1ccd4a5006713dc65ad84f41281ce732c23533555debc4e71f6457bb26b8fa1"
   },
   {
    "name": "wifi-intel",
