@@ -321,16 +321,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-8",
+   "version": "11.0-9",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-8.npk",
-   "size": 150481959,
-   "sha256": "b64edf176db46fe142fd422594eb61dc8724852f23ec69239cd43dcaeb189c35",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-9.npk",
+   "size": 150846647,
+   "sha256": "9b65e70346826fc8ad1daf7bde8153be344d1fa0aa00681d753ca69e25e061f2",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-9",
+     "notes": "- Windows programs can ask about the network: the computer's network cards and addresses, and which program owns a connection. Steam asks that before it lets its own window talk to it."
+    },
     {
      "version": "11.0-8",
      "notes": "- Windows programs can read and change another program's memory, and their own through the same call, as Steam's web helper does when it starts. Needs the Nova update published with it."
