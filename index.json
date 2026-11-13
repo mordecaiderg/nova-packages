@@ -329,16 +329,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-11",
+   "version": "11.0-12",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-11.npk",
-   "size": 150465585,
-   "sha256": "08a87d1d4b45e1ba7dd4a4a7527ae40b0eeade4520567117a00f50f59a25c46f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-12.npk",
+   "size": 151737586,
+   "sha256": "9789cf36e2857bdc978d19b6acd95a7d2c7fc9ea4f66af8cc4300701c9572e61",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-12",
+     "notes": "- Windows programs can check certificates and signatures and make secure (https) connections: Wine has GnuTLS now. Steam needs this to reach its logon servers."
+    },
     {
      "version": "11.0-11",
      "notes": "- A program that prepares its picture before its window is shown (Chromium, so Steam's windows) shows it once the window is there, and keeps showing it when the window is resized."
