@@ -2,17 +2,29 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.11.2214",
+   "version": "2026.11.12.2159",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.11.2214.npk",
-   "size": 46869306,
-   "sha256": "833f7bec41e920a186b5a21ff54e513a6c5f2ed44264fef8f5405b80f5c5c515",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.12.2159.npk",
+   "size": 46912551,
+   "sha256": "dd36894f54bee9c95eb967153f90f7deca69ae8eb47bb27c3bc1783d09cde3fe",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.12.2159",
+     "notes": "- libc: the SIOCGIF* ioctls in a file of their own"
+    },
+    {
+     "version": "2026.11.12.2137",
+     "notes": "- Drawing in another process's window (SYS_WIN_PUT); Vulkan and Wine's driver use it"
+    },
+    {
+     "version": "2026.11.11.2314",
+     "notes": "- libc: struct ifreq and the SIOCGIF* ioctls; Wine's nsiproxy builds, wine 11.0-9"
+    },
     {
      "version": "2026.11.11.2214",
      "notes": "- Another process's memory read and written (SYS_PROCESS_VM); Wine's server uses it"
@@ -120,18 +132,6 @@
     {
      "version": "2026.11.08.2220",
      "notes": "- Wi-Fi scanning, and a network popup in the top bar"
-    },
-    {
-     "version": "2026.11.08.2200",
-     "notes": "- Task Manager: built-in drivers get rows too, with what they drive\n- Wi-Fi: OpenBSD's iwx driver as a module, starting Intel AX2xx cards"
-    },
-    {
-     "version": "2026.11.08.2111",
-     "notes": "- Bluetooth: notifications when a controller connects or disconnects"
-    },
-    {
-     "version": "2026.11.08.2102",
-     "notes": "- Bluetooth: answer a reconnecting controller's SDP look-up; open its channels"
     }
    ],
    "icon": "icons/nova.png",
@@ -201,18 +201,22 @@
   },
   {
    "name": "nvidia-vulkan",
-   "version": "26.2.6-26",
+   "version": "26.2.6-27",
    "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
    "depends": [
     "nvidia"
    ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-26.npk",
-   "size": 27828314,
-   "sha256": "3bfadd13d0979768d2e2adeaf9c97cfa0684eccfdeb01416d5c7118f1928ff0d",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-vulkan-26.2.6-27.npk",
+   "size": 27832998,
+   "sha256": "859b5a99da5e42839d668c4e8e462dc49f80c28a6247effc3937514494e59e10",
    "title": "NVIDIA Vulkan",
    "category": "System",
    "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
    "changes": [
+    {
+     "version": "26.2.6-27",
+     "notes": "- Vulkan can show its picture in a window that belongs to another program (a helper process drawing for the program that made the window)."
+    },
     {
      "version": "26.2.6-26",
      "notes": "- A program that uses Vulkan in two places at once (two instances) no longer ends when it closes the newer one first."
@@ -321,16 +325,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-9",
+   "version": "11.0-10",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-9.npk",
-   "size": 150846647,
-   "sha256": "9b65e70346826fc8ad1daf7bde8153be344d1fa0aa00681d753ca69e25e061f2",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-10.npk",
+   "size": 150463153,
+   "sha256": "b593e1a32c2f005b9c9ce28dcb4ca6ec3709f352abab02d9c49563af5998aeaf",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-10",
+     "notes": "- A program whose picture is drawn by a helper process (Chromium does this, so Steam's windows) shows it: the helper can draw in the program's window. Needs the Nova update published with it."
+    },
     {
      "version": "11.0-9",
      "notes": "- Windows programs can ask about the network: the computer's network cards and addresses, and which program owns a connection. Steam asks that before it lets its own window talk to it."
