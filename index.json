@@ -2,17 +2,25 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.13.2211",
+   "version": "2026.11.13.2236",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.13.2211.npk",
-   "size": 46912134,
-   "sha256": "bc777539bff6180442f5241c7505b9a04f614600187b28ac92a6bb509b7a362c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.13.2236.npk",
+   "size": 46915701,
+   "sha256": "11f9e4b447fe1d40b92e9b936dae7892fcc734f41cbdecfa0e41c1f495424a30",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.13.2236",
+     "notes": "- L1: the profiler says what holds the kernel lock, and times input to the screen"
+    },
+    {
+     "version": "2026.11.13.2223",
+     "notes": "- The desktop's processor's interrupts go ahead for the kernel lock too"
+    },
     {
      "version": "2026.11.13.2211",
      "notes": "- With four processors or more, the first is the desktop's alone"
@@ -124,14 +132,6 @@
     {
      "version": "2026.11.09.1843",
      "notes": "- Wine 12.4: Unix libraries without shared objects; wine --version runs on Nova"
-    },
-    {
-     "version": "2026.11.09.1811",
-     "notes": "- Signals: give handlers a Linux-layout ucontext, and resume from it (12.2)"
-    },
-    {
-     "version": "2026.11.09.1803",
-     "notes": "- Add SYS_ARCH_PRCTL: a per-thread user %gs base (roadmap 12.2)"
     }
    ],
    "icon": "icons/nova.png",
