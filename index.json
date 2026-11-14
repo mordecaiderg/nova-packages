@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.13.2236",
+   "version": "2026.11.13.2253",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.13.2236.npk",
-   "size": 46915701,
-   "sha256": "11f9e4b447fe1d40b92e9b936dae7892fcc734f41cbdecfa0e41c1f495424a30",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.13.2253.npk",
+   "size": 46915997,
+   "sha256": "3a9ebeeb73fa885df2a1d6a41c067a49117f717c2da6b10ca641c309e642bea5",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.13.2253",
+     "notes": "- ext2 reads neighbouring blocks of a file in one disk request"
+    },
     {
      "version": "2026.11.13.2236",
      "notes": "- L1: the profiler says what holds the kernel lock, and times input to the screen"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.09.2040",
      "notes": "- Wine 12.5: address space by request, socket names that stat, staging; first Windows images load"
-    },
-    {
-     "version": "2026.11.09.1843",
-     "notes": "- Wine 12.4: Unix libraries without shared objects; wine --version runs on Nova"
     }
    ],
    "icon": "icons/nova.png",
