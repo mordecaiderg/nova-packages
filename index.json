@@ -333,16 +333,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-13",
+   "version": "11.0-14",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-13.npk",
-   "size": 151738559,
-   "sha256": "baf4192ebb7d9f2079562310de076916ce8fc41b7d763d7a150c515bb84f3a74",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-14.npk",
+   "size": 151721245,
+   "sha256": "4293a589510086e321b8333c90d9563caf71b92108d022d832b8a2cbe231e603",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-14",
+     "notes": "- Text drawn with DirectWrite shows: Steam's windows (and other programs built on Chromium) had no letters in them."
+    },
     {
      "version": "11.0-13",
      "notes": "- DirectX programs get the system memory they ask for: the graphics driver thought only a few megabytes were free. Steam ended just after signing in because of it."
