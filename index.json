@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.13.2140",
+   "version": "2026.11.13.2211",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.13.2140.npk",
-   "size": 46912092,
-   "sha256": "710d662be2d7607e0c74043c76b5b45909ca8cf5b9013d700d8d8ec458cb9317",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.13.2211.npk",
+   "size": 46912134,
+   "sha256": "bc777539bff6180442f5241c7505b9a04f614600187b28ac92a6bb509b7a362c",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.13.2211",
+     "notes": "- With four processors or more, the first is the desktop's alone"
+    },
     {
      "version": "2026.11.13.2140",
      "notes": "- The desktop goes ahead of the other processors for the kernel lock"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.09.1803",
      "notes": "- Add SYS_ARCH_PRCTL: a per-thread user %gs base (roadmap 12.2)"
-    },
-    {
-     "version": "2026.11.09.1749",
-     "notes": "- libc: what Wine's Unix side needs to compile (roadmap 12.2, first part)"
     }
    ],
    "icon": "icons/nova.png",
