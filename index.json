@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.15.0159",
+   "version": "2026.11.15.0301",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.15.0159.npk",
-   "size": 47028436,
-   "sha256": "797aeb5dcb50e67430d7d68442b52ac4578d302bee4249b795d5f2983550af6b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.15.0301.npk",
+   "size": 47030529,
+   "sha256": "e354fa107814387e084c8ec6d9867ba66a8f48c23fcb07dfb99ff3528c6f5585",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.15.0301",
+     "notes": "- An open file's size is the file's, not what that open last knew"
+    },
     {
      "version": "2026.11.15.0159",
      "notes": "- A popup placed on the screen (NV_WIN_SCREEN)\n- The block cache is a quarter of memory; a sliced read goes back to its program"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.10.1944",
      "notes": "- 12.8, the build side: a Vulkan surface for Windows windows, Wine with libvulkan, DXVK fetched"
-    },
-    {
-     "version": "2026.11.10.1501",
-     "notes": "- A window's own icon (SYS_WIN_SET_ICON), and a dock tile for programs that are not apps"
     }
    ],
    "icon": "icons/nova.png",
@@ -337,16 +337,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-17",
+   "version": "11.0-18",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-17.npk",
-   "size": 151852204,
-   "sha256": "9ee13543bcf38dadf53d9454eb55dd504386ba79721ebf3c29e44ad21fa78581",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-18.npk",
+   "size": 151854038,
+   "sha256": "ee560727b8ffa30c51cfa80a8f32c7835855819f0545f5a3ab14a44598261f11",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-18",
+     "notes": "- Steam's notifications really are popups in the screen's corner now: 11.0-17 looked for the wrong mark on them, and they still came up as windows in the middle of the screen."
+    },
     {
      "version": "11.0-17",
      "notes": "- Steam's notifications are small borderless popups in the corner of the screen where Steam puts them, not windows with a title bar and a tile in the dock. Their place needs the Nova update published with it."
