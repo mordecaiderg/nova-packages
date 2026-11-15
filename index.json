@@ -337,16 +337,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-18",
+   "version": "11.0-19",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-18.npk",
-   "size": 151854038,
-   "sha256": "ee560727b8ffa30c51cfa80a8f32c7835855819f0545f5a3ab14a44598261f11",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-19.npk",
+   "size": 151885799,
+   "sha256": "3671ba938323122ecdea94823fbe3d17ee73dda4dba0fb230251cf10bbbf3656",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-19",
+     "notes": "- A program signed with a certificate that has since expired is still found properly signed, as on Windows: the time stamped into its signature is what counts. Gunfire Reborn ended a few seconds into a level over this; it plays now."
+    },
     {
      "version": "11.0-18",
      "notes": "- Steam's notifications really are popups in the screen's corner now: 11.0-17 looked for the wrong mark on them, and they still came up as windows in the middle of the screen."
