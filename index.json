@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.15.0301",
+   "version": "2026.11.15.1326",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.15.0301.npk",
-   "size": 47030529,
-   "sha256": "e354fa107814387e084c8ec6d9867ba66a8f48c23fcb07dfb99ff3528c6f5585",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.15.1326.npk",
+   "size": 47030872,
+   "sha256": "70dfa4e06641216712d0d2fb922b055e4af983236fd4ad2e730b696e598610b1",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.15.1326",
+     "notes": "- A signal handler doesn't run single-stepped; the trap flag comes back through sigreturn"
+    },
     {
      "version": "2026.11.15.0301",
      "notes": "- An open file's size is the file's, not what that open last knew"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.10.2111",
      "notes": "- Wine as a package: ports/wine/build.sh, the wine command, tests/wine-package.sh"
-    },
-    {
-     "version": "2026.11.10.1944",
-     "notes": "- 12.8, the build side: a Vulkan surface for Windows windows, Wine with libvulkan, DXVK fetched"
     }
    ],
    "icon": "icons/nova.png",
