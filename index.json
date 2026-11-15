@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.15.0132",
+   "version": "2026.11.15.0159",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.15.0132.npk",
-   "size": 47027539,
-   "sha256": "d4a35867f5632f8d3c222e09dcf9a620f77702e25217793b17019089dc846d8b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.15.0159.npk",
+   "size": 47028436,
+   "sha256": "797aeb5dcb50e67430d7d68442b52ac4578d302bee4249b795d5f2983550af6b",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.15.0159",
+     "notes": "- A popup placed on the screen (NV_WIN_SCREEN)\n- The block cache is a quarter of memory; a sliced read goes back to its program"
+    },
     {
      "version": "2026.11.15.0132",
      "notes": "- Long reads in slices, cheaper shadows, the USB service once a tick"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.10.1501",
      "notes": "- A window's own icon (SYS_WIN_SET_ICON), and a dock tile for programs that are not apps"
-    },
-    {
-     "version": "2026.11.10.1451",
-     "notes": "- Popup windows (NV_WIN_POPUP), and Wine's menus in them"
     }
    ],
    "icon": "icons/nova.png",
@@ -337,16 +337,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-16",
+   "version": "11.0-17",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-16.npk",
-   "size": 151849955,
-   "sha256": "d6ffd07679f59a433c45d9d4fe5a01ae63bd05158c9bd2cee2ddc7192fbfdd1f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-17.npk",
+   "size": 151852204,
+   "sha256": "9ee13543bcf38dadf53d9454eb55dd504386ba79721ebf3c29e44ad21fa78581",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-17",
+     "notes": "- Steam's notifications are small borderless popups in the corner of the screen where Steam puts them, not windows with a title bar and a tile in the dock. Their place needs the Nova update published with it."
+    },
     {
      "version": "11.0-16",
      "notes": "- 32-bit games drawn with DirectX show their picture: they were a black window (Crazy Taxi from Steam plays now).\n- A game that asks for a screen size smaller than the screen goes fullscreen with its picture stretched to fit, instead of stopping when it changes the size.\n- Steam's store page no longer blinks when the window around it redraws, and tooltips show their text.\n- Programs that ask for Arial, Times New Roman, Courier New, Segoe UI or Verdana get Nova's Liberation fonts in their place: text in Steam's pages was missing where it fell back to them."
