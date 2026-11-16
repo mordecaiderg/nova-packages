@@ -337,16 +337,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-22",
+   "version": "11.0-23",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-22.npk",
-   "size": 151963476,
-   "sha256": "2471026cad3f8e1dcf1e5b1339357a72a286eff15e7574e9c633f3a6bc0295db",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-23.npk",
+   "size": 151961838,
+   "sha256": "164c44c2a0fd3a4942cefc0fac6be558ed9a78d44f626323d1378aa06c90db19",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-23",
+     "notes": "- Games that turn the camera with the mouse work: while a game hides the cursor and keeps it in its window, Nova's pointer is locked there and the mouse's own movement goes to the game (the cursor used to stay visible and the camera jumped). A cursor a program hides is hidden.\n- Keys, clicks and mouse movement reach Windows programs as they happen. They used to be picked up only ten times a second."
+    },
     {
      "version": "11.0-22",
      "notes": "- Gunfire Reborn plays: its protection no longer takes the game for one being debugged and ends it. A program asking for its thread's debug registers (where a debugger keeps hardware breakpoints) was handed back whatever its memory held; they now read as zero, as they are."
