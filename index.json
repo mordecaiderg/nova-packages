@@ -337,16 +337,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-21",
+   "version": "11.0-22",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-21.npk",
-   "size": 151918773,
-   "sha256": "e5aeef30b50eaae09e87d5fda13018b1cc108505da1db0f388c513717a7aae21",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-22.npk",
+   "size": 151963476,
+   "sha256": "2471026cad3f8e1dcf1e5b1339357a72a286eff15e7574e9c633f3a6bc0295db",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-22",
+     "notes": "- Gunfire Reborn plays: its protection no longer takes the game for one being debugged and ends it. A program asking for its thread's debug registers (where a debugger keeps hardware breakpoints) was handed back whatever its memory held; they now read as zero, as they are."
+    },
     {
      "version": "11.0-21",
      "notes": "- Windows programs see the PC's processors: their number, name and real speed (the registry's `CentralProcessor` keys were missing altogether, and the speed Wine would have given was a made-up 1000 MHz). Programs that tell the time from the processor's counter depend on it."
