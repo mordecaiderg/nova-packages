@@ -337,16 +337,24 @@
   },
   {
    "name": "wine",
-   "version": "11.0-19",
+   "version": "11.0-21",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-19.npk",
-   "size": 151885799,
-   "sha256": "3671ba938323122ecdea94823fbe3d17ee73dda4dba0fb230251cf10bbbf3656",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-21.npk",
+   "size": 151918773,
+   "sha256": "e5aeef30b50eaae09e87d5fda13018b1cc108505da1db0f388c513717a7aae21",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-21",
+     "notes": "- Windows programs see the PC's processors: their number, name and real speed (the registry's `CentralProcessor` keys were missing altogether, and the speed Wine would have given was a made-up 1000 MHz). Programs that tell the time from the processor's counter depend on it."
+    },
+    {
+     "version": "11.0-20",
+     "notes": "- Steam's notifications no longer flash in the middle of the screen when one arrives while Steam's own window is closed or minimized (a game starting): they go in the corner with another of Steam's windows, or are left out when it has none.\n- Gunfire Reborn does not play yet after all: 11.0-19's fix is right, but the game's protection still ends it most of the time."
+    },
     {
      "version": "11.0-19",
      "notes": "- A program signed with a certificate that has since expired is still found properly signed, as on Windows: the time stamped into its signature is what counts. Gunfire Reborn ended a few seconds into a level over this; it plays now."
