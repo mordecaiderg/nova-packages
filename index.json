@@ -337,16 +337,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-24",
+   "version": "11.0-25",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-24.npk",
-   "size": 151953031,
-   "sha256": "8e4bc8f710b16e59c1bb036c4c7372150fa820f720e2c9fb0e19e34b12e1efd4",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-25.npk",
+   "size": 151952787,
+   "sha256": "79e77be9496f3671922aa4ccea5baf66720e4a5af9746d315267e7ce194a1a84",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-25",
+     "notes": "- A Windows program's window knows it is the active one when Nova gives it the keyboard because another program's window closed. Steam's library went on showing Stop after a game was closed, until it was clicked: its page was asleep, never told the window was in front again."
+    },
     {
      "version": "11.0-24",
      "notes": "- Steam no longer stalls or ends when a game it started is closed: it stayed at \"uploading 100%\" for the cloud save, then went away minutes later. It called a graphics function Wine did not have."
