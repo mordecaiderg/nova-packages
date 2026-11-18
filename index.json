@@ -2,17 +2,41 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.15.1326",
+   "version": "2026.11.17.2151",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.15.1326.npk",
-   "size": 47030872,
-   "sha256": "70dfa4e06641216712d0d2fb922b055e4af983236fd4ad2e730b696e598610b1",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.17.2151.npk",
+   "size": 47040757,
+   "sha256": "432f4c6495ed67129f6cad0fc4a64b78fca9c559f5ebb0b1200d2df92b39750e",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.17.2151",
+     "notes": "- What memory is used for (SYS_MEM_INFO, free -v); the kernel heap gives pages back"
+    },
+    {
+     "version": "2026.11.17.2023",
+     "notes": "- A disk check at boot says so on the screen, with how far it is"
+    },
+    {
+     "version": "2026.11.17.2012",
+     "notes": "- Lookups: ext2 remembers names and inodes, vfs_permit the folders above a path"
+    },
+    {
+     "version": "2026.11.17.1943",
+     "notes": "- The block cache reads ahead: a miss fetches to the end of its 128 KiB group"
+    },
+    {
+     "version": "2026.11.17.1833",
+     "notes": "- The block cache's index is taken as the cache fills, not whole at boot"
+    },
+    {
+     "version": "2026.11.16.2143",
+     "notes": "- Steam: a launcher tile that starts the Windows Steam under Wine (steam 1.0-1)"
+    },
     {
      "version": "2026.11.15.1326",
      "notes": "- A signal handler doesn't run single-stepped; the trap flag comes back through sigreturn"
@@ -108,30 +132,6 @@
     {
      "version": "2026.11.11.2102",
      "notes": "- Vulkan: several instances at once; Wine: the server survives a cancel that completes at once"
-    },
-    {
-     "version": "2026.11.11.1805",
-     "notes": "- Folders read many entries a call (SYS_READDIRS); Wine finds Nova's root certificates"
-    },
-    {
-     "version": "2026.11.11.1551",
-     "notes": "- Writable shared mappings of files on a disk, and msync"
-    },
-    {
-     "version": "2026.11.11.0350",
-     "notes": "- kill reaches a process whose first thread has left; nvidia-vulkan 26.2.6-25"
-    },
-    {
-     "version": "2026.11.11.0239",
-     "notes": "- NVK on NVIDIA's driver: each flush's semaphore release in its own place (the Xid 32 freezes)"
-    },
-    {
-     "version": "2026.11.11.0213",
-     "notes": "- NVK on NVIDIA's driver: write-combining buffers flushed before the card is told of work"
-    },
-    {
-     "version": "2026.11.10.2111",
-     "notes": "- Wine as a package: ports/wine/build.sh, the wine command, tests/wine-package.sh"
     }
    ],
    "icon": "icons/nova.png",
