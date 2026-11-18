@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.17.2151",
+   "version": "2026.11.17.2341",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.17.2151.npk",
-   "size": 47040757,
-   "sha256": "432f4c6495ed67129f6cad0fc4a64b78fca9c559f5ebb0b1200d2df92b39750e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.17.2341.npk",
+   "size": 47045007,
+   "sha256": "8fdc289843c21d1feec63ffeaf5f76fc7675317970b9e05a7f7d42b3e09ff307",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.17.2341",
+     "notes": "- The desktop shows a frame without the kernel lock, and enlarges it once"
+    },
     {
      "version": "2026.11.17.2151",
      "notes": "- What memory is used for (SYS_MEM_INFO, free -v); the kernel heap gives pages back"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.11.2119",
      "notes": "- A signal to one thread of another process (SYS_TKILL's tgid); Wine's server uses it"
-    },
-    {
-     "version": "2026.11.11.2102",
-     "notes": "- Vulkan: several instances at once; Wine: the server survives a cancel that completes at once"
     }
    ],
    "icon": "icons/nova.png",
