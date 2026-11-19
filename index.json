@@ -139,16 +139,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-29",
+   "version": "570.144-30",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-29.npk",
-   "size": 61020284,
-   "sha256": "d981e6fa44f9672634ccb8182b48ee6ed190f6bee31322c75d1500f5014a6fae",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-30.npk",
+   "size": 61020426,
+   "sha256": "ad356255d643a696f855319b15b0ada195bc12ddb9dff458f0025e7969551fa7",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-30",
+     "notes": "- Changing the resolution or refresh rate a few times in a row no longer turns off smooth frames (the screen synced to the monitor): each change was counted as a frame shown late, and after five the driver stopped syncing, leaving the desktop at about 66 frames a second whatever the monitor's rate."
+    },
     {
      "version": "570.144-29",
      "notes": "- Fixes a warning in /var/log/nvidia.log that -27 brought back (\"_rmGpuAllocLockIsOwner\"): the interrupt's second step, now run from inside any wait, ran under the waiting program's name instead of the driver's own."
