@@ -139,16 +139,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-25",
+   "version": "570.144-26",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-25.npk",
-   "size": 61019027,
-   "sha256": "bca5f7e082d838d272a96a1225c161b384273ba1ca77a6d1616e14bfd1d7a8e3",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-26.npk",
+   "size": 61019410,
+   "sha256": "f074af13d4a6ff90f09e3a490caaa5d584fd9efed45063cd075ac2bd3d1d2e3e",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-26",
+     "notes": "- Diagnostics only: a long wait for the card's lock also says what the driver itself has written down about who holds that lock."
+    },
     {
      "version": "570.144-25",
      "notes": "- Diagnostics only: when the driver waits more than 2 seconds for one of its own locks, it says so at once in the kernel log, with which part of it took that lock last. The PC froze when its monitor was turned off, waiting for such a lock, and the report of the freeze could not say who held it."
