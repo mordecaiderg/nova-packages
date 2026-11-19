@@ -139,16 +139,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-26",
+   "version": "570.144-27",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-26.npk",
-   "size": 61019410,
-   "sha256": "f074af13d4a6ff90f09e3a490caaa5d584fd9efed45063cd075ac2bd3d1d2e3e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-27.npk",
+   "size": 61019579,
+   "sha256": "a886c8b1dc8a0d7c0a1156aa4a9c9f02625598ba2775cf7a8dd1f45759899e94",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-27",
+     "notes": "- Fixes the PC freezing when the monitor is turned off (or unplugged): the driver's handling of the display going away waited for the graphics card's lock, which the card's interrupt had handed to a second step that was queued behind that very handling and so never ran."
+    },
     {
      "version": "570.144-26",
      "notes": "- Diagnostics only: a long wait for the card's lock also says what the driver itself has written down about who holds that lock."
