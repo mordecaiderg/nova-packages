@@ -2,17 +2,21 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.18.2239",
+   "version": "2026.11.18.2315",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.18.2239.npk",
-   "size": 47047286,
-   "sha256": "fe0f41c3085367c7c360de0f5af77318b6c1df16484482c0fdbd2291d268c847",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.18.2315.npk",
+   "size": 47047537,
+   "sha256": "e5b49f9c45864d1dc284d6e4b734c0df52d1a3b1a1ff1e2004336f2f25932307",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.18.2315",
+     "notes": "- 200% writes both rows from the back buffer; nvidia -29: bottom halves keep the work identity"
+    },
     {
      "version": "2026.11.18.2239",
      "notes": "- Refresh rates: every rate of every mode, chosen in Settings and kept; nvidia -28 offers them"
@@ -128,10 +132,6 @@
     {
      "version": "2026.11.11.2314",
      "notes": "- libc: struct ifreq and the SIOCGIF* ioctls; Wine's nsiproxy builds, wine 11.0-9"
-    },
-    {
-     "version": "2026.11.11.2214",
-     "notes": "- Another process's memory read and written (SYS_PROCESS_VM); Wine's server uses it"
     }
    ],
    "icon": "icons/nova.png",
@@ -139,16 +139,20 @@
   },
   {
    "name": "nvidia",
-   "version": "570.144-28",
+   "version": "570.144-29",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-28.npk",
-   "size": 61020216,
-   "sha256": "06f4d13f07eaecf2ed487ac622698f0cdc90d8abb775bf909665894fffbe8a12",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nvidia-570.144-29.npk",
+   "size": 61020284,
+   "sha256": "d981e6fa44f9672634ccb8182b48ee6ed190f6bee31322c75d1500f5014a6fae",
    "title": "NVIDIA Graphics",
    "category": "System",
    "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
    "changes": [
+    {
+     "version": "570.144-29",
+     "notes": "- Fixes a warning in /var/log/nvidia.log that -27 brought back (\"_rmGpuAllocLockIsOwner\"): the interrupt's second step, now run from inside any wait, ran under the waiting program's name instead of the driver's own."
+    },
     {
      "version": "570.144-28",
      "notes": "- Every refresh rate the monitor offers can be chosen in Settings > Display (with the Nova update of the same day): until now each resolution had one, and the monitor's own resolution only its own rate. Needs Nova 2026.11.18 or newer for the choice; on an older one nothing changes."
