@@ -829,17 +829,21 @@
   },
   {
    "name": "dolphin",
-   "version": "2609b-2",
+   "version": "2609b-3",
    "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-2.npk",
-   "size": 13682898,
-   "sha256": "b046a4dcb6a6be0aa7a039f6e67cbd8fce32b5d09215392f42111d8994d76b79",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-3.npk",
+   "size": 13685286,
+   "sha256": "10d13aa17d1a75ba24efdcbf6c6160271ae0e1ad84fbb22580e1a8385ee4a436",
    "title": "Dolphin",
    "category": "Games",
    "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Games aren't included.",
    "app": "dolphin",
    "changes": [
+    {
+     "version": "2609b-3",
+     "notes": "- Controllers play: a Controllers tab chooses what each GameCube port is (a controller, Bluetooth or USB, the keyboard, or nothing; Automatic takes them in order), changes any button by pressing it, and turns rumble on or off. Before, only the keyboard was mapped.\n- The PS button ends a game.\n- More settings: aspect ratio, widescreen hack, anti-aliasing, texture filtering, V-Sync, the frame rate, how shaders compile, the speed limit, dual core, the CPU clock, volume and cheats."
+    },
     {
      "version": "2609b-2",
      "notes": "- GameCube games in RVZ and WIA files open: Dolphin said they were \"an invalid GCM/ISO file\" (an empty read Nova refused)."
@@ -854,17 +858,21 @@
   },
   {
    "name": "photocraft",
-   "version": "0.23.1-4",
+   "version": "0.23.1-5",
    "description": "PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/photocraft-0.23.1-4.npk",
-   "size": 41897099,
-   "sha256": "23f9136d11e1ad7fa91b1e7bff8b3c88bcc3fb83c648a7fe32242cf73dd5ace6",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/photocraft-0.23.1-5.npk",
+   "size": 41898526,
+   "sha256": "eb1f5bf80d7115940464dcf760295e16f7aabfb530566402c219a8b7046a44ae",
    "title": "PhotoCraft",
    "category": "Graphics",
    "about": "PhotoCraft is an image editor in the manner of Photoshop: layers and groups, masks, adjustment layers (Levels, Curves, Hue/Saturation and more), layer styles, type, shapes and paths, brushes, selections, and a long list of filters. It opens and saves layered PSD files, and PNG, JPEG, WebP, TIFF, GIF and many other pictures. Open a picture from Files, drop one on its window, or use File, Open; the menus and shortcuts are the ones Photoshop users know, with Ctrl for Command. On Nova it draws on the processor, so very large documents are slower than on a PC with a graphics card.",
    "app": "photocraft",
    "changes": [
+    {
+     "version": "0.23.1-5",
+     "notes": "- The brush's circle shows at every size: PhotoCraft's pointer images (brush outlines, the eyedropper) are drawn at the pointer. Only very large brushes showed one before."
+    },
     {
      "version": "0.23.1-4",
      "notes": "- The close button closes PhotoCraft (it did nothing); with unsaved changes it asks first, as Quit does."
