@@ -2,17 +2,33 @@
  "packages": [
   {
    "name": "nova",
-   "version": "2026.11.18.2315",
+   "version": "2026.11.19.1921",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.18.2315.npk",
-   "size": 47047537,
-   "sha256": "e5b49f9c45864d1dc284d6e4b734c0df52d1a3b1a1ff1e2004336f2f25932307",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/nova-2026.11.19.1921.npk",
+   "size": 47502164,
+   "sha256": "e02aa039db9dac890f11a2854089a2ad5477639cfb849278abef579af8884003",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.19.1921",
+     "notes": "- publish.sh: NOVA_PUBLISH_ONLY publishes just the packages named"
+    },
+    {
+     "version": "2026.11.19.1828",
+     "notes": "- btintel: room for the longest firmware name in its error"
+    },
+    {
+     "version": "2026.11.19.1709",
+     "notes": "- Merge the menu bar, VLC and PhotoCraft branch; the menu bar is syscall 283"
+    },
+    {
+     "version": "2026.11.19.1635",
+     "notes": "- Dolphin: the GameCube and Wii emulator as a package (roadmap 9.28)"
+    },
     {
      "version": "2026.11.18.2315",
      "notes": "- 200% writes both rows from the back buffer; nvidia -29: bottom halves keep the work identity"
@@ -116,22 +132,6 @@
     {
      "version": "2026.11.12.2316",
      "notes": "- Wine with GnuTLS: public keys, certificates' signatures and TLS (wine 11.0-12)"
-    },
-    {
-     "version": "2026.11.12.2223",
-     "notes": "- Vulkan surfaces that find their window later; Wine's driver makes them so"
-    },
-    {
-     "version": "2026.11.12.2159",
-     "notes": "- libc: the SIOCGIF* ioctls in a file of their own"
-    },
-    {
-     "version": "2026.11.12.2137",
-     "notes": "- Drawing in another process's window (SYS_WIN_PUT); Vulkan and Wine's driver use it"
-    },
-    {
-     "version": "2026.11.11.2314",
-     "notes": "- libc: struct ifreq and the SIOCGIF* ioctls; Wine's nsiproxy builds, wine 11.0-9"
     }
    ],
    "icon": "icons/nova.png",
