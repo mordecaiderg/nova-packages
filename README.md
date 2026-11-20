@@ -27,8 +27,8 @@ written by Nova's `make publish`: don't edit it by hand.
 | VLC | `vlc` | 3.0.24-1 | Multimedia | 9715 KB | VLC media player: plays films and music in almost any format |
 | Intel Wi-Fi | `wifi-intel` | 0.2-2 | System | 9284 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1271 KB | Run your own Discord-style chat server, with a web client for any browser |
-| Dolphin | `dolphin` | 2609b-3 | Games | 13365 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
 | PhotoCraft | `photocraft` | 0.23.1-5 | Graphics | 40917 KB | PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files |
-| Nova | `nova` | 2026.11.19.2244 | System | 46390 KB | Nova itself: the kernel and the system every app runs on |
 | NVIDIA Graphics | `nvidia` | 570.144-30 | System | 59591 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-31 | System | 27196 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
+| Nova | `nova` | 2026.11.20.0927 | System | 46396 KB | Nova itself: the kernel and the system every app runs on |
+| Dolphin | `dolphin` | 2609b-4 | Games | 13365 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |

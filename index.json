@@ -469,35 +469,6 @@
    "icon_sha256": "bf06f706de4fedb0e8d70b94cbfb86c8e71ee571e761da40628cbee3fd50b265"
   },
   {
-   "name": "dolphin",
-   "version": "2609b-3",
-   "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-3.npk",
-   "size": 13685286,
-   "sha256": "10d13aa17d1a75ba24efdcbf6c6160271ae0e1ad84fbb22580e1a8385ee4a436",
-   "title": "Dolphin",
-   "category": "Games",
-   "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Games aren't included.",
-   "app": "dolphin",
-   "changes": [
-    {
-     "version": "2609b-3",
-     "notes": "- Controllers play: a Controllers tab chooses what each GameCube port is (a controller, Bluetooth or USB, the keyboard, or nothing; Automatic takes them in order), changes any button by pressing it, and turns rumble on or off. Before, only the keyboard was mapped.\n- The PS button ends a game.\n- More settings: aspect ratio, widescreen hack, anti-aliasing, texture filtering, V-Sync, the frame rate, how shaders compile, the speed limit, dual core, the CPU clock, volume and cheats."
-    },
-    {
-     "version": "2609b-2",
-     "notes": "- GameCube games in RVZ and WIA files open: Dolphin said they were \"an invalid GCM/ISO file\" (an empty read Nova refused)."
-    },
-    {
-     "version": "2609b-1",
-     "notes": "- Dolphin 2609b, the GameCube and Wii emulator: games from ~/Games, the software renderer or Vulkan, full screen, controllers with rumble, its menus in the top bar."
-    }
-   ],
-   "icon": "icons/dolphin.png",
-   "icon_sha256": "83ae3fa7936557512e118a9974c75c8f428950500c067b326285ca9a7903ac56"
-  },
-  {
    "name": "photocraft",
    "version": "0.23.1-5",
    "description": "PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files",
@@ -533,143 +504,6 @@
    ],
    "icon": "icons/photocraft.png",
    "icon_sha256": "efd02e0b8ea76c59fbc3a9692ddc21faae6064cc9f9492898df1facec3b5b57d"
-  },
-  {
-   "name": "nova",
-   "version": "2026.11.19.2244",
-   "description": "Nova itself: the kernel and the system every app runs on",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.19.2244.npk",
-   "size": 47502429,
-   "sha256": "f07fc491289bc04ac88b3ed784a819b23b82ad6f9673a9703185cb282d570302",
-   "title": "Nova",
-   "category": "System",
-   "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
-   "system": true,
-   "changes": [
-    {
-     "version": "2026.11.19.2244",
-     "notes": "- wc and head pass any bytes; head -c N\n- Reads and writes of 0 bytes succeed whatever the pointer, as on Linux"
-    },
-    {
-     "version": "2026.11.19.1921",
-     "notes": "- publish.sh: NOVA_PUBLISH_ONLY publishes just the packages named"
-    },
-    {
-     "version": "2026.11.19.1828",
-     "notes": "- btintel: room for the longest firmware name in its error"
-    },
-    {
-     "version": "2026.11.19.1709",
-     "notes": "- Merge the menu bar, VLC and PhotoCraft branch; the menu bar is syscall 283"
-    },
-    {
-     "version": "2026.11.19.1635",
-     "notes": "- Dolphin: the GameCube and Wii emulator as a package (roadmap 9.28)"
-    },
-    {
-     "version": "2026.11.18.2315",
-     "notes": "- 200% writes both rows from the back buffer; nvidia -29: bottom halves keep the work identity"
-    },
-    {
-     "version": "2026.11.18.2239",
-     "notes": "- Refresh rates: every rate of every mode, chosen in Settings and kept; nvidia -28 offers them"
-    },
-    {
-     "version": "2026.11.17.2341",
-     "notes": "- The desktop shows a frame without the kernel lock, and enlarges it once"
-    },
-    {
-     "version": "2026.11.17.2151",
-     "notes": "- What memory is used for (SYS_MEM_INFO, free -v); the kernel heap gives pages back"
-    },
-    {
-     "version": "2026.11.17.2023",
-     "notes": "- A disk check at boot says so on the screen, with how far it is"
-    },
-    {
-     "version": "2026.11.17.2012",
-     "notes": "- Lookups: ext2 remembers names and inodes, vfs_permit the folders above a path"
-    },
-    {
-     "version": "2026.11.17.1943",
-     "notes": "- The block cache reads ahead: a miss fetches to the end of its 128 KiB group"
-    },
-    {
-     "version": "2026.11.17.1833",
-     "notes": "- The block cache's index is taken as the cache fills, not whole at boot"
-    },
-    {
-     "version": "2026.11.16.2143",
-     "notes": "- Steam: a launcher tile that starts the Windows Steam under Wine (steam 1.0-1)"
-    },
-    {
-     "version": "2026.11.15.1326",
-     "notes": "- A signal handler doesn't run single-stepped; the trap flag comes back through sigreturn"
-    },
-    {
-     "version": "2026.11.15.0301",
-     "notes": "- An open file's size is the file's, not what that open last knew"
-    },
-    {
-     "version": "2026.11.15.0159",
-     "notes": "- A popup placed on the screen (NV_WIN_SCREEN)\n- The block cache is a quarter of memory; a sliced read goes back to its program"
-    },
-    {
-     "version": "2026.11.15.0132",
-     "notes": "- Long reads in slices, cheaper shadows, the USB service once a tick"
-    },
-    {
-     "version": "2026.11.15.0049",
-     "notes": "- The stack report keeps its words off the thread's stack, and says it isn't safe yet"
-    },
-    {
-     "version": "2026.11.14.2312",
-     "notes": "- A thread asleep inside the kernel sleeps even with a signal pending; the stack report costs programs nothing"
-    },
-    {
-     "version": "2026.11.14.2216",
-     "notes": "- Wine: 32-bit DirectX games draw, smaller display modes, no blinking store page (wine 11.0-16)\n- A click on a window over a desktop icon is the window's; libc can say where a stopped program is"
-    },
-    {
-     "version": "2026.11.14.1702",
-     "notes": "- SYS_WIN_PUT at a place in the window; Vulkan surfaces drawn where their child window is"
-    },
-    {
-     "version": "2026.11.14.1536",
-     "notes": "- A task doesn't go to sleep with a signal it would take pending"
-    },
-    {
-     "version": "2026.11.13.2311",
-     "notes": "- mmap reads a file's range in big pieces before filling its pages"
-    },
-    {
-     "version": "2026.11.13.2253",
-     "notes": "- ext2 reads neighbouring blocks of a file in one disk request"
-    },
-    {
-     "version": "2026.11.13.2236",
-     "notes": "- L1: the profiler says what holds the kernel lock, and times input to the screen"
-    },
-    {
-     "version": "2026.11.13.2223",
-     "notes": "- The desktop's processor's interrupts go ahead for the kernel lock too"
-    },
-    {
-     "version": "2026.11.13.2211",
-     "notes": "- With four processors or more, the first is the desktop's alone"
-    },
-    {
-     "version": "2026.11.13.2140",
-     "notes": "- The desktop goes ahead of the other processors for the kernel lock"
-    },
-    {
-     "version": "2026.11.13.2003",
-     "notes": "- NVK sees the system memory that is free; wine 11.0-13, nvidia-vulkan 26.2.6-29"
-    }
-   ],
-   "icon": "icons/nova.png",
-   "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
   },
   {
    "name": "nvidia",
@@ -940,6 +774,176 @@
      "notes": "- vktest says where Vulkan stopped when it fails."
     }
    ]
+  },
+  {
+   "name": "nova",
+   "version": "2026.11.20.0927",
+   "description": "Nova itself: the kernel and the system every app runs on",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.20.0927.npk",
+   "size": 47509233,
+   "sha256": "c4244733f1e0cb9081aabe21d2185a1b23f516bc82883d506956752d9f4d037c",
+   "title": "Nova",
+   "category": "System",
+   "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
+   "system": true,
+   "changes": [
+    {
+     "version": "2026.11.20.0927",
+     "notes": "- Threads get 8 MiB stacks, as glibc's; dolphin 2609b-4"
+    },
+    {
+     "version": "2026.11.20.0912",
+     "notes": "- exec and spawn take 128 KiB of arguments, not 32 of them"
+    },
+    {
+     "version": "2026.11.19.2244",
+     "notes": "- wc and head pass any bytes; head -c N\n- Reads and writes of 0 bytes succeed whatever the pointer, as on Linux"
+    },
+    {
+     "version": "2026.11.19.1921",
+     "notes": "- publish.sh: NOVA_PUBLISH_ONLY publishes just the packages named"
+    },
+    {
+     "version": "2026.11.19.1828",
+     "notes": "- btintel: room for the longest firmware name in its error"
+    },
+    {
+     "version": "2026.11.19.1709",
+     "notes": "- Merge the menu bar, VLC and PhotoCraft branch; the menu bar is syscall 283"
+    },
+    {
+     "version": "2026.11.19.1635",
+     "notes": "- Dolphin: the GameCube and Wii emulator as a package (roadmap 9.28)"
+    },
+    {
+     "version": "2026.11.18.2315",
+     "notes": "- 200% writes both rows from the back buffer; nvidia -29: bottom halves keep the work identity"
+    },
+    {
+     "version": "2026.11.18.2239",
+     "notes": "- Refresh rates: every rate of every mode, chosen in Settings and kept; nvidia -28 offers them"
+    },
+    {
+     "version": "2026.11.17.2341",
+     "notes": "- The desktop shows a frame without the kernel lock, and enlarges it once"
+    },
+    {
+     "version": "2026.11.17.2151",
+     "notes": "- What memory is used for (SYS_MEM_INFO, free -v); the kernel heap gives pages back"
+    },
+    {
+     "version": "2026.11.17.2023",
+     "notes": "- A disk check at boot says so on the screen, with how far it is"
+    },
+    {
+     "version": "2026.11.17.2012",
+     "notes": "- Lookups: ext2 remembers names and inodes, vfs_permit the folders above a path"
+    },
+    {
+     "version": "2026.11.17.1943",
+     "notes": "- The block cache reads ahead: a miss fetches to the end of its 128 KiB group"
+    },
+    {
+     "version": "2026.11.17.1833",
+     "notes": "- The block cache's index is taken as the cache fills, not whole at boot"
+    },
+    {
+     "version": "2026.11.16.2143",
+     "notes": "- Steam: a launcher tile that starts the Windows Steam under Wine (steam 1.0-1)"
+    },
+    {
+     "version": "2026.11.15.1326",
+     "notes": "- A signal handler doesn't run single-stepped; the trap flag comes back through sigreturn"
+    },
+    {
+     "version": "2026.11.15.0301",
+     "notes": "- An open file's size is the file's, not what that open last knew"
+    },
+    {
+     "version": "2026.11.15.0159",
+     "notes": "- A popup placed on the screen (NV_WIN_SCREEN)\n- The block cache is a quarter of memory; a sliced read goes back to its program"
+    },
+    {
+     "version": "2026.11.15.0132",
+     "notes": "- Long reads in slices, cheaper shadows, the USB service once a tick"
+    },
+    {
+     "version": "2026.11.15.0049",
+     "notes": "- The stack report keeps its words off the thread's stack, and says it isn't safe yet"
+    },
+    {
+     "version": "2026.11.14.2312",
+     "notes": "- A thread asleep inside the kernel sleeps even with a signal pending; the stack report costs programs nothing"
+    },
+    {
+     "version": "2026.11.14.2216",
+     "notes": "- Wine: 32-bit DirectX games draw, smaller display modes, no blinking store page (wine 11.0-16)\n- A click on a window over a desktop icon is the window's; libc can say where a stopped program is"
+    },
+    {
+     "version": "2026.11.14.1702",
+     "notes": "- SYS_WIN_PUT at a place in the window; Vulkan surfaces drawn where their child window is"
+    },
+    {
+     "version": "2026.11.14.1536",
+     "notes": "- A task doesn't go to sleep with a signal it would take pending"
+    },
+    {
+     "version": "2026.11.13.2311",
+     "notes": "- mmap reads a file's range in big pieces before filling its pages"
+    },
+    {
+     "version": "2026.11.13.2253",
+     "notes": "- ext2 reads neighbouring blocks of a file in one disk request"
+    },
+    {
+     "version": "2026.11.13.2236",
+     "notes": "- L1: the profiler says what holds the kernel lock, and times input to the screen"
+    },
+    {
+     "version": "2026.11.13.2223",
+     "notes": "- The desktop's processor's interrupts go ahead for the kernel lock too"
+    },
+    {
+     "version": "2026.11.13.2211",
+     "notes": "- With four processors or more, the first is the desktop's alone"
+    }
+   ],
+   "icon": "icons/nova.png",
+   "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
+  },
+  {
+   "name": "dolphin",
+   "version": "2609b-4",
+   "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-4.npk",
+   "size": 13685214,
+   "sha256": "c65b31c9327023d86610dea615362086ad87165d8c26a28d7d7edd4288f7b3ea",
+   "title": "Dolphin",
+   "category": "Games",
+   "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Games aren't included.",
+   "app": "dolphin",
+   "changes": [
+    {
+     "version": "2609b-4",
+     "notes": "- One of Dolphin's speed-ups is on again: it had turned it off (the \"BLR optimization\", which runs a game's function returns directly) because its emulation thread's stack was too small. Threads now get 8 MB, as on Linux."
+    },
+    {
+     "version": "2609b-3",
+     "notes": "- Controllers play: a Controllers tab chooses what each GameCube port is (a controller, Bluetooth or USB, the keyboard, or nothing; Automatic takes them in order), changes any button by pressing it, and turns rumble on or off. Before, only the keyboard was mapped.\n- The PS button ends a game.\n- More settings: aspect ratio, widescreen hack, anti-aliasing, texture filtering, V-Sync, the frame rate, how shaders compile, the speed limit, dual core, the CPU clock, volume and cheats."
+    },
+    {
+     "version": "2609b-2",
+     "notes": "- GameCube games in RVZ and WIA files open: Dolphin said they were \"an invalid GCM/ISO file\" (an empty read Nova refused)."
+    },
+    {
+     "version": "2609b-1",
+     "notes": "- Dolphin 2609b, the GameCube and Wii emulator: games from ~/Games, the software renderer or Vulkan, full screen, controllers with rumble, its menus in the top bar."
+    }
+   ],
+   "icon": "icons/dolphin.png",
+   "icon_sha256": "83ae3fa7936557512e118a9974c75c8f428950500c067b326285ca9a7903ac56"
   }
  ]
 }
