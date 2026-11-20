@@ -810,17 +810,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.20.0937",
+   "version": "2026.11.20.0952",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.20.0937.npk",
-   "size": 47508859,
-   "sha256": "41110ee916d883f0381e0e07cb4fc748112409fc3eea9d7dbc5c7f1f74ed3968",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.20.0952.npk",
+   "size": 47509193,
+   "sha256": "bb521bc9f7a00546234151f66cdd03c608d6c0ceb424dbb5045aa908e09a1e70",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.20.0952",
+     "notes": "- The disk cache's index shrinks with it"
+    },
     {
      "version": "2026.11.20.0937",
      "notes": "- SYS_WAIT wakes whichever threads wait, not only the first"
@@ -936,10 +940,6 @@
     {
      "version": "2026.11.13.2236",
      "notes": "- L1: the profiler says what holds the kernel lock, and times input to the screen"
-    },
-    {
-     "version": "2026.11.13.2223",
-     "notes": "- The desktop's processor's interrupts go ahead for the kernel lock too"
     }
    ],
    "icon": "icons/nova.png",
