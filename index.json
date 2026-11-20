@@ -276,365 +276,6 @@
    "about": "A lean Python 3 that starts in an instant: micropython FILE.py runs a script. For the full language and its standard library, there is Python."
   },
   {
-   "name": "nova",
-   "version": "2026.11.11.0448",
-   "description": "Nova itself: the kernel and the system every app runs on",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.11.0448.npk",
-   "size": 47116353,
-   "sha256": "d511db6edaaa525434ddeefba1659e3a5e89314490900ec776f07e63d3424edd",
-   "title": "Nova",
-   "category": "System",
-   "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
-   "system": true,
-   "changes": [
-    {
-     "version": "2026.11.11.0448",
-     "notes": "- VLC: the media player as a package, with a Nova window and sound output\n- libc: cleanup handlers, flockfile, sigwait, strerror_l, Bessel functions and iconv"
-    },
-    {
-     "version": "2026.11.08.2331",
-     "notes": "- Wi-Fi: refcnt_finalize waits as OpenBSD's does, so the card restarts"
-    },
-    {
-     "version": "2026.11.08.2310",
-     "notes": "- Wi-Fi: joining networks, remembering them, and Nova's traffic over Wi-Fi"
-    },
-    {
-     "version": "2026.11.08.2220",
-     "notes": "- Wi-Fi scanning, and a network popup in the top bar"
-    },
-    {
-     "version": "2026.11.08.2200",
-     "notes": "- Task Manager: built-in drivers get rows too, with what they drive\n- Wi-Fi: OpenBSD's iwx driver as a module, starting Intel AX2xx cards"
-    },
-    {
-     "version": "2026.11.08.2111",
-     "notes": "- Bluetooth: notifications when a controller connects or disconnects"
-    },
-    {
-     "version": "2026.11.08.2102",
-     "notes": "- Bluetooth: answer a reconnecting controller's SDP look-up; open its channels"
-    },
-    {
-     "version": "2026.11.08.2050",
-     "notes": "- Bluetooth: a controller connecting again checks keys when it asks, as Linux"
-    },
-    {
-     "version": "2026.11.08.2040",
-     "notes": "- Bluetooth: a paired controller connecting again, as Linux takes it"
-    },
-    {
-     "version": "2026.11.08.1653",
-     "notes": "- Controllers: motion; Bluetooth controllers turn off with the PC"
-    },
-    {
-     "version": "2026.11.08.1638",
-     "notes": "- Bluetooth: try the controller's connection again when pairing"
-    },
-    {
-     "version": "2026.11.08.1629",
-     "notes": "- Bluetooth: pairing a controller, and a Bluetooth icon in the top bar"
-    },
-    {
-     "version": "2026.11.08.1602",
-     "notes": "- Bluetooth: keep Intel's download result whenever it comes"
-    },
-    {
-     "version": "2026.11.08.1529",
-     "notes": "- Bluetooth: start a USB Bluetooth controller, Intel's with its firmware"
-    },
-    {
-     "version": "2026.11.08.1458",
-     "notes": "- Controllers: each controller's own settings; one has the pointer"
-    },
-    {
-     "version": "2026.11.08.1433",
-     "notes": "- Controllers: a DualSense's trigger effects, and clearer battery"
-    },
-    {
-     "version": "2026.11.08.1409",
-     "notes": "- Controllers: send a pad's light and rumble by its interrupt endpoint"
-    },
-    {
-     "version": "2026.11.08.1348",
-     "notes": "- Controllers: a PlayStation pad's light, touchpad as the mouse, rumble"
-    },
-    {
-     "version": "2026.11.08.0241",
-     "notes": "- mGBA: controller buttons, a window with Settings and Controls"
-    },
-    {
-     "version": "2026.11.07.2244",
-     "notes": "- Archives: a package for zip, 7z, rar and tar, and Extract Here in Files"
-    },
-    {
-     "version": "2026.11.07.2204",
-     "notes": "- mGBA: a package for Game Boy Advance, Game Boy and Color games"
-    },
-    {
-     "version": "2026.11.07.2149",
-     "notes": "- SDL: a joystick driver for Nova's game controllers"
-    },
-    {
-     "version": "2026.11.07.2140",
-     "notes": "- Game controllers: /dev/gamepad0..3"
-    },
-    {
-     "version": "2026.11.07.2124",
-     "notes": "- Files: the sidebar fits a short window"
-    },
-    {
-     "version": "2026.11.07.2110",
-     "notes": "- Four desktops, and tiling with Super and the arrows"
-    },
-    {
-     "version": "2026.11.07.2006",
-     "notes": "- Files dropped on the desktop from another drive move again"
-    },
-    {
-     "version": "2026.11.07.2002",
-     "notes": "- Screenshots, a notification list, Calculator and Calendar"
-    },
-    {
-     "version": "2026.11.07.1816",
-     "notes": "- A hang detector: a stuck kernel says where it's stuck"
-    },
-    {
-     "version": "2026.11.07.1657",
-     "notes": "- A bad update rolls back by itself; Alt+Tab shows the windows' pictures"
-    },
-    {
-     "version": "2026.11.07.1548",
-     "notes": "- The kernel log on disk, a panic screen that shows with flips, timestamps in nvidia.log"
-    }
-   ],
-   "icon": "icons/nova.png",
-   "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
-  },
-  {
-   "name": "nvidia",
-   "version": "570.144-24",
-   "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-24.npk",
-   "size": 61016888,
-   "sha256": "ba8d0ef792159a2d17876752307478188b53104796e28486ef6f9a5110844af5",
-   "title": "NVIDIA Graphics",
-   "category": "System",
-   "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
-   "changes": [
-    {
-     "version": "570.144-24",
-     "notes": "- Fixes the \"_rmGpuAllocLockIsOwner\" line every start showed, and with it a way the driver could end up waiting for a lock nobody held: the second half of the card's interrupt handler, which on Linux runs on a thread of its own, ran on the waiting call's thread with the same identity, so the driver took it for that call and let go of the call's lock. It has its own identity now, as do interrupts (the identity Linux gives them, which Nova's desktop had shared)."
-    },
-    {
-     "version": "570.144-23",
-     "notes": "- Diagnostics only: the driver's first few assertions and lock waits in /var/log/nvidia.log now say in what context they happened and which of the driver's functions led there, to find the cause of the \"_rmGpuAllocLockIsOwner\" line every start shows. Nothing else changes."
-    },
-    {
-     "version": "570.144-22",
-     "notes": "- Fixes -21, with which the card took 20 seconds longer to start and the screen stayed black: the driver's own waits for a signal were mistaken for locks and skipped, so a signal was lost. The driver's locks now behave as in -18, with the one difference that a wait given up on leaves the lock as it was, instead of leaving it off by one for good, which was the frozen desktop."
-    },
-    {
-     "version": "570.144-21",
-     "notes": "- Fixes -19 and -20, with which the card didn't start (a black screen; Nova then booted without the driver): the start waits for work of the driver's own, which -19 held back. The driver's work runs as it did up to -18; only a wait inside such work for a lock the interrupted call holds is passed at once instead of after 20 seconds."
-    },
-    {
-     "version": "570.144-20",
-     "notes": "- Every line of /var/log/nvidia.log now starts with the time since boot, so a log can say when something happened, not just in what order."
-    },
-    {
-     "version": "570.144-19",
-     "notes": "- The desktop no longer freezes for good after the driver gives up waiting for one of its locks (the log said \"a semaphore stayed taken: carried on\" every 20 seconds; seen after a monitor was switched off at an idle desktop). Work the driver hands off (its interrupts' second half, timers, queued work) no longer runs in the middle of a call that holds a lock it would need, and a wait given up on no longer leaves the lock off by one, which made every later wait time out too. The log line now says which thread, how many locks it held and how deep in waits it was."
-    },
-    {
-     "version": "570.144-18",
-     "notes": "- The screen no longer goes black for a few seconds (with the HDMI sound) when the machine is busy: a late frame is no longer taken as flips not working.\n- Programs drawing on the card from several threads at once (the browser) no longer trip the driver's locks (\"_rmGpuAllocLockIsOwner\" in the log). Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-17",
-     "notes": "- The screen no longer tears: each frame of the desktop is shown at the monitor's refresh, so moving windows, scrolling, games and video are smooth. (-14 and -15 tried this and left the screen black: a function the driver lacks was called; fixed.) nvidia.flips=off in /etc/nova.conf goes back to the old way."
-    },
-    {
-     "version": "570.144-16",
-     "notes": "- Back to drawing straight on the screen, as up to -13: the flips of -14 and -15 left the screen black on some cards. They're off until they're known to work; nvidia.flips=on in /etc/nova.conf tries them."
-    },
-    {
-     "version": "570.144-15",
-     "notes": "- Fixes -14's black screen at start: if the card doesn't take a flipped frame within a quarter of a second, the desktop goes back to drawing straight on the screen (it may tear, but it works), and the log says why. The desktop no longer keeps programs waiting while a frame is on its way. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-14",
-     "notes": "- The screen no longer tears: the desktop draws each frame out of sight and the card shows it at the monitor's refresh, so moving windows, games and video are smooth, at the monitor's own rate. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-13",
-     "notes": "- In the Store for everyone with a GeForce RTX 30 or 40 card: no testing source to add first. The description says what the driver does now."
-    },
-    {
-     "version": "570.144-12",
-     "notes": "- Task Manager gets a GPU tab: how busy the card is (drawing, memory, video decoding and encoding), its video memory and its performance state. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-11",
-     "notes": "- Programs can map system memory the card uses (it was refused as \"not supported\"): Vulkan (NVIDIA Vulkan's vktest) needs it to start the card."
-    },
-    {
-     "version": "570.144-10",
-     "notes": "- Programs can map the card's memory (video memory and system memory it uses) and write to it directly, as graphics libraries do; nvidia-info checks it. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-9",
-     "notes": "- When the monitor is switched off and on again (or its cable unplugged and plugged back in), the picture comes back: the mode is set again."
-    },
-    {
-     "version": "570.144-8",
-     "notes": "- Settings > Display's resolutions go down as well as up (they were listed biggest first).\n- Switches on the card's own sound device for HDMI and DisplayPort, so Settings > Sound can play through your monitor or TV (needs the Nova update published with it)."
-    },
-    {
-     "version": "570.144-7",
-     "notes": "- Fixes the black screen: the display's output scale was left at zero, which turns every pixel black."
-    },
-    {
-     "version": "570.144-6",
-     "notes": "- If the display setup fails partway, the screen is given back to the old display instead of staying black.\n- The last start's log is kept as /var/log/nvidia.log.1, and the log says more about each display step."
-    },
-    {
-     "version": "570.144-5",
-     "notes": "- The display: NVIDIA's display driver sets your monitor to its own resolution and refresh rate, and Nova's desktop draws through the graphics card. Settings > Display lists the monitor's modes.\n- The first time, it's a trial: press Keep in Settings > Display. If the screen stayed black and you couldn't, the next start goes back to the old display by itself.\n- Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-4",
-     "notes": "- Programs can talk to the driver: /dev/nvidiactl and /dev/nvidia0, as on Linux. The nvidia-info command (in the Terminal) asks it for the card's name, memory and the driver's version. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-3",
-     "notes": "- When the driver waits for something another part of it does (its interrupt work, queued work, timers), that work now runs while it waits, instead of the wait being skipped. Waits that never end are logged with where they were."
-    },
-    {
-     "version": "570.144-2",
-     "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-1",
-     "notes": "- First test: finds the card, starts NVIDIA's driver and the card's firmware, and writes what happened to /var/log/nvidia.log."
-    }
-   ]
-  },
-  {
-   "name": "nvidia-vulkan",
-   "version": "26.2.6-24",
-   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
-   "depends": [
-    "nvidia"
-   ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-24.npk",
-   "size": 27346565,
-   "sha256": "25c3e740f3e6b2110bcae1f09aaee694074ca3b095f6398506d990ad928b7612",
-   "title": "NVIDIA Vulkan",
-   "category": "System",
-   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
-   "changes": [
-    {
-     "version": "26.2.6-24",
-     "notes": "- Vulkan and OpenGL windows (vkcube, glcube) show a frame each time the monitor refreshes, in step with the desktop, instead of every 15 ms: no more dropped frames. Needs the Nova update published with it."
-    },
-    {
-     "version": "26.2.6-23",
-     "notes": "- The Store shows what each version changed (this list)."
-    },
-    {
-     "version": "26.2.6-22",
-     "notes": "- OpenGL windows use colors a window can show (8 bits a channel), so glcube's cube appears instead of a blank window."
-    },
-    {
-     "version": "26.2.6-21",
-     "notes": "- Vulkan windows take images in RGBA order too, as OpenGL (Zink) asks for them."
-    },
-    {
-     "version": "26.2.6-20",
-     "notes": "- Programs that use the card from several threads at once (OpenGL in a window does) no longer get in each other's way."
-    },
-    {
-     "version": "26.2.6-19",
-     "notes": "- OpenGL in windows: glcube spins a cube in a window you can resize (F11: fullscreen; glcube -i: as fast as it goes).\n- Vulkan windows follow their window's size when it changes. Needs the Nova update published with it."
-    },
-    {
-     "version": "26.2.6-18",
-     "notes": "- zinktest finds its OpenGL settings on the card (it found none)."
-    },
-    {
-     "version": "26.2.6-17",
-     "notes": "- OpenGL (Zink) starts on the card: it stopped with \"out of host memory\"."
-    },
-    {
-     "version": "26.2.6-16",
-     "notes": "- OpenGL for ported programs, through Mesa's Zink on Vulkan: zinktest draws a triangle with OpenGL 4 and checks it."
-    },
-    {
-     "version": "26.2.6-15",
-     "notes": "- gltest sets up the card's memory as the browser does, so the browser's WebGL starts instead of crashing."
-    },
-    {
-     "version": "26.2.6-14",
-     "notes": "- OpenGL ES through Google's ANGLE, as the browser's WebGL uses it: gltest draws a triangle and checks it."
-    },
-    {
-     "version": "26.2.6-13",
-     "notes": "- vkcube and other Vulkan windows show a frame each time the desktop draws one, instead of hundreds nobody sees.\n- vktest no longer ends with two error lines from the driver."
-    },
-    {
-     "version": "26.2.6-12",
-     "notes": "- Vulkan programs that wait for the card with timeline semaphores (the browser's drawing) work."
-    },
-    {
-     "version": "26.2.6-11",
-     "notes": "- Programs that ask Vulkan for layers (the browser does) get an answer."
-    },
-    {
-     "version": "26.2.6-10",
-     "notes": "- vkcube's frame rate lines appear as they're printed."
-    },
-    {
-     "version": "26.2.6-9",
-     "notes": "- vkcube draws the cube's front faces (it showed the inside)."
-    },
-    {
-     "version": "26.2.6-8",
-     "notes": "- Vulkan for programs, with windows: vkcube spins a cube in a window and prints its frame rate."
-    },
-    {
-     "version": "26.2.6-7",
-     "notes": "- vktest's shaders compile for the card."
-    },
-    {
-     "version": "26.2.6-6",
-     "notes": "- When vktest fails, it shows what NVIDIA's driver said."
-    },
-    {
-     "version": "26.2.6-5",
-     "notes": "- Vulkan can use the computer's memory for the card, as NVIDIA's driver requires."
-    },
-    {
-     "version": "26.2.6-4",
-     "notes": "- The card is set up the way Mesa expects."
-    },
-    {
-     "version": "26.2.6-3",
-     "notes": "- Vulkan's functions are all in place in a program (some were missing)."
-    },
-    {
-     "version": "26.2.6-2",
-     "notes": "- vktest says where Vulkan stopped when it fails."
-    },
-    {
-     "version": "26.2.6-1",
-     "notes": "- First test: vktest, Vulkan through Mesa's NVK on NVIDIA's driver. It lists the card, runs a small program on it, draws a triangle and saves it as vktest.png."
-    }
-   ]
-  },
-  {
    "name": "openarena",
    "version": "0.8.8-2",
    "description": "OpenArena: a fast first-person arena shooter against bots or online (ioquake3), for NVIDIA cards",
@@ -892,6 +533,413 @@
    ],
    "icon": "icons/photocraft.png",
    "icon_sha256": "efd02e0b8ea76c59fbc3a9692ddc21faae6064cc9f9492898df1facec3b5b57d"
+  },
+  {
+   "name": "nova",
+   "version": "2026.11.19.2244",
+   "description": "Nova itself: the kernel and the system every app runs on",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.19.2244.npk",
+   "size": 47502429,
+   "sha256": "f07fc491289bc04ac88b3ed784a819b23b82ad6f9673a9703185cb282d570302",
+   "title": "Nova",
+   "category": "System",
+   "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
+   "system": true,
+   "changes": [
+    {
+     "version": "2026.11.19.2244",
+     "notes": "- wc and head pass any bytes; head -c N\n- Reads and writes of 0 bytes succeed whatever the pointer, as on Linux"
+    },
+    {
+     "version": "2026.11.19.1921",
+     "notes": "- publish.sh: NOVA_PUBLISH_ONLY publishes just the packages named"
+    },
+    {
+     "version": "2026.11.19.1828",
+     "notes": "- btintel: room for the longest firmware name in its error"
+    },
+    {
+     "version": "2026.11.19.1709",
+     "notes": "- Merge the menu bar, VLC and PhotoCraft branch; the menu bar is syscall 283"
+    },
+    {
+     "version": "2026.11.19.1635",
+     "notes": "- Dolphin: the GameCube and Wii emulator as a package (roadmap 9.28)"
+    },
+    {
+     "version": "2026.11.18.2315",
+     "notes": "- 200% writes both rows from the back buffer; nvidia -29: bottom halves keep the work identity"
+    },
+    {
+     "version": "2026.11.18.2239",
+     "notes": "- Refresh rates: every rate of every mode, chosen in Settings and kept; nvidia -28 offers them"
+    },
+    {
+     "version": "2026.11.17.2341",
+     "notes": "- The desktop shows a frame without the kernel lock, and enlarges it once"
+    },
+    {
+     "version": "2026.11.17.2151",
+     "notes": "- What memory is used for (SYS_MEM_INFO, free -v); the kernel heap gives pages back"
+    },
+    {
+     "version": "2026.11.17.2023",
+     "notes": "- A disk check at boot says so on the screen, with how far it is"
+    },
+    {
+     "version": "2026.11.17.2012",
+     "notes": "- Lookups: ext2 remembers names and inodes, vfs_permit the folders above a path"
+    },
+    {
+     "version": "2026.11.17.1943",
+     "notes": "- The block cache reads ahead: a miss fetches to the end of its 128 KiB group"
+    },
+    {
+     "version": "2026.11.17.1833",
+     "notes": "- The block cache's index is taken as the cache fills, not whole at boot"
+    },
+    {
+     "version": "2026.11.16.2143",
+     "notes": "- Steam: a launcher tile that starts the Windows Steam under Wine (steam 1.0-1)"
+    },
+    {
+     "version": "2026.11.15.1326",
+     "notes": "- A signal handler doesn't run single-stepped; the trap flag comes back through sigreturn"
+    },
+    {
+     "version": "2026.11.15.0301",
+     "notes": "- An open file's size is the file's, not what that open last knew"
+    },
+    {
+     "version": "2026.11.15.0159",
+     "notes": "- A popup placed on the screen (NV_WIN_SCREEN)\n- The block cache is a quarter of memory; a sliced read goes back to its program"
+    },
+    {
+     "version": "2026.11.15.0132",
+     "notes": "- Long reads in slices, cheaper shadows, the USB service once a tick"
+    },
+    {
+     "version": "2026.11.15.0049",
+     "notes": "- The stack report keeps its words off the thread's stack, and says it isn't safe yet"
+    },
+    {
+     "version": "2026.11.14.2312",
+     "notes": "- A thread asleep inside the kernel sleeps even with a signal pending; the stack report costs programs nothing"
+    },
+    {
+     "version": "2026.11.14.2216",
+     "notes": "- Wine: 32-bit DirectX games draw, smaller display modes, no blinking store page (wine 11.0-16)\n- A click on a window over a desktop icon is the window's; libc can say where a stopped program is"
+    },
+    {
+     "version": "2026.11.14.1702",
+     "notes": "- SYS_WIN_PUT at a place in the window; Vulkan surfaces drawn where their child window is"
+    },
+    {
+     "version": "2026.11.14.1536",
+     "notes": "- A task doesn't go to sleep with a signal it would take pending"
+    },
+    {
+     "version": "2026.11.13.2311",
+     "notes": "- mmap reads a file's range in big pieces before filling its pages"
+    },
+    {
+     "version": "2026.11.13.2253",
+     "notes": "- ext2 reads neighbouring blocks of a file in one disk request"
+    },
+    {
+     "version": "2026.11.13.2236",
+     "notes": "- L1: the profiler says what holds the kernel lock, and times input to the screen"
+    },
+    {
+     "version": "2026.11.13.2223",
+     "notes": "- The desktop's processor's interrupts go ahead for the kernel lock too"
+    },
+    {
+     "version": "2026.11.13.2211",
+     "notes": "- With four processors or more, the first is the desktop's alone"
+    },
+    {
+     "version": "2026.11.13.2140",
+     "notes": "- The desktop goes ahead of the other processors for the kernel lock"
+    },
+    {
+     "version": "2026.11.13.2003",
+     "notes": "- NVK sees the system memory that is free; wine 11.0-13, nvidia-vulkan 26.2.6-29"
+    }
+   ],
+   "icon": "icons/nova.png",
+   "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
+  },
+  {
+   "name": "nvidia",
+   "version": "570.144-30",
+   "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-30.npk",
+   "size": 61020426,
+   "sha256": "ad356255d643a696f855319b15b0ada195bc12ddb9dff458f0025e7969551fa7",
+   "title": "NVIDIA Graphics",
+   "category": "System",
+   "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
+   "changes": [
+    {
+     "version": "570.144-30",
+     "notes": "- Changing the resolution or refresh rate a few times in a row no longer turns off smooth frames (the screen synced to the monitor): each change was counted as a frame shown late, and after five the driver stopped syncing, leaving the desktop at about 66 frames a second whatever the monitor's rate."
+    },
+    {
+     "version": "570.144-29",
+     "notes": "- Fixes a warning in /var/log/nvidia.log that -27 brought back (\"_rmGpuAllocLockIsOwner\"): the interrupt's second step, now run from inside any wait, ran under the waiting program's name instead of the driver's own."
+    },
+    {
+     "version": "570.144-28",
+     "notes": "- Every refresh rate the monitor offers can be chosen in Settings > Display (with the Nova update of the same day): until now each resolution had one, and the monitor's own resolution only its own rate. Needs Nova 2026.11.18 or newer for the choice; on an older one nothing changes."
+    },
+    {
+     "version": "570.144-27",
+     "notes": "- Fixes the PC freezing when the monitor is turned off (or unplugged): the driver's handling of the display going away waited for the graphics card's lock, which the card's interrupt had handed to a second step that was queued behind that very handling and so never ran."
+    },
+    {
+     "version": "570.144-26",
+     "notes": "- Diagnostics only: a long wait for the card's lock also says what the driver itself has written down about who holds that lock."
+    },
+    {
+     "version": "570.144-25",
+     "notes": "- Diagnostics only: when the driver waits more than 2 seconds for one of its own locks, it says so at once in the kernel log, with which part of it took that lock last. The PC froze when its monitor was turned off, waiting for such a lock, and the report of the freeze could not say who held it."
+    },
+    {
+     "version": "570.144-24",
+     "notes": "- Fixes the \"_rmGpuAllocLockIsOwner\" line every start showed, and with it a way the driver could end up waiting for a lock nobody held: the second half of the card's interrupt handler, which on Linux runs on a thread of its own, ran on the waiting call's thread with the same identity, so the driver took it for that call and let go of the call's lock. It has its own identity now, as do interrupts (the identity Linux gives them, which Nova's desktop had shared)."
+    },
+    {
+     "version": "570.144-23",
+     "notes": "- Diagnostics only: the driver's first few assertions and lock waits in /var/log/nvidia.log now say in what context they happened and which of the driver's functions led there, to find the cause of the \"_rmGpuAllocLockIsOwner\" line every start shows. Nothing else changes."
+    },
+    {
+     "version": "570.144-22",
+     "notes": "- Fixes -21, with which the card took 20 seconds longer to start and the screen stayed black: the driver's own waits for a signal were mistaken for locks and skipped, so a signal was lost. The driver's locks now behave as in -18, with the one difference that a wait given up on leaves the lock as it was, instead of leaving it off by one for good, which was the frozen desktop."
+    },
+    {
+     "version": "570.144-21",
+     "notes": "- Fixes -19 and -20, with which the card didn't start (a black screen; Nova then booted without the driver): the start waits for work of the driver's own, which -19 held back. The driver's work runs as it did up to -18; only a wait inside such work for a lock the interrupted call holds is passed at once instead of after 20 seconds."
+    },
+    {
+     "version": "570.144-20",
+     "notes": "- Every line of /var/log/nvidia.log now starts with the time since boot, so a log can say when something happened, not just in what order."
+    },
+    {
+     "version": "570.144-19",
+     "notes": "- The desktop no longer freezes for good after the driver gives up waiting for one of its locks (the log said \"a semaphore stayed taken: carried on\" every 20 seconds; seen after a monitor was switched off at an idle desktop). Work the driver hands off (its interrupts' second half, timers, queued work) no longer runs in the middle of a call that holds a lock it would need, and a wait given up on no longer leaves the lock off by one, which made every later wait time out too. The log line now says which thread, how many locks it held and how deep in waits it was."
+    },
+    {
+     "version": "570.144-18",
+     "notes": "- The screen no longer goes black for a few seconds (with the HDMI sound) when the machine is busy: a late frame is no longer taken as flips not working.\n- Programs drawing on the card from several threads at once (the browser) no longer trip the driver's locks (\"_rmGpuAllocLockIsOwner\" in the log). Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-17",
+     "notes": "- The screen no longer tears: each frame of the desktop is shown at the monitor's refresh, so moving windows, scrolling, games and video are smooth. (-14 and -15 tried this and left the screen black: a function the driver lacks was called; fixed.) nvidia.flips=off in /etc/nova.conf goes back to the old way."
+    },
+    {
+     "version": "570.144-16",
+     "notes": "- Back to drawing straight on the screen, as up to -13: the flips of -14 and -15 left the screen black on some cards. They're off until they're known to work; nvidia.flips=on in /etc/nova.conf tries them."
+    },
+    {
+     "version": "570.144-15",
+     "notes": "- Fixes -14's black screen at start: if the card doesn't take a flipped frame within a quarter of a second, the desktop goes back to drawing straight on the screen (it may tear, but it works), and the log says why. The desktop no longer keeps programs waiting while a frame is on its way. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-14",
+     "notes": "- The screen no longer tears: the desktop draws each frame out of sight and the card shows it at the monitor's refresh, so moving windows, games and video are smooth, at the monitor's own rate. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-13",
+     "notes": "- In the Store for everyone with a GeForce RTX 30 or 40 card: no testing source to add first. The description says what the driver does now."
+    },
+    {
+     "version": "570.144-12",
+     "notes": "- Task Manager gets a GPU tab: how busy the card is (drawing, memory, video decoding and encoding), its video memory and its performance state. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-11",
+     "notes": "- Programs can map system memory the card uses (it was refused as \"not supported\"): Vulkan (NVIDIA Vulkan's vktest) needs it to start the card."
+    },
+    {
+     "version": "570.144-10",
+     "notes": "- Programs can map the card's memory (video memory and system memory it uses) and write to it directly, as graphics libraries do; nvidia-info checks it. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-9",
+     "notes": "- When the monitor is switched off and on again (or its cable unplugged and plugged back in), the picture comes back: the mode is set again."
+    },
+    {
+     "version": "570.144-8",
+     "notes": "- Settings > Display's resolutions go down as well as up (they were listed biggest first).\n- Switches on the card's own sound device for HDMI and DisplayPort, so Settings > Sound can play through your monitor or TV (needs the Nova update published with it)."
+    },
+    {
+     "version": "570.144-7",
+     "notes": "- Fixes the black screen: the display's output scale was left at zero, which turns every pixel black."
+    },
+    {
+     "version": "570.144-6",
+     "notes": "- If the display setup fails partway, the screen is given back to the old display instead of staying black.\n- The last start's log is kept as /var/log/nvidia.log.1, and the log says more about each display step."
+    },
+    {
+     "version": "570.144-5",
+     "notes": "- The display: NVIDIA's display driver sets your monitor to its own resolution and refresh rate, and Nova's desktop draws through the graphics card. Settings > Display lists the monitor's modes.\n- The first time, it's a trial: press Keep in Settings > Display. If the screen stayed black and you couldn't, the next start goes back to the old display by itself.\n- Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-4",
+     "notes": "- Programs can talk to the driver: /dev/nvidiactl and /dev/nvidia0, as on Linux. The nvidia-info command (in the Terminal) asks it for the card's name, memory and the driver's version. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-3",
+     "notes": "- When the driver waits for something another part of it does (its interrupt work, queued work, timers), that work now runs while it waits, instead of the wait being skipped. Waits that never end are logged with where they were."
+    },
+    {
+     "version": "570.144-2",
+     "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-1",
+     "notes": "- First test: finds the card, starts NVIDIA's driver and the card's firmware, and writes what happened to /var/log/nvidia.log."
+    }
+   ]
+  },
+  {
+   "name": "nvidia-vulkan",
+   "version": "26.2.6-31",
+   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
+   "depends": [
+    "nvidia"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-31.npk",
+   "size": 27847831,
+   "sha256": "d00d2b34ff897f5330dea0012041b3a0e5831203f310c48d7bad9cfa37535dc6",
+   "title": "NVIDIA Vulkan",
+   "category": "System",
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
+   "changes": [
+    {
+     "version": "26.2.6-31",
+     "notes": "- Memory can be mapped at an address the program chooses (32-bit Windows programs under Wine need it: they drew nothing).\n- Vulkan functions are found by their older and newer names alike, as the usual loader does.\n- A surface's picture can be stretched to the size its window shows it at, a picture made before its window exists is shown when the window comes, and a window inside a window no longer blinks."
+    },
+    {
+     "version": "26.2.6-30",
+     "notes": "- A Vulkan surface can show its picture at a place inside its window (Wine uses this for windows inside windows)."
+    },
+    {
+     "version": "26.2.6-29",
+     "notes": "- Vulkan sees how much system memory is free (it thought a few megabytes), so programs that keep to its budget can use it."
+    },
+    {
+     "version": "26.2.6-28",
+     "notes": "- A Vulkan surface can be made before its window exists and find it later (Wine uses this)."
+    },
+    {
+     "version": "26.2.6-27",
+     "notes": "- Vulkan can show its picture in a window that belongs to another program (a helper process drawing for the program that made the window)."
+    },
+    {
+     "version": "26.2.6-26",
+     "notes": "- A program that uses Vulkan in two places at once (two instances) no longer ends when it closes the newer one first."
+    },
+    {
+     "version": "26.2.6-25",
+     "notes": "- Fixes Vulkan and OpenGL programs freezing now and then with their picture stopped (the graphics card could be told that work was finished too soon)."
+    },
+    {
+     "version": "26.2.6-24",
+     "notes": "- Vulkan and OpenGL windows (vkcube, glcube) show a frame each time the monitor refreshes, in step with the desktop, instead of every 15 ms: no more dropped frames. Needs the Nova update published with it."
+    },
+    {
+     "version": "26.2.6-23",
+     "notes": "- The Store shows what each version changed (this list)."
+    },
+    {
+     "version": "26.2.6-22",
+     "notes": "- OpenGL windows use colors a window can show (8 bits a channel), so glcube's cube appears instead of a blank window."
+    },
+    {
+     "version": "26.2.6-21",
+     "notes": "- Vulkan windows take images in RGBA order too, as OpenGL (Zink) asks for them."
+    },
+    {
+     "version": "26.2.6-20",
+     "notes": "- Programs that use the card from several threads at once (OpenGL in a window does) no longer get in each other's way."
+    },
+    {
+     "version": "26.2.6-19",
+     "notes": "- OpenGL in windows: glcube spins a cube in a window you can resize (F11: fullscreen; glcube -i: as fast as it goes).\n- Vulkan windows follow their window's size when it changes. Needs the Nova update published with it."
+    },
+    {
+     "version": "26.2.6-18",
+     "notes": "- zinktest finds its OpenGL settings on the card (it found none)."
+    },
+    {
+     "version": "26.2.6-17",
+     "notes": "- OpenGL (Zink) starts on the card: it stopped with \"out of host memory\"."
+    },
+    {
+     "version": "26.2.6-16",
+     "notes": "- OpenGL for ported programs, through Mesa's Zink on Vulkan: zinktest draws a triangle with OpenGL 4 and checks it."
+    },
+    {
+     "version": "26.2.6-15",
+     "notes": "- gltest sets up the card's memory as the browser does, so the browser's WebGL starts instead of crashing."
+    },
+    {
+     "version": "26.2.6-14",
+     "notes": "- OpenGL ES through Google's ANGLE, as the browser's WebGL uses it: gltest draws a triangle and checks it."
+    },
+    {
+     "version": "26.2.6-13",
+     "notes": "- vkcube and other Vulkan windows show a frame each time the desktop draws one, instead of hundreds nobody sees.\n- vktest no longer ends with two error lines from the driver."
+    },
+    {
+     "version": "26.2.6-12",
+     "notes": "- Vulkan programs that wait for the card with timeline semaphores (the browser's drawing) work."
+    },
+    {
+     "version": "26.2.6-11",
+     "notes": "- Programs that ask Vulkan for layers (the browser does) get an answer."
+    },
+    {
+     "version": "26.2.6-10",
+     "notes": "- vkcube's frame rate lines appear as they're printed."
+    },
+    {
+     "version": "26.2.6-9",
+     "notes": "- vkcube draws the cube's front faces (it showed the inside)."
+    },
+    {
+     "version": "26.2.6-8",
+     "notes": "- Vulkan for programs, with windows: vkcube spins a cube in a window and prints its frame rate."
+    },
+    {
+     "version": "26.2.6-7",
+     "notes": "- vktest's shaders compile for the card."
+    },
+    {
+     "version": "26.2.6-6",
+     "notes": "- When vktest fails, it shows what NVIDIA's driver said."
+    },
+    {
+     "version": "26.2.6-5",
+     "notes": "- Vulkan can use the computer's memory for the card, as NVIDIA's driver requires."
+    },
+    {
+     "version": "26.2.6-4",
+     "notes": "- The card is set up the way Mesa expects."
+    },
+    {
+     "version": "26.2.6-3",
+     "notes": "- Vulkan's functions are all in place in a program (some were missing)."
+    },
+    {
+     "version": "26.2.6-2",
+     "notes": "- vktest says where Vulkan stopped when it fails."
+    }
+   ]
   }
  ]
 }
