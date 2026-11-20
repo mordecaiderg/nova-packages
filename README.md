@@ -19,7 +19,6 @@ written by Nova's `make publish`: don't edit it by hand.
 | Ladybird | `ladybird` | 2026.10.18+7a8a84e0-15 | Internet | 129178 KB | A web browser with its own engine: today's web, JavaScript and all |
 | Lua | `lua` | 5.4.7-1 | Development | 164 KB | Lua 5.4, a small and fast scripting language |
 | GNU Make | `make` | 4.4.1-1 | Development | 161 KB | GNU make 4.4.1, which builds programs from makefiles |
-| mGBA | `mgba` | 0.10.5-3 | Games | 8001 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 844 KB | MicroPython 1.29, a lean Python 3 |
 | OpenArena | `openarena` | 0.8.8-2 | Games | 406576 KB | OpenArena: a fast first-person arena shooter against bots or online (ioquake3), for NVIDIA cards |
 | Python | `python` | 3.14.8-1 | Development | 9874 KB | Python 3.14, the reference implementation (CPython) |
@@ -30,5 +29,6 @@ written by Nova's `make publish`: don't edit it by hand.
 | PhotoCraft | `photocraft` | 0.23.1-5 | Graphics | 40917 KB | PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files |
 | NVIDIA Graphics | `nvidia` | 570.144-30 | System | 59591 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-31 | System | 27196 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
-| Dolphin | `dolphin` | 2609b-4 | Games | 13365 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
 | Nova | `nova` | 2026.11.20.1011 | System | 46396 KB | Nova itself: the kernel and the system every app runs on |
+| mGBA | `mgba` | 0.10.5-4 | Games | 8244 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
+| Dolphin | `dolphin` | 2609b-5 | Games | 13822 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |

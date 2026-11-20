@@ -235,35 +235,6 @@
    "about": "make builds programs from makefiles, rebuilding only what changed. With Nova's C compiler (tcc) it builds C programs on Nova itself."
   },
   {
-   "name": "mgba",
-   "version": "0.10.5-3",
-   "description": "mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/mgba-0.10.5-3.npk",
-   "size": 8192930,
-   "sha256": "e8d76c173571f0eff044518ed0057adc3eb720b176781a1e36c8d5f90530e02d",
-   "title": "mGBA",
-   "category": "Games",
-   "about": "mGBA plays Game Boy Advance games, and Game Boy and Game Boy Color ones too, from the game files you have (.gba, .gb, .gbc): put them in the Games folder in your home folder and open mGBA, or double-click one in Files. The keyboard plays (the arrows, X is A, Z is B, A and S are the shoulder buttons, Enter is Start and Backspace Select), and so does a USB game controller (a PlayStation pad, or most others). mGBA's Settings choose the size (or full screen), a smoothed picture and the sound; its Controls change any key or button. Esc or the PS button ends a game. Games aren't included.",
-   "app": "mgba",
-   "changes": [
-    {
-     "version": "0.10.5-3",
-     "notes": "- A controller's buttons work: Cross is A, Square is B, L1 and R1 the shoulders, Options Start and Create Select (D-pad and left stick move). Plugging one in while playing works too.\n- Opening mGBA shows your games (the Games folder), Settings (size, full screen, a smoothed picture, the sound) and Controls (change any key or controller button by pressing it).\n- Esc or the PS button ends a game; full screen keeps the picture's shape."
-    },
-    {
-     "version": "0.10.5-2",
-     "notes": "- Quitting a game no longer crashes mGBA (it freed its picture twice)."
-    },
-    {
-     "version": "0.10.5-1",
-     "notes": "- mGBA 0.10.5: Game Boy Advance, Game Boy and Game Boy Color games from your own game files, with the keyboard or a USB game controller (a PlayStation pad, or most others). Double-click a game in Files to play it. Needs the Nova update published with it."
-    }
-   ],
-   "icon": "icons/mgba.png",
-   "icon_sha256": "3114977a3f92b8a71c001dde061d3ce3695fa64b12c2afe6b43deaeee1a8a2af"
-  },
-  {
    "name": "micropython",
    "version": "1.29.0-1",
    "description": "MicroPython 1.29, a lean Python 3",
@@ -776,39 +747,6 @@
    ]
   },
   {
-   "name": "dolphin",
-   "version": "2609b-4",
-   "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-4.npk",
-   "size": 13685214,
-   "sha256": "c65b31c9327023d86610dea615362086ad87165d8c26a28d7d7edd4288f7b3ea",
-   "title": "Dolphin",
-   "category": "Games",
-   "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Games aren't included.",
-   "app": "dolphin",
-   "changes": [
-    {
-     "version": "2609b-4",
-     "notes": "- One of Dolphin's speed-ups is on again: it had turned it off (the \"BLR optimization\", which runs a game's function returns directly) because its emulation thread's stack was too small. Threads now get 8 MB, as on Linux."
-    },
-    {
-     "version": "2609b-3",
-     "notes": "- Controllers play: a Controllers tab chooses what each GameCube port is (a controller, Bluetooth or USB, the keyboard, or nothing; Automatic takes them in order), changes any button by pressing it, and turns rumble on or off. Before, only the keyboard was mapped.\n- The PS button ends a game.\n- More settings: aspect ratio, widescreen hack, anti-aliasing, texture filtering, V-Sync, the frame rate, how shaders compile, the speed limit, dual core, the CPU clock, volume and cheats."
-    },
-    {
-     "version": "2609b-2",
-     "notes": "- GameCube games in RVZ and WIA files open: Dolphin said they were \"an invalid GCM/ISO file\" (an empty read Nova refused)."
-    },
-    {
-     "version": "2609b-1",
-     "notes": "- Dolphin 2609b, the GameCube and Wii emulator: games from ~/Games, the software renderer or Vulkan, full screen, controllers with rumble, its menus in the top bar."
-    }
-   ],
-   "icon": "icons/dolphin.png",
-   "icon_sha256": "83ae3fa7936557512e118a9974c75c8f428950500c067b326285ca9a7903ac56"
-  },
-  {
    "name": "nova",
    "version": "2026.11.20.1011",
    "description": "Nova itself: the kernel and the system every app runs on",
@@ -944,6 +882,76 @@
    ],
    "icon": "icons/nova.png",
    "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
+  },
+  {
+   "name": "mgba",
+   "version": "0.10.5-4",
+   "description": "mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/mgba-0.10.5-4.npk",
+   "size": 8441221,
+   "sha256": "5f8a91ad9f6bf990040c9ee22fd70edb1de551c6ef75ce665f069e6c299bc292",
+   "title": "mGBA",
+   "category": "Games",
+   "about": "mGBA plays Game Boy Advance games, and Game Boy and Game Boy Color ones too, from the game files you have (.gba, .gb, .gbc): put them in the Games folder in your home folder and open mGBA, or double-click one in Files. The keyboard plays (the arrows, X is A, Z is B, A and S are the shoulder buttons, Enter is Start and Backspace Select), and so does a USB game controller (a PlayStation pad, or most others). mGBA's Settings choose the size (or full screen), a smoothed picture and the sound; its Controls change any key or button. Esc or the PS button ends a game. Games aren't included.",
+   "app": "mgba",
+   "changes": [
+    {
+     "version": "0.10.5-4",
+     "notes": "- Beside your games, the one under the pointer (or chosen with a controller) shows its box art, year, developer, genre and what it's about. They're looked up once online (libretro's game lists and box art, Wikipedia) and kept; Settings > Game details turns that off."
+    },
+    {
+     "version": "0.10.5-3",
+     "notes": "- A controller's buttons work: Cross is A, Square is B, L1 and R1 the shoulders, Options Start and Create Select (D-pad and left stick move). Plugging one in while playing works too.\n- Opening mGBA shows your games (the Games folder), Settings (size, full screen, a smoothed picture, the sound) and Controls (change any key or controller button by pressing it).\n- Esc or the PS button ends a game; full screen keeps the picture's shape."
+    },
+    {
+     "version": "0.10.5-2",
+     "notes": "- Quitting a game no longer crashes mGBA (it freed its picture twice)."
+    },
+    {
+     "version": "0.10.5-1",
+     "notes": "- mGBA 0.10.5: Game Boy Advance, Game Boy and Game Boy Color games from your own game files, with the keyboard or a USB game controller (a PlayStation pad, or most others). Double-click a game in Files to play it. Needs the Nova update published with it."
+    }
+   ],
+   "icon": "icons/mgba.png",
+   "icon_sha256": "3114977a3f92b8a71c001dde061d3ce3695fa64b12c2afe6b43deaeee1a8a2af"
+  },
+  {
+   "name": "dolphin",
+   "version": "2609b-5",
+   "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-5.npk",
+   "size": 14153265,
+   "sha256": "f4f986529db0d18728bb41357e3642378cd6178d4f444e380c0498f40067df0f",
+   "title": "Dolphin",
+   "category": "Games",
+   "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Games aren't included.",
+   "app": "dolphin",
+   "changes": [
+    {
+     "version": "2609b-5",
+     "notes": "- Beside your games, the one under the pointer (or chosen with a controller) shows its cover, year, developer, publisher, genre, players and what it's about, from GameTDB. They're looked up once online and kept; Settings > Game details turns that off."
+    },
+    {
+     "version": "2609b-4",
+     "notes": "- One of Dolphin's speed-ups is on again: it had turned it off (the \"BLR optimization\", which runs a game's function returns directly) because its emulation thread's stack was too small. Threads now get 8 MB, as on Linux."
+    },
+    {
+     "version": "2609b-3",
+     "notes": "- Controllers play: a Controllers tab chooses what each GameCube port is (a controller, Bluetooth or USB, the keyboard, or nothing; Automatic takes them in order), changes any button by pressing it, and turns rumble on or off. Before, only the keyboard was mapped.\n- The PS button ends a game.\n- More settings: aspect ratio, widescreen hack, anti-aliasing, texture filtering, V-Sync, the frame rate, how shaders compile, the speed limit, dual core, the CPU clock, volume and cheats."
+    },
+    {
+     "version": "2609b-2",
+     "notes": "- GameCube games in RVZ and WIA files open: Dolphin said they were \"an invalid GCM/ISO file\" (an empty read Nova refused)."
+    },
+    {
+     "version": "2609b-1",
+     "notes": "- Dolphin 2609b, the GameCube and Wii emulator: games from ~/Games, the software renderer or Vulkan, full screen, controllers with rumble, its menus in the top bar."
+    }
+   ],
+   "icon": "icons/dolphin.png",
+   "icon_sha256": "83ae3fa7936557512e118a9974c75c8f428950500c067b326285ca9a7903ac56"
   }
  ]
 }
