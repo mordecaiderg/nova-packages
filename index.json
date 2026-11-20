@@ -918,17 +918,21 @@
   },
   {
    "name": "dolphin",
-   "version": "2609b-5",
+   "version": "2609b-6",
    "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-5.npk",
-   "size": 14153265,
-   "sha256": "f4f986529db0d18728bb41357e3642378cd6178d4f444e380c0498f40067df0f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-6.npk",
+   "size": 14189345,
+   "sha256": "d4cf7c4c1af2e1c96769b51ef9e4219ae607acd1ce29c345c6e26e59839e5620",
    "title": "Dolphin",
    "category": "Games",
-   "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Games aren't included.",
+   "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Its Memory Card tab shows the saves on the GameCube's memory cards as cubes in 3D, laid out like the console's own screen, and moves, copies, erases and imports them. Games aren't included.",
    "app": "dolphin",
    "changes": [
+    {
+     "version": "2609b-6",
+     "notes": "- A Memory Card tab, laid out like the GameCube's own Memory Card screen: both slots' cards side by side on a glowing grid, every save a glass cube in 3D with its moving icon on the front. The cubes fly in as the tab opens, lift under the pointer, and the chosen one turns beside its banner, comment, size and date. Move, Copy or Erase it (a copy flies to the other card; an erased save goes to the Bin), or import a save file (.gci, .gcs or .sav). A controller works it as on the console: the D-pad chooses, A confirms, B cancels.\n- Slot B can hold a card while you play (off by default, as in Dolphin): click its \"Off\".\n- The controller's Back (Create) button changes tab."
+    },
     {
      "version": "2609b-5",
      "notes": "- Beside your games, the one under the pointer (or chosen with a controller) shows its cover, year, developer, publisher, genre, players and what it's about, from GameTDB. They're looked up once online and kept; Settings > Game details turns that off."
