@@ -826,6 +826,46 @@
    ],
    "icon": "icons/yipyap-server.png",
    "icon_sha256": "bf06f706de4fedb0e8d70b94cbfb86c8e71ee571e761da40628cbee3fd50b265"
+  },
+  {
+   "name": "photocraft",
+   "version": "0.23.1-2",
+   "description": "PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/photocraft-0.23.1-2.npk",
+   "size": 41897380,
+   "sha256": "2fd8fbc976cf7b35e56497352dcf06220d1fa6c2a8eab65bcbe092e8bd565cbf",
+   "title": "PhotoCraft",
+   "category": "Graphics",
+   "about": "PhotoCraft is an image editor in the manner of Photoshop: layers and groups, masks, adjustment layers (Levels, Curves, Hue/Saturation and more), layer styles, type, shapes and paths, brushes, selections, and a long list of filters. It opens and saves layered PSD files, and PNG, JPEG, WebP, TIFF, GIF and many other pictures. Open a picture from Files, drop one on its window, or use File, Open; the menus and shortcuts are the ones Photoshop users know, with Ctrl for Command. On Nova it draws on the processor, so very large documents are slower than on a PC with a graphics card.",
+   "app": "photocraft",
+   "changes": [
+    {
+     "version": "0.23.1-2",
+     "notes": "- PhotoCraft's menus are back in the top bar with the Nova update published with it: the menu bar's system call has a new number, so the earlier package's menus no longer appeared."
+    },
+    {
+     "version": "0.23.1-1",
+     "notes": "- PhotoCraft 0.23.1: an image editor with layers, masks, adjustment layers, brushes, type and filters, which opens and saves Photoshop's PSD files. Its menus are in the top bar."
+    }
+   ],
+   "icon": "icons/photocraft.png",
+   "icon_sha256": "efd02e0b8ea76c59fbc3a9692ddc21faae6064cc9f9492898df1facec3b5b57d"
+  },
+  {
+   "name": "dolphin",
+   "version": "2609b-1",
+   "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-1.npk",
+   "size": 13682832,
+   "sha256": "6a8e056f8b7e374301aece0bbfd3db42c8e288f8e170067a8bcf4c6893946b4b",
+   "title": "Dolphin",
+   "category": "Games",
+   "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Games aren't included.",
+   "app": "dolphin",
+   "icon": "icons/dolphin.png",
+   "icon_sha256": "83ae3fa7936557512e118a9974c75c8f428950500c067b326285ca9a7903ac56"
   }
  ]
 }

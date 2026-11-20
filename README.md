@@ -30,3 +30,5 @@ written by Nova's `make publish`: don't edit it by hand.
 | VLC | `vlc` | 3.0.24-1 | Multimedia | 9715 KB | VLC media player: plays films and music in almost any format |
 | Intel Wi-Fi | `wifi-intel` | 0.2-2 | System | 9284 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1271 KB | Run your own Discord-style chat server, with a web client for any browser |
+| PhotoCraft | `photocraft` | 0.23.1-2 | Graphics | 40916 KB | PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files |
+| Dolphin | `dolphin` | 2609b-1 | Games | 13363 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
