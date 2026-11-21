@@ -918,17 +918,21 @@
   },
   {
    "name": "dolphin",
-   "version": "2609b-7",
+   "version": "2609b-8",
    "description": "Dolphin: play GameCube and Wii games, with the keyboard or a controller",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-7.npk",
-   "size": 14192835,
-   "sha256": "5231ef564ce344736393e587b1bdfb6484c54903d397de52ad083ecfd1a8208d",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/dolphin-2609b-8.npk",
+   "size": 14193918,
+   "sha256": "4ab6589d2de3af78a4a4174378849d0a31ca5ef1427d39989b7d4e1cb23b67a7",
    "title": "Dolphin",
    "category": "Games",
    "about": "Dolphin plays GameCube and Wii games from the discs you own (.iso, .rvz, .gcm, .wbfs and the other kinds Dolphin reads): put them in the Games folder in your home folder and open Dolphin, or double-click one in Files. With an NVIDIA GeForce RTX 30 or 40 card and the NVIDIA Graphics and NVIDIA Vulkan packages it draws with Vulkan at up to four times the console's resolution; without one, its software renderer draws (slowly). The keyboard plays (the arrows are the stick, X is A, Z is B, Enter is Start), and so does a USB or Bluetooth controller. Esc ends a game, F10 pauses, Alt+Enter is full screen, F1 to F8 load a saved state and Shift+F1 to F8 save one; the same are in the top bar's menus. Its Memory Card tab shows the saves on the GameCube's memory cards as cubes in 3D, laid out like the console's own screen, and moves, copies, erases and imports them. Games aren't included.",
    "app": "dolphin",
    "changes": [
+    {
+     "version": "2609b-8",
+     "notes": "- Copy anyway: a save whose game doesn't allow copying it (Pok\u00e9mon Colosseum's, for one) can still be copied to the other card, after a question (Cancel is chosen first). Moving such a save works the same way. The copy keeps the game's rule, as it was on the card."
+    },
     {
      "version": "2609b-7",
      "notes": "- Each game can have its own aspect ratio: right-click it in Games (or use Game > Aspect Ratio for This Game in the top bar) and pick Auto, 16:9, 4:3 or Stretch, or Same as Settings. A game with its own shows it beside its name. Pok\u00e9mon Colosseum, for one, is 4:3: Auto's guess turned some of its scenes wide."
