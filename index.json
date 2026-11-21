@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.20.2119",
+   "version": "2026.11.21.0014",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.20.2119.npk",
-   "size": 47511651,
-   "sha256": "d2d7df5392b445133c1aa12722dae87eeacb780c596d0dd0f12b5dd34c9877dd",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.0014.npk",
+   "size": 47516069,
+   "sha256": "08f781adf38efd0e19d8ff143f3e8a25ae12230cbc1c7c5df2d78deb2337da40",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.21.0014",
+     "notes": "- Pipes' reads and writes without the kernel lock"
+    },
     {
      "version": "2026.11.20.2119",
      "notes": "- sigprocmask without the kernel lock"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.15.0132",
      "notes": "- Long reads in slices, cheaper shadows, the USB service once a tick"
-    },
-    {
-     "version": "2026.11.15.0049",
-     "notes": "- The stack report keeps its words off the thread's stack, and says it isn't safe yet"
     }
    ],
    "icon": "icons/nova.png",
