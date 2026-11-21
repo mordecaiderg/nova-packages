@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.21.1457",
+   "version": "2026.11.21.1708",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.1457.npk",
-   "size": 47525714,
-   "sha256": "58ac97ccb8a5a97600dad7d9bbb302b557101900630b3ddc23be7782a9eb9b0f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.1708.npk",
+   "size": 47527308,
+   "sha256": "9fb34c5a977eb235e57e5297bc5ef96dd99327b620b9901c58ebfb230683e00c",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.21.1708",
+     "notes": "- A pipe's writer no longer waits for the kernel lock to wake its reader"
+    },
     {
      "version": "2026.11.21.1457",
      "notes": "- epoll, so wineserver stops polling every Wine thread's pipe"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.15.0301",
      "notes": "- An open file's size is the file's, not what that open last knew"
-    },
-    {
-     "version": "2026.11.15.0159",
-     "notes": "- A popup placed on the screen (NV_WIN_SCREEN)\n- The block cache is a quarter of memory; a sliced read goes back to its program"
     }
    ],
    "icon": "icons/nova.png",
