@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-26",
+   "version": "11.0-27",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-26.npk",
-   "size": 151951776,
-   "sha256": "0b432530398e5145d2fad4b4ae74624d57bcd21958a16e8ae884c321b14571cd",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-27.npk",
+   "size": 151947853,
+   "sha256": "584d358ea2237e95d6ea53956c0bdfef3dff8f4323cfd5a5185bf3f2127ad874",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-27",
+     "notes": "- wineserver waits on its programs with epoll, which Nova has from 2026.11.21: it no longer looks at every Wine thread's connection each time anything in the system changes, which held up Steam's start. On an older Nova it goes on as before."
+    },
     {
      "version": "11.0-26",
      "notes": "- A program started from a tile can be ended when its window is closed, where on Windows it would hide in the system tray and go on running unseen (the Steam tile uses this)."
