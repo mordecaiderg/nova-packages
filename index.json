@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.21.1805",
+   "version": "2026.11.21.1855",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.1805.npk",
-   "size": 47527574,
-   "sha256": "8d5207d89a0fc1e73130cd4daa0ed67f4d68e1d6ccae770e7286b03a6a07b68c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.1855.npk",
+   "size": 47475691,
+   "sha256": "dee1a26a325ba31e8b459de38ab3dc09a5dc4162708353b41bb0de6a78fbcb8c",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.21.1855",
+     "notes": "- prof: reads and writes by the kind of file\n- mmap, munmap and mprotect look only at the regions in their range"
+    },
     {
      "version": "2026.11.21.1805",
      "notes": "- Pipes: any size without the kernel lock, and PIPE_BUF writes whole"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.16.2143",
      "notes": "- Steam: a launcher tile that starts the Windows Steam under Wine (steam 1.0-1)"
-    },
-    {
-     "version": "2026.11.15.1326",
-     "notes": "- A signal handler doesn't run single-stepped; the trap flag comes back through sigreturn"
     }
    ],
    "icon": "icons/nova.png",
