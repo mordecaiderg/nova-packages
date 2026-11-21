@@ -29,6 +29,6 @@ written by Nova's `make publish`: don't edit it by hand.
 | PhotoCraft | `photocraft` | 0.23.1-5 | Graphics | 40917 KB | PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files |
 | NVIDIA Graphics | `nvidia` | 570.144-30 | System | 59591 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-31 | System | 27196 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
-| Nova | `nova` | 2026.11.20.1011 | System | 46396 KB | Nova itself: the kernel and the system every app runs on |
 | mGBA | `mgba` | 0.10.5-4 | Games | 8244 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | Dolphin | `dolphin` | 2609b-8 | Games | 13862 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
+| Nova | `nova` | 2026.11.20.2119 | System | 46399 KB | Nova itself: the kernel and the system every app runs on |
