@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.21.2156",
+   "version": "2026.11.21.2348",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.2156.npk",
-   "size": 47503023,
-   "sha256": "2cf589aa3484722e10852e4c59fcab34863c866b3ec1b34e7ccb7243b4406f89",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.2348.npk",
+   "size": 47503302,
+   "sha256": "b4c466a4c8ad18ef92687ac535b74eb8eac9fe302ff4bf3cd078486ef98c3c63",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.21.2348",
+     "notes": "- Fix a hang with the filesystems' lock; ext2 writes its counts every 2 s"
+    },
     {
      "version": "2026.11.21.2156",
      "notes": "- Lookups, listings and read-only opens let every processor in too"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.17.2151",
      "notes": "- What memory is used for (SYS_MEM_INFO, free -v); the kernel heap gives pages back"
-    },
-    {
-     "version": "2026.11.17.2023",
-     "notes": "- A disk check at boot says so on the screen, with how far it is"
     }
    ],
    "icon": "icons/nova.png",
