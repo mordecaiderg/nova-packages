@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.22.1637",
+   "version": "2026.11.22.1733",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.1637.npk",
-   "size": 47566697,
-   "sha256": "5a688272a91e4430c36dfc91c4b4386c30e1cb5f8dc121a98f8e11aa171b8c7d",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.1733.npk",
+   "size": 47569507,
+   "sha256": "b7c4154873f9191a045efad6c54b72194325cd1c609cbf9c114eac35e2bb97c8",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.22.1733",
+     "notes": "- The profiler says how stat by path went"
+    },
     {
      "version": "2026.11.22.1637",
      "notes": "- A write forgets only its own file's cached stat"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.19.1709",
      "notes": "- Merge the menu bar, VLC and PhotoCraft branch; the menu bar is syscall 283"
-    },
-    {
-     "version": "2026.11.19.1635",
-     "notes": "- Dolphin: the GameCube and Wii emulator as a package (roadmap 9.28)"
     }
    ],
    "icon": "icons/nova.png",
