@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.21.2348",
+   "version": "2026.11.22.0206",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.2348.npk",
-   "size": 47503302,
-   "sha256": "b4c466a4c8ad18ef92687ac535b74eb8eac9fe302ff4bf3cd078486ef98c3c63",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.0206.npk",
+   "size": 47557582,
+   "sha256": "d625a3df8aa108a6bcfe0c3a940bda4e0b83d24d2c2ef0774cb32bab54be687c",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.22.0206",
+     "notes": "- Page faults on untouched memory without the kernel lock\n- What a path's stat last said is kept until a file changes"
+    },
     {
      "version": "2026.11.21.2348",
      "notes": "- Fix a hang with the filesystems' lock; ext2 writes its counts every 2 s"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.17.2341",
      "notes": "- The desktop shows a frame without the kernel lock, and enlarges it once"
-    },
-    {
-     "version": "2026.11.17.2151",
-     "notes": "- What memory is used for (SYS_MEM_INFO, free -v); the kernel heap gives pages back"
     }
    ],
    "icon": "icons/nova.png",
