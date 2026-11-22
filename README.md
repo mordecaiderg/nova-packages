@@ -31,4 +31,4 @@ written by Nova's `make publish`: don't edit it by hand.
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-31 | System | 27196 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
 | mGBA | `mgba` | 0.10.5-4 | Games | 8244 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | Dolphin | `dolphin` | 2609b-8 | Games | 13862 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
-| Nova | `nova` | 2026.11.22.0206 | System | 46443 KB | Nova itself: the kernel and the system every app runs on |
+| Nova | `nova` | 2026.11.22.1523 | System | 46450 KB | Nova itself: the kernel and the system every app runs on |
