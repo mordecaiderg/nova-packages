@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.21.1937",
+   "version": "2026.11.21.2005",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.1937.npk",
-   "size": 47487703,
-   "sha256": "192b676b5bd3cfa847ff8d68b4f1504c57ed226c627bd81ffc07304c5194473c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.21.2005.npk",
+   "size": 47491215,
+   "sha256": "f92b3d970f3e39e21b76fe3a2a24eb8c26f9c629ed79878b0bace54f82ba4774",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.21.2005",
+     "notes": "- L2: a syscall can sleep half-way through and come back"
+    },
     {
      "version": "2026.11.21.1937",
      "notes": "- Mapped files are read as they're touched, not all at mmap"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.17.1943",
      "notes": "- The block cache reads ahead: a miss fetches to the end of its 128 KiB group"
-    },
-    {
-     "version": "2026.11.17.1833",
-     "notes": "- The block cache's index is taken as the cache fills, not whole at boot"
     }
    ],
    "icon": "icons/nova.png",
