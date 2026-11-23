@@ -830,17 +830,25 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.22.2336",
+   "version": "2026.11.23.1730",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.2336.npk",
-   "size": 47605225,
-   "sha256": "7e51c8d32430be2af569f07fe8eff15702c49d684879ea500f23442d3b946d12",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.1730.npk",
+   "size": 47606724,
+   "sha256": "eb62669ba2f3cdf15e89f83d776d3cfd943c1e4d401780bf3a72ac2dff5c7a2d",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.23.1730",
+     "notes": "- The frame wait doesn't wait for a frame after the one that showed the picture"
+    },
+    {
+     "version": "2026.11.23.1703",
+     "notes": "- Presenting into another process's window keeps its buffer (wine 11.0-28)"
+    },
     {
      "version": "2026.11.22.2336",
      "notes": "- sysinfo waits its turn for the filesystems; a cheaper see-through dock"
@@ -952,14 +960,6 @@
     {
      "version": "2026.11.20.1921",
      "notes": "- Dolphin: an aspect ratio for each game"
-    },
-    {
-     "version": "2026.11.20.1340",
-     "notes": "- Dolphin gets a Memory Card tab, like the GameCube's own screen"
-    },
-    {
-     "version": "2026.11.20.1056",
-     "notes": "- mGBA and Dolphin show the games' details beside the list"
     }
    ],
    "icon": "icons/nova.png",
