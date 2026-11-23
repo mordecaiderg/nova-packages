@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.22.2300",
+   "version": "2026.11.22.2336",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.2300.npk",
-   "size": 47604019,
-   "sha256": "0a85e73ff8cac4686df21d2d1c96a51852ce911fbe4f304af6969620b971e7f5",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.2336.npk",
+   "size": 47605225,
+   "sha256": "7e51c8d32430be2af569f07fe8eff15702c49d684879ea500f23442d3b946d12",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.22.2336",
+     "notes": "- sysinfo waits its turn for the filesystems; a cheaper see-through dock"
+    },
     {
      "version": "2026.11.22.2300",
      "notes": "- A window over a redrawing one costs only where it reaches; a frame's drawing timed in finer parts"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.20.1056",
      "notes": "- mGBA and Dolphin show the games' details beside the list"
-    },
-    {
-     "version": "2026.11.20.1011",
-     "notes": "- free -v names the kernel's memory that was \"other\""
     }
    ],
    "icon": "icons/nova.png",
