@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.23.1730",
+   "version": "2026.11.23.1752",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.1730.npk",
-   "size": 47606724,
-   "sha256": "eb62669ba2f3cdf15e89f83d776d3cfd943c1e4d401780bf3a72ac2dff5c7a2d",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.1752.npk",
+   "size": 47607341,
+   "sha256": "ce179063cf7af4d00ae9b927609c993eb2d2ae64a0378cbe89bea615624d58eb",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.23.1752",
+     "notes": "- A 2 MB TCP receive window; a socket's ring grows to hold it"
+    },
     {
      "version": "2026.11.23.1730",
      "notes": "- The frame wait doesn't wait for a frame after the one that showed the picture"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.20.2015",
      "notes": "- Dolphin's Memory Card tab: Copy anyway"
-    },
-    {
-     "version": "2026.11.20.1921",
-     "notes": "- Dolphin: an aspect ratio for each game"
     }
    ],
    "icon": "icons/nova.png",
