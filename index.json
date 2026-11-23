@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.22.2011",
+   "version": "2026.11.22.2043",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.2011.npk",
-   "size": 47594994,
-   "sha256": "c3498a4a8c750dcfb88003dce2c24f6507d4c5dc97a0a0b69460d260c92887ad",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.2043.npk",
+   "size": 47598142,
+   "sha256": "2a08b671a7748ab62aba89bb1d4ff7f268343c4e445145b69fa3dd706a2abb47",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.22.2043",
+     "notes": "- A picture put into a window is copied without the kernel lock"
+    },
     {
      "version": "2026.11.22.2011",
      "notes": "- A see-through dock, switched on in Settings"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.20.0927",
      "notes": "- Threads get 8 MiB stacks, as glibc's; dolphin 2609b-4"
-    },
-    {
-     "version": "2026.11.20.0912",
-     "notes": "- exec and spawn take 128 KiB of arguments, not 32 of them"
     }
    ],
    "icon": "icons/nova.png",
