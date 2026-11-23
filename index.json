@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.22.2043",
+   "version": "2026.11.22.2126",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.2043.npk",
-   "size": 47598142,
-   "sha256": "2a08b671a7748ab62aba89bb1d4ff7f268343c4e445145b69fa3dd706a2abb47",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.22.2126.npk",
+   "size": 47598914,
+   "sha256": "63cbd08f03ee82bc069a6930a249e73b2bfde04fdca516c843b3ccd41c20d506",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.22.2126",
+     "notes": "- Fix a deadlock between the kernel lock and a process's memory lock"
+    },
     {
      "version": "2026.11.22.2043",
      "notes": "- A picture put into a window is copied without the kernel lock"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.20.0937",
      "notes": "- SYS_WAIT wakes whichever threads wait, not only the first"
-    },
-    {
-     "version": "2026.11.20.0927",
-     "notes": "- Threads get 8 MiB stacks, as glibc's; dolphin 2609b-4"
     }
    ],
    "icon": "icons/nova.png",
