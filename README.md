@@ -24,11 +24,11 @@ written by Nova's `make publish`: don't edit it by hand.
 | Python | `python` | 3.14.8-1 | Development | 9874 KB | Python 3.14, the reference implementation (CPython) |
 | SDL Demos | `sdl2-demos` | 2.32.10-4 | Games | 36635 KB | SDL 2's test programs: sprites, an OpenGL cube, a looping sound, a locked mouse and a game controller, to try SDL on Nova |
 | VLC | `vlc` | 3.0.24-1 | Multimedia | 9715 KB | VLC media player: plays films and music in almost any format |
-| Intel Wi-Fi | `wifi-intel` | 0.2-2 | System | 9284 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1271 KB | Run your own Discord-style chat server, with a web client for any browser |
 | PhotoCraft | `photocraft` | 0.23.1-5 | Graphics | 40917 KB | PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files |
 | NVIDIA Graphics | `nvidia` | 570.144-30 | System | 59591 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-31 | System | 27196 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
 | mGBA | `mgba` | 0.10.5-4 | Games | 8244 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | Dolphin | `dolphin` | 2609b-8 | Games | 13862 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
-| Nova | `nova` | 2026.11.23.2335 | System | 46500 KB | Nova itself: the kernel and the system every app runs on |
+| Nova | `nova` | 2026.11.24.1749 | System | 46501 KB | Nova itself: the kernel and the system every app runs on |
+| Intel Wi-Fi | `wifi-intel` | 0.2-3 | System | 9284 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |

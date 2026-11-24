@@ -329,40 +329,6 @@
    "icon_sha256": "a1ccd4a5006713dc65ad84f41281ce732c23533555debc4e71f6457bb26b8fa1"
   },
   {
-   "name": "wifi-intel",
-   "version": "0.2-2",
-   "description": "Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.2-2.npk",
-   "size": 9506135,
-   "sha256": "b91423be037ed8ac41c32a10fa359980d6c0cc167fe736dfa97bc7ddac11f0f3",
-   "title": "Intel Wi-Fi",
-   "category": "System",
-   "about": "Wi-Fi for the Intel Wi-Fi 6 and 6E cards in most PCs from 2019 on: AX200, AX201, AX210 and AX211. Click the network bars in the top bar to see the networks around and join one (WPA2 and open networks; WPA3-only ones not yet), or use the wifi command in the Terminal. Nova remembers the networks you join and joins them again by itself. It is OpenBSD's iwx driver and 802.11 stack, with Intel's firmware. If Nova ever stops while starting it, the next start skips it by itself. wifi=off in /etc/nova.conf leaves the card alone.",
-   "changes": [
-    {
-     "version": "0.2-2",
-     "notes": "- Joining no longer stops Nova (\"Nova stopped responding\"): restarting the card to join a network failed one of the driver's own checks."
-    },
-    {
-     "version": "0.2-1",
-     "notes": "- Joining networks: click one in the network popup and type its password (WPA2, or an open network), or `wifi join NAME` in the Terminal. Nova gets an address over Wi-Fi, remembers the network and joins it again by itself; Disconnect and Forget in the popup. While a cable is connected, it stays the connection used. Needs the Nova update published with it."
-    },
-    {
-     "version": "0.1-3",
-     "notes": "- Each network's signal bars show its real strength (they all showed full)."
-    },
-    {
-     "version": "0.1-2",
-     "notes": "- Scanning: the networks around show in the top bar's network popup (click the signal bars) and with the `wifi` command, with their signal and security. Needs the Nova update published with it. Joining comes next."
-    },
-    {
-     "version": "0.1-1",
-     "notes": "- The card starts: its firmware loads and Nova reads its address (dmesg | grep wifi)."
-    }
-   ]
-  },
-  {
    "name": "yipyap-server",
    "version": "0.2.5+9e7e443-1",
    "description": "Run your own Discord-style chat server, with a web client for any browser",
@@ -830,17 +796,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.23.2335",
+   "version": "2026.11.24.1749",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.2335.npk",
-   "size": 47615762,
-   "sha256": "32da1eac9d01410c90632378fdd9400847456af8e57ea6a900c3de53e738205d",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.24.1749.npk",
+   "size": 47616778,
+   "sha256": "9e3d71e85b0116beb6ccd0eb35a48f7a5abb3587f9fe89b64e542a9465e94376",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.24.1749",
+     "notes": "- A module's poll can wait without holding the desktop up; the Wi-Fi driver's sleeps do (wifi-intel 0.2-3)"
+    },
     {
      "version": "2026.11.23.2335",
      "notes": "- A remembered Wi-Fi network isn't joined by itself while the cable has a link"
@@ -956,14 +926,48 @@
     {
      "version": "2026.11.21.1855",
      "notes": "- prof: reads and writes by the kind of file\n- mmap, munmap and mprotect look only at the regions in their range"
-    },
-    {
-     "version": "2026.11.21.1805",
-     "notes": "- Pipes: any size without the kernel lock, and PIPE_BUF writes whole"
     }
    ],
    "icon": "icons/nova.png",
    "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
+  },
+  {
+   "name": "wifi-intel",
+   "version": "0.2-3",
+   "description": "Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/wifi-intel-0.2-3.npk",
+   "size": 9506252,
+   "sha256": "0cec5e337dae79ac0d4163646e57cf42b06081f280611c8863df993b04cb91cb",
+   "title": "Intel Wi-Fi",
+   "category": "System",
+   "about": "Wi-Fi for the Intel Wi-Fi 6 and 6E cards in most PCs from 2019 on: AX200, AX201, AX210 and AX211. Click the network bars in the top bar to see the networks around and join one (WPA2 and open networks; WPA3-only ones not yet), or use the wifi command in the Terminal. Nova remembers the networks you join and joins them again by itself. It is OpenBSD's iwx driver and 802.11 stack, with Intel's firmware. If Nova ever stops while starting it, the next start skips it by itself. wifi=off in /etc/nova.conf leaves the card alone.",
+   "changes": [
+    {
+     "version": "0.2-3",
+     "notes": "- Joining a network no longer stops the pointer and breaks up sounds: while the driver waits for the card, the desktop goes on. Needs the Nova update published with it (on an older Nova it works as before)."
+    },
+    {
+     "version": "0.2-2",
+     "notes": "- Joining no longer stops Nova (\"Nova stopped responding\"): restarting the card to join a network failed one of the driver's own checks."
+    },
+    {
+     "version": "0.2-1",
+     "notes": "- Joining networks: click one in the network popup and type its password (WPA2, or an open network), or `wifi join NAME` in the Terminal. Nova gets an address over Wi-Fi, remembers the network and joins it again by itself; Disconnect and Forget in the popup. While a cable is connected, it stays the connection used. Needs the Nova update published with it."
+    },
+    {
+     "version": "0.1-3",
+     "notes": "- Each network's signal bars show its real strength (they all showed full)."
+    },
+    {
+     "version": "0.1-2",
+     "notes": "- Scanning: the networks around show in the top bar's network popup (click the signal bars) and with the `wifi` command, with their signal and security. Needs the Nova update published with it. Joining comes next."
+    },
+    {
+     "version": "0.1-1",
+     "notes": "- The card starts: its firmware loads and Nova reads its address (dmesg | grep wifi)."
+    }
+   ]
   }
  ]
 }
