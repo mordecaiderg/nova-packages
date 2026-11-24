@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.23.2321",
+   "version": "2026.11.23.2335",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.2321.npk",
-   "size": 47615624,
-   "sha256": "2dcf2fd486f9d7afb67c69f5121b87d7cdcf069343e33a727e4199ca2a7bf54b",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.2335.npk",
+   "size": 47615762,
+   "sha256": "32da1eac9d01410c90632378fdd9400847456af8e57ea6a900c3de53e738205d",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.23.2335",
+     "notes": "- A remembered Wi-Fi network isn't joined by itself while the cable has a link"
+    },
     {
      "version": "2026.11.23.2321",
      "notes": "- A page fault reads its file page without the process's memory lock"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.21.1805",
      "notes": "- Pipes: any size without the kernel lock, and PIPE_BUF writes whole"
-    },
-    {
-     "version": "2026.11.21.1708",
-     "notes": "- A pipe's writer no longer waits for the kernel lock to wake its reader"
     }
    ],
    "icon": "icons/nova.png",
