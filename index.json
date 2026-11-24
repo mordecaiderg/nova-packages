@@ -830,17 +830,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.23.2003",
+   "version": "2026.11.23.2133",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.2003.npk",
-   "size": 47607403,
-   "sha256": "320ee33d8cfa1468649bca61026c7c5b985250918cc3ef15b4c55d8cbd80ba72",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.23.2133.npk",
+   "size": 47608252,
+   "sha256": "2f94d81450f3661b3ca6b5be69d049cd548bcb9d7528ca1ec2c57981e22bc703",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.23.2133",
+     "notes": "- igc: the card's counts of missed and bad frames go to the log"
+    },
     {
      "version": "2026.11.23.2003",
      "notes": "- igc: a receive ring of 1024 frames, and 512 taken a poll"
@@ -956,10 +960,6 @@
     {
      "version": "2026.11.20.2119",
      "notes": "- sigprocmask without the kernel lock"
-    },
-    {
-     "version": "2026.11.20.2107",
-     "notes": "- Disk work no longer holds the desktop back: disk windows\n- selftest: the cache check reads the root's disk, NVMe or virtio too"
     }
    ],
    "icon": "icons/nova.png",
