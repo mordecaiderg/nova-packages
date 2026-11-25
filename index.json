@@ -834,17 +834,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.24.2322",
+   "version": "2026.11.25.1446",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.24.2322.npk",
-   "size": 47620779,
-   "sha256": "89f4bf5426ec356c5ea7447638b7b64cca5262a8a87dfb91d731ebab206f7922",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1446.npk",
+   "size": 47621995,
+   "sha256": "dd539ce3f45f799a14d2fc8a5965afcf3e3a8eb1a3df6f606611f9b396db8dc9",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.25.1446",
+     "notes": "- The serial port isn't waited for with the kernel lock"
+    },
     {
      "version": "2026.11.24.2322",
      "notes": "- Window shadows and outlines from a kept picture; none drawn where none can show"
@@ -960,10 +964,6 @@
     {
      "version": "2026.11.22.0206",
      "notes": "- Page faults on untouched memory without the kernel lock\n- What a path's stat last said is kept until a file changes"
-    },
-    {
-     "version": "2026.11.21.2348",
-     "notes": "- Fix a hang with the filesystems' lock; ext2 writes its counts every 2 s"
     }
    ],
    "icon": "icons/nova.png",
