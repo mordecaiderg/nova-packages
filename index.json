@@ -834,17 +834,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.25.1630",
+   "version": "2026.11.25.1658",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1630.npk",
-   "size": 47623211,
-   "sha256": "58b2db3c59f03510968550e131ab035a83743c5f9d0dfe8f31962809e2d1ea31",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1658.npk",
+   "size": 47624003,
+   "sha256": "3b15a6969b3c7903f630b981f23850bc686dac6601042746fcfbe13826626b95",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.25.1658",
+     "notes": "- A flushed window's picture is copied without the kernel lock"
+    },
     {
      "version": "2026.11.25.1630",
      "notes": "- Nothing is written to a serial port that isn't there"
@@ -960,10 +964,6 @@
     {
      "version": "2026.11.22.1637",
      "notes": "- A write forgets only its own file's cached stat"
-    },
-    {
-     "version": "2026.11.22.1523",
-     "notes": "- The launcher's search field shows the end of a long query\n- A file already read is copied to the program without the kernel lock"
     }
    ],
    "icon": "icons/nova.png",
