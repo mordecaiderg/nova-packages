@@ -31,4 +31,4 @@ written by Nova's `make publish`: don't edit it by hand.
 | mGBA | `mgba` | 0.10.5-4 | Games | 8244 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | Dolphin | `dolphin` | 2609b-8 | Games | 13862 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
 | Intel Wi-Fi | `wifi-intel` | 0.2-3 | System | 9284 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |
-| Nova | `nova` | 2026.11.25.1546 | System | 46507 KB | Nova itself: the kernel and the system every app runs on |
+| Nova | `nova` | 2026.11.25.1630 | System | 46508 KB | Nova itself: the kernel and the system every app runs on |

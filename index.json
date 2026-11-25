@@ -834,17 +834,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.25.1546",
+   "version": "2026.11.25.1630",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1546.npk",
-   "size": 47622487,
-   "sha256": "8f951518abba763ef6f7657e7f8fc5d0946ae70ab06dff98d056312f1a53ef9f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1630.npk",
+   "size": 47623211,
+   "sha256": "58b2db3c59f03510968550e131ab035a83743c5f9d0dfe8f31962809e2d1ea31",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.25.1630",
+     "notes": "- Nothing is written to a serial port that isn't there"
+    },
     {
      "version": "2026.11.25.1546",
      "notes": "- The serial port's status is read once a line, not twice a byte"
@@ -960,10 +964,6 @@
     {
      "version": "2026.11.22.1523",
      "notes": "- The launcher's search field shows the end of a long query\n- A file already read is copied to the program without the kernel lock"
-    },
-    {
-     "version": "2026.11.22.1222",
-     "notes": "- The profiler counts calls answered without the kernel lock apart"
     }
    ],
    "icon": "icons/nova.png",
