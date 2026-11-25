@@ -834,17 +834,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.25.1446",
+   "version": "2026.11.25.1546",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1446.npk",
-   "size": 47621995,
-   "sha256": "dd539ce3f45f799a14d2fc8a5965afcf3e3a8eb1a3df6f606611f9b396db8dc9",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1546.npk",
+   "size": 47622487,
+   "sha256": "8f951518abba763ef6f7657e7f8fc5d0946ae70ab06dff98d056312f1a53ef9f",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.25.1546",
+     "notes": "- The serial port's status is read once a line, not twice a byte"
+    },
     {
      "version": "2026.11.25.1446",
      "notes": "- The serial port isn't waited for with the kernel lock"
@@ -960,10 +964,6 @@
     {
      "version": "2026.11.22.1222",
      "notes": "- The profiler counts calls answered without the kernel lock apart"
-    },
-    {
-     "version": "2026.11.22.0206",
-     "notes": "- Page faults on untouched memory without the kernel lock\n- What a path's stat last said is kept until a file changes"
     }
    ],
    "icon": "icons/nova.png",
