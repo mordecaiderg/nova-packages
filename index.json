@@ -834,17 +834,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.24.2253",
+   "version": "2026.11.24.2322",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.24.2253.npk",
-   "size": 47619206,
-   "sha256": "b6702e4b2cb211150d974d5a0c7358596c328423f53e9125056d25136e7ded82",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.24.2322.npk",
+   "size": 47620779,
+   "sha256": "89f4bf5426ec356c5ea7447638b7b64cca5262a8a87dfb91d731ebab206f7922",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.24.2322",
+     "notes": "- Window shadows and outlines from a kept picture; none drawn where none can show"
+    },
     {
      "version": "2026.11.24.2253",
      "notes": "- A login no longer walks the home folder in the desktop's loop"
@@ -960,10 +964,6 @@
     {
      "version": "2026.11.21.2348",
      "notes": "- Fix a hang with the filesystems' lock; ext2 writes its counts every 2 s"
-    },
-    {
-     "version": "2026.11.21.2156",
-     "notes": "- Lookups, listings and read-only opens let every processor in too"
     }
    ],
    "icon": "icons/nova.png",
