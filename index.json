@@ -834,17 +834,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.24.2242",
+   "version": "2026.11.24.2253",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.24.2242.npk",
-   "size": 47619034,
-   "sha256": "708b574ff118c7ad939f4d71317cea839a5212cec1264db6c7de116a8a423516",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.24.2253.npk",
+   "size": 47619206,
+   "sha256": "b6702e4b2cb211150d974d5a0c7358596c328423f53e9125056d25136e7ded82",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.24.2253",
+     "notes": "- A login no longer walks the home folder in the desktop's loop"
+    },
     {
      "version": "2026.11.24.2242",
      "notes": "- The watchdog, the sound and the scheduler's scan go by the time gone by; the desktop's stalls are logged"
@@ -960,10 +964,6 @@
     {
      "version": "2026.11.21.2156",
      "notes": "- Lookups, listings and read-only opens let every processor in too"
-    },
-    {
-     "version": "2026.11.21.2105",
-     "notes": "- A file's disk waits let every processor into the kernel"
     }
    ],
    "icon": "icons/nova.png",
