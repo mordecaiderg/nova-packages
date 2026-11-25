@@ -443,140 +443,6 @@
    "icon_sha256": "efd02e0b8ea76c59fbc3a9692ddc21faae6064cc9f9492898df1facec3b5b57d"
   },
   {
-   "name": "nvidia",
-   "version": "570.144-30",
-   "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-30.npk",
-   "size": 61020426,
-   "sha256": "ad356255d643a696f855319b15b0ada195bc12ddb9dff458f0025e7969551fa7",
-   "title": "NVIDIA Graphics",
-   "category": "System",
-   "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
-   "changes": [
-    {
-     "version": "570.144-30",
-     "notes": "- Changing the resolution or refresh rate a few times in a row no longer turns off smooth frames (the screen synced to the monitor): each change was counted as a frame shown late, and after five the driver stopped syncing, leaving the desktop at about 66 frames a second whatever the monitor's rate."
-    },
-    {
-     "version": "570.144-29",
-     "notes": "- Fixes a warning in /var/log/nvidia.log that -27 brought back (\"_rmGpuAllocLockIsOwner\"): the interrupt's second step, now run from inside any wait, ran under the waiting program's name instead of the driver's own."
-    },
-    {
-     "version": "570.144-28",
-     "notes": "- Every refresh rate the monitor offers can be chosen in Settings > Display (with the Nova update of the same day): until now each resolution had one, and the monitor's own resolution only its own rate. Needs Nova 2026.11.18 or newer for the choice; on an older one nothing changes."
-    },
-    {
-     "version": "570.144-27",
-     "notes": "- Fixes the PC freezing when the monitor is turned off (or unplugged): the driver's handling of the display going away waited for the graphics card's lock, which the card's interrupt had handed to a second step that was queued behind that very handling and so never ran."
-    },
-    {
-     "version": "570.144-26",
-     "notes": "- Diagnostics only: a long wait for the card's lock also says what the driver itself has written down about who holds that lock."
-    },
-    {
-     "version": "570.144-25",
-     "notes": "- Diagnostics only: when the driver waits more than 2 seconds for one of its own locks, it says so at once in the kernel log, with which part of it took that lock last. The PC froze when its monitor was turned off, waiting for such a lock, and the report of the freeze could not say who held it."
-    },
-    {
-     "version": "570.144-24",
-     "notes": "- Fixes the \"_rmGpuAllocLockIsOwner\" line every start showed, and with it a way the driver could end up waiting for a lock nobody held: the second half of the card's interrupt handler, which on Linux runs on a thread of its own, ran on the waiting call's thread with the same identity, so the driver took it for that call and let go of the call's lock. It has its own identity now, as do interrupts (the identity Linux gives them, which Nova's desktop had shared)."
-    },
-    {
-     "version": "570.144-23",
-     "notes": "- Diagnostics only: the driver's first few assertions and lock waits in /var/log/nvidia.log now say in what context they happened and which of the driver's functions led there, to find the cause of the \"_rmGpuAllocLockIsOwner\" line every start shows. Nothing else changes."
-    },
-    {
-     "version": "570.144-22",
-     "notes": "- Fixes -21, with which the card took 20 seconds longer to start and the screen stayed black: the driver's own waits for a signal were mistaken for locks and skipped, so a signal was lost. The driver's locks now behave as in -18, with the one difference that a wait given up on leaves the lock as it was, instead of leaving it off by one for good, which was the frozen desktop."
-    },
-    {
-     "version": "570.144-21",
-     "notes": "- Fixes -19 and -20, with which the card didn't start (a black screen; Nova then booted without the driver): the start waits for work of the driver's own, which -19 held back. The driver's work runs as it did up to -18; only a wait inside such work for a lock the interrupted call holds is passed at once instead of after 20 seconds."
-    },
-    {
-     "version": "570.144-20",
-     "notes": "- Every line of /var/log/nvidia.log now starts with the time since boot, so a log can say when something happened, not just in what order."
-    },
-    {
-     "version": "570.144-19",
-     "notes": "- The desktop no longer freezes for good after the driver gives up waiting for one of its locks (the log said \"a semaphore stayed taken: carried on\" every 20 seconds; seen after a monitor was switched off at an idle desktop). Work the driver hands off (its interrupts' second half, timers, queued work) no longer runs in the middle of a call that holds a lock it would need, and a wait given up on no longer leaves the lock off by one, which made every later wait time out too. The log line now says which thread, how many locks it held and how deep in waits it was."
-    },
-    {
-     "version": "570.144-18",
-     "notes": "- The screen no longer goes black for a few seconds (with the HDMI sound) when the machine is busy: a late frame is no longer taken as flips not working.\n- Programs drawing on the card from several threads at once (the browser) no longer trip the driver's locks (\"_rmGpuAllocLockIsOwner\" in the log). Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-17",
-     "notes": "- The screen no longer tears: each frame of the desktop is shown at the monitor's refresh, so moving windows, scrolling, games and video are smooth. (-14 and -15 tried this and left the screen black: a function the driver lacks was called; fixed.) nvidia.flips=off in /etc/nova.conf goes back to the old way."
-    },
-    {
-     "version": "570.144-16",
-     "notes": "- Back to drawing straight on the screen, as up to -13: the flips of -14 and -15 left the screen black on some cards. They're off until they're known to work; nvidia.flips=on in /etc/nova.conf tries them."
-    },
-    {
-     "version": "570.144-15",
-     "notes": "- Fixes -14's black screen at start: if the card doesn't take a flipped frame within a quarter of a second, the desktop goes back to drawing straight on the screen (it may tear, but it works), and the log says why. The desktop no longer keeps programs waiting while a frame is on its way. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-14",
-     "notes": "- The screen no longer tears: the desktop draws each frame out of sight and the card shows it at the monitor's refresh, so moving windows, games and video are smooth, at the monitor's own rate. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-13",
-     "notes": "- In the Store for everyone with a GeForce RTX 30 or 40 card: no testing source to add first. The description says what the driver does now."
-    },
-    {
-     "version": "570.144-12",
-     "notes": "- Task Manager gets a GPU tab: how busy the card is (drawing, memory, video decoding and encoding), its video memory and its performance state. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-11",
-     "notes": "- Programs can map system memory the card uses (it was refused as \"not supported\"): Vulkan (NVIDIA Vulkan's vktest) needs it to start the card."
-    },
-    {
-     "version": "570.144-10",
-     "notes": "- Programs can map the card's memory (video memory and system memory it uses) and write to it directly, as graphics libraries do; nvidia-info checks it. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-9",
-     "notes": "- When the monitor is switched off and on again (or its cable unplugged and plugged back in), the picture comes back: the mode is set again."
-    },
-    {
-     "version": "570.144-8",
-     "notes": "- Settings > Display's resolutions go down as well as up (they were listed biggest first).\n- Switches on the card's own sound device for HDMI and DisplayPort, so Settings > Sound can play through your monitor or TV (needs the Nova update published with it)."
-    },
-    {
-     "version": "570.144-7",
-     "notes": "- Fixes the black screen: the display's output scale was left at zero, which turns every pixel black."
-    },
-    {
-     "version": "570.144-6",
-     "notes": "- If the display setup fails partway, the screen is given back to the old display instead of staying black.\n- The last start's log is kept as /var/log/nvidia.log.1, and the log says more about each display step."
-    },
-    {
-     "version": "570.144-5",
-     "notes": "- The display: NVIDIA's display driver sets your monitor to its own resolution and refresh rate, and Nova's desktop draws through the graphics card. Settings > Display lists the monitor's modes.\n- The first time, it's a trial: press Keep in Settings > Display. If the screen stayed black and you couldn't, the next start goes back to the old display by itself.\n- Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-4",
-     "notes": "- Programs can talk to the driver: /dev/nvidiactl and /dev/nvidia0, as on Linux. The nvidia-info command (in the Terminal) asks it for the card's name, memory and the driver's version. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-3",
-     "notes": "- When the driver waits for something another part of it does (its interrupt work, queued work, timers), that work now runs while it waits, instead of the wait being skipped. Waits that never end are logged with where they were."
-    },
-    {
-     "version": "570.144-2",
-     "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
-    },
-    {
-     "version": "570.144-1",
-     "notes": "- First test: finds the card, starts NVIDIA's driver and the card's firmware, and writes what happened to /var/log/nvidia.log."
-    }
-   ]
-  },
-  {
    "name": "nvidia-vulkan",
    "version": "26.2.6-31",
    "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
@@ -968,6 +834,140 @@
    ],
    "icon": "icons/nova.png",
    "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
+  },
+  {
+   "name": "nvidia",
+   "version": "570.144-31",
+   "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-570.144-31.npk",
+   "size": 61022404,
+   "sha256": "63dfd779ac702d151fc611141ca0bebefb4258f876ebac21dc128b8c18f40881",
+   "title": "NVIDIA Graphics",
+   "category": "System",
+   "about": "NVIDIA's open-source GPU driver, for GeForce RTX 30 and 40 series cards (RTX 3050 to 4090). Nova loads it when it starts, if it finds one of these cards, and writes what it found to /var/log/nvidia.log.\nWith it, the browser draws pages on the card, Settings > Display can let the card drive the screen (a trial until you keep it), Task Manager shows the card's activity in its GPU tab, and Vulkan programs (the NVIDIA Vulkan package has two to try) use it for 3D.\nIf Nova ever stops while starting it, the next start skips it by itself (and says so), until a new version comes. modules=off in /etc/nova.conf turns every driver from a package off.",
+   "changes": [
+    {
+     "version": "570.144-31",
+     "notes": "- The driver's log (/var/log/nvidia.log) says once a minute what programs asked of the driver: how many calls, how long they took, and which kinds and programs took longest. Nothing else changes: it is for finding what holds other programs up."
+    },
+    {
+     "version": "570.144-30",
+     "notes": "- Changing the resolution or refresh rate a few times in a row no longer turns off smooth frames (the screen synced to the monitor): each change was counted as a frame shown late, and after five the driver stopped syncing, leaving the desktop at about 66 frames a second whatever the monitor's rate."
+    },
+    {
+     "version": "570.144-29",
+     "notes": "- Fixes a warning in /var/log/nvidia.log that -27 brought back (\"_rmGpuAllocLockIsOwner\"): the interrupt's second step, now run from inside any wait, ran under the waiting program's name instead of the driver's own."
+    },
+    {
+     "version": "570.144-28",
+     "notes": "- Every refresh rate the monitor offers can be chosen in Settings > Display (with the Nova update of the same day): until now each resolution had one, and the monitor's own resolution only its own rate. Needs Nova 2026.11.18 or newer for the choice; on an older one nothing changes."
+    },
+    {
+     "version": "570.144-27",
+     "notes": "- Fixes the PC freezing when the monitor is turned off (or unplugged): the driver's handling of the display going away waited for the graphics card's lock, which the card's interrupt had handed to a second step that was queued behind that very handling and so never ran."
+    },
+    {
+     "version": "570.144-26",
+     "notes": "- Diagnostics only: a long wait for the card's lock also says what the driver itself has written down about who holds that lock."
+    },
+    {
+     "version": "570.144-25",
+     "notes": "- Diagnostics only: when the driver waits more than 2 seconds for one of its own locks, it says so at once in the kernel log, with which part of it took that lock last. The PC froze when its monitor was turned off, waiting for such a lock, and the report of the freeze could not say who held it."
+    },
+    {
+     "version": "570.144-24",
+     "notes": "- Fixes the \"_rmGpuAllocLockIsOwner\" line every start showed, and with it a way the driver could end up waiting for a lock nobody held: the second half of the card's interrupt handler, which on Linux runs on a thread of its own, ran on the waiting call's thread with the same identity, so the driver took it for that call and let go of the call's lock. It has its own identity now, as do interrupts (the identity Linux gives them, which Nova's desktop had shared)."
+    },
+    {
+     "version": "570.144-23",
+     "notes": "- Diagnostics only: the driver's first few assertions and lock waits in /var/log/nvidia.log now say in what context they happened and which of the driver's functions led there, to find the cause of the \"_rmGpuAllocLockIsOwner\" line every start shows. Nothing else changes."
+    },
+    {
+     "version": "570.144-22",
+     "notes": "- Fixes -21, with which the card took 20 seconds longer to start and the screen stayed black: the driver's own waits for a signal were mistaken for locks and skipped, so a signal was lost. The driver's locks now behave as in -18, with the one difference that a wait given up on leaves the lock as it was, instead of leaving it off by one for good, which was the frozen desktop."
+    },
+    {
+     "version": "570.144-21",
+     "notes": "- Fixes -19 and -20, with which the card didn't start (a black screen; Nova then booted without the driver): the start waits for work of the driver's own, which -19 held back. The driver's work runs as it did up to -18; only a wait inside such work for a lock the interrupted call holds is passed at once instead of after 20 seconds."
+    },
+    {
+     "version": "570.144-20",
+     "notes": "- Every line of /var/log/nvidia.log now starts with the time since boot, so a log can say when something happened, not just in what order."
+    },
+    {
+     "version": "570.144-19",
+     "notes": "- The desktop no longer freezes for good after the driver gives up waiting for one of its locks (the log said \"a semaphore stayed taken: carried on\" every 20 seconds; seen after a monitor was switched off at an idle desktop). Work the driver hands off (its interrupts' second half, timers, queued work) no longer runs in the middle of a call that holds a lock it would need, and a wait given up on no longer leaves the lock off by one, which made every later wait time out too. The log line now says which thread, how many locks it held and how deep in waits it was."
+    },
+    {
+     "version": "570.144-18",
+     "notes": "- The screen no longer goes black for a few seconds (with the HDMI sound) when the machine is busy: a late frame is no longer taken as flips not working.\n- Programs drawing on the card from several threads at once (the browser) no longer trip the driver's locks (\"_rmGpuAllocLockIsOwner\" in the log). Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-17",
+     "notes": "- The screen no longer tears: each frame of the desktop is shown at the monitor's refresh, so moving windows, scrolling, games and video are smooth. (-14 and -15 tried this and left the screen black: a function the driver lacks was called; fixed.) nvidia.flips=off in /etc/nova.conf goes back to the old way."
+    },
+    {
+     "version": "570.144-16",
+     "notes": "- Back to drawing straight on the screen, as up to -13: the flips of -14 and -15 left the screen black on some cards. They're off until they're known to work; nvidia.flips=on in /etc/nova.conf tries them."
+    },
+    {
+     "version": "570.144-15",
+     "notes": "- Fixes -14's black screen at start: if the card doesn't take a flipped frame within a quarter of a second, the desktop goes back to drawing straight on the screen (it may tear, but it works), and the log says why. The desktop no longer keeps programs waiting while a frame is on its way. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-14",
+     "notes": "- The screen no longer tears: the desktop draws each frame out of sight and the card shows it at the monitor's refresh, so moving windows, games and video are smooth, at the monitor's own rate. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-13",
+     "notes": "- In the Store for everyone with a GeForce RTX 30 or 40 card: no testing source to add first. The description says what the driver does now."
+    },
+    {
+     "version": "570.144-12",
+     "notes": "- Task Manager gets a GPU tab: how busy the card is (drawing, memory, video decoding and encoding), its video memory and its performance state. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-11",
+     "notes": "- Programs can map system memory the card uses (it was refused as \"not supported\"): Vulkan (NVIDIA Vulkan's vktest) needs it to start the card."
+    },
+    {
+     "version": "570.144-10",
+     "notes": "- Programs can map the card's memory (video memory and system memory it uses) and write to it directly, as graphics libraries do; nvidia-info checks it. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-9",
+     "notes": "- When the monitor is switched off and on again (or its cable unplugged and plugged back in), the picture comes back: the mode is set again."
+    },
+    {
+     "version": "570.144-8",
+     "notes": "- Settings > Display's resolutions go down as well as up (they were listed biggest first).\n- Switches on the card's own sound device for HDMI and DisplayPort, so Settings > Sound can play through your monitor or TV (needs the Nova update published with it)."
+    },
+    {
+     "version": "570.144-7",
+     "notes": "- Fixes the black screen: the display's output scale was left at zero, which turns every pixel black."
+    },
+    {
+     "version": "570.144-6",
+     "notes": "- If the display setup fails partway, the screen is given back to the old display instead of staying black.\n- The last start's log is kept as /var/log/nvidia.log.1, and the log says more about each display step."
+    },
+    {
+     "version": "570.144-5",
+     "notes": "- The display: NVIDIA's display driver sets your monitor to its own resolution and refresh rate, and Nova's desktop draws through the graphics card. Settings > Display lists the monitor's modes.\n- The first time, it's a trial: press Keep in Settings > Display. If the screen stayed black and you couldn't, the next start goes back to the old display by itself.\n- Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-4",
+     "notes": "- Programs can talk to the driver: /dev/nvidiactl and /dev/nvidia0, as on Linux. The nvidia-info command (in the Terminal) asks it for the card's name, memory and the driver's version. Needs the Nova update published with it."
+    },
+    {
+     "version": "570.144-3",
+     "notes": "- When the driver waits for something another part of it does (its interrupt work, queued work, timers), that work now runs while it waits, instead of the wait being skipped. Waits that never end are logged with where they were."
+    },
+    {
+     "version": "570.144-2",
+     "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
+    }
+   ]
   }
  ]
 }
