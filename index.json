@@ -484,143 +484,6 @@
    ]
   },
   {
-   "name": "nova",
-   "version": "2026.11.25.1732",
-   "description": "Nova itself: the kernel and the system every app runs on",
-   "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.1732.npk",
-   "size": 47624746,
-   "sha256": "7b480eccb7da4f1c954528a8f54b7c2fd41b158d5540f88259e0583125b00f54",
-   "title": "Nova",
-   "category": "System",
-   "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
-   "system": true,
-   "changes": [
-    {
-     "version": "2026.11.25.1732",
-     "notes": "- The see-through dock's blur and blending without the kernel lock"
-    },
-    {
-     "version": "2026.11.25.1658",
-     "notes": "- A flushed window's picture is copied without the kernel lock"
-    },
-    {
-     "version": "2026.11.25.1630",
-     "notes": "- Nothing is written to a serial port that isn't there"
-    },
-    {
-     "version": "2026.11.25.1546",
-     "notes": "- The serial port's status is read once a line, not twice a byte"
-    },
-    {
-     "version": "2026.11.25.1446",
-     "notes": "- The serial port isn't waited for with the kernel lock"
-    },
-    {
-     "version": "2026.11.24.2322",
-     "notes": "- Window shadows and outlines from a kept picture; none drawn where none can show"
-    },
-    {
-     "version": "2026.11.24.2253",
-     "notes": "- A login no longer walks the home folder in the desktop's loop"
-    },
-    {
-     "version": "2026.11.24.2242",
-     "notes": "- The watchdog, the sound and the scheduler's scan go by the time gone by; the desktop's stalls are logged"
-    },
-    {
-     "version": "2026.11.24.1830",
-     "notes": "- igc: an interrupt when frames come (MSI), the poll kept beside it"
-    },
-    {
-     "version": "2026.11.24.1823",
-     "notes": "- The profiler times input to the screen only when handling it changed the screen"
-    },
-    {
-     "version": "2026.11.24.1749",
-     "notes": "- A module's poll can wait without holding the desktop up; the Wi-Fi driver's sleeps do (wifi-intel 0.2-3)"
-    },
-    {
-     "version": "2026.11.23.2335",
-     "notes": "- A remembered Wi-Fi network isn't joined by itself while the cable has a link"
-    },
-    {
-     "version": "2026.11.23.2321",
-     "notes": "- A page fault reads its file page without the process's memory lock"
-    },
-    {
-     "version": "2026.11.23.2257",
-     "notes": "- The desktop's icons: no file written and no screen drawn every second; the dock's picture kept while windows move"
-    },
-    {
-     "version": "2026.11.23.2224",
-     "notes": "- The pointer passing over the dock doesn't remake its kept picture; TCP selective acknowledgements"
-    },
-    {
-     "version": "2026.11.23.2133",
-     "notes": "- igc: the card's counts of missed and bad frames go to the log"
-    },
-    {
-     "version": "2026.11.23.2003",
-     "notes": "- igc: a receive ring of 1024 frames, and 512 taken a poll"
-    },
-    {
-     "version": "2026.11.23.1752",
-     "notes": "- A 2 MB TCP receive window; a socket's ring grows to hold it"
-    },
-    {
-     "version": "2026.11.23.1730",
-     "notes": "- The frame wait doesn't wait for a frame after the one that showed the picture"
-    },
-    {
-     "version": "2026.11.23.1703",
-     "notes": "- Presenting into another process's window keeps its buffer (wine 11.0-28)"
-    },
-    {
-     "version": "2026.11.22.2336",
-     "notes": "- sysinfo waits its turn for the filesystems; a cheaper see-through dock"
-    },
-    {
-     "version": "2026.11.22.2300",
-     "notes": "- A window over a redrawing one costs only where it reaches; a frame's drawing timed in finer parts"
-    },
-    {
-     "version": "2026.11.22.2216",
-     "notes": "- The pointer's damage stays apart from a window's content; the desktop copies a window's picture without the kernel lock"
-    },
-    {
-     "version": "2026.11.22.2126",
-     "notes": "- Fix a deadlock between the kernel lock and a process's memory lock"
-    },
-    {
-     "version": "2026.11.22.2043",
-     "notes": "- A picture put into a window is copied without the kernel lock"
-    },
-    {
-     "version": "2026.11.22.2011",
-     "notes": "- A see-through dock, switched on in Settings"
-    },
-    {
-     "version": "2026.11.22.1943",
-     "notes": "- A window redrawing under the dock no longer has the dock drawn again"
-    },
-    {
-     "version": "2026.11.22.1859",
-     "notes": "- The profiler says what the desktop did while it held the kernel lock"
-    },
-    {
-     "version": "2026.11.22.1811",
-     "notes": "- ext2 keeps the last path it looked up until a block is written"
-    },
-    {
-     "version": "2026.11.22.1733",
-     "notes": "- The profiler says how stat by path went"
-    }
-   ],
-   "icon": "icons/nova.png",
-   "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
-  },
-  {
    "name": "nvidia",
    "version": "570.144-31",
    "description": "NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards",
@@ -976,6 +839,143 @@
      "notes": "- Vulkan's functions are all in place in a program (some were missing)."
     }
    ]
+  },
+  {
+   "name": "nova",
+   "version": "2026.11.25.2116",
+   "description": "Nova itself: the kernel and the system every app runs on",
+   "depends": [],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.2116.npk",
+   "size": 47633065,
+   "sha256": "b38648426fba20c78c439cdacbc414596517d43e321804b7914345f0d4adf729",
+   "title": "Nova",
+   "category": "System",
+   "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
+   "system": true,
+   "changes": [
+    {
+     "version": "2026.11.25.2116",
+     "notes": "- mmap, munmap and mprotect of anonymous memory without the kernel lock"
+    },
+    {
+     "version": "2026.11.25.2037",
+     "notes": "- NVK on Nova: no export of every allocation to a device file closed at once"
+    },
+    {
+     "version": "2026.11.25.1732",
+     "notes": "- The see-through dock's blur and blending without the kernel lock"
+    },
+    {
+     "version": "2026.11.25.1658",
+     "notes": "- A flushed window's picture is copied without the kernel lock"
+    },
+    {
+     "version": "2026.11.25.1630",
+     "notes": "- Nothing is written to a serial port that isn't there"
+    },
+    {
+     "version": "2026.11.25.1546",
+     "notes": "- The serial port's status is read once a line, not twice a byte"
+    },
+    {
+     "version": "2026.11.25.1446",
+     "notes": "- The serial port isn't waited for with the kernel lock"
+    },
+    {
+     "version": "2026.11.24.2322",
+     "notes": "- Window shadows and outlines from a kept picture; none drawn where none can show"
+    },
+    {
+     "version": "2026.11.24.2253",
+     "notes": "- A login no longer walks the home folder in the desktop's loop"
+    },
+    {
+     "version": "2026.11.24.2242",
+     "notes": "- The watchdog, the sound and the scheduler's scan go by the time gone by; the desktop's stalls are logged"
+    },
+    {
+     "version": "2026.11.24.1830",
+     "notes": "- igc: an interrupt when frames come (MSI), the poll kept beside it"
+    },
+    {
+     "version": "2026.11.24.1823",
+     "notes": "- The profiler times input to the screen only when handling it changed the screen"
+    },
+    {
+     "version": "2026.11.24.1749",
+     "notes": "- A module's poll can wait without holding the desktop up; the Wi-Fi driver's sleeps do (wifi-intel 0.2-3)"
+    },
+    {
+     "version": "2026.11.23.2335",
+     "notes": "- A remembered Wi-Fi network isn't joined by itself while the cable has a link"
+    },
+    {
+     "version": "2026.11.23.2321",
+     "notes": "- A page fault reads its file page without the process's memory lock"
+    },
+    {
+     "version": "2026.11.23.2257",
+     "notes": "- The desktop's icons: no file written and no screen drawn every second; the dock's picture kept while windows move"
+    },
+    {
+     "version": "2026.11.23.2224",
+     "notes": "- The pointer passing over the dock doesn't remake its kept picture; TCP selective acknowledgements"
+    },
+    {
+     "version": "2026.11.23.2133",
+     "notes": "- igc: the card's counts of missed and bad frames go to the log"
+    },
+    {
+     "version": "2026.11.23.2003",
+     "notes": "- igc: a receive ring of 1024 frames, and 512 taken a poll"
+    },
+    {
+     "version": "2026.11.23.1752",
+     "notes": "- A 2 MB TCP receive window; a socket's ring grows to hold it"
+    },
+    {
+     "version": "2026.11.23.1730",
+     "notes": "- The frame wait doesn't wait for a frame after the one that showed the picture"
+    },
+    {
+     "version": "2026.11.23.1703",
+     "notes": "- Presenting into another process's window keeps its buffer (wine 11.0-28)"
+    },
+    {
+     "version": "2026.11.22.2336",
+     "notes": "- sysinfo waits its turn for the filesystems; a cheaper see-through dock"
+    },
+    {
+     "version": "2026.11.22.2300",
+     "notes": "- A window over a redrawing one costs only where it reaches; a frame's drawing timed in finer parts"
+    },
+    {
+     "version": "2026.11.22.2216",
+     "notes": "- The pointer's damage stays apart from a window's content; the desktop copies a window's picture without the kernel lock"
+    },
+    {
+     "version": "2026.11.22.2126",
+     "notes": "- Fix a deadlock between the kernel lock and a process's memory lock"
+    },
+    {
+     "version": "2026.11.22.2043",
+     "notes": "- A picture put into a window is copied without the kernel lock"
+    },
+    {
+     "version": "2026.11.22.2011",
+     "notes": "- A see-through dock, switched on in Settings"
+    },
+    {
+     "version": "2026.11.22.1943",
+     "notes": "- A window redrawing under the dock no longer has the dock drawn again"
+    },
+    {
+     "version": "2026.11.22.1859",
+     "notes": "- The profiler says what the desktop did while it held the kernel lock"
+    }
+   ],
+   "icon": "icons/nova.png",
+   "icon_sha256": "952b65839cb87b74e5b7fdf2fc6a73427c3acbd2c7959dcb8cd7d64f5a6813d6"
   }
  ]
 }
