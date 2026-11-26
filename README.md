@@ -31,4 +31,4 @@ written by Nova's `make publish`: don't edit it by hand.
 | NVIDIA Graphics | `nvidia` | 570.144-31 | System | 59593 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | Ladybird | `ladybird` | 2026.10.18+7a8a84e0-17 | Internet | 129980 KB | A web browser with its own engine: today's web, JavaScript and all |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-32 | System | 27207 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
-| Nova | `nova` | 2026.11.25.2134 | System | 46517 KB | Nova itself: the kernel and the system every app runs on |
+| Nova | `nova` | 2026.11.26.0017 | System | 46517 KB | Nova itself: the kernel and the system every app runs on |

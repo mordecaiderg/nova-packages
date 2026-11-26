@@ -842,17 +842,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.25.2134",
+   "version": "2026.11.26.0017",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.25.2134.npk",
-   "size": 47632422,
-   "sha256": "ebd13a80544a1c26547dadc67c026e37a3989f5a34730f1a48dee4b979309843",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.26.0017.npk",
+   "size": 47632797,
+   "sha256": "95ead5d92993cb143615db2ded4e8683997705dca8d86d7c35c29cf0eadb267a",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.26.0017",
+     "notes": "- sched_yield without the kernel lock while nothing waits to run"
+    },
     {
      "version": "2026.11.25.2134",
      "notes": "- The larger reads of a program's code only for large programs"
@@ -968,10 +972,6 @@
     {
      "version": "2026.11.22.2043",
      "notes": "- A picture put into a window is copied without the kernel lock"
-    },
-    {
-     "version": "2026.11.22.2011",
-     "notes": "- A see-through dock, switched on in Settings"
     }
    ],
    "icon": "icons/nova.png",
