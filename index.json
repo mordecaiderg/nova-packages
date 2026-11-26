@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-28",
+   "version": "11.0-29",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-28.npk",
-   "size": 151858167,
-   "sha256": "ab34312a15dcfda3bdad66b494091eb470252b085f9542697869da2079e0ed26",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-29.npk",
+   "size": 151858976,
+   "sha256": "2aa7d9bda37d0f25bec89a83caa110672aa8f8e90f0ca3aac243fefbe05b6e7e",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-29",
+     "notes": "- Each piece of graphics memory a program takes is no longer handed to a device file that is closed again at once (a step for sharing memory, which Nova doesn't do): about a millisecond and a half of every other program waiting, each time. Steam made a thousand such requests a minute."
+    },
     {
      "version": "11.0-28",
      "notes": "- A program whose pictures are shown by another of its processes, with smaller views over the main one (Steam), no longer takes and gives back memory the size of its window for every frame, nor fills it a pixel at a time: less work for each frame Steam shows.\n- The kernel log gets a line for every 600 frames a program shows through the graphics card, with how long their parts took."

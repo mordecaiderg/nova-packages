@@ -13,4 +13,4 @@ written by Nova's `make publish`: don't edit it by hand.
 | NVIDIA Graphics | `nvidia` | 570.144-30 | System | 59591 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
 | NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-31 | System | 27196 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
 | Steam | `steam` | 1.0-3 | Games | 313 KB | Steam: starts the Windows Steam (installed under Wine) from the launcher |
-| Wine | `wine` | 11.0-28 | System | 148299 KB | Wine: run Windows programs (early: a command, no app yet) |
+| Wine | `wine` | 11.0-29 | System | 148300 KB | Wine: run Windows programs (early: a command, no app yet) |
