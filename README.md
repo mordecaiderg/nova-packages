@@ -16,7 +16,6 @@ written by Nova's `make publish`: don't edit it by hand.
 | Noto Fonts | `fonts-noto` | 2026.10.26-1 | System | 20084 KB | Noto fonts: Chinese, Japanese, Korean, many more scripts, symbols and color emoji |
 | Intel Bluetooth Firmware | `intel-bluetooth-firmware` | 20261108-1 | System | 6886 KB | Intel's Bluetooth firmware, for the Bluetooth built into Intel Wi-Fi cards (AX201, AX211, AX411) |
 | Kilo | `kilo` | 0.0.0+323d93b-1 | Utilities | 70 KB | kilo, a small text editor for the terminal |
-| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-15 | Internet | 129178 KB | A web browser with its own engine: today's web, JavaScript and all |
 | Lua | `lua` | 5.4.7-1 | Development | 164 KB | Lua 5.4, a small and fast scripting language |
 | GNU Make | `make` | 4.4.1-1 | Development | 161 KB | GNU make 4.4.1, which builds programs from makefiles |
 | MicroPython | `micropython` | 1.29.0-1 | Development | 844 KB | MicroPython 1.29, a lean Python 3 |
@@ -26,9 +25,10 @@ written by Nova's `make publish`: don't edit it by hand.
 | VLC | `vlc` | 3.0.24-1 | Multimedia | 9715 KB | VLC media player: plays films and music in almost any format |
 | YipYap Server | `yipyap-server` | 0.2.5+9e7e443-1 | Internet | 1271 KB | Run your own Discord-style chat server, with a web client for any browser |
 | PhotoCraft | `photocraft` | 0.23.1-5 | Graphics | 40917 KB | PhotoCraft: an image editor with layers, masks, adjustments, type, brushes, filters and PSD files |
-| NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-31 | System | 27196 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |
 | mGBA | `mgba` | 0.10.5-4 | Games | 8244 KB | mGBA: play Game Boy Advance, Game Boy and Game Boy Color games, with the keyboard or a controller |
 | Dolphin | `dolphin` | 2609b-8 | Games | 13862 KB | Dolphin: play GameCube and Wii games, with the keyboard or a controller |
 | Intel Wi-Fi | `wifi-intel` | 0.2-3 | System | 9284 KB | Wi-Fi for Intel AX200, AX201, AX210 and AX211 cards |
 | Nova | `nova` | 2026.11.25.1732 | System | 46509 KB | Nova itself: the kernel and the system every app runs on |
 | NVIDIA Graphics | `nvidia` | 570.144-31 | System | 59593 KB | NVIDIA's open GPU driver, for GeForce RTX 30 and 40 cards |
+| Ladybird | `ladybird` | 2026.10.18+7a8a84e0-17 | Internet | 129980 KB | A web browser with its own engine: today's web, JavaScript and all |
+| NVIDIA Vulkan | `nvidia-vulkan` | 26.2.6-32 | System | 27207 KB | Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes |

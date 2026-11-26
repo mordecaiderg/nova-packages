@@ -130,85 +130,6 @@
    "about": "A small text editor that runs in the Terminal: kilo FILE. Ctrl+S saves, Ctrl+Q quits, Ctrl+F finds."
   },
   {
-   "name": "ladybird",
-   "version": "2026.10.18+7a8a84e0-15",
-   "description": "A web browser with its own engine: today's web, JavaScript and all",
-   "depends": [
-    "fonts-noto"
-   ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-15.npk",
-   "size": 132278067,
-   "sha256": "0adb4253554ae6a6f0fa924abf5eeda437b0360325f94307be82b0d4272cc331",
-   "title": "Ladybird",
-   "category": "Internet",
-   "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
-   "app": "web",
-   "changes": [
-    {
-     "version": "2026.10.18+7a8a84e0-15",
-     "notes": "- Opens again: the browser's programs are marked as programs, which Nova checks now that it has users (\"permission denied\")."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-14",
-     "notes": "- WebGL pages no longer close the tab on an NVIDIA card: the part of the browser that draws them stopped while setting up the card's memory."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-13",
-     "notes": "- WebGL, for 3D on web pages (maps, games, product viewers), on GeForce RTX 30 and 40 cards: drawn by the card through ANGLE on Vulkan. Needs the NVIDIA Graphics package; without an NVIDIA card pages see no WebGL, as before."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-12",
-     "notes": "- Leaving fullscreen on a YouTube video no longer closes the page (\"Ladybird flew off-course\"): a check in the browser's engine stopped it while the page was between styles."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-11",
-     "notes": "- Real fullscreen: a video's fullscreen button (or a page asking for it) fills the whole screen, without the browser's tabs and toolbar or Nova's top bar and dock. Esc (or the video's button again) goes back. Needs the Nova update published with it."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-10",
-     "notes": "- Pages with a lot to draw (YouTube) no longer stop the browser on an NVIDIA card: the graphics driver's way of counting finished GPU work was missing a piece it needed once enough had been drawn."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-9",
-     "notes": "- Drawing on an NVIDIA card works: the browser stopped at start on one, since a Vulkan question only a loader answers went unanswered."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-8",
-     "notes": "- With an NVIDIA RTX 30 or 40 card and the NVIDIA Graphics package, pages are drawn by the graphics card (Vulkan) instead of the processor. Without one nothing changes.\n- If drawing on the card misbehaves, `touch /.config/web-no-gpu` in the Terminal keeps the browser on the processor (and `rm /.config/web-no-gpu` undoes it)."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-7",
-     "notes": "- \"Open in New Tab\" (and links that open a new tab) show the tab: before, the page loaded somewhere hidden.\n- View Source works on big pages: their source is shown as plain text, in seconds instead of minutes.\n- No crash when the browser is closed with the Downloads page open."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-6",
-     "notes": "- Downloads work: they go into the new Downloads folder, and a notification says when each is done (or why it failed).\n- A Downloads button in the toolbar (or Ctrl+J) lists them, with progress while they run and Open / Show in folder when done.\n- \"Download Linked File As...\" asks where to save in Nova's Save window; screenshots from the page menu save the same way."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-5",
-     "notes": "- Right-click menus: on a page (back, forward, reload, copy, paste, select all, view source), a link (open in a new tab, download, copy its address), an image (open, save, copy) and selected text (search the web). The address bar has cut, copy, paste and \"Paste and Go\"; a tab has new tab, reload and close."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-4",
-     "notes": "- Emoji, symbols, math and every language's letters show on web pages: the browser now looks through all of Nova's fonts for a character the page's font lacks.\n- Brings the new Noto Fonts package with it."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-3",
-     "notes": "- The address bar edits like a text field: click to place the cursor, move it with the arrow keys, select with the mouse or Shift, and copy, cut and paste."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-2",
-     "notes": "- Pages that start helper programs no longer fail."
-    },
-    {
-     "version": "2026.10.18+7a8a84e0-1",
-     "notes": "- The first Ladybird for Nova."
-    }
-   ],
-   "icon": "icons/ladybird.png",
-   "icon_sha256": "c6904267ec1569c707297e3142852db0547b3992d94b9329666ab94e2f907492"
-  },
-  {
    "name": "lua",
    "version": "5.4.7-1",
    "description": "Lua 5.4, a small and fast scripting language",
@@ -441,142 +362,6 @@
    ],
    "icon": "icons/photocraft.png",
    "icon_sha256": "efd02e0b8ea76c59fbc3a9692ddc21faae6064cc9f9492898df1facec3b5b57d"
-  },
-  {
-   "name": "nvidia-vulkan",
-   "version": "26.2.6-31",
-   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
-   "depends": [
-    "nvidia"
-   ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-31.npk",
-   "size": 27847831,
-   "sha256": "d00d2b34ff897f5330dea0012041b3a0e5831203f310c48d7bad9cfa37535dc6",
-   "title": "NVIDIA Vulkan",
-   "category": "System",
-   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
-   "changes": [
-    {
-     "version": "26.2.6-31",
-     "notes": "- Memory can be mapped at an address the program chooses (32-bit Windows programs under Wine need it: they drew nothing).\n- Vulkan functions are found by their older and newer names alike, as the usual loader does.\n- A surface's picture can be stretched to the size its window shows it at, a picture made before its window exists is shown when the window comes, and a window inside a window no longer blinks."
-    },
-    {
-     "version": "26.2.6-30",
-     "notes": "- A Vulkan surface can show its picture at a place inside its window (Wine uses this for windows inside windows)."
-    },
-    {
-     "version": "26.2.6-29",
-     "notes": "- Vulkan sees how much system memory is free (it thought a few megabytes), so programs that keep to its budget can use it."
-    },
-    {
-     "version": "26.2.6-28",
-     "notes": "- A Vulkan surface can be made before its window exists and find it later (Wine uses this)."
-    },
-    {
-     "version": "26.2.6-27",
-     "notes": "- Vulkan can show its picture in a window that belongs to another program (a helper process drawing for the program that made the window)."
-    },
-    {
-     "version": "26.2.6-26",
-     "notes": "- A program that uses Vulkan in two places at once (two instances) no longer ends when it closes the newer one first."
-    },
-    {
-     "version": "26.2.6-25",
-     "notes": "- Fixes Vulkan and OpenGL programs freezing now and then with their picture stopped (the graphics card could be told that work was finished too soon)."
-    },
-    {
-     "version": "26.2.6-24",
-     "notes": "- Vulkan and OpenGL windows (vkcube, glcube) show a frame each time the monitor refreshes, in step with the desktop, instead of every 15 ms: no more dropped frames. Needs the Nova update published with it."
-    },
-    {
-     "version": "26.2.6-23",
-     "notes": "- The Store shows what each version changed (this list)."
-    },
-    {
-     "version": "26.2.6-22",
-     "notes": "- OpenGL windows use colors a window can show (8 bits a channel), so glcube's cube appears instead of a blank window."
-    },
-    {
-     "version": "26.2.6-21",
-     "notes": "- Vulkan windows take images in RGBA order too, as OpenGL (Zink) asks for them."
-    },
-    {
-     "version": "26.2.6-20",
-     "notes": "- Programs that use the card from several threads at once (OpenGL in a window does) no longer get in each other's way."
-    },
-    {
-     "version": "26.2.6-19",
-     "notes": "- OpenGL in windows: glcube spins a cube in a window you can resize (F11: fullscreen; glcube -i: as fast as it goes).\n- Vulkan windows follow their window's size when it changes. Needs the Nova update published with it."
-    },
-    {
-     "version": "26.2.6-18",
-     "notes": "- zinktest finds its OpenGL settings on the card (it found none)."
-    },
-    {
-     "version": "26.2.6-17",
-     "notes": "- OpenGL (Zink) starts on the card: it stopped with \"out of host memory\"."
-    },
-    {
-     "version": "26.2.6-16",
-     "notes": "- OpenGL for ported programs, through Mesa's Zink on Vulkan: zinktest draws a triangle with OpenGL 4 and checks it."
-    },
-    {
-     "version": "26.2.6-15",
-     "notes": "- gltest sets up the card's memory as the browser does, so the browser's WebGL starts instead of crashing."
-    },
-    {
-     "version": "26.2.6-14",
-     "notes": "- OpenGL ES through Google's ANGLE, as the browser's WebGL uses it: gltest draws a triangle and checks it."
-    },
-    {
-     "version": "26.2.6-13",
-     "notes": "- vkcube and other Vulkan windows show a frame each time the desktop draws one, instead of hundreds nobody sees.\n- vktest no longer ends with two error lines from the driver."
-    },
-    {
-     "version": "26.2.6-12",
-     "notes": "- Vulkan programs that wait for the card with timeline semaphores (the browser's drawing) work."
-    },
-    {
-     "version": "26.2.6-11",
-     "notes": "- Programs that ask Vulkan for layers (the browser does) get an answer."
-    },
-    {
-     "version": "26.2.6-10",
-     "notes": "- vkcube's frame rate lines appear as they're printed."
-    },
-    {
-     "version": "26.2.6-9",
-     "notes": "- vkcube draws the cube's front faces (it showed the inside)."
-    },
-    {
-     "version": "26.2.6-8",
-     "notes": "- Vulkan for programs, with windows: vkcube spins a cube in a window and prints its frame rate."
-    },
-    {
-     "version": "26.2.6-7",
-     "notes": "- vktest's shaders compile for the card."
-    },
-    {
-     "version": "26.2.6-6",
-     "notes": "- When vktest fails, it shows what NVIDIA's driver said."
-    },
-    {
-     "version": "26.2.6-5",
-     "notes": "- Vulkan can use the computer's memory for the card, as NVIDIA's driver requires."
-    },
-    {
-     "version": "26.2.6-4",
-     "notes": "- The card is set up the way Mesa expects."
-    },
-    {
-     "version": "26.2.6-3",
-     "notes": "- Vulkan's functions are all in place in a program (some were missing)."
-    },
-    {
-     "version": "26.2.6-2",
-     "notes": "- vktest says where Vulkan stopped when it fails."
-    }
-   ]
   },
   {
    "name": "mgba",
@@ -966,6 +751,229 @@
     {
      "version": "570.144-2",
      "notes": "- The card's interrupts are connected (MSI): the driver's check that they arrive stopped it before. Needs the Nova update published with it."
+    }
+   ]
+  },
+  {
+   "name": "ladybird",
+   "version": "2026.10.18+7a8a84e0-17",
+   "description": "A web browser with its own engine: today's web, JavaScript and all",
+   "depends": [
+    "fonts-noto"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/ladybird-2026.10.18_7a8a84e0-17.npk",
+   "size": 133099125,
+   "sha256": "93384f713f5591acfaf196963ea0403a233f59499805d5b979f02afa54f62b66",
+   "title": "Ladybird",
+   "category": "Internet",
+   "about": "Ladybird is an independent web browser, written from scratch: its own HTML, CSS and JavaScript engines, so modern sites work, YouTube included.\nIt opens from Web in the dock, with tabs, an address bar, copy and paste. Each tab may use up to half the computer's memory; a page that runs away is closed alone.",
+   "app": "web",
+   "changes": [
+    {
+     "version": "2026.10.18+7a8a84e0-17",
+     "notes": "- Smoother while pages draw: each piece of graphics memory a program takes is no longer handed to a device file that is closed again at once (a step for sharing memory, which Nova doesn't do): about a millisecond and a half of every other program waiting, each time."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-16",
+     "notes": "- The window's title is the page's alone: the browser's name is in Nova's top bar."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-15",
+     "notes": "- Opens again: the browser's programs are marked as programs, which Nova checks now that it has users (\"permission denied\")."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-14",
+     "notes": "- WebGL pages no longer close the tab on an NVIDIA card: the part of the browser that draws them stopped while setting up the card's memory."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-13",
+     "notes": "- WebGL, for 3D on web pages (maps, games, product viewers), on GeForce RTX 30 and 40 cards: drawn by the card through ANGLE on Vulkan. Needs the NVIDIA Graphics package; without an NVIDIA card pages see no WebGL, as before."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-12",
+     "notes": "- Leaving fullscreen on a YouTube video no longer closes the page (\"Ladybird flew off-course\"): a check in the browser's engine stopped it while the page was between styles."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-11",
+     "notes": "- Real fullscreen: a video's fullscreen button (or a page asking for it) fills the whole screen, without the browser's tabs and toolbar or Nova's top bar and dock. Esc (or the video's button again) goes back. Needs the Nova update published with it."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-10",
+     "notes": "- Pages with a lot to draw (YouTube) no longer stop the browser on an NVIDIA card: the graphics driver's way of counting finished GPU work was missing a piece it needed once enough had been drawn."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-9",
+     "notes": "- Drawing on an NVIDIA card works: the browser stopped at start on one, since a Vulkan question only a loader answers went unanswered."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-8",
+     "notes": "- With an NVIDIA RTX 30 or 40 card and the NVIDIA Graphics package, pages are drawn by the graphics card (Vulkan) instead of the processor. Without one nothing changes.\n- If drawing on the card misbehaves, `touch /.config/web-no-gpu` in the Terminal keeps the browser on the processor (and `rm /.config/web-no-gpu` undoes it)."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-7",
+     "notes": "- \"Open in New Tab\" (and links that open a new tab) show the tab: before, the page loaded somewhere hidden.\n- View Source works on big pages: their source is shown as plain text, in seconds instead of minutes.\n- No crash when the browser is closed with the Downloads page open."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-6",
+     "notes": "- Downloads work: they go into the new Downloads folder, and a notification says when each is done (or why it failed).\n- A Downloads button in the toolbar (or Ctrl+J) lists them, with progress while they run and Open / Show in folder when done.\n- \"Download Linked File As...\" asks where to save in Nova's Save window; screenshots from the page menu save the same way."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-5",
+     "notes": "- Right-click menus: on a page (back, forward, reload, copy, paste, select all, view source), a link (open in a new tab, download, copy its address), an image (open, save, copy) and selected text (search the web). The address bar has cut, copy, paste and \"Paste and Go\"; a tab has new tab, reload and close."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-4",
+     "notes": "- Emoji, symbols, math and every language's letters show on web pages: the browser now looks through all of Nova's fonts for a character the page's font lacks.\n- Brings the new Noto Fonts package with it."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-3",
+     "notes": "- The address bar edits like a text field: click to place the cursor, move it with the arrow keys, select with the mouse or Shift, and copy, cut and paste."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-2",
+     "notes": "- Pages that start helper programs no longer fail."
+    },
+    {
+     "version": "2026.10.18+7a8a84e0-1",
+     "notes": "- The first Ladybird for Nova."
+    }
+   ],
+   "icon": "icons/ladybird.png",
+   "icon_sha256": "c6904267ec1569c707297e3142852db0547b3992d94b9329666ab94e2f907492"
+  },
+  {
+   "name": "nvidia-vulkan",
+   "version": "26.2.6-32",
+   "description": "Vulkan and OpenGL for NVIDIA cards (Mesa's NVK and Zink, Google's ANGLE): vktest, gltest and zinktest check the card, vkcube and glcube spin cubes",
+   "depends": [
+    "nvidia"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nvidia-vulkan-26.2.6-32.npk",
+   "size": 27859569,
+   "sha256": "7496ef3ea562bc7646a386b77572efadb8de1d576ce2666a7a8884badce55784",
+   "title": "NVIDIA Vulkan",
+   "category": "System",
+   "about": "Vulkan, the 3D and compute interface, for GeForce RTX 30 and 40 cards: Mesa's open NVK driver, on NVIDIA's driver (the NVIDIA Graphics package).\nTwo programs to try in the Terminal: vktest lists the card, runs a small program on it, draws a triangle and saves it as vktest.png in your home folder (its last line says VKTEST PASS or what failed); vkcube opens a window with a spinning cube the card draws, and prints its frame rate; gltest draws a triangle with OpenGL ES through ANGLE, as the browser's WebGL does, and saves it as gltest.png (GLTEST PASS or what failed); zinktest draws one with OpenGL 4 through Mesa's Zink, as ported programs do, and saves it as zinktest.png (ZINKTEST PASS or what failed); glcube spins a cube with OpenGL in a window you can resize (F11: fullscreen), and prints its frame rate.",
+   "changes": [
+    {
+     "version": "26.2.6-32",
+     "notes": "- Each piece of graphics memory a program takes is no longer handed to a device file that is closed again at once (a step for sharing memory, which Nova doesn't do): about a millisecond and a half of every other program waiting, each time."
+    },
+    {
+     "version": "26.2.6-31",
+     "notes": "- Memory can be mapped at an address the program chooses (32-bit Windows programs under Wine need it: they drew nothing).\n- Vulkan functions are found by their older and newer names alike, as the usual loader does.\n- A surface's picture can be stretched to the size its window shows it at, a picture made before its window exists is shown when the window comes, and a window inside a window no longer blinks."
+    },
+    {
+     "version": "26.2.6-30",
+     "notes": "- A Vulkan surface can show its picture at a place inside its window (Wine uses this for windows inside windows)."
+    },
+    {
+     "version": "26.2.6-29",
+     "notes": "- Vulkan sees how much system memory is free (it thought a few megabytes), so programs that keep to its budget can use it."
+    },
+    {
+     "version": "26.2.6-28",
+     "notes": "- A Vulkan surface can be made before its window exists and find it later (Wine uses this)."
+    },
+    {
+     "version": "26.2.6-27",
+     "notes": "- Vulkan can show its picture in a window that belongs to another program (a helper process drawing for the program that made the window)."
+    },
+    {
+     "version": "26.2.6-26",
+     "notes": "- A program that uses Vulkan in two places at once (two instances) no longer ends when it closes the newer one first."
+    },
+    {
+     "version": "26.2.6-25",
+     "notes": "- Fixes Vulkan and OpenGL programs freezing now and then with their picture stopped (the graphics card could be told that work was finished too soon)."
+    },
+    {
+     "version": "26.2.6-24",
+     "notes": "- Vulkan and OpenGL windows (vkcube, glcube) show a frame each time the monitor refreshes, in step with the desktop, instead of every 15 ms: no more dropped frames. Needs the Nova update published with it."
+    },
+    {
+     "version": "26.2.6-23",
+     "notes": "- The Store shows what each version changed (this list)."
+    },
+    {
+     "version": "26.2.6-22",
+     "notes": "- OpenGL windows use colors a window can show (8 bits a channel), so glcube's cube appears instead of a blank window."
+    },
+    {
+     "version": "26.2.6-21",
+     "notes": "- Vulkan windows take images in RGBA order too, as OpenGL (Zink) asks for them."
+    },
+    {
+     "version": "26.2.6-20",
+     "notes": "- Programs that use the card from several threads at once (OpenGL in a window does) no longer get in each other's way."
+    },
+    {
+     "version": "26.2.6-19",
+     "notes": "- OpenGL in windows: glcube spins a cube in a window you can resize (F11: fullscreen; glcube -i: as fast as it goes).\n- Vulkan windows follow their window's size when it changes. Needs the Nova update published with it."
+    },
+    {
+     "version": "26.2.6-18",
+     "notes": "- zinktest finds its OpenGL settings on the card (it found none)."
+    },
+    {
+     "version": "26.2.6-17",
+     "notes": "- OpenGL (Zink) starts on the card: it stopped with \"out of host memory\"."
+    },
+    {
+     "version": "26.2.6-16",
+     "notes": "- OpenGL for ported programs, through Mesa's Zink on Vulkan: zinktest draws a triangle with OpenGL 4 and checks it."
+    },
+    {
+     "version": "26.2.6-15",
+     "notes": "- gltest sets up the card's memory as the browser does, so the browser's WebGL starts instead of crashing."
+    },
+    {
+     "version": "26.2.6-14",
+     "notes": "- OpenGL ES through Google's ANGLE, as the browser's WebGL uses it: gltest draws a triangle and checks it."
+    },
+    {
+     "version": "26.2.6-13",
+     "notes": "- vkcube and other Vulkan windows show a frame each time the desktop draws one, instead of hundreds nobody sees.\n- vktest no longer ends with two error lines from the driver."
+    },
+    {
+     "version": "26.2.6-12",
+     "notes": "- Vulkan programs that wait for the card with timeline semaphores (the browser's drawing) work."
+    },
+    {
+     "version": "26.2.6-11",
+     "notes": "- Programs that ask Vulkan for layers (the browser does) get an answer."
+    },
+    {
+     "version": "26.2.6-10",
+     "notes": "- vkcube's frame rate lines appear as they're printed."
+    },
+    {
+     "version": "26.2.6-9",
+     "notes": "- vkcube draws the cube's front faces (it showed the inside)."
+    },
+    {
+     "version": "26.2.6-8",
+     "notes": "- Vulkan for programs, with windows: vkcube spins a cube in a window and prints its frame rate."
+    },
+    {
+     "version": "26.2.6-7",
+     "notes": "- vktest's shaders compile for the card."
+    },
+    {
+     "version": "26.2.6-6",
+     "notes": "- When vktest fails, it shows what NVIDIA's driver said."
+    },
+    {
+     "version": "26.2.6-5",
+     "notes": "- Vulkan can use the computer's memory for the card, as NVIDIA's driver requires."
+    },
+    {
+     "version": "26.2.6-4",
+     "notes": "- The card is set up the way Mesa expects."
+    },
+    {
+     "version": "26.2.6-3",
+     "notes": "- Vulkan's functions are all in place in a program (some were missing)."
     }
    ]
   }
