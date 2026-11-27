@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-32",
+   "version": "11.0-33",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-32.npk",
-   "size": 151851328,
-   "sha256": "82cad60356c5563a634044ebd79b5015f9c9587c1c634aa2117144bbafc8309f",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-33.npk",
+   "size": 151851911,
+   "sha256": "40695581fe6ca30f49e0facd3bdbfd5879b7a23f7bc204c9ef6c62f94a7dfbe0",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-33",
+     "notes": "- Notifications that slide in (Steam's toasts) are moved, not closed and made again at every step: they flickered, and were empty until the program drew into them again. Needs Nova 2026.11.27 or later; on an older Nova they are made again as before. Seen in the test machine with a test notification; not yet with Steam's.\n- `novamode toast` shows a notification sliding up into the corner."
+    },
     {
      "version": "11.0-32",
      "notes": "- Steam's Settings window opens on a low screen. It wants to be 720 high; on a screen that is 720 high (1080 lines at 150%) Nova made it lower, Steam put it back, and the window was made again without end: over a thousand windows, the pointer stalling, none to be seen. A window whose program insists on a size Nova had to cut down is now left as it is, showing as much as fits.\n- Windows programs are told how much room a window can have on Nova (the work area: the screen less the top bar, a title bar and a margin), so that they fit their windows to it.\n- The kernel log says when the game controllers' layer starts, offers a controller to Windows programs, and when one goes.\n- `novamode tall` tries a window as high as the screen that refuses to be smaller."
@@ -565,10 +569,6 @@
     {
      "version": "11.0-4",
      "notes": "- `wine novagpu cube`: a turning cube drawn with shaders, to try real 3D through DirectX 11."
-    },
-    {
-     "version": "11.0-3",
-     "notes": "- Adds `novagpu`, a small Windows program that tries the graphics card: `wine novagpu vulkan`, `wine novagpu d3d11`, `wine novagpu window`."
     }
    ]
   }
