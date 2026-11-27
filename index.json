@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-29",
+   "version": "11.0-30",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-29.npk",
-   "size": 151858976,
-   "sha256": "2aa7d9bda37d0f25bec89a83caa110672aa8f8e90f0ca3aac243fefbe05b6e7e",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-30.npk",
+   "size": 151861422,
+   "sha256": "37da08fd7d113abdfd42cd91f4fd4e3bfe1a254fb1936bc89e1b20f90e434123",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-30",
+     "notes": "- Steam's library shows Play again by itself after a game is closed. Steam hides its pages while a fullscreen game covers the screen and looks again only when its window is made the active one; it was made active a moment too early, while the game's window still existed for Windows, so it stayed hidden (showing Stop) until clicked. It is now told once more after the game's window has gone.\n- `novamode front` says which window Windows has in front, `novamode blink` shows a small window for a second."
+    },
     {
      "version": "11.0-29",
      "notes": "- Each piece of graphics memory a program takes is no longer handed to a device file that is closed again at once (a step for sharing memory, which Nova doesn't do): about a millisecond and a half of every other program waiting, each time. Steam made a thousand such requests a minute."
