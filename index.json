@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-35",
+   "version": "11.0-36",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-35.npk",
-   "size": 151843347,
-   "sha256": "a679a8f023694314b78103796ce0af0fea2f785026fa00cc237ffe9967490c57",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-36.npk",
+   "size": 151843090,
+   "sha256": "11a9ae978c6522df3d9c1e638279db69b3e0fbbadce785734e299835a02fc3e0",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-36",
+     "notes": "- A notification that is drawn before its window is there shows whole. Steam draws a toast once, 283 by 70, often a moment before Nova has its window; the picture was then cut to a 64 by 64 stand-in size, and when the window came only that corner, the icon, was shown, the rest seconds later when the toast was drawn again to fade. The picture now keeps the size the program asked for. Not testable without a graphics card: seen in the log on the owner's PC, the fix not yet seen there."
+    },
     {
      "version": "11.0-35",
      "notes": "- A thread is no longer suspended or ended while it is inside Nova's memory allocator or writing to a stream. Stopped there it kept a lock every other thread of the program needs, the one that would resume it too, and the whole program stood still. Steam's graphics process was found so on the owner's PC (its window black, or stuck at its loading icon): its main thread suspended by Steam's own browser, which samples its threads, nine others waiting for the lock. This may be the black window Steam showed now and then at its start; that is not shown.\n- `novamode suspend` suspends a busy thread 3000 times with work that needs memory before each resume."
@@ -565,10 +569,6 @@
     {
      "version": "11.0-7",
      "notes": "- Steam gets further: three faults that stopped its helpers are fixed (a program using the graphics card twice over ended, Wine's own server could end when a program closed, and a program that pauses one of its own threads waited for ever). Needs Nova 2026.11.11.2119 or newer.\n- Folders are read much faster, which Windows programs do all the time."
-    },
-    {
-     "version": "11.0-6",
-     "notes": "- Windows programs trust the same web certificates as the rest of Nova. Without them Steam said \"Steam needs to be online to update\"; with them it downloads its update."
     }
    ]
   }
