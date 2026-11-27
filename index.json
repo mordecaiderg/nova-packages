@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-30",
+   "version": "11.0-31",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-30.npk",
-   "size": 151861422,
-   "sha256": "37da08fd7d113abdfd42cd91f4fd4e3bfe1a254fb1936bc89e1b20f90e434123",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-31.npk",
+   "size": 151855750,
+   "sha256": "0b5a90b9e8341685e944758d8216bbb368424e4d2c589151832002215eb993b7",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-31",
+     "notes": "- Game controllers reach Windows programs. Each of Nova's controllers (up to four) is offered as an Xbox 360 controller, the kind games and Steam know best, whatever the pad really is: buttons, sticks, triggers and the D-pad, and rumble back to the pad. Plugging one in or out while a game runs is noticed within a second. Seen with Nova's test pad and a test program; not yet with a real pad in a real game.\n- `novapad` prints what Windows programs see of the controllers (`wine novapad 30 rumble`)."
+    },
     {
      "version": "11.0-30",
      "notes": "- Steam's library shows Play again by itself after a game is closed. Steam hides its pages while a fullscreen game covers the screen and looks again only when its window is made the active one; it was made active a moment too early, while the game's window still existed for Windows, so it stayed hidden (showing Stop) until clicked. It is now told once more after the game's window has gone.\n- `novamode front` says which window Windows has in front, `novamode blink` shows a small window for a second."
@@ -565,10 +569,6 @@
     {
      "version": "11.0-2",
      "notes": "- Fixes a program freezing when it lists the computer's drives (Notepad's Save As, then My Computer), and other calls whose yes-or-no arguments could be misread."
-    },
-    {
-     "version": "11.0-1",
-     "notes": "- The first package: Wine 11.0 as a command (`wine notepad`), 64-bit and 32-bit Windows programs in windows of their own, with sound.\n- `wine --dxvk` puts DXVK and VKD3D-Proton in the prefix for DirectX through Vulkan; not yet seen working."
     }
    ]
   }
