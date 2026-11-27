@@ -842,17 +842,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.27.0216",
+   "version": "2026.11.27.0301",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.27.0216.npk",
-   "size": 47636098,
-   "sha256": "975959e9c3f310fb371cab83e0eb6cd19d20dde6a28961ee3ef34acd659ca4a8",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.27.0301.npk",
+   "size": 47637943,
+   "sha256": "288dbd1edc4aa32cb0086c2919fe1a22eab5d0c48a01a9da909e6e47bb32786a",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.27.0301",
+     "notes": "- SYS_WIN_MOVE: a popup moved by its program"
+    },
     {
      "version": "2026.11.27.0216",
      "notes": "- A process's or thread's number rests five seconds before it is reused"
@@ -968,10 +972,6 @@
     {
      "version": "2026.11.22.2300",
      "notes": "- A window over a redrawing one costs only where it reaches; a frame's drawing timed in finer parts"
-    },
-    {
-     "version": "2026.11.22.2216",
-     "notes": "- The pointer's damage stays apart from a window's content; the desktop copies a window's picture without the kernel lock"
     }
    ],
    "icon": "icons/nova.png",
