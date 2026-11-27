@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-36",
+   "version": "11.0-37",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-36.npk",
-   "size": 151843090,
-   "sha256": "11a9ae978c6522df3d9c1e638279db69b3e0fbbadce785734e299835a02fc3e0",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-37.npk",
+   "size": 151844505,
+   "sha256": "d9805b00dfcedca810f46c947a52ef95190ca5d83593cb54d64750c12f2d34f3",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-37",
+     "notes": "- A picture drawn before its window was there is shown as soon as the window is. It waited for the program's next picture of anything, and a program with nothing to draw (Steam, idle) kept a notification empty for a moment. The thread that reads a program's window events now looks every 5 ms while a picture is kept. Not testable without a graphics card; not yet seen on the owner's PC."
+    },
     {
      "version": "11.0-36",
      "notes": "- A notification that is drawn before its window is there shows whole. Steam draws a toast once, 283 by 70, often a moment before Nova has its window; the picture was then cut to a 64 by 64 stand-in size, and when the window came only that corner, the icon, was shown, the rest seconds later when the toast was drawn again to fade. The picture now keeps the size the program asked for. Not testable without a graphics card: seen in the log on the owner's PC, the fix not yet seen there."
@@ -565,10 +569,6 @@
     {
      "version": "11.0-8",
      "notes": "- Windows programs can read and change another program's memory, and their own through the same call, as Steam's web helper does when it starts. Needs the Nova update published with it."
-    },
-    {
-     "version": "11.0-7",
-     "notes": "- Steam gets further: three faults that stopped its helpers are fixed (a program using the graphics card twice over ended, Wine's own server could end when a program closed, and a program that pauses one of its own threads waited for ever). Needs Nova 2026.11.11.2119 or newer.\n- Folders are read much faster, which Windows programs do all the time."
     }
    ]
   }
