@@ -408,17 +408,56 @@
    ]
   },
   {
+   "name": "steam",
+   "version": "1.0-4",
+   "description": "Steam: starts the Windows Steam (installed under Wine) from the launcher",
+   "depends": [
+    "wine"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/steam-1.0-4.npk",
+   "size": 328888,
+   "sha256": "52a0b92213120d253e71e5ce71adc6fb486c4f4a647d9d1a8618070be6c34c92",
+   "title": "Steam",
+   "category": "Games",
+   "about": "A tile for Steam in the launcher and the dock, so that it starts with a click and not from the Terminal. It starts the Windows version of Steam under Wine. Steam itself is not in this package: download SteamSetup.exe from store.steampowered.com and run it once with wine in the Terminal (wine ~/Downloads/SteamSetup.exe), and run wine --dxvk once so games use the graphics card. Steam's window takes up to a minute to appear; closed, it hides to Steam's icon in the top bar, whose menu has Exit Steam. Games need the NVIDIA driver and Vulkan packages. Early: some games work, many do not yet.",
+   "app": "steam",
+   "changes": [
+    {
+     "version": "1.0-4",
+     "notes": "- Closing Steam's window hides it to its icon in the top bar, as on Windows: a click on the icon brings the window back, and Exit Steam in the icon's menu ends Steam. Needs Nova 2026.11.27.2027 and Wine 11.0-38."
+    },
+    {
+     "version": "1.0-3",
+     "notes": "- Closing Steam's window ends Steam, and Wine with it. It used to go on running where nothing showed it: on Windows it hides in the system tray, which Nova does not have yet. Needs Wine 11.0-26."
+    },
+    {
+     "version": "1.0-2",
+     "notes": "- Starting Steam again right after closing it works: the start used to fail twice and say so, because the Steam just closed was still going away and took the new one with it. The tile now waits for that to finish and tries again."
+    },
+    {
+     "version": "1.0-1",
+     "notes": "- New: a Steam tile in the launcher. It starts the Windows Steam installed under Wine, and starts it again by itself when the first start ends at once."
+    }
+   ],
+   "icon": "icons/steam.png",
+   "icon_sha256": "264f1e31823470b553c2c538ff9b3065f4bb66e5d335fbb26f37afad23f53e6e"
+  },
+  {
    "name": "wine",
-   "version": "11.0-38",
+   "version": "11.0-39",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-38.npk",
-   "size": 151837986,
-   "sha256": "45ec5780e864ee53801a5cc0285d2d4b953c8b5a4ba16e97a91740de8df77602",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-39.npk",
+   "size": 151838128,
+   "sha256": "0a7ef655513fbc5e293310edd8843f3d9f4ecc0f4d228810da3b2679c4598890",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-39",
+     "notes": "- A menu opened from a tray icon closes when you click the desktop, the top bar or another program, as on Windows: Steam's (which Steam draws itself) stayed open. The click makes no Windows program the active one and takes the menu's hold on the mouse away. Needs Nova 2026.11.27 (evening) or later."
+    },
     {
      "version": "11.0-38",
      "notes": "- Windows programs' tray icons go in Nova's tray, at the top bar's right (Nova 2026.11.27 or later): their picture and tip; a click, double click or right-click goes to the program as on Windows. Steam's icon brings its window back on a click and shows its menu on a right-click.\n- A program's popup menu or notification with no window of Nova's under it (Steam's menu from its tray icon, its window closed) is shown on the screen by itself; a click elsewhere closes the menu.\n- `novamode tray` puts an icon in the tray and shows a menu on its right-click.\n- Seen in the test machine with `novamode tray`; not yet with Steam on the owner's PC."
@@ -534,47 +573,8 @@
     {
      "version": "11.0-10",
      "notes": "- A program whose picture is drawn by a helper process (Chromium does this, so Steam's windows) shows it: the helper can draw in the program's window. Needs the Nova update published with it."
-    },
-    {
-     "version": "11.0-9",
-     "notes": "- Windows programs can ask about the network: the computer's network cards and addresses, and which program owns a connection. Steam asks that before it lets its own window talk to it."
     }
    ]
-  },
-  {
-   "name": "steam",
-   "version": "1.0-4",
-   "description": "Steam: starts the Windows Steam (installed under Wine) from the launcher",
-   "depends": [
-    "wine"
-   ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/steam-1.0-4.npk",
-   "size": 328888,
-   "sha256": "52a0b92213120d253e71e5ce71adc6fb486c4f4a647d9d1a8618070be6c34c92",
-   "title": "Steam",
-   "category": "Games",
-   "about": "A tile for Steam in the launcher and the dock, so that it starts with a click and not from the Terminal. It starts the Windows version of Steam under Wine. Steam itself is not in this package: download SteamSetup.exe from store.steampowered.com and run it once with wine in the Terminal (wine ~/Downloads/SteamSetup.exe), and run wine --dxvk once so games use the graphics card. Steam's window takes up to a minute to appear; closed, it hides to Steam's icon in the top bar, whose menu has Exit Steam. Games need the NVIDIA driver and Vulkan packages. Early: some games work, many do not yet.",
-   "app": "steam",
-   "changes": [
-    {
-     "version": "1.0-4",
-     "notes": "- Closing Steam's window hides it to its icon in the top bar, as on Windows: a click on the icon brings the window back, and Exit Steam in the icon's menu ends Steam. Needs Nova 2026.11.27.2027 and Wine 11.0-38."
-    },
-    {
-     "version": "1.0-3",
-     "notes": "- Closing Steam's window ends Steam, and Wine with it. It used to go on running where nothing showed it: on Windows it hides in the system tray, which Nova does not have yet. Needs Wine 11.0-26."
-    },
-    {
-     "version": "1.0-2",
-     "notes": "- Starting Steam again right after closing it works: the start used to fail twice and say so, because the Steam just closed was still going away and took the new one with it. The tile now waits for that to finish and tries again."
-    },
-    {
-     "version": "1.0-1",
-     "notes": "- New: a Steam tile in the launcher. It starts the Windows Steam installed under Wine, and starts it again by itself when the first start ends at once."
-    }
-   ],
-   "icon": "icons/steam.png",
-   "icon_sha256": "264f1e31823470b553c2c538ff9b3065f4bb66e5d335fbb26f37afad23f53e6e"
   }
  ]
 }
