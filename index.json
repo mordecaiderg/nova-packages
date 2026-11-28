@@ -842,17 +842,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.28.0000",
+   "version": "2026.11.28.0140",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.28.0000.npk",
-   "size": 47684678,
-   "sha256": "e9a04dd4432eead24eb53293bf2417ec88fa67c4434ba28584d0d54e4061623c",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.28.0140.npk",
+   "size": 47644418,
+   "sha256": "835b86455d1f41ce0feabb34824e62a9406d1fc1bc3cd65a3c960bd3d7d97abb",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.28.0140",
+     "notes": "- L5: file calls answer TLB flushes; making and removing files without the lock"
+    },
     {
      "version": "2026.11.28.0000",
      "notes": "- L5: reads, writes and lookups run their filesystem call without the kernel lock"
@@ -968,10 +972,6 @@
     {
      "version": "2026.11.23.2257",
      "notes": "- The desktop's icons: no file written and no screen drawn every second; the dock's picture kept while windows move"
-    },
-    {
-     "version": "2026.11.23.2224",
-     "notes": "- The pointer passing over the dock doesn't remake its kept picture; TCP selective acknowledgements"
     }
    ],
    "icon": "icons/nova.png",
