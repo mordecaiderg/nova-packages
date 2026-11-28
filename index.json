@@ -440,16 +440,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-37",
+   "version": "11.0-38",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-37.npk",
-   "size": 151844505,
-   "sha256": "d9805b00dfcedca810f46c947a52ef95190ca5d83593cb54d64750c12f2d34f3",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-38.npk",
+   "size": 151837986,
+   "sha256": "45ec5780e864ee53801a5cc0285d2d4b953c8b5a4ba16e97a91740de8df77602",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-38",
+     "notes": "- Windows programs' tray icons go in Nova's tray, at the top bar's right (Nova 2026.11.27 or later): their picture and tip; a click, double click or right-click goes to the program as on Windows. Steam's icon brings its window back on a click and shows its menu on a right-click.\n- A program's popup menu or notification with no window of Nova's under it (Steam's menu from its tray icon, its window closed) is shown on the screen by itself; a click elsewhere closes the menu.\n- `novamode tray` puts an icon in the tray and shows a menu on its right-click.\n- Seen in the test machine with `novamode tray`; not yet with Steam on the owner's PC."
+    },
     {
      "version": "11.0-37",
      "notes": "- A picture drawn before its window was there is shown as soon as the window is. It waited for the program's next picture of anything, and a program with nothing to draw (Steam, idle) kept a notification empty for a moment. The thread that reads a program's window events now looks every 5 ms while a picture is kept. Not testable without a graphics card; not yet seen on the owner's PC."
@@ -565,10 +569,6 @@
     {
      "version": "11.0-9",
      "notes": "- Windows programs can ask about the network: the computer's network cards and addresses, and which program owns a connection. Steam asks that before it lets its own window talk to it."
-    },
-    {
-     "version": "11.0-8",
-     "notes": "- Windows programs can read and change another program's memory, and their own through the same call, as Steam's web helper does when it starts. Needs the Nova update published with it."
     }
    ]
   }
