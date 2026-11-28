@@ -842,17 +842,29 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.27.1531",
+   "version": "2026.11.27.2027",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.27.1531.npk",
-   "size": 47655849,
-   "sha256": "070e7e3934aaa5efb5cc3f03c3287044ec2e8f6e7ac4aed4320cb0b8ff134099",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.27.2027.npk",
+   "size": 47675984,
+   "sha256": "941fd8b7f6c3cca842c8a880bef21be07589a938c304d2c61fc47b18e412bdd7",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.27.2027",
+     "notes": "- The tray: programs' icons in the top bar (roadmap 9.27)"
+    },
+    {
+     "version": "2026.11.27.1818",
+     "notes": "- Wine 11.0-37: a kept picture is shown as soon as its window is there"
+    },
+    {
+     "version": "2026.11.27.1657",
+     "notes": "- Wine 11.0-36: a swapchain made before its window keeps the size asked for"
+    },
     {
      "version": "2026.11.27.1531",
      "notes": "- libc: a signal handler can put its signal off while the thread holds libc's lock"
@@ -960,18 +972,6 @@
     {
      "version": "2026.11.23.2003",
      "notes": "- igc: a receive ring of 1024 frames, and 512 taken a poll"
-    },
-    {
-     "version": "2026.11.23.1752",
-     "notes": "- A 2 MB TCP receive window; a socket's ring grows to hold it"
-    },
-    {
-     "version": "2026.11.23.1730",
-     "notes": "- The frame wait doesn't wait for a frame after the one that showed the picture"
-    },
-    {
-     "version": "2026.11.23.1703",
-     "notes": "- Presenting into another process's window keeps its buffer (wine 11.0-28)"
     }
    ],
    "icon": "icons/nova.png",
