@@ -444,16 +444,20 @@
   },
   {
    "name": "wine",
-   "version": "11.0-39",
+   "version": "11.0-40",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-39.npk",
-   "size": 151838128,
-   "sha256": "0a7ef655513fbc5e293310edd8843f3d9f4ecc0f4d228810da3b2679c4598890",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/wine-11.0-40.npk",
+   "size": 151838300,
+   "sha256": "be70726f68065323011b9e30c8925763893d7a124e40aa3fccbc427fcab7b6cf",
    "title": "Wine",
    "category": "System",
    "about": "Runs programs made for Windows, 64-bit and 32-bit, in windows of their own with sound: type wine and the program's name in the Terminal (wine notepad, wine winecfg, or a .exe in your home folder).\nThe first start sets up a Windows folder in your home folder (.wine), which takes a few minutes.\nDirectX through the graphics card (wine --dxvk) needs the NVIDIA driver and Vulkan packages.\nThis is an early version: games and Steam are not expected to work yet. It needs Nova installed on a disk, not started from a USB stick.",
    "changes": [
+    {
+     "version": "11.0-40",
+     "notes": "- A tray icon's menu closes on a click elsewhere every time, not only the first: a click on a tray icon now makes its program the active one, as Windows lets it, so the click away has a program to deactivate. Steam's menu closed once and then stayed open."
+    },
     {
      "version": "11.0-39",
      "notes": "- A menu opened from a tray icon closes when you click the desktop, the top bar or another program, as on Windows: Steam's (which Steam draws itself) stayed open. The click makes no Windows program the active one and takes the menu's hold on the mouse away. Needs Nova 2026.11.27 (evening) or later."
@@ -569,10 +573,6 @@
     {
      "version": "11.0-11",
      "notes": "- A program that prepares its picture before its window is shown (Chromium, so Steam's windows) shows it once the window is there, and keeps showing it when the window is resized."
-    },
-    {
-     "version": "11.0-10",
-     "notes": "- A program whose picture is drawn by a helper process (Chromium does this, so Steam's windows) shows it: the helper can draw in the program's window. Needs the Nova update published with it."
     }
    ]
   }
