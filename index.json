@@ -842,17 +842,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.27.2027",
+   "version": "2026.11.27.2057",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.27.2027.npk",
-   "size": 47675984,
-   "sha256": "941fd8b7f6c3cca842c8a880bef21be07589a938c304d2c61fc47b18e412bdd7",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.27.2057.npk",
+   "size": 47676116,
+   "sha256": "b06db2b3ba1a5872ff775cd6b10c36bd8cafb8b14a587c18a3078f14bb68abb2",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.27.2057",
+     "notes": "- A windowless popup isn't told of a press on its own program's window"
+    },
     {
      "version": "2026.11.27.2027",
      "notes": "- The tray: programs' icons in the top bar (roadmap 9.27)"
@@ -968,10 +972,6 @@
     {
      "version": "2026.11.23.2133",
      "notes": "- igc: the card's counts of missed and bad frames go to the log"
-    },
-    {
-     "version": "2026.11.23.2003",
-     "notes": "- igc: a receive ring of 1024 frames, and 512 taken a poll"
     }
    ],
    "icon": "icons/nova.png",
