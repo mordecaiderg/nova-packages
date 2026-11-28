@@ -842,17 +842,21 @@
   },
   {
    "name": "nova",
-   "version": "2026.11.27.2057",
+   "version": "2026.11.28.0000",
    "description": "Nova itself: the kernel and the system every app runs on",
    "depends": [],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.27.2057.npk",
-   "size": 47676116,
-   "sha256": "b06db2b3ba1a5872ff775cd6b10c36bd8cafb8b14a587c18a3078f14bb68abb2",
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/packages/nova-2026.11.28.0000.npk",
+   "size": 47684678,
+   "sha256": "e9a04dd4432eead24eb53293bf2417ec88fa67c4434ba28584d0d54e4061623c",
    "title": "Nova",
    "category": "System",
    "about": "Updates Nova on the disk it was installed on. The new version starts at the next restart; the one you have now stays in the boot menu as \"Nova (previous version)\", in case the new one misbehaves. Your apps, settings and files aren't touched.\nA Nova running from a USB stick is updated by writing a new image to the stick.",
    "system": true,
    "changes": [
+    {
+     "version": "2026.11.28.0000",
+     "notes": "- L5: reads, writes and lookups run their filesystem call without the kernel lock"
+    },
     {
      "version": "2026.11.27.2057",
      "notes": "- A windowless popup isn't told of a press on its own program's window"
@@ -968,10 +972,6 @@
     {
      "version": "2026.11.23.2224",
      "notes": "- The pointer passing over the dock doesn't remake its kept picture; TCP selective acknowledgements"
-    },
-    {
-     "version": "2026.11.23.2133",
-     "notes": "- igc: the card's counts of missed and bad frames go to the log"
     }
    ],
    "icon": "icons/nova.png",
