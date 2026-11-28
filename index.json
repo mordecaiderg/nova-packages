@@ -408,37 +408,6 @@
    ]
   },
   {
-   "name": "steam",
-   "version": "1.0-3",
-   "description": "Steam: starts the Windows Steam (installed under Wine) from the launcher",
-   "depends": [
-    "wine"
-   ],
-   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/steam-1.0-3.npk",
-   "size": 319672,
-   "sha256": "95185f4953bdc7c2a177acc215375ef0b14aeb638bde64e63b2c94b67eb251f6",
-   "title": "Steam",
-   "category": "Games",
-   "about": "A tile for Steam in the launcher and the dock, so that it starts with a click and not from the Terminal. It starts the Windows version of Steam under Wine. Steam itself is not in this package: download SteamSetup.exe from store.steampowered.com and run it once with wine in the Terminal (wine ~/Downloads/SteamSetup.exe), and run wine --dxvk once so games use the graphics card. Steam's window takes up to a minute to appear. Games need the NVIDIA driver and Vulkan packages. Early: some games work, many do not yet.",
-   "app": "steam",
-   "changes": [
-    {
-     "version": "1.0-3",
-     "notes": "- Closing Steam's window ends Steam, and Wine with it. It used to go on running where nothing showed it: on Windows it hides in the system tray, which Nova does not have yet. Needs Wine 11.0-26."
-    },
-    {
-     "version": "1.0-2",
-     "notes": "- Starting Steam again right after closing it works: the start used to fail twice and say so, because the Steam just closed was still going away and took the new one with it. The tile now waits for that to finish and tries again."
-    },
-    {
-     "version": "1.0-1",
-     "notes": "- New: a Steam tile in the launcher. It starts the Windows Steam installed under Wine, and starts it again by itself when the first start ends at once."
-    }
-   ],
-   "icon": "icons/steam.png",
-   "icon_sha256": "264f1e31823470b553c2c538ff9b3065f4bb66e5d335fbb26f37afad23f53e6e"
-  },
-  {
    "name": "wine",
    "version": "11.0-38",
    "description": "Wine: run Windows programs (early: a command, no app yet)",
@@ -571,6 +540,41 @@
      "notes": "- Windows programs can ask about the network: the computer's network cards and addresses, and which program owns a connection. Steam asks that before it lets its own window talk to it."
     }
    ]
+  },
+  {
+   "name": "steam",
+   "version": "1.0-4",
+   "description": "Steam: starts the Windows Steam (installed under Wine) from the launcher",
+   "depends": [
+    "wine"
+   ],
+   "file": "https://github.com/mordecaiderg/nova-packages/releases/download/testing/steam-1.0-4.npk",
+   "size": 328888,
+   "sha256": "52a0b92213120d253e71e5ce71adc6fb486c4f4a647d9d1a8618070be6c34c92",
+   "title": "Steam",
+   "category": "Games",
+   "about": "A tile for Steam in the launcher and the dock, so that it starts with a click and not from the Terminal. It starts the Windows version of Steam under Wine. Steam itself is not in this package: download SteamSetup.exe from store.steampowered.com and run it once with wine in the Terminal (wine ~/Downloads/SteamSetup.exe), and run wine --dxvk once so games use the graphics card. Steam's window takes up to a minute to appear; closed, it hides to Steam's icon in the top bar, whose menu has Exit Steam. Games need the NVIDIA driver and Vulkan packages. Early: some games work, many do not yet.",
+   "app": "steam",
+   "changes": [
+    {
+     "version": "1.0-4",
+     "notes": "- Closing Steam's window hides it to its icon in the top bar, as on Windows: a click on the icon brings the window back, and Exit Steam in the icon's menu ends Steam. Needs Nova 2026.11.27.2027 and Wine 11.0-38."
+    },
+    {
+     "version": "1.0-3",
+     "notes": "- Closing Steam's window ends Steam, and Wine with it. It used to go on running where nothing showed it: on Windows it hides in the system tray, which Nova does not have yet. Needs Wine 11.0-26."
+    },
+    {
+     "version": "1.0-2",
+     "notes": "- Starting Steam again right after closing it works: the start used to fail twice and say so, because the Steam just closed was still going away and took the new one with it. The tile now waits for that to finish and tries again."
+    },
+    {
+     "version": "1.0-1",
+     "notes": "- New: a Steam tile in the launcher. It starts the Windows Steam installed under Wine, and starts it again by itself when the first start ends at once."
+    }
+   ],
+   "icon": "icons/steam.png",
+   "icon_sha256": "264f1e31823470b553c2c538ff9b3065f4bb66e5d335fbb26f37afad23f53e6e"
   }
  ]
 }
